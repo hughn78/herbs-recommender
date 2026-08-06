@@ -42,7 +42,8 @@ type RawChunk = {
 
 export const getIngestionStatusFn = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
-  .handler(async () => {
+  .handler(async ({ context }) => {
+    await assertAdmin(context);
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { data, error } = await supabaseAdmin
       .from("ingestion_jobs")
@@ -58,7 +59,8 @@ export const getIngestionStatusFn = createServerFn({ method: "GET" })
 export const ingestShardFn = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((d: { jobId: string }) => d)
-  .handler(async ({ data }) => {
+  .handler(async ({ data, context }) => {
+    await assertAdmin(context);
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 
     const { data: job, error: jobErr } = await supabaseAdmin
@@ -166,6 +168,7 @@ export const searchKbFn = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((d: { query: string; limit?: number }) => d)
   .handler(async ({ data, context }) => {
+    await assertAdmin(context);
     const q = (data.query ?? "").trim();
     if (!q) return { results: [] };
     const limit = Math.min(Math.max(data.limit ?? 20, 1), 50);
@@ -183,7 +186,8 @@ export const searchKbFn = createServerFn({ method: "POST" })
 export const resetIngestionFn = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((d: { jobId: string }) => d)
-  .handler(async ({ data }) => {
+  .handler(async ({ data, context }) => {
+    await assertAdmin(context);
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     await supabaseAdmin
       .from("ingestion_jobs")
