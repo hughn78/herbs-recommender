@@ -2,7 +2,7 @@
 // Phase 1: deterministic rule engine. Phase 3: KB evidence attachment.
 // Phase 5: product recommendations.
 import { createServerFn } from "@tanstack/react-start";
-import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
+import { publicSupabase } from "./public-supabase-middleware";
 import { runEngine, type PatientCtx, type SafetyRuleRow } from "./engine";
 import type { ProductRow } from "./recommend-products";
 import { attachEvidence } from "./retrieval";
@@ -32,7 +32,7 @@ export type CaseInput = {
 };
 
 export const getDictionaryFn = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .handler(async ({ context }) => {
     const { data, error } = await context.supabase
       .from("medication_dictionary")
@@ -47,7 +47,7 @@ export const getDictionaryFn = createServerFn({ method: "GET" })
   });
 
 export const listSafetyRulesFn = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .handler(async ({ context }) => {
     const { data, error } = await context.supabase.from("safety_rules").select("*");
     if (error) throw new Error(error.message);
@@ -55,7 +55,7 @@ export const listSafetyRulesFn = createServerFn({ method: "GET" })
   });
 
 export const listCasesFn = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .handler(async ({ context }) => {
     const { data, error } = await context.supabase
       .from("patient_cases")
@@ -67,7 +67,7 @@ export const listCasesFn = createServerFn({ method: "GET" })
   });
 
 export const listProductsFn = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .handler(async ({ context }) => {
     const { data, error } = await context.supabase
       .from("products")
@@ -81,7 +81,7 @@ export const listProductsFn = createServerFn({ method: "GET" })
   });
 
 export const getCaseFn = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .inputValidator((d: { caseId: string }) => d)
   .handler(async ({ data, context }) => {
     const [caseRes, recsRes, auditRes] = await Promise.all([
@@ -112,10 +112,11 @@ export const getCaseFn = createServerFn({ method: "GET" })
   });
 
 export const createCaseFn = createServerFn({ method: "POST" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .inputValidator((d: CaseInput) => d)
   .handler(async ({ data, context }) => {
-    const { supabase, userId } = context;
+    const { supabase } = context;
+    const userId: string | null = null;
 
     const [rulesRes, productsRes] = await Promise.all([
       supabase.from("safety_rules").select("*"),

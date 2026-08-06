@@ -1,11 +1,11 @@
 // Phase 5 — pharmacist feedback + queue + export.
 import { createServerFn } from "@tanstack/react-start";
-import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
+import { publicSupabase } from "./public-supabase-middleware";
 
 export type FeedbackStatus = "accepted" | "modified" | "declined" | "escalated";
 
 export const submitFeedbackFn = createServerFn({ method: "POST" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .inputValidator(
     (d: { case_id: string; recommendation_id: string; status: FeedbackStatus; notes?: string }) => d,
   )
@@ -13,7 +13,7 @@ export const submitFeedbackFn = createServerFn({ method: "POST" })
     const { error } = await context.supabase.from("pharmacist_feedback").insert({
       case_id: data.case_id,
       recommendation_id: data.recommendation_id,
-      user_id: context.userId,
+      user_id: null,
       status: data.status,
       notes: data.notes ?? null,
     });
@@ -22,7 +22,7 @@ export const submitFeedbackFn = createServerFn({ method: "POST" })
   });
 
 export const undoFeedbackFn = createServerFn({ method: "POST" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .inputValidator((d: { recommendation_id: string }) => d)
   .handler(async ({ data, context }) => {
     // Delete only the latest feedback for this rec by this user.
@@ -30,7 +30,7 @@ export const undoFeedbackFn = createServerFn({ method: "POST" })
       .from("pharmacist_feedback")
       .select("feedback_id")
       .eq("recommendation_id", data.recommendation_id)
-      .eq("user_id", context.userId)
+      .is("user_id", null)
       .order("created_at", { ascending: false })
       .limit(1)
       .maybeSingle();
@@ -45,7 +45,7 @@ export const undoFeedbackFn = createServerFn({ method: "POST" })
   });
 
 export const listQueueFn = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .handler(async ({ context }) => {
     // A case enters the queue if it has any recommendation flagged for review,
     // OR if any feedback marked it as 'escalated' and there's no later resolution.
@@ -97,7 +97,7 @@ export const listQueueFn = createServerFn({ method: "GET" })
   });
 
 export const getCaseFeedbackFn = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .inputValidator((d: { caseId: string }) => d)
   .handler(async ({ data, context }) => {
     const { data: rows, error } = await context.supabase
@@ -110,7 +110,7 @@ export const getCaseFeedbackFn = createServerFn({ method: "GET" })
   });
 
 export const exportCaseFn = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .inputValidator((d: { caseId: string }) => d)
   .handler(async ({ data, context }) => {
     const [caseRes, recsRes, feedbackRes] = await Promise.all([
