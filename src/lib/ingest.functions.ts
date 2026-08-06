@@ -4,6 +4,20 @@
 import { createServerFn } from "@tanstack/react-start";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 
+// Verifies the caller holds the 'admin' role using the RLS-scoped user client.
+// user_roles only lets a user read their own rows, so this cannot be spoofed.
+async function assertAdmin(context: { supabase: { from: (t: "user_roles") => any }; userId: string }) {
+  const { data, error } = await context.supabase
+    .from("user_roles")
+    .select("role")
+    .eq("user_id", context.userId)
+    .eq("role", "admin")
+    .maybeSingle();
+  if (error) throw new Error("Not authorized");
+  if (!data) throw new Error("Not authorized: admin role required");
+}
+
+
 type RawChunk = {
   chunk_id: string;
   source: string;
