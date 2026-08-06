@@ -5,20 +5,24 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* PharmaPrompt OS — locked design system
- * Display: Raleway. Body: Inter.
- * Calm clinical palette. Signal red reserved EXCLUSIVELY for safety cautions.
+/* PharmaPrompt OS — Organic design system
+ * Editorial + warm: paper-gray page, borderless white panels,
+ * deep-teal hero band, pale amber actions, serif headings, Inter body.
+ * Signal red reserved EXCLUSIVELY for safety cautions.
  */
 
 @theme inline {
-  --font-display: "Raleway", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  --radius-sm: 8px;
-  --radius-md: 12px;
+  /* Organic geometry — soft, never pill-like */
+  --radius-sm: 4px;
+  --radius-md: 14px;
   --radius-lg: 16px;
-  --radius-xl: 20px;
-  --radius-2xl: 24px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-band: 80px;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -42,6 +46,8 @@
   --color-ring: var(--ring);
   --color-deep-panel: var(--deep-panel);
   --color-panel: var(--panel);
+  --color-teal: var(--teal);
+  --color-teal-foreground: var(--teal-foreground);
 
   /* Signal red — SAFETY CAUTIONS ONLY */
   --color-signal: var(--signal);
@@ -52,46 +58,69 @@
   --color-destructive-foreground: var(--signal-foreground);
 
   --color-amber: var(--amber);
+  --color-amber-foreground: var(--amber-foreground);
   --color-amber-soft: var(--amber-soft);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--hairline);
+  --color-sidebar-ring: var(--ring);
+  --color-sidebar-primary: var(--teal);
+  --color-sidebar-primary-foreground: var(--teal-foreground);
 }
 
 :root {
-  --background: #F7F5EF;
-  --foreground: #151715;
-  --muted-foreground: #5D615B;
-  --subtle: #8A8E86;
+  /* Paper surface */
+  --background: #F5F5F5;
+  /* Inks */
+  --foreground: #2E2E2E;
+  --muted-foreground: #57564C;
+  --subtle: #82817A;
 
-  --card: rgba(255, 255, 250, 0.85);
-  --panel: rgba(255, 255, 250, 0.72);
-  --deep-panel: #20251F;
+  /* Borderless white panels */
+  --card: #FFFFFF;
+  --panel: #FFFFFF;
+  --deep-panel: #1A1A1A;
 
-  --primary: #20251F;
-  --primary-foreground: #F7F5EF;
-  --secondary: #ECE9E0;
-  --secondary-foreground: #151715;
-  --muted: #ECE9E0;
+  /* Hero teal */
+  --teal: #024F46;
+  --teal-foreground: #F3F1EC;
 
-  --accent: #7D927B;
-  --accent-foreground: #F7F5EF;
-  --accent-deep: #40513F;
+  --primary: #024F46;
+  --primary-foreground: #F3F1EC;
+  --secondary: #ECEAE6;
+  --secondary-foreground: #2E2E2E;
+  --muted: #ECEAE6;
 
-  --border: rgba(21, 23, 21, 0.12);
-  --hairline: rgba(21, 23, 21, 0.08);
-  --ring: #7D927B;
+  --accent: #024F46;
+  --accent-foreground: #F3F1EC;
+  --accent-deep: #013A33;
+
+  --border: #E9E6E6;
+  --hairline: #E9E6E6;
+  --ring: #024F46;
 
   /* Signal red — RESERVED for safety cautions only */
   --signal: #B23A2E;
   --signal-foreground: #FFFFFF;
-  --signal-soft: rgba(178, 58, 46, 0.08);
+  --signal-soft: #FBF0EE;
 
-  --amber: #8A6A1E;
-  --amber-soft: rgba(138, 106, 30, 0.10);
+  /* Brand amber — primary actions and intentional highlights */
+  --amber: #ECBA82;
+  --amber-foreground: #2E2E2E;
+  --amber-soft: #FBF1E5;
+
+  --sidebar: #FFFFFF;
+  --sidebar-accent: #ECEAE6;
+  --sidebar-accent-foreground: #024F46;
 }
 
 .dark {
-  /* App is light-mode by design; dark mode unused in Phase 1. */
-  --background: #F7F5EF;
-  --foreground: #151715;
+  /* App is light-first by design; dark mode unused. */
+  --background: #F5F5F5;
+  --foreground: #2E2E2E;
 }
 
 @layer base {
@@ -101,17 +130,17 @@
 
   html, body {
     background-color: var(--color-background);
-    color: var(--color-foreground);
+    color: var(--color-body-ink, var(--color-muted-foreground));
     font-family: var(--font-sans);
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.55;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5 {
     font-family: var(--font-display);
-    font-weight: 500;
-    letter-spacing: -0.01em;
+    font-weight: 400;
+    letter-spacing: -0.025em;
     color: var(--color-foreground);
   }
 
@@ -121,18 +150,23 @@
 }
 
 @layer components {
+  /* Borderless white panel — the Organic default surface */
   .pp-glass {
     background: var(--color-card);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--color-border);
-    border-radius: 20px;
-    box-shadow: 0 20px 60px -30px rgba(20, 24, 20, 0.10);
+    border: 0;
+    border-radius: 24px;
   }
   .pp-flat {
     background: var(--color-card);
-    border: 1px solid var(--color-border);
+    border: 0;
     border-radius: 16px;
+  }
+  /* Floating overlays get the only soft elevation in the system */
+  .pp-raised {
+    background: var(--color-card);
+    border: 0;
+    border-radius: 16px;
+    box-shadow: 0 18px 40px -24px rgba(26, 26, 26, 0.28);
   }
   .pp-chip {
     display: inline-flex;
@@ -144,11 +178,23 @@
     color: var(--color-foreground);
     font-size: 0.8125rem;
     line-height: 1;
-    border: 1px solid var(--color-hairline);
+    border: 0;
   }
   .pp-safety {
     border-left: 4px solid var(--color-signal);
     background: var(--color-signal-soft);
+  }
+  /* Signature hero band: square top, deeply rounded bottom */
+  .pp-band {
+    background: var(--color-teal);
+    color: var(--color-teal-foreground);
+    border-bottom-left-radius: var(--radius-band);
+    border-bottom-right-radius: var(--radius-band);
+  }
+  .pp-island {
+    background: var(--color-deep-panel);
+    color: #F3F1EC;
+    border-radius: 32px;
   }
 }
 
@@ -161,20 +207,24 @@
   html, body { background: white !important; color: #111 !important; }
   .no-print { display: none !important; }
   aside, nav { display: none !important; }
-  .pp-glass, .pp-flat {
+  .pp-glass, .pp-flat, .pp-raised {
     box-shadow: none !important;
-    backdrop-filter: none !important;
     border: 1px solid #d0d0d0 !important;
     background: white !important;
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+  .pp-band, .pp-island {
+    background: white !important;
+    color: #111 !important;
+    border-radius: 0 !important;
   }
   .pp-safety {
     border-left: 4px solid #b00020 !important;
     background: #fff5f5 !important;
   }
   .pp-chip {
-    border-color: #bbb !important;
+    border: 1px solid #bbb !important;
     background: #f5f5f5 !important;
     color: #222 !important;
   }
