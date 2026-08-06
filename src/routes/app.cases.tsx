@@ -12,7 +12,7 @@ function CasesPage() {
   const { data } = useQuery({ queryKey: ["cases"], queryFn: () => fn() });
   return (
     <div className="px-8 py-10 max-w-4xl mx-auto">
-      <h1 className="text-2xl font-display font-medium">Past reviews</h1>
+      <h1 className="text-2xl font-display">Past reviews</h1>
       <div className="mt-5 pp-flat divide-y divide-hairline">
         {(data ?? []).map((c) => (
           <Link

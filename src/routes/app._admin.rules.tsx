@@ -12,7 +12,7 @@ function RulesPage() {
   const { data } = useQuery({ queryKey: ["rules"], queryFn: () => fn() });
   return (
     <div className="px-8 py-10 max-w-4xl mx-auto">
-      <h1 className="text-2xl font-display font-medium">Safety rules</h1>
+      <h1 className="text-2xl font-display">Safety rules</h1>
       <p className="mt-2 text-sm text-muted-foreground">
         Read-only view of the deterministic guardrails that fire during a review.
       </p>
