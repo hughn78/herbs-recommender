@@ -10,7 +10,7 @@ import { Loader2, Play, Pause, RotateCcw, CheckCircle2, AlertTriangle } from "lu
 import { getIngestionStatusFn, ingestShardFn, resetIngestionFn } from "@/lib/ingest.functions";
 import { toast } from "sonner";
 
-export const Route = createFileRoute("/_authenticated/app/setup")({
+export const Route = createFileRoute("/app/_admin/setup")({
   component: SetupPage,
   errorComponent: ({ error }) => <div className="p-8 text-sm text-destructive">{error.message}</div>,
   notFoundComponent: () => <div className="p-8">Not found</div>,

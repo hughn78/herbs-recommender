@@ -3,7 +3,7 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { DisclaimerFooter } from "@/components/disclaimer-footer";
 
-export const Route = createFileRoute("/_authenticated/app")({
+export const Route = createFileRoute("/app")({
   component: AppLayout,
 });
 

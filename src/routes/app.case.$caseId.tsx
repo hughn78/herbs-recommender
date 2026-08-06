@@ -28,7 +28,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-export const Route = createFileRoute("/_authenticated/app/case/$caseId")({
+export const Route = createFileRoute("/app/case/$caseId")({
   component: CaseResults,
 });
 

@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Package, Search } from "lucide-react";
 import { listProductsFn } from "@/lib/cases.functions";
 
-export const Route = createFileRoute("/_authenticated/app/products")({
+export const Route = createFileRoute("/app/_admin/products")({
   component: ProductsPage,
   errorComponent: ({ error }) => (
     <div className="p-8 text-sm text-destructive">{error.message}</div>
