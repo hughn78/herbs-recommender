@@ -107,11 +107,21 @@ export function AppSidebar() {
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton onClick={signOut}>
-              <LogOut className="h-4 w-4" />
-              <span>Sign out</span>
-            </SidebarMenuButton>
+            {signedIn ? (
+              <SidebarMenuButton onClick={signOut}>
+                <LogOut className="h-4 w-4" />
+                <span>Sign out</span>
+              </SidebarMenuButton>
+            ) : (
+              <SidebarMenuButton asChild>
+                <Link to="/auth" className="flex items-center gap-2">
+                  <LogIn className="h-4 w-4" />
+                  <span>Staff sign in</span>
+                </Link>
+              </SidebarMenuButton>
+            )}
           </SidebarMenuItem>
+
         </SidebarMenu>
       </SidebarFooter>
     </Sidebar>
