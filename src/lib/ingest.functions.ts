@@ -3,10 +3,12 @@
 // Uses the admin client to bypass RLS for the kb_chunks insert.
 import { createServerFn } from "@tanstack/react-start";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
+import type { SupabaseClient } from "@supabase/supabase-js";
+import type { Database } from "@/integrations/supabase/types";
 
 // Verifies the caller holds the 'admin' role using the RLS-scoped user client.
 // user_roles only lets a user read their own rows, so this cannot be spoofed.
-async function assertAdmin(context: { supabase: { from: (t: "user_roles") => any }; userId: string }) {
+async function assertAdmin(context: { supabase: SupabaseClient<Database>; userId: string }) {
   const { data, error } = await context.supabase
     .from("user_roles")
     .select("role")
@@ -16,6 +18,7 @@ async function assertAdmin(context: { supabase: { from: (t: "user_roles") => any
   if (error) throw new Error("Not authorized");
   if (!data) throw new Error("Not authorized: admin role required");
 }
+
 
 
 type RawChunk = {
