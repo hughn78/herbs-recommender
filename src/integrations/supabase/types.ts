@@ -210,7 +210,7 @@ export type Database = {
           sex: string | null
           symptoms: string | null
           updated_at: string
-          user_id: string
+          user_id: string | null
         }
         Insert: {
           age?: number | null
@@ -233,7 +233,7 @@ export type Database = {
           sex?: string | null
           symptoms?: string | null
           updated_at?: string
-          user_id: string
+          user_id?: string | null
         }
         Update: {
           age?: number | null
@@ -256,7 +256,7 @@ export type Database = {
           sex?: string | null
           symptoms?: string | null
           updated_at?: string
-          user_id?: string
+          user_id?: string | null
         }
         Relationships: []
       }
@@ -268,7 +268,7 @@ export type Database = {
           notes: string | null
           recommendation_id: string | null
           status: string
-          user_id: string
+          user_id: string | null
         }
         Insert: {
           case_id: string
@@ -277,7 +277,7 @@ export type Database = {
           notes?: string | null
           recommendation_id?: string | null
           status: string
-          user_id: string
+          user_id?: string | null
         }
         Update: {
           case_id?: string
@@ -286,7 +286,7 @@ export type Database = {
           notes?: string | null
           recommendation_id?: string | null
           status?: string
-          user_id?: string
+          user_id?: string | null
         }
         Relationships: [
           {
@@ -403,7 +403,7 @@ export type Database = {
           source_references: Json | null
           talking_points: Json | null
           title: string
-          user_id: string
+          user_id: string | null
           why_triggered: string | null
         }
         Insert: {
@@ -440,7 +440,7 @@ export type Database = {
           source_references?: Json | null
           talking_points?: Json | null
           title: string
-          user_id: string
+          user_id?: string | null
           why_triggered?: string | null
         }
         Update: {
@@ -477,7 +477,7 @@ export type Database = {
           source_references?: Json | null
           talking_points?: Json | null
           title?: string
-          user_id?: string
+          user_id?: string | null
           why_triggered?: string | null
         }
         Relationships: [
@@ -578,7 +578,7 @@ export type Database = {
           raw_response: Json | null
           rejected_changes: Json | null
           status: string
-          user_id: string
+          user_id: string | null
         }
         Insert: {
           applied_changes?: Json | null
@@ -592,7 +592,7 @@ export type Database = {
           raw_response?: Json | null
           rejected_changes?: Json | null
           status: string
-          user_id: string
+          user_id?: string | null
         }
         Update: {
           applied_changes?: Json | null
@@ -606,7 +606,7 @@ export type Database = {
           raw_response?: Json | null
           rejected_changes?: Json | null
           status?: string
-          user_id?: string
+          user_id?: string | null
         }
         Relationships: [
           {
