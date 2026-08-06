@@ -13,15 +13,15 @@ function AppLayout() {
       <div className="min-h-screen flex w-full bg-background">
         <AppSidebar />
         <div className="flex-1 flex flex-col min-w-0">
-          <header className="h-12 flex items-center justify-between border-b border-hairline bg-background/70 backdrop-blur px-4">
+          <header className="flex h-14 items-center justify-between border-b border-hairline bg-card px-4">
             <div className="flex items-center gap-3">
               <SidebarTrigger />
-              <span className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+              <span className="font-display text-sm text-foreground">
                 Pharmacy Recommendation Engine
               </span>
             </div>
-            <div className="flex items-center gap-2 text-[11px] text-muted-foreground">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            <div className="flex items-center gap-2 text-xs text-subtle">
+              <span className="h-1.5 w-1.5 rounded-full bg-amber" />
               Deterministic mode · No AI · No retrieval
             </div>
           </header>
