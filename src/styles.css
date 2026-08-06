@@ -130,7 +130,7 @@
 
   html, body {
     background-color: var(--color-background);
-    color: var(--color-body-ink, var(--color-muted-foreground));
+    color: var(--color-muted-foreground);
     font-family: var(--font-sans);
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
