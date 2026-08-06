@@ -16,6 +16,7 @@ import { Route as AppIndexRouteImport } from './routes/app.index'
 import { Route as AppReviewRouteImport } from './routes/app.review'
 import { Route as AppQueueRouteImport } from './routes/app.queue'
 import { Route as AppCasesRouteImport } from './routes/app.cases'
+import { Route as AppAdminRouteImport } from './routes/app._admin'
 import { Route as AppCaseCaseIdRouteImport } from './routes/app.case.$caseId'
 import { Route as AppAdminSetupRouteImport } from './routes/app._admin.setup'
 import { Route as AppAdminRulesRouteImport } from './routes/app._admin.rules'
@@ -57,35 +58,39 @@ const AppCasesRoute = AppCasesRouteImport.update({
   path: '/cases',
   getParentRoute: () => AppRoute,
 } as any)
+const AppAdminRoute = AppAdminRouteImport.update({
+  id: '/_admin',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppCaseCaseIdRoute = AppCaseCaseIdRouteImport.update({
   id: '/case/$caseId',
   path: '/case/$caseId',
   getParentRoute: () => AppRoute,
 } as any)
 const AppAdminSetupRoute = AppAdminSetupRouteImport.update({
-  id: '/_admin/setup',
+  id: '/setup',
   path: '/setup',
-  getParentRoute: () => AppRoute,
+  getParentRoute: () => AppAdminRoute,
 } as any)
 const AppAdminRulesRoute = AppAdminRulesRouteImport.update({
-  id: '/_admin/rules',
+  id: '/rules',
   path: '/rules',
-  getParentRoute: () => AppRoute,
+  getParentRoute: () => AppAdminRoute,
 } as any)
 const AppAdminReferencesRoute = AppAdminReferencesRouteImport.update({
-  id: '/_admin/references',
+  id: '/references',
   path: '/references',
-  getParentRoute: () => AppRoute,
+  getParentRoute: () => AppAdminRoute,
 } as any)
 const AppAdminProductsRoute = AppAdminProductsRouteImport.update({
-  id: '/_admin/products',
+  id: '/products',
   path: '/products',
-  getParentRoute: () => AppRoute,
+  getParentRoute: () => AppAdminRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/app': typeof AppRouteWithChildren
+  '/app': typeof AppAdminRouteWithChildren
   '/auth': typeof AuthRoute
   '/app/cases': typeof AppCasesRoute
   '/app/queue': typeof AppQueueRoute
@@ -100,10 +105,10 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
+  '/app': typeof AppIndexRoute
   '/app/cases': typeof AppCasesRoute
   '/app/queue': typeof AppQueueRoute
   '/app/review': typeof AppReviewRoute
-  '/app': typeof AppIndexRoute
   '/app/products': typeof AppAdminProductsRoute
   '/app/references': typeof AppAdminReferencesRoute
   '/app/rules': typeof AppAdminRulesRoute
@@ -115,6 +120,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/app': typeof AppRouteWithChildren
   '/auth': typeof AuthRoute
+  '/app/_admin': typeof AppAdminRouteWithChildren
   '/app/cases': typeof AppCasesRoute
   '/app/queue': typeof AppQueueRoute
   '/app/review': typeof AppReviewRoute
@@ -144,10 +150,10 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/auth'
+    | '/app'
     | '/app/cases'
     | '/app/queue'
     | '/app/review'
-    | '/app'
     | '/app/products'
     | '/app/references'
     | '/app/rules'
@@ -158,6 +164,7 @@ export interface FileRouteTypes {
     | '/'
     | '/app'
     | '/auth'
+    | '/app/_admin'
     | '/app/cases'
     | '/app/queue'
     | '/app/review'
@@ -226,6 +233,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppCasesRouteImport
       parentRoute: typeof AppRoute
     }
+    '/app/_admin': {
+      id: '/app/_admin'
+      path: ''
+      fullPath: '/app'
+      preLoaderRoute: typeof AppAdminRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/app/case/$caseId': {
       id: '/app/case/$caseId'
       path: '/case/$caseId'
@@ -238,53 +252,65 @@ declare module '@tanstack/react-router' {
       path: '/setup'
       fullPath: '/app/setup'
       preLoaderRoute: typeof AppAdminSetupRouteImport
-      parentRoute: typeof AppRoute
+      parentRoute: typeof AppAdminRoute
     }
     '/app/_admin/rules': {
       id: '/app/_admin/rules'
       path: '/rules'
       fullPath: '/app/rules'
       preLoaderRoute: typeof AppAdminRulesRouteImport
-      parentRoute: typeof AppRoute
+      parentRoute: typeof AppAdminRoute
     }
     '/app/_admin/references': {
       id: '/app/_admin/references'
       path: '/references'
       fullPath: '/app/references'
       preLoaderRoute: typeof AppAdminReferencesRouteImport
-      parentRoute: typeof AppRoute
+      parentRoute: typeof AppAdminRoute
     }
     '/app/_admin/products': {
       id: '/app/_admin/products'
       path: '/products'
       fullPath: '/app/products'
       preLoaderRoute: typeof AppAdminProductsRouteImport
-      parentRoute: typeof AppRoute
+      parentRoute: typeof AppAdminRoute
     }
   }
 }
 
-interface AppRouteChildren {
-  AppCasesRoute: typeof AppCasesRoute
-  AppQueueRoute: typeof AppQueueRoute
-  AppReviewRoute: typeof AppReviewRoute
-  AppIndexRoute: typeof AppIndexRoute
+interface AppAdminRouteChildren {
   AppAdminProductsRoute: typeof AppAdminProductsRoute
   AppAdminReferencesRoute: typeof AppAdminReferencesRoute
   AppAdminRulesRoute: typeof AppAdminRulesRoute
   AppAdminSetupRoute: typeof AppAdminSetupRoute
-  AppCaseCaseIdRoute: typeof AppCaseCaseIdRoute
 }
 
-const AppRouteChildren: AppRouteChildren = {
-  AppCasesRoute: AppCasesRoute,
-  AppQueueRoute: AppQueueRoute,
-  AppReviewRoute: AppReviewRoute,
-  AppIndexRoute: AppIndexRoute,
+const AppAdminRouteChildren: AppAdminRouteChildren = {
   AppAdminProductsRoute: AppAdminProductsRoute,
   AppAdminReferencesRoute: AppAdminReferencesRoute,
   AppAdminRulesRoute: AppAdminRulesRoute,
   AppAdminSetupRoute: AppAdminSetupRoute,
+}
+
+const AppAdminRouteWithChildren = AppAdminRoute._addFileChildren(
+  AppAdminRouteChildren,
+)
+
+interface AppRouteChildren {
+  AppAdminRoute: typeof AppAdminRouteWithChildren
+  AppCasesRoute: typeof AppCasesRoute
+  AppQueueRoute: typeof AppQueueRoute
+  AppReviewRoute: typeof AppReviewRoute
+  AppIndexRoute: typeof AppIndexRoute
+  AppCaseCaseIdRoute: typeof AppCaseCaseIdRoute
+}
+
+const AppRouteChildren: AppRouteChildren = {
+  AppAdminRoute: AppAdminRouteWithChildren,
+  AppCasesRoute: AppCasesRoute,
+  AppQueueRoute: AppQueueRoute,
+  AppReviewRoute: AppReviewRoute,
+  AppIndexRoute: AppIndexRoute,
   AppCaseCaseIdRoute: AppCaseCaseIdRoute,
 }
 
