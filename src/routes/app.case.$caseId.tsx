@@ -28,7 +28,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-export const Route = createFileRoute("/_authenticated/app/case/$caseId")({
+export const Route = createFileRoute("/app/case/$caseId")({
   component: CaseResults,
 });
 
@@ -175,7 +175,7 @@ function dedupeTalkingPoints(
 }
 
 function CaseResults() {
-  const { caseId } = useParams({ from: "/_authenticated/app/case/$caseId" });
+  const { caseId } = useParams({ from: "/app/case/$caseId" });
   const fetchCase = useServerFn(getCaseFn);
   const fetchFeedback = useServerFn(getCaseFeedbackFn);
   const exportCase = useServerFn(exportCaseFn);

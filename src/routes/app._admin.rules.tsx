@@ -3,7 +3,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
 import { listSafetyRulesFn } from "@/lib/cases.functions";
 
-export const Route = createFileRoute("/_authenticated/app/rules")({
+export const Route = createFileRoute("/app/_admin/rules")({
   component: RulesPage,
 });
 

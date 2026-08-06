@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Search, ExternalLink, Loader2 } from "lucide-react";
 import { searchKbFn } from "@/lib/ingest.functions";
 
-export const Route = createFileRoute("/_authenticated/app/references")({
+export const Route = createFileRoute("/app/_admin/references")({
   component: ReferencesPage,
   errorComponent: ({ error }) => <div className="p-8 text-sm text-destructive">{error.message}</div>,
   notFoundComponent: () => <div className="p-8">Not found</div>,

@@ -3,7 +3,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
 import { listCasesFn } from "@/lib/cases.functions";
 
-export const Route = createFileRoute("/_authenticated/app/cases")({
+export const Route = createFileRoute("/app/cases")({
   component: CasesPage,
 });
 

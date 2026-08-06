@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { listQueueFn } from "@/lib/feedback.functions";
 import { Inbox, Flag, ShieldAlert, ClipboardCheck } from "lucide-react";
 
-export const Route = createFileRoute("/_authenticated/app/queue")({
+export const Route = createFileRoute("/app/queue")({
   component: QueuePage,
   errorComponent: ({ error }) => <div className="p-8 text-sm text-destructive">{error.message}</div>,
   notFoundComponent: () => <div className="p-8">Not found</div>,

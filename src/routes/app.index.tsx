@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { listCasesFn } from "@/lib/cases.functions";
 import { FilePlus2, ListChecks, ShieldCheck } from "lucide-react";
 
-export const Route = createFileRoute("/_authenticated/app/")({
+export const Route = createFileRoute("/app/")({
   component: HomePage,
 });
 

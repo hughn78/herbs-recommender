@@ -1,5 +1,6 @@
 import { Link, useRouterState, useNavigate } from "@tanstack/react-router";
-import { Home, FilePlus2, ListChecks, BookOpen, Package, Inbox, ShieldCheck, Settings, LogOut } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Home, FilePlus2, ListChecks, BookOpen, Package, Inbox, ShieldCheck, Settings, LogOut, LogIn } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -18,24 +19,40 @@ const items = [
   { title: "Home", url: "/app", icon: Home },
   { title: "New review", url: "/app/review", icon: FilePlus2 },
   { title: "Past reviews", url: "/app/cases", icon: ListChecks },
-  { title: "Safety rules", url: "/app/rules", icon: ShieldCheck },
+  { title: "Needs review", url: "/app/queue", icon: Inbox },
 ];
 
 const stubItems = [
+  { title: "Safety rules", url: "/app/rules", icon: ShieldCheck },
   { title: "References", url: "/app/references", icon: BookOpen },
   { title: "Products", url: "/app/products", icon: Package },
-  { title: "Needs review", url: "/app/queue", icon: Inbox },
   { title: "Set-up", url: "/app/setup", icon: Settings },
 ];
 
 export function AppSidebar() {
   const path = useRouterState({ select: (s) => s.location.pathname });
   const navigate = useNavigate();
+  const [signedIn, setSignedIn] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    supabase.auth.getUser().then(({ data }) => {
+      if (active) setSignedIn(!!data.user);
+    });
+    const { data: sub } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSignedIn(!!session?.user);
+    });
+    return () => {
+      active = false;
+      sub.subscription.unsubscribe();
+    };
+  }, []);
 
   async function signOut() {
     await supabase.auth.signOut();
-    navigate({ to: "/auth", replace: true });
+    navigate({ to: "/app", replace: true });
   }
+
 
   return (
     <Sidebar collapsible="icon">
@@ -90,11 +107,21 @@ export function AppSidebar() {
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton onClick={signOut}>
-              <LogOut className="h-4 w-4" />
-              <span>Sign out</span>
-            </SidebarMenuButton>
+            {signedIn ? (
+              <SidebarMenuButton onClick={signOut}>
+                <LogOut className="h-4 w-4" />
+                <span>Sign out</span>
+              </SidebarMenuButton>
+            ) : (
+              <SidebarMenuButton asChild>
+                <Link to="/auth" className="flex items-center gap-2">
+                  <LogIn className="h-4 w-4" />
+                  <span>Staff sign in</span>
+                </Link>
+              </SidebarMenuButton>
+            )}
           </SidebarMenuItem>
+
         </SidebarMenu>
       </SidebarFooter>
     </Sidebar>

@@ -10,7 +10,7 @@ import { getDictionaryFn, createCaseFn, type ConfirmedMed } from "@/lib/cases.fu
 import { parseMedications, type DictEntry, type ParsedItem } from "@/lib/parser";
 import { Check, AlertCircle, HelpCircle, X } from "lucide-react";
 
-export const Route = createFileRoute("/_authenticated/app/review")({
+export const Route = createFileRoute("/app/review")({
   component: ReviewWizard,
 });
 
