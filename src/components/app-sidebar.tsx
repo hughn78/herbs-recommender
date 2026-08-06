@@ -58,12 +58,12 @@ export function AppSidebar() {
     <Sidebar collapsible="icon">
       <SidebarHeader>
         <Link to="/app" className="flex items-center gap-2 px-2 py-3">
-          <div className="h-7 w-7 rounded-md bg-foreground flex items-center justify-center">
-            <span className="text-background font-display text-sm">P</span>
+          <div className="flex h-8 w-8 items-center justify-center rounded-[10px] bg-teal">
+            <span className="font-display text-sm text-teal-foreground">P</span>
           </div>
           <div className="flex flex-col leading-tight">
-            <span className="text-sm font-display font-medium">PharmaPrompt</span>
-            <span className="text-[10px] uppercase tracking-[0.16em] text-muted-foreground">Pharmacy OS</span>
+            <span className="font-display text-sm text-foreground">PharmaPrompt</span>
+            <span className="text-[10px] uppercase tracking-[0.16em] text-subtle">Pharmacy OS</span>
           </div>
         </Link>
       </SidebarHeader>
