@@ -1,0 +1,275 @@
+// Server functions for PharmaPrompt OS.
+// Phase 1: deterministic rule engine. Phase 3: KB evidence attachment.
+// Phase 5: product recommendations.
+import { createServerFn } from "@tanstack/react-start";
+import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
+import { runEngine, type PatientCtx, type SafetyRuleRow } from "./engine";
+import type { ProductRow } from "./recommend-products";
+import { attachEvidence } from "./retrieval";
+import { runAiSenseCheck } from "./ai-sense-check";
+
+export type ConfirmedMed = {
+  generic_name: string;
+  brand_name?: string;
+  drug_class?: string | null;
+};
+
+export type CaseInput = {
+  case_label?: string | null;
+  age: number | null;
+  sex: string | null;
+  pregnancy_status: string | null;
+  breastfeeding_status: string | null;
+  allergies: string;
+  medical_history: string;
+  medication_text: string;
+  symptoms: string;
+  counselling_goal: string;
+  existing_supplements: string;
+  pathology_notes: string;
+  pharmacist_notes: string;
+  confirmed_medications: ConfirmedMed[];
+};
+
+export const getDictionaryFn = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .handler(async ({ context }) => {
+    const { data, error } = await context.supabase
+      .from("medication_dictionary")
+      .select("generic_name, brand_names, drug_class, aliases");
+    if (error) throw new Error(error.message);
+    return (data ?? []).map((d) => ({
+      generic_name: d.generic_name,
+      brand_names: d.brand_names ?? [],
+      drug_class: d.drug_class ?? null,
+      aliases: d.aliases ?? [],
+    }));
+  });
+
+export const listSafetyRulesFn = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .handler(async ({ context }) => {
+    const { data, error } = await context.supabase.from("safety_rules").select("*");
+    if (error) throw new Error(error.message);
+    return data ?? [];
+  });
+
+export const listCasesFn = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .handler(async ({ context }) => {
+    const { data, error } = await context.supabase
+      .from("patient_cases")
+      .select("case_id, case_label, age, sex, symptoms, created_at")
+      .order("created_at", { ascending: false })
+      .limit(30);
+    if (error) throw new Error(error.message);
+    return data ?? [];
+  });
+
+export const listProductsFn = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .handler(async ({ context }) => {
+    const { data, error } = await context.supabase
+      .from("products")
+      .select(
+        "product_id, name, brand, category, active_ingredients, indications, cautions, pack_sizes, schedule, reviewed, clinical_use_tags, avoid_if_tags",
+      )
+      .order("brand", { ascending: true })
+      .order("name", { ascending: true });
+    if (error) throw new Error(error.message);
+    return data ?? [];
+  });
+
+export const getCaseFn = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((d: { caseId: string }) => d)
+  .handler(async ({ data, context }) => {
+    const [caseRes, recsRes, auditRes] = await Promise.all([
+      context.supabase.from("patient_cases").select("*").eq("case_id", data.caseId).maybeSingle(),
+      context.supabase
+        .from("recommendations")
+        .select("*")
+        .eq("case_id", data.caseId)
+        .order("rank", { ascending: true }),
+      context.supabase
+        .from("sense_check_audits")
+        .select(
+          "status, model, applied_changes, rejected_changes, error_message, latency_ms, raw_response, created_at",
+        )
+        .eq("case_id", data.caseId)
+        .order("created_at", { ascending: false })
+        .limit(1)
+        .maybeSingle(),
+    ]);
+    if (caseRes.error) throw new Error(caseRes.error.message);
+    if (recsRes.error) throw new Error(recsRes.error.message);
+    if (!caseRes.data) throw new Error("Case not found");
+    return {
+      patientCase: caseRes.data,
+      recommendations: recsRes.data ?? [],
+      senseCheck: auditRes.data ?? null,
+    };
+  });
+
+export const createCaseFn = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((d: CaseInput) => d)
+  .handler(async ({ data, context }) => {
+    const { supabase, userId } = context;
+
+    const [rulesRes, productsRes] = await Promise.all([
+      supabase.from("safety_rules").select("*"),
+      supabase
+        .from("products")
+        .select(
+          "product_id, name, brand, category, active_ingredients, indications, cautions, pack_sizes, schedule, reviewed, source_url, notes, clinical_use_tags, avoid_if_tags, medicine_interaction_flags, counselling_flags",
+        )
+        .eq("reviewed", true),
+    ]);
+    if (rulesRes.error) throw new Error(rulesRes.error.message);
+    if (productsRes.error) throw new Error(productsRes.error.message);
+    const rules: SafetyRuleRow[] = (rulesRes.data ?? []).map((r) => ({
+      rule_id: r.rule_id,
+      name: r.name,
+      description: r.description ?? "",
+      trigger_drug_classes: r.trigger_drug_classes ?? [],
+      trigger_patient_factors: r.trigger_patient_factors ?? [],
+      avoid_product_keywords: r.avoid_product_keywords ?? [],
+      severity: r.severity ?? "Medium",
+      recommendation_type: r.recommendation_type ?? "review_required",
+      pharmacist_message: r.pharmacist_message ?? "",
+      pharmacist_checks: Array.isArray(r.pharmacist_checks)
+        ? (r.pharmacist_checks as string[])
+        : [],
+      review_required: !!r.review_required,
+    }));
+
+    const products: ProductRow[] = (productsRes.data ?? []).map((p) => ({
+      product_id: p.product_id,
+      name: p.name,
+      brand: p.brand ?? null,
+      category: p.category ?? null,
+      active_ingredients: Array.isArray(p.active_ingredients)
+        ? (p.active_ingredients as string[])
+        : [],
+      indications: Array.isArray(p.indications) ? (p.indications as string[]) : [],
+      cautions: Array.isArray(p.cautions) ? (p.cautions as string[]) : [],
+      pack_sizes: Array.isArray(p.pack_sizes) ? (p.pack_sizes as string[]) : [],
+      schedule: p.schedule ?? null,
+      reviewed: !!p.reviewed,
+      source_url: p.source_url ?? null,
+      notes: p.notes ?? null,
+      clinical_use_tags: Array.isArray(p.clinical_use_tags)
+        ? (p.clinical_use_tags as string[])
+        : [],
+      avoid_if_tags: Array.isArray(p.avoid_if_tags) ? (p.avoid_if_tags as string[]) : [],
+      medicine_interaction_flags: Array.isArray(p.medicine_interaction_flags)
+        ? (p.medicine_interaction_flags as string[])
+        : [],
+      counselling_flags: Array.isArray(p.counselling_flags)
+        ? (p.counselling_flags as string[])
+        : [],
+    }));
+
+    const ctx: PatientCtx = {
+      age: data.age,
+      sex: data.sex,
+      pregnancy_status: data.pregnancy_status,
+      breastfeeding_status: data.breastfeeding_status,
+      allergies: data.allergies ?? "",
+      medical_history: data.medical_history ?? "",
+      symptoms: data.symptoms ?? "",
+      counselling_goal: data.counselling_goal ?? "",
+      existing_supplements: data.existing_supplements ?? "",
+      pathology_notes: data.pathology_notes ?? "",
+      confirmed_medications: data.confirmed_medications,
+    };
+
+    const baseRecs = await attachEvidence(supabase, runEngine(ctx, rules, products));
+    const sense = await runAiSenseCheck(ctx, baseRecs);
+    const recs = sense.recs;
+
+    const { data: caseRow, error: caseErr } = await supabase
+      .from("patient_cases")
+      .insert({
+        user_id: userId,
+        case_label: data.case_label ?? null,
+        age: data.age,
+        sex: data.sex,
+        pregnancy_status: data.pregnancy_status,
+        breastfeeding_status: data.breastfeeding_status,
+        allergies: data.allergies,
+        medical_history: data.medical_history,
+        medication_text: data.medication_text,
+        symptoms: data.symptoms,
+        counselling_goal: data.counselling_goal,
+        existing_supplements: data.existing_supplements,
+        pathology_notes: data.pathology_notes,
+        pharmacist_notes: data.pharmacist_notes,
+        confirmed_medications: data.confirmed_medications as never,
+        detected_drug_classes: Array.from(
+          new Set(data.confirmed_medications.map((m) => m.drug_class).filter(Boolean)),
+        ) as never,
+        detected_patient_factors: Array.from(
+          new Set(recs.flatMap((r) => r.matched_patient_factors)),
+        ) as never,
+      })
+      .select("case_id")
+      .single();
+    if (caseErr) throw new Error(caseErr.message);
+
+    if (recs.length) {
+      const rows = recs.map((r) => ({
+        case_id: caseRow.case_id,
+        user_id: userId,
+        recommendation_type: r.recommendation_type,
+        title: r.title,
+        product_id: r.product_id ?? null,
+        product_name: r.product_name ?? null,
+        brand: r.brand ?? null,
+        confidence: r.confidence,
+        score: r.score,
+        rank: r.rank,
+        why_triggered: r.why_triggered,
+        pharmacist_checks: r.pharmacist_checks as never,
+        talking_points: r.talking_points as never,
+        safety_cautions: r.safety_cautions as never,
+        interaction_notes: r.interaction_notes as never,
+        matched_medicines: r.matched_medicines as never,
+        matched_patient_factors: r.matched_patient_factors as never,
+        matched_product_tags: r.matched_product_tags ?? ([] as string[] as never),
+        source_references: r.source_references as never,
+        // Phase 6 structured rationale
+        severity_tier: r.severity_tier,
+        confidence_score: r.confidence_score,
+        matched_factors: (r.rationale?.matchedFactors ?? []) as never,
+        mechanism: r.rationale?.mechanism ?? null,
+        advice: r.rationale?.advice ?? null,
+        safety_net: r.rationale?.safetyNet ?? null,
+        alternatives: (r.rationale?.alternatives ?? []) as never,
+        onset: r.rationale?.onset ?? null,
+      }));
+      const { error: recErr } = await supabase.from("recommendations").insert(rows);
+      if (recErr) throw new Error(recErr.message);
+    }
+
+    await supabase.from("sense_check_audits").insert({
+      case_id: caseRow.case_id,
+      user_id: userId,
+      model: sense.model,
+      status: sense.status,
+      input_summary: {
+        age: ctx.age,
+        sex: ctx.sex,
+        medication_count: ctx.confirmed_medications.length,
+        rec_count: baseRecs.length,
+      } as never,
+      raw_response: (sense.overall_note ? { overall_note: sense.overall_note } : null) as never,
+      applied_changes: sense.applied as never,
+      rejected_changes: sense.rejected as never,
+      error_message: sense.error ?? null,
+      latency_ms: sense.latency_ms,
+    });
+
+    return { case_id: caseRow.case_id };
+  });
