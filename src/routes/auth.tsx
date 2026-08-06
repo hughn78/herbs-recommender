@@ -59,7 +59,7 @@ function AuthPage() {
         <Link to="/" className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
           PharmaPrompt OS
         </Link>
-        <h1 className="mt-4 text-2xl font-display font-medium">
+        <h1 className="mt-4 text-2xl font-display">
           {mode === "signin" ? "Pharmacist sign-in" : "Create access"}
         </h1>
         <p className="mt-1 text-sm text-muted-foreground">
@@ -83,7 +83,7 @@ function AuthPage() {
             />
           </div>
           {err && <p className="text-sm text-signal">{err}</p>}
-          <Button type="submit" disabled={busy} className="w-full bg-foreground text-background hover:bg-foreground/90">
+          <Button type="submit" disabled={busy} className="w-full bg-amber text-amber-foreground hover:bg-amber/85">
             {busy ? "Working…" : mode === "signin" ? "Sign in" : "Create account"}
           </Button>
         </form>

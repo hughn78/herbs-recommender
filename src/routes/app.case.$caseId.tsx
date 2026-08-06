@@ -245,7 +245,7 @@ function CaseResults() {
           >
             ← All reviews
           </Link>
-          <h1 className="mt-2 text-3xl font-display font-medium">
+          <h1 className="mt-2 text-3xl font-display">
             {p.case_label || `Patient · ${p.sex ?? "—"} · ${p.age ?? "?"}y`}
           </h1>
           <p className="mt-1 text-sm text-muted-foreground">

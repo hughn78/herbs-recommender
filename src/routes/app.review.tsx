@@ -120,7 +120,7 @@ function ReviewWizard() {
 
       {step === 1 && (
         <div className="mt-8 pp-glass p-6 space-y-5">
-          <h1 className="text-2xl font-display font-medium">Patient context</h1>
+          <h1 className="text-2xl font-display">Patient context</h1>
           <div className="grid grid-cols-2 gap-4">
             <Field label="Age">
               <Input type="number" value={ageStr} onChange={(e) => setAgeStr(e.target.value)} />
@@ -195,7 +195,7 @@ function ReviewWizard() {
             <Textarea rows={2} value={pathology} onChange={(e) => setPathology(e.target.value)} />
           </Field>
           <div className="flex justify-end pt-2">
-            <Button onClick={goConfirm} className="bg-foreground text-background hover:bg-foreground/90">
+            <Button onClick={goConfirm} className="bg-amber text-amber-foreground hover:bg-amber/85">
               Continue
             </Button>
           </div>
@@ -204,7 +204,7 @@ function ReviewWizard() {
 
       {step === 2 && (
         <div className="mt-8 pp-glass p-6 space-y-5">
-          <h1 className="text-2xl font-display font-medium">Confirm what we recognised</h1>
+          <h1 className="text-2xl font-display">Confirm what we recognised</h1>
           <p className="text-sm text-muted-foreground">
             Recognised medicines are below. Resolve unknowns or "did you mean" before running the engine.
           </p>
@@ -261,7 +261,7 @@ function ReviewWizard() {
             <Button variant="outline" onClick={() => setStep(1)}>
               Back
             </Button>
-            <Button onClick={() => setStep(3)} className="bg-foreground text-background hover:bg-foreground/90">
+            <Button onClick={() => setStep(3)} className="bg-amber text-amber-foreground hover:bg-amber/85">
               Continue
             </Button>
           </div>
@@ -270,7 +270,7 @@ function ReviewWizard() {
 
       {step === 3 && (
         <div className="mt-8 pp-glass p-6 space-y-5">
-          <h1 className="text-2xl font-display font-medium">Ready to run</h1>
+          <h1 className="text-2xl font-display">Ready to run</h1>
           <div className="grid grid-cols-2 gap-3 text-sm">
             <Summary k="Patient" v={`${sex || "—"} · ${ageStr || "?"}y`} />
             <Summary k="Pregnancy/BF" v={`${pregnancy} / ${breastfeeding}`} />
@@ -297,7 +297,7 @@ function ReviewWizard() {
             <Button
               onClick={() => mutation.mutate()}
               disabled={mutation.isPending}
-              className="bg-foreground text-background hover:bg-foreground/90"
+              className="bg-amber text-amber-foreground hover:bg-amber/85"
             >
               {mutation.isPending ? "Running engine…" : "Run review"}
             </Button>
@@ -331,7 +331,7 @@ function Step({ n, label, active, done }: { n: number; label: string; active: bo
     <div className={`flex items-center gap-2 ${active ? "text-foreground" : done ? "text-accent" : "text-muted-foreground"}`}>
       <span
         className={`h-6 w-6 rounded-full flex items-center justify-center text-[11px] border ${
-          active ? "bg-foreground text-background border-foreground" : done ? "bg-accent/20 border-accent text-accent" : "border-border"
+          active ? "bg-teal text-teal-foreground border-teal" : done ? "bg-accent/20 border-accent text-accent" : "border-border"
         }`}
       >
         {n}

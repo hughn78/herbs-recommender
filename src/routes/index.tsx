@@ -39,90 +39,90 @@ const fadeUp: Variants = {
 
 function Landing() {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-hidden">
-      {/* Ambient gradient */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[680px] -z-0">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 h-[640px] w-[1100px] rounded-full opacity-[0.18] blur-3xl"
-          style={{ background: "radial-gradient(closest-side, hsl(var(--accent)/0.7), transparent 70%)" }} />
-        <div className="absolute inset-0 opacity-[0.04]"
-          style={{ backgroundImage: "linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)", backgroundSize: "56px 56px" }} />
+    <div className="min-h-dvh bg-background text-muted-foreground">
+      {/* Signature hero: solid deep-teal band, square top, 80px rounded bottom */}
+      <div className="pp-band">
+        <header className="mx-auto flex max-w-[1280px] items-center justify-between px-8 py-6">
+          <div className="flex items-center gap-2.5">
+            <div className="flex h-8 w-8 items-center justify-center rounded-[10px] bg-amber">
+              <span className="font-display text-sm text-amber-foreground">P</span>
+            </div>
+            <span className="font-display text-base text-teal-foreground">PharmaPrompt OS</span>
+          </div>
+          <Link
+            to="/app"
+            className="rounded-lg bg-amber px-4 py-2 text-sm font-medium text-amber-foreground transition-colors hover:bg-amber/85"
+          >
+            Open the app
+          </Link>
+        </header>
+
+        <section className="mx-auto max-w-[1280px] px-8 pt-16 pb-28 md:pt-24 md:pb-32">
+          <motion.div
+            initial="hidden"
+            animate="show"
+            variants={fadeUp}
+            custom={0}
+            className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-xs text-teal-foreground"
+          >
+            <Sparkles className="h-3.5 w-3.5 text-amber" />
+            Built for Australian community pharmacy
+          </motion.div>
+
+          <motion.h1
+            initial="hidden"
+            animate="show"
+            variants={fadeUp}
+            custom={1}
+            className="mt-6 max-w-3xl font-display text-[40px] leading-[1.08] text-teal-foreground md:text-[64px]"
+          >
+            Decision support that
+            <span className="block italic text-amber">respects the pharmacist.</span>
+          </motion.h1>
+
+          <motion.p
+            initial="hidden"
+            animate="show"
+            variants={fadeUp}
+            custom={2}
+            className="mt-6 max-w-2xl text-lg leading-relaxed text-teal-foreground/80"
+          >
+            PharmaPrompt OS reads a patient's medication list, history and presentation, and surfaces the
+            guardrails and counselling prompts that matter — deterministically, with sources, without the
+            chatbot theatre.
+          </motion.p>
+
+          <motion.div
+            initial="hidden"
+            animate="show"
+            variants={fadeUp}
+            custom={3}
+            className="mt-8 flex flex-wrap gap-3"
+          >
+            <Link
+              to="/app/review"
+              className="group inline-flex items-center gap-2 rounded-lg bg-amber px-5 py-3 text-sm font-medium text-amber-foreground transition-colors hover:bg-amber/85"
+            >
+              Start a review
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
+            <a
+              href="#how"
+              className="inline-flex items-center rounded-lg bg-white/10 px-5 py-3 text-sm font-medium text-teal-foreground transition-colors hover:bg-white/20"
+            >
+              How it works
+            </a>
+          </motion.div>
+        </section>
       </div>
 
-      <header className="relative z-10 px-8 py-5 flex items-center justify-between max-w-6xl mx-auto">
-        <div className="flex items-center gap-2">
-          <div className="h-7 w-7 rounded-md bg-foreground flex items-center justify-center">
-            <span className="text-background font-display text-sm">P</span>
-          </div>
-          <span className="font-display text-sm">PharmaPrompt OS</span>
-        </div>
-        <Link
-          to="/app"
-          className="text-sm rounded-lg bg-foreground text-background px-4 py-2 hover:bg-foreground/90 transition-colors"
-        >
-          Open the app
-
-        </Link>
-      </header>
-
-      <section className="relative z-10 max-w-4xl mx-auto px-8 pt-20 pb-24">
-        <motion.div
-          initial="hidden"
-          animate="show"
-          variants={fadeUp}
-          custom={0}
-          className="inline-flex items-center gap-2 pp-chip text-[11px]"
-        >
-          <Sparkles className="h-3 w-3 text-accent" />
-          Built for Australian community pharmacy
-        </motion.div>
-
-        <motion.h1
-          initial="hidden"
-          animate="show"
-          variants={fadeUp}
-          custom={1}
-          className="mt-5 text-5xl md:text-7xl font-display font-medium leading-[1.02] tracking-tight"
-        >
-          Decision support that
-          <span className="block italic text-muted-foreground">respects the pharmacist.</span>
-        </motion.h1>
-
-        <motion.p
-          initial="hidden"
-          animate="show"
-          variants={fadeUp}
-          custom={2}
-          className="mt-7 text-lg text-muted-foreground max-w-2xl leading-relaxed"
-        >
-          PharmaPrompt OS reads a patient's medication list, history and presentation, and surfaces the
-          guardrails and counselling prompts that matter — deterministically, with sources, without the
-          chatbot theatre.
-        </motion.p>
-
-        <motion.div
-          initial="hidden"
-          animate="show"
-          variants={fadeUp}
-          custom={3}
-          className="mt-9 flex flex-wrap gap-3"
-        >
-          <Link
-            to="/app/review"
-            className="group inline-flex items-center gap-2 rounded-lg bg-foreground text-background px-5 py-3 text-sm font-medium hover:bg-foreground/90 transition-colors"
-          >
-            Start a review
-
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-          </Link>
-          <a
-            href="#how"
-            className="inline-flex items-center rounded-lg border border-hairline px-5 py-3 text-sm font-medium hover:bg-muted/40 transition-colors"
-          >
-            How it works
-          </a>
-        </motion.div>
-
-        <div id="how" className="mt-28 grid md:grid-cols-3 gap-4">
+      {/* Paper section with borderless white panels */}
+      <section id="how" className="mx-auto max-w-[1280px] px-8 py-16 md:py-28">
+        <h2 className="font-display text-3xl md:text-4xl">How it works</h2>
+        <p className="mt-6 max-w-2xl text-base leading-relaxed">
+          Three commitments hold every recommendation together.
+        </p>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
           {[
             { icon: ShieldCheck, title: "Safety-first", body: "Bleeding risk, mineral timing, renal cautions, pregnancy and breastfeeding suppression — fire before any product is suggested." },
             { icon: ListChecks, title: "Deterministic", body: "A curated ruleset and Australian medication dictionary. Same input, same output. Auditable. No hallucinations." },
@@ -135,20 +135,41 @@ function Landing() {
               viewport={{ once: true, margin: "-60px" }}
               variants={fadeUp}
               custom={i}
-              className="pp-glass p-5"
+              className="pp-glass p-7"
             >
-              <p.icon className="h-5 w-5 text-accent" />
-              <h3 className="mt-3 font-display text-lg">{p.title}</h3>
-              <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{p.body}</p>
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-amber-soft">
+                <p.icon className="h-5 w-5 text-teal" />
+              </span>
+              <h3 className="mt-5 font-display text-xl">{p.title}</h3>
+              <p className="mt-3 text-[15px] leading-relaxed">{p.body}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
-      <footer className="relative z-10 border-t border-hairline px-8 py-5">
-        <p className="max-w-4xl mx-auto text-[11px] text-muted-foreground">
-          PharmaPrompt OS supports — it does not replace — pharmacist clinical judgement. Account access is
-          provisioned per pharmacy.
+      {/* Occasional near-black feature island resets the rhythm */}
+      <section className="mx-auto max-w-[1280px] px-8 pb-16 md:pb-28">
+        <div className="pp-island px-8 py-14 md:px-14 md:py-20">
+          <h2 className="max-w-2xl font-display text-3xl leading-tight text-[#F3F1EC] md:text-[40px]">
+            No sign-in. No patient identifiers. Just the review.
+          </h2>
+          <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-[#F3F1EC]/70">
+            Open a review, paste the medication list, and work through the guardrails. Nothing that
+            identifies a patient is ever collected or stored.
+          </p>
+          <Link
+            to="/app/review"
+            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-amber px-5 py-3 text-sm font-medium text-amber-foreground transition-colors hover:bg-amber/85"
+          >
+            Start a review
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
+      <footer className="bg-background px-8 py-8">
+        <p className="mx-auto max-w-[1280px] text-xs text-subtle">
+          PharmaPrompt OS supports — it does not replace — pharmacist clinical judgement.
         </p>
       </footer>
     </div>
