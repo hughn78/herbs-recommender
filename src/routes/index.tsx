@@ -107,10 +107,11 @@ function Landing() {
           className="mt-9 flex flex-wrap gap-3"
         >
           <Link
-            to="/auth"
+            to="/app/review"
             className="group inline-flex items-center gap-2 rounded-lg bg-foreground text-background px-5 py-3 text-sm font-medium hover:bg-foreground/90 transition-colors"
           >
-            Sign in to start a review
+            Start a review
+
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
           <a
