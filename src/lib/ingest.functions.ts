@@ -3,6 +3,23 @@
 // Uses the admin client to bypass RLS for the kb_chunks insert.
 import { createServerFn } from "@tanstack/react-start";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
+import type { SupabaseClient } from "@supabase/supabase-js";
+import type { Database } from "@/integrations/supabase/types";
+
+// Verifies the caller holds the 'admin' role using the RLS-scoped user client.
+// user_roles only lets a user read their own rows, so this cannot be spoofed.
+async function assertAdmin(context: { supabase: SupabaseClient<Database>; userId: string }) {
+  const { data, error } = await context.supabase
+    .from("user_roles")
+    .select("role")
+    .eq("user_id", context.userId)
+    .eq("role", "admin")
+    .maybeSingle();
+  if (error) throw new Error("Not authorized");
+  if (!data) throw new Error("Not authorized: admin role required");
+}
+
+
 
 type RawChunk = {
   chunk_id: string;
@@ -28,7 +45,8 @@ type RawChunk = {
 
 export const getIngestionStatusFn = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
-  .handler(async () => {
+  .handler(async ({ context }) => {
+    await assertAdmin(context);
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { data, error } = await supabaseAdmin
       .from("ingestion_jobs")
@@ -44,7 +62,8 @@ export const getIngestionStatusFn = createServerFn({ method: "GET" })
 export const ingestShardFn = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((d: { jobId: string }) => d)
-  .handler(async ({ data }) => {
+  .handler(async ({ data, context }) => {
+    await assertAdmin(context);
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 
     const { data: job, error: jobErr } = await supabaseAdmin
@@ -152,6 +171,7 @@ export const searchKbFn = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((d: { query: string; limit?: number }) => d)
   .handler(async ({ data, context }) => {
+    await assertAdmin(context);
     const q = (data.query ?? "").trim();
     if (!q) return { results: [] };
     const limit = Math.min(Math.max(data.limit ?? 20, 1), 50);
@@ -169,7 +189,8 @@ export const searchKbFn = createServerFn({ method: "POST" })
 export const resetIngestionFn = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((d: { jobId: string }) => d)
-  .handler(async ({ data }) => {
+  .handler(async ({ data, context }) => {
+    await assertAdmin(context);
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     await supabaseAdmin
       .from("ingestion_jobs")
