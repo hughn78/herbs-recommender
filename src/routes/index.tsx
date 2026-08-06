@@ -56,10 +56,11 @@ function Landing() {
           <span className="font-display text-sm">PharmaPrompt OS</span>
         </div>
         <Link
-          to="/auth"
+          to="/app"
           className="text-sm rounded-lg bg-foreground text-background px-4 py-2 hover:bg-foreground/90 transition-colors"
         >
-          Sign in
+          Open the app
+
         </Link>
       </header>
 
