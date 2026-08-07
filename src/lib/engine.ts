@@ -473,7 +473,10 @@ export function runEngine(
     );
     const triggeredRules = rules.filter((r) => triggeredRuleIds.has(r.rule_id));
     const productRecs = recommendProducts(ctx, products, triggeredRules);
-    // Convert ProductRecommendation to GeneratedRec shape
+    // Convert ProductRecommendation to GeneratedRec shape.
+    // Rank-flattening fix: carry through the per-product confidence and
+    // confidence_score computed in recommendProducts (previously every
+    // product rec collapsed to "Medium"/50, discarding match strength).
     for (const pr of productRecs) {
       recs.push({
         recommendation_type: "product_recommendation",
@@ -481,10 +484,10 @@ export function runEngine(
         product_id: pr.product_id,
         product_name: pr.product_name,
         brand: pr.brand,
-        confidence: "Medium",
-        confidence_score: 50,
+        confidence: pr.confidence,
+        confidence_score: pr.confidence_score,
         severity_tier: "minor",
-        score: TYPE_BASE_SCORE.product_recommendation + 50,
+        score: pr.score,
         rank: 0,
         why_triggered: pr.why_triggered,
         rationale: pr.rationale,

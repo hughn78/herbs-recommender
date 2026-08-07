@@ -517,6 +517,10 @@ export function recommendProducts(
 
     const baseScore = 400;
     const score = baseScore + matchedTags.length * 20;
+    // Explainable numeric confidence: 40 base + 10 per matched tag (cap 90).
+    // Preserved through engine.ts so product recs rank by actual match
+    // strength instead of collapsing to a flat 50 (rank-flattening fix).
+    const confidenceScore = Math.min(90, 40 + matchedTags.length * 10);
 
     const triggerParts: string[] = [];
     if (matchedMeds.length) {
@@ -580,7 +584,7 @@ export function recommendProducts(
         mechanism: "clinical",
       }),
       severity_tier: "minor",
-      confidence_score: 50,
+      confidence_score: confidenceScore,
     });
   }
 
