@@ -252,9 +252,13 @@ functions, retrieval, ingestion. 8 tests skipped.
   references, no storage bucket usage, `public/` has only `favicon.ico`.
   **Update 2026-08-07:** 137 unique product pack-shot PNGs exist embedded in
   the corpus DOCX/XLSX — extraction and product mapping is Phase 3.
-- Live-DB counts (products/reviewed/chunks/etc.): **not yet verified** —
-  network probe to the Supabase REST API was attempted but shell approvals
-  expired; will be recorded in §13 once run.
+- Live-DB counts: **verified 2026-08-07 via REST probe — the project in
+  `.env` is a fresh, unseeded instance**: `products` 0, `safety_rules` 0,
+  `medication_dictionary` 0, `kb_chunks` 0, `patient_cases` 0 (schema exists;
+  PostgREST 200 with `content-range: */0`). The 103-product seed and
+  `bring_live_db_current.sql` were applied to a *different* (Lovable
+  production) project, not this one. Consequence: Phase 5 ingestion is not
+  optional — this project has no data until the pipeline runs.
 
 ## 11. Dead code, duplication, hard-coded clinical maps
 
