@@ -406,7 +406,39 @@ ALTER TABLE public.catalogue_review_actions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.ontology_concepts ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.ontology_synonyms ENABLE ROW LEVEL SECURITY;
 
--- Read: catalogue + provenance visible to anon and authenticated.
+-- Explicit API grants. RLS policies below still decide row visibility; these
+-- grants make the tables reachable at all on projects without default grants.
+GRANT SELECT ON
+  public.catalogue_products,
+  public.product_variants,
+  public.product_images,
+  public.ingredients,
+  public.ingredient_aliases,
+  public.product_ingredients,
+  public.product_indications,
+  public.product_directions,
+  public.product_warnings,
+  public.product_interaction_flags,
+  public.product_population_rules,
+  public.product_keywords,
+  public.product_synonyms,
+  public.ontology_concepts,
+  public.ontology_synonyms
+TO anon, authenticated;
+
+GRANT SELECT ON
+  public.source_documents,
+  public.source_sections,
+  public.source_claims,
+  public.claim_citations,
+  public.ingestion_runs,
+  public.extraction_conflicts,
+  public.data_quality_issues,
+  public.catalogue_review_actions
+TO authenticated;
+GRANT INSERT ON public.catalogue_review_actions TO authenticated;
+
+-- Read: catalogue + ontology visible to anon and authenticated.
 DROP POLICY IF EXISTS "Read catalogue products" ON public.catalogue_products;
 CREATE POLICY "Read catalogue products" ON public.catalogue_products
   FOR SELECT TO anon, authenticated USING (true);

@@ -1,9 +1,18 @@
-import { createFileRoute, Outlet } from "@tanstack/react-router";
+import { createFileRoute, Outlet, redirect } from "@tanstack/react-router";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { DisclaimerFooter } from "@/components/disclaimer-footer";
+import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/app")({
+  ssr: false,
+  beforeLoad: async () => {
+    // Phase 13: clinical reviews contain patient context and must never be
+    // reachable anonymously. Reference-data reads remain public elsewhere.
+    const { data, error } = await supabase.auth.getUser();
+    if (error || !data.user) throw redirect({ to: "/auth" });
+    return { user: data.user };
+  },
   component: AppLayout,
 });
 
@@ -22,7 +31,7 @@ function AppLayout() {
             </div>
             <div className="flex items-center gap-2 text-xs text-subtle">
               <span className="h-1.5 w-1.5 rounded-full bg-amber" />
-              Deterministic mode · No AI · No retrieval
+              Deterministic rules · Governed catalogue · Staff only
             </div>
           </header>
           <main className="flex-1 overflow-auto">

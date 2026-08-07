@@ -1,8 +1,11 @@
 // Server functions for PharmaPrompt OS.
 // Phase 1: deterministic rule engine. Phase 3: KB evidence attachment.
-// Phase 5: product recommendations.
+// Phase 5: product recommendations. Phase 13: authenticated clinical flow —
+// patient reviews require a staff session; rows are owned by the reviewer
+// (RLS owner policies), and a transient mode runs without persistence.
 import { createServerFn } from "@tanstack/react-start";
 import { publicSupabase } from "./public-supabase-middleware";
+import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { runEngine, type PatientCtx, type SafetyRuleRow } from "./engine";
 import type { ProductRow } from "./recommend-products";
 import { attachEvidence } from "./retrieval";
@@ -29,6 +32,10 @@ export type CaseInput = {
   pathology_notes: string;
   pharmacist_notes: string;
   confirmed_medications: ConfirmedMed[];
+  /** Phase 13: run the engine and return results WITHOUT persisting any
+   *  patient context. Transient reviews never appear in past reviews and
+   *  are excluded from analytics/audit tables. */
+  transient?: boolean;
 };
 
 export const getDictionaryFn = createServerFn({ method: "GET" })
@@ -55,8 +62,9 @@ export const listSafetyRulesFn = createServerFn({ method: "GET" })
   });
 
 export const listCasesFn = createServerFn({ method: "GET" })
-  .middleware([publicSupabase])
+  .middleware([requireSupabaseAuth])
   .handler(async ({ context }) => {
+    // RLS owner policies scope this to the signed-in reviewer's own cases.
     const { data, error } = await context.supabase
       .from("patient_cases")
       .select("case_id, case_label, age, sex, symptoms, created_at")
@@ -81,7 +89,7 @@ export const listProductsFn = createServerFn({ method: "GET" })
   });
 
 export const getCaseFn = createServerFn({ method: "GET" })
-  .middleware([publicSupabase])
+  .middleware([requireSupabaseAuth])
   .inputValidator((d: { caseId: string }) => d)
   .handler(async ({ data, context }) => {
     const [caseRes, recsRes, auditRes] = await Promise.all([
@@ -112,11 +120,13 @@ export const getCaseFn = createServerFn({ method: "GET" })
   });
 
 export const createCaseFn = createServerFn({ method: "POST" })
-  .middleware([publicSupabase])
+  .middleware([requireSupabaseAuth])
   .inputValidator((d: CaseInput) => d)
   .handler(async ({ data, context }) => {
     const { supabase } = context;
-    const userId: string | null = null;
+    // Phase 13: the reviewer owns the case. No more hardcoded null —
+    // RLS owner policies make rows visible only to their creator.
+    const userId: string = context.userId;
 
     const [rulesRes, productsRes] = await Promise.all([
       supabase.from("safety_rules").select("*"),
@@ -187,8 +197,38 @@ export const createCaseFn = createServerFn({ method: "POST" })
     };
 
     const baseRecs = await attachEvidence(supabase, runEngine(ctx, rules, products));
-    const sense = await runAiSenseCheck(ctx, baseRecs);
+    // Transient reviews must not send patient context to the external AI
+    // gateway. They receive deterministic results only; no audit row is
+    // persisted below either.
+    const sense = data.transient
+      ? {
+          status: "skipped" as const,
+          model: "transient-deterministic-only",
+          latency_ms: 0,
+          recs: baseRecs,
+          applied: [],
+          rejected: [],
+          error: "AI sense-check disabled for unsaved transient review",
+        }
+      : await runAiSenseCheck(ctx, baseRecs);
     const recs = sense.recs;
+
+    // ---- Transient mode: return results without persisting anything ----
+    // The patient context never reaches the database and is excluded from
+    // audit/analytics tables. The client keeps results in memory only and
+    // clearly labels the review as unsaved.
+    if (data.transient) {
+      return {
+        case_id: null,
+        transient: true,
+        recommendations: recs,
+        sense_check: {
+          status: sense.status,
+          model: sense.model,
+          overall_note: sense.overall_note ?? null,
+        },
+      };
+    }
 
     const { data: caseRow, error: caseErr } = await supabase
       .from("patient_cases")

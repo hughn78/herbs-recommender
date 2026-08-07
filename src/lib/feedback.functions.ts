@@ -1,11 +1,13 @@
 // Phase 5 — pharmacist feedback + queue + export.
+// Phase 13: all functions require an authenticated staff session;
+// feedback is owned by its author (RLS owner policies).
 import { createServerFn } from "@tanstack/react-start";
-import { publicSupabase } from "./public-supabase-middleware";
+import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 
 export type FeedbackStatus = "accepted" | "modified" | "declined" | "escalated";
 
 export const submitFeedbackFn = createServerFn({ method: "POST" })
-  .middleware([publicSupabase])
+  .middleware([requireSupabaseAuth])
   .inputValidator(
     (d: { case_id: string; recommendation_id: string; status: FeedbackStatus; notes?: string }) => d,
   )
@@ -13,7 +15,7 @@ export const submitFeedbackFn = createServerFn({ method: "POST" })
     const { error } = await context.supabase.from("pharmacist_feedback").insert({
       case_id: data.case_id,
       recommendation_id: data.recommendation_id,
-      user_id: null,
+      user_id: context.userId,
       status: data.status,
       notes: data.notes ?? null,
     });
@@ -22,15 +24,15 @@ export const submitFeedbackFn = createServerFn({ method: "POST" })
   });
 
 export const undoFeedbackFn = createServerFn({ method: "POST" })
-  .middleware([publicSupabase])
+  .middleware([requireSupabaseAuth])
   .inputValidator((d: { recommendation_id: string }) => d)
   .handler(async ({ data, context }) => {
-    // Delete only the latest feedback for this rec by this user.
+    // Delete only the latest feedback for this rec by this signed-in reviewer.
     const { data: latest, error: selErr } = await context.supabase
       .from("pharmacist_feedback")
       .select("feedback_id")
       .eq("recommendation_id", data.recommendation_id)
-      .is("user_id", null)
+      .eq("user_id", context.userId)
       .order("created_at", { ascending: false })
       .limit(1)
       .maybeSingle();
@@ -45,10 +47,11 @@ export const undoFeedbackFn = createServerFn({ method: "POST" })
   });
 
 export const listQueueFn = createServerFn({ method: "GET" })
-  .middleware([publicSupabase])
+  .middleware([requireSupabaseAuth])
   .handler(async ({ context }) => {
     // A case enters the queue if it has any recommendation flagged for review,
     // OR if any feedback marked it as 'escalated' and there's no later resolution.
+    // RLS owner policies scope all three reads to the signed-in reviewer.
     const { data: recs, error: recsErr } = await context.supabase
       .from("recommendations")
       .select("case_id, recommendation_id, title, recommendation_type, confidence")
@@ -97,7 +100,7 @@ export const listQueueFn = createServerFn({ method: "GET" })
   });
 
 export const getCaseFeedbackFn = createServerFn({ method: "GET" })
-  .middleware([publicSupabase])
+  .middleware([requireSupabaseAuth])
   .inputValidator((d: { caseId: string }) => d)
   .handler(async ({ data, context }) => {
     const { data: rows, error } = await context.supabase
@@ -110,7 +113,7 @@ export const getCaseFeedbackFn = createServerFn({ method: "GET" })
   });
 
 export const exportCaseFn = createServerFn({ method: "GET" })
-  .middleware([publicSupabase])
+  .middleware([requireSupabaseAuth])
   .inputValidator((d: { caseId: string }) => d)
   .handler(async ({ data, context }) => {
     const [caseRes, recsRes, feedbackRes] = await Promise.all([

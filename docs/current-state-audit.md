@@ -346,3 +346,32 @@ runbook (documented only in MIGRATIONS_README).
 3. 944 lint errors (943 prettier-formatting, fixable wholesale; pre-existing).
 4. 6 lint warnings (react-hooks exhaustive-deps etc.).
 5. Git index corrupted by `._*` AppleDouble files (fixed during setup).
+
+---
+
+## 16. Post-audit remediation log (2026-08-07)
+
+### Phase 13 — authenticated clinical flow and transient reviews
+
+- `/app` now requires a signed-in staff session before any clinical route is
+  reachable; anonymous visitors are redirected to `/auth`.
+- `listCasesFn`, `getCaseFn`, `createCaseFn`, feedback, queue and export server
+  functions now use `requireSupabaseAuth`; newly written cases,
+  recommendations, audits and feedback rows carry the reviewer's `user_id`.
+- New migration `supabase/migrations/20260807110000_privacy_lockdown.sql`
+  revokes anonymous CRUD on patient-data tables, drops the ownerless-row
+  policies, adds owner-scoped authenticated policies, grants authenticated
+  staff least-privilege table access, and adds authenticated read policies for
+  non-patient reference tables (`kb_chunks`, dictionary, rules, products,
+  lookup indexes). **Not yet applied to the live project** — apply through the
+  Supabase SQL editor before using the updated app.
+- `searchKbFn` no longer requires the admin role; References search is available
+  to ordinary authenticated staff while ingestion controls remain admin-only.
+- The review wizard now has a **"Do not save this review"** mode. Transient
+  runs return results inline without writing patient cases, recommendations,
+  feedback or audit rows, and do not send patient context to the external AI
+  sense-check gateway.
+- Feedback submission/undo is now owned by the signed-in reviewer instead of
+  shared anonymous `user_id IS NULL` rows.
+- Verification after these changes: `npm test` — 117/117 passed;
+  `npx tsc --noEmit` — passed; `npm run build` — passed.
