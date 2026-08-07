@@ -1,7 +1,7 @@
 // Deterministic guardrail engine (Phase 1) + product recommendations (Phase 5)
 // + structured rationale on every rec (Phase 6).
 // Runs on the server inside a serverFn. No AI, no vector search.
-import { recommendProducts, type ProductRow } from "./recommend-products";
+import { recommendProducts, type ProductRow, type TagMaps } from "./recommend-products";
 import {
   buildRationale,
   type Rationale,
@@ -281,6 +281,7 @@ export function runEngine(
   ctx: PatientCtx,
   rules: SafetyRuleRow[],
   products: ProductRow[] = [],
+  maps: Partial<TagMaps> = {},
 ): GeneratedRec[] {
   const factors = detectPatientFactors(ctx);
   const classes = new Set(
@@ -472,7 +473,10 @@ export function runEngine(
         .filter((id) => id && !id.startsWith("engine:") && !id.startsWith("red_flag:") && !id.startsWith("otc_interaction:")),
     );
     const triggeredRules = rules.filter((r) => triggeredRuleIds.has(r.rule_id));
-    const productRecs = recommendProducts(ctx, products, triggeredRules);
+    // Phase 6: ontology-driven tag maps (consumer wording, brand aliases,
+    // clinical synonyms) are passed through; recommendProducts falls back to
+    // its built-in defaults for any map not supplied.
+    const productRecs = recommendProducts(ctx, products, triggeredRules, maps);
     // Convert ProductRecommendation to GeneratedRec shape.
     // Rank-flattening fix: carry through the per-product confidence and
     // confidence_score computed in recommendProducts (previously every

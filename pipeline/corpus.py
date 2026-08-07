@@ -41,6 +41,9 @@ KB_PDF_PAGE_INDEX = KB_ROOT / "intermediate" / "pdf_page_index.json"
 KB_VALIDATION_XLSX = KB_ROOT / "output" / "validation_report.xlsx"
 KB_SAFETY_RULES_DRAFT = KB_ROOT / "intermediate" / "safety_rules_draft.json"
 
+# Phase 6: curated clinical/search ontology (committed seed data, not corpus).
+ONTOLOGY_JSON = DATA_ROOT / "ontology" / "clinical-search-ontology.json"
+
 
 def sha256_file(path: Path) -> str:
     h = hashlib.sha256()

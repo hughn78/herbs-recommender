@@ -394,3 +394,33 @@ runbook (documented only in MIGRATIONS_README).
 - Verification after these changes: `python3 -m pipeline.ingest --dry-run` —
   passed; `npm test` — 118/118 passed; `npx tsc --noEmit` — passed;
   `npm run build` — passed.
+
+### Phase 6 — data-driven clinical/search ontology
+
+- New committed seed `data/ontology/clinical-search-ontology.json` (37
+  concepts, 186 synonyms) maps consumer wording, clinical synonyms, medicine
+  brand aliases and spelling variants to the clinical-use tags that actually
+  exist on corpus products. The old hardcoded maps referenced tags with no
+  products at all (e.g. `coq10_support`, `potassium_support`); the seed
+  retargets those mappings at real corpus tags (e.g. statin → `heart_health`
+  for the CoQ10/ubiquinol products).
+- The governed-catalogue migration now permits `concept_type =
+  'patient_factor'` so patient factors live in the ontology alongside
+  medication classes, symptoms and health goals.
+- `pipeline/ingest.py` stages `ontology_concepts` and `ontology_synonyms`
+  with natural-key duplicate validation; concepts upsert on
+  `(concept_type, canonical_label)`, synonyms on `(concept_id, term)`.
+- New `src/lib/ontology.ts` builds the three engine tag maps
+  (drug-class / patient-factor / symptom-goal) from approved synonyms only.
+  `runEngine` accepts the maps and `createCaseFn` loads them in parallel with
+  safety rules and products. Any failure or empty category falls back to the
+  built-in default maps, so the ontology is an enhancement, never a hard
+  dependency.
+- New `src/lib/ontology.test.ts` (8 tests) covers concept-type routing,
+  term normalisation, unapproved-synonym exclusion, tag merging across
+  concepts, per-category fallback, and end-to-end matching through consumer
+  wording ("night cramps") and a brand alias ("nexium") that the old
+  hardcoded maps could not reach.
+- Verification after these changes: `python3 -m pipeline.ingest --dry-run` —
+  passed (37 concepts / 186 synonyms staged); `npm test` — 126/126 passed;
+  `npx tsc --noEmit` — passed; `npm run build` — passed.

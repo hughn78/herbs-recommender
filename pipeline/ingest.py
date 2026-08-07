@@ -401,6 +401,52 @@ def _source_document_rows() -> list[dict]:
     return rows
 
 
+def stage_ontology() -> dict:
+    """Phase 6: stage the curated clinical/search ontology from committed
+    seed data (data/ontology/). The canonical label is itself a searchable
+    term, so it is staged as a synonym row with provenance 'canonical_label'.
+    Auto-proposed synonyms (none in the seed) would stage with
+    approved=False; everything curated here is approved."""
+    seed = corpus.load_json(corpus.ONTOLOGY_JSON)
+    concept_rows, synonym_rows = [], []
+    for concept in seed.get("concepts", []):
+        concept_rows.append(
+            {
+                "concept_type": concept["concept_type"],
+                "canonical_label": concept["canonical_label"],
+                "clinical_use_tags": concept.get("clinical_use_tags") or [],
+            }
+        )
+        synonym_rows.append(
+            {
+                "concept_type": concept["concept_type"],
+                "canonical_label": concept["canonical_label"],
+                "term": concept["canonical_label"],
+                "synonym_type": "curated_search",
+                "approved": True,
+                "provenance": "canonical_label",
+            }
+        )
+        for syn in concept.get("synonyms", []):
+            term = str(syn.get("term") or "").strip()
+            if not term or term == concept["canonical_label"]:
+                continue
+            synonym_rows.append(
+                {
+                    "concept_type": concept["concept_type"],
+                    "canonical_label": concept["canonical_label"],
+                    "term": term,
+                    "synonym_type": syn.get("synonym_type") or "curated_search",
+                    "approved": bool(syn.get("approved", True)),
+                    "provenance": syn.get("provenance") or "curated",
+                }
+            )
+    return {
+        "ontology_concepts": concept_rows,
+        "ontology_synonyms": synonym_rows,
+    }
+
+
 def _pack_variants(raw: str) -> list[str]:
     """Split source pack-size strings such as "60 / 120 capsules" into
     variant rows without inventing data. Ambiguous strings stay verbatim."""
@@ -479,7 +525,7 @@ def main() -> int:
 
     started = time.time()
     inventory = corpus.inventory_sources()
-    staged = stage_catalogue()
+    staged = {**stage_catalogue(), **stage_ontology()}
     stats = {k: len(v) for k, v in staged.items()}
     stats["source_files"] = len(inventory)
 
@@ -520,6 +566,16 @@ def main() -> int:
             r["document_path"], r["page"], r["section_heading"],
         ),
         "claim citation key",
+    )
+    duplicate_keys(
+        staged["ontology_concepts"],
+        lambda r: (r["concept_type"], r["canonical_label"]),
+        "ontology concept key",
+    )
+    duplicate_keys(
+        staged["ontology_synonyms"],
+        lambda r: (r["concept_type"], r["canonical_label"], r["term"].lower()),
+        "ontology synonym key",
     )
     if failures:
         print("VALIDATION FAILED:", *failures, sep="\n  ")
@@ -566,6 +622,32 @@ def main() -> int:
                 for r in staged["source_sections"]
             ],
             "document_id,hog_code,heading,page",
+        )
+
+        # Phase 6 ontology: concepts then synonyms (FK on concept_id).
+        # Independent of the catalogue identity map.
+        rest.upsert(
+            "ontology_concepts",
+            staged["ontology_concepts"],
+            "concept_type,canonical_label",
+        )
+        concepts = rest.select("ontology_concepts?select=concept_id,concept_type,canonical_label")
+        ont_id = {
+            (c["concept_type"], c["canonical_label"]): c["concept_id"] for c in concepts
+        }
+        rest.upsert(
+            "ontology_synonyms",
+            [
+                {
+                    "concept_id": ont_id[(r["concept_type"], r["canonical_label"])],
+                    "term": r["term"],
+                    "synonym_type": r["synonym_type"],
+                    "approved": r["approved"],
+                    "provenance": r["provenance"],
+                }
+                for r in staged["ontology_synonyms"]
+            ],
+            "concept_id,term",
         )
 
         # identity map: hog_code -> uuid

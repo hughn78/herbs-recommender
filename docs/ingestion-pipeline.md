@@ -50,7 +50,31 @@ environment only, never commit it.
 90 warnings · 96 interaction flags · 737 typed product keywords ·
 115 catalogue images · 5 source documents · 103 source sections ·
 659 source claims · 659 page-level claim citations ·
-144 data-quality issues · 50 source files hashed.
+144 data-quality issues · 50 source files hashed ·
+37 ontology concepts · 186 ontology synonyms (Phase 6).
+
+## Phase 6 — clinical/search ontology
+
+`pipeline/ingest.py` also stages the curated search ontology from the
+committed seed `data/ontology/clinical-search-ontology.json` (not from the
+corpus — this is pharmacist-curated data, not manufacturer source material).
+It maps consumer wording, clinical synonyms, medicine brand aliases and
+spelling variants onto the clinical-use tags that catalogue products actually
+carry, across three matcher categories:
+
+- `medication_class` → drug-class matching (e.g. `nexium` → PPI tags)
+- `patient_factor` → factor matching (e.g. `renal disease`, `polypharmacy`)
+- `symptom` / `health_goal` → symptom/goal matching (e.g. `night cramps`,
+  `trying to conceive`, `frequent colds`)
+
+Concepts upsert on `(concept_type, canonical_label)`; synonyms on
+`(concept_id, term)` after concept-ID resolution. `auto_proposed` synonyms
+would stage with `approved = false` and never influence matching until a
+reviewer approves them in the Phase 14 governance workflow; every synonym in
+the seed is curated and approved. The tag choices were made against the real
+corpus tag set (see `data/reports/`) — tags with no products were dropped
+from the seed, and tag cleanup such as `joint_health (review)` remains a
+Phase 14 data-quality task.
 
 ## One-time manual steps (live project)
 
@@ -62,7 +86,8 @@ environment only, never commit it.
 3. Run `python3 -m pipeline.ingest --apply`.
 4. Verify: 103 rows in `catalogue_products`, 121 in `product_variants`,
    737 in `product_keywords`, 115 in `product_images`, 659 in
-   `source_claims`, and 659 in `claim_citations`; check `ingestion_runs`
+   `source_claims`, and 659 in `claim_citations`; 37 in `ontology_concepts`
+   and 186 in `ontology_synonyms`; check `ingestion_runs`
    shows `complete`.
 
 ## Known gaps carried into the review queue

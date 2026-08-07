@@ -45,12 +45,15 @@ safety_warning / directions / interaction / educational / population_rule) ·
 `extraction_conflicts` · `data_quality_issues` (seeded from the corpus's
 144 logged issues) · `catalogue_review_actions` (who/what/when/why audit)
 
-Search ontology (content arrives in Phase 6):
+Search ontology (seeded in Phase 6 from
+`data/ontology/clinical-search-ontology.json`):
 `ontology_concepts` (symptom / condition / health_goal / medication_class /
-medicine_ingredient / nutrient_depletion / cm_ingredient / contraindication /
-warning / referral, each mapped to clinical_use_tags) ·
+patient_factor / medicine_ingredient / nutrient_depletion / cm_ingredient /
+contraindication / warning / referral, each mapped to clinical_use_tags) ·
 `ontology_synonyms` (typed + provenance; `auto_proposed` requires approval
-before it is authoritative).
+before it is authoritative). The recommendation engine loads these tables via
+`src/lib/ontology.ts` and falls back to built-in default maps whenever the
+tables are unavailable or a category has no curated entries.
 
 ## RLS summary
 

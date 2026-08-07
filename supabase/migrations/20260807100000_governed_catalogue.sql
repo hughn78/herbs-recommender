@@ -349,8 +349,8 @@ CREATE TABLE IF NOT EXISTS public.ontology_concepts (
   concept_type   text NOT NULL
                    CHECK (concept_type IN
                      ('symptom','condition','health_goal','medication_class',
-                      'medicine_ingredient','nutrient_depletion','cm_ingredient',
-                      'contraindication','warning','referral')),
+                      'patient_factor','medicine_ingredient','nutrient_depletion',
+                      'cm_ingredient','contraindication','warning','referral')),
   canonical_label text NOT NULL,
   clinical_use_tags text[] NOT NULL DEFAULT '{}',        -- tag(s) this concept maps to
   created_at     timestamptz NOT NULL DEFAULT now(),

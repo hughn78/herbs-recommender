@@ -8,6 +8,7 @@ import { publicSupabase } from "./public-supabase-middleware";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { runEngine, type PatientCtx, type SafetyRuleRow } from "./engine";
 import { loadEngineProducts } from "./catalogue-products";
+import { loadOntologyTagMaps } from "./ontology";
 import { attachEvidence } from "./retrieval";
 import { runAiSenseCheck } from "./ai-sense-check";
 
@@ -126,13 +127,19 @@ export const createCaseFn = createServerFn({ method: "POST" })
     // Phase 7: approved governed-catalogue products are authoritative. The
     // loader falls back to the legacy flat table while the new catalogue is
     // being migrated and clinically reviewed.
-    const [rulesRes, productLoad] = await Promise.all([
+    const [rulesRes, productLoad, ontologyLoad] = await Promise.all([
       supabase.from("safety_rules").select("*"),
       loadEngineProducts(supabase),
+      loadOntologyTagMaps(supabase),
     ]);
     if (rulesRes.error) throw new Error(rulesRes.error.message);
     if (productLoad.catalogueError) {
       console.warn(`[catalogue] falling back to legacy products: ${productLoad.catalogueError}`);
+    }
+    // Phase 6: ontology tag maps are an enhancement — on any failure the
+    // engine falls back to its built-in default maps.
+    if (ontologyLoad.error) {
+      console.warn(`[ontology] falling back to built-in tag maps: ${ontologyLoad.error}`);
     }
     const rules: SafetyRuleRow[] = (rulesRes.data ?? []).map((r) => ({
       rule_id: r.rule_id,
@@ -166,7 +173,7 @@ export const createCaseFn = createServerFn({ method: "POST" })
       confirmed_medications: data.confirmed_medications,
     };
 
-    const baseRecs = await attachEvidence(supabase, runEngine(ctx, rules, products));
+    const baseRecs = await attachEvidence(supabase, runEngine(ctx, rules, products, ontologyLoad.maps));
     // Transient reviews must not send patient context to the external AI
     // gateway. They receive deterministic results only; no audit row is
     // persisted below either.
