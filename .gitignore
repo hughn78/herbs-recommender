@@ -30,3 +30,19 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# macOS AppleDouble metadata (external volume)
+._*
+
+# Source corpus + scraper artefacts (kept in workspace, not committed)
+docs/herbsofgold_scraped/
+cookies.txt
+~$*
+
+# Derived pipeline artefacts (regenerable)
+data/derived/
