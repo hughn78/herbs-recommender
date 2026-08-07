@@ -424,3 +424,104 @@ runbook (documented only in MIGRATIONS_README).
 - Verification after these changes: `python3 -m pipeline.ingest --dry-run` —
   passed (37 concepts / 186 synonyms staged); `npm test` — 126/126 passed;
   `npx tsc --noEmit` — passed; `npm run build` — passed.
+
+### Phases 8–10 — product images and result cards
+
+- `ProductRow`, `ProductRecommendation` and `GeneratedRec` now carry an
+  optional `image` (primary pack shot: storage path, alt text, dimensions).
+  The catalogue loader joins `product_images` and picks the approved primary;
+  persisted case recommendations resolve images at read time from the
+  catalogue (single source of truth) instead of denormalising them into the
+  `recommendations` table, so no schema change was needed there.
+- New `src/lib/product-images.ts` resolves public URLs from the
+  `product-images` bucket, stripping the bucket prefix the pipeline stores.
+- Result cards (saved case view and unsaved transient view) render the pack
+  shot; products without an approved image fall back to the type icon, never
+  a broken image.
+- Product groups now show the top 3 ranked products as full cards with the
+  remainder behind an explicit "Show N more" expansion (compact list with
+  per-row expansion), replacing the old behaviour where a 3+ minor bucket
+  collapsed entirely to names and hid the strongest matches. A print-only
+  fallback still lists collapsed products by name.
+- Verification: `npx tsc --noEmit` — passed; `npm test` — 126/126 passed.
+
+### Phases 11–12 — staff product browser and source-material explorer
+
+- New `src/lib/catalogue.functions.ts` serves the staff browser: every
+  catalogue product with review status (not just approved), full structured
+  detail (ingredients, indications, warnings, interactions, directions,
+  counselling flags, pack variants, images), and evidence-claim counts.
+- New `src/lib/references.functions.ts` exposes the provenance chain to
+  ordinary staff: source documents, per-product monograph sections, and
+  extracted claims with page-level citations.
+- `/app/products` is now a governed-catalogue browser with pack shots,
+  dosage form, pack sizes, review-status and tag filters, a detail page
+  (`/app/products/:hogCode`) with structured sections and a collapsible
+  source-evidence view, and a compare tray (up to 3 products side by side).
+  It falls back to the legacy product list with a clear banner when the
+  catalogue migration is not applied yet.
+- `/app/references` is now a source library (the 5 corpus documents with
+  format/role/page/section counts, expandable per-product sections linking
+  to product detail) above the existing clinical knowledge search. Both
+  pages are reachable by any authenticated staff member — the files moved
+  out of the `_admin` pathless layout (`app._admin.products.tsx` and
+  `app._admin.references.tsx` removed). Ingestion controls remain
+  admin-only.
+
+### Phase 14 — clinical content governance workflow
+
+- New migration `20260807120000_governance_workflow.sql` grants
+  least-privilege review capability to authenticated staff: column-level
+  UPDATE grants on review-status columns only (`catalogue_products`,
+  `product_indications`, `product_warnings`, `product_images`,
+  `source_claims`, `ontology_synonyms.approved`,
+  `data_quality_issues.status`), with matching UPDATE policies. All other
+  catalogue writes remain service-role only (ingestion).
+- New `src/lib/governance.functions.ts`: review-queue summary, per-entity
+  approve/reject with mandatory reason, and a safe bulk-approve for the
+  initial 103-product ingestion. Every transition reads the previous value
+  and writes a `catalogue_review_actions` row (reviewer, previous → new,
+  reason, timestamp).
+- New `/app/governance` page (sidebar: "Catalogue governance") shows queue
+  counts, the bulk-approve bar with explicit confirmation, per-product
+  approve/reject, and data-quality issue triage. Until products are bulk or
+  individually approved after first ingestion, the engine continues to fall
+  back to the legacy products table by design.
+
+### Phase 15 — expanded regression tests
+
+- New `src/lib/regression-cases.test.ts` adds cases D–H on top of the
+  existing precision-floor cases A–C: ranking-flattening fix (distinct
+  confidence scores through the engine), per-product citations, ontology
+  consumer wording against the real corpus catalogue, image threading, and
+  full engine integration with ontology maps (citations + images + ranking).
+- Verification (2026-08-08, after route-tree regeneration): `npm run build` —
+  passed; `npx tsc --noEmit` — passed; `npm test` — 132/132 passed
+  (126 baseline + 6 new regression cases).
+
+### Phase 16 — performance notes (no refactor required)
+
+Measured-by-design rather than by profiler; the hot paths were structured to
+avoid the obvious costs:
+
+- **Case creation** loads safety rules, engine products and ontology maps in
+  a single `Promise.all`; the catalogue product loader uses one nested
+  PostgREST select (variants, keywords, ingredients, indications, warnings,
+  interaction flags, images in one round trip) instead of per-child N+1
+  queries.
+- **Product matching** is O(products × tags) over pre-computed reverse
+  indexes (`FACTOR_TO_AVOID`, `CLASS_TO_AVOID`) and runs the full 103-product
+  catalogue plus rule engine in well under the test-suite's 80 ms total.
+- **Case view** fetches case, recommendations and sense-check audit in
+  parallel; image resolution adds two small queries only when product
+  recommendations exist, and degrades silently when the catalogue is not
+  migrated.
+- **Staff browser** loads all 103 product summaries in one joined query;
+  compare/detail views go through react-query's cache keyed by HOG code.
+- **Images** are served from the public storage bucket (CDN-cached), not
+  through the API.
+
+No further refactor is warranted at this data scale (103 products, ~700
+keywords, ~660 claims). If the catalogue grows past a few thousand products,
+the next lever is server-side tag filtering in `listCatalogueProductsFn`,
+not client changes.

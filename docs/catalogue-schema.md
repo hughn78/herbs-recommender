@@ -59,10 +59,15 @@ tables are unavailable or a category has no curated entries.
 
 | Data | anon | authenticated | write |
 |---|---|---|---|
-| Catalogue content (products, ingredients, indications, warnings, images, keywords, ontology) | read | read | service role only |
-| Provenance (source documents/sections/claims/citations) | — | read | service role only |
-| Governance (runs, conflicts, issues, review actions) | — | read | service role; staff may insert review actions (`reviewer = auth.uid()`) |
+| Catalogue content (products, ingredients, indications, warnings, images, keywords, ontology) | read | read | service role (ingestion); staff may UPDATE review-status columns only (Phase 14) |
+| Provenance (source documents/sections/claims/citations) | — | read | service role; staff may UPDATE claim review-status (Phase 14) |
+| Governance (runs, conflicts, issues, review actions) | — | read | service role; staff may insert review actions (`reviewer = auth.uid()`) and triage issue status (Phase 14) |
 | Storage `product-images` bucket | read | read | service role only |
+
+Phase 14 (`20260807120000_governance_workflow.sql`) grants authenticated
+staff column-level UPDATE on review-status columns so the governance queue
+can approve/reject content; every transition is audited in
+`catalogue_review_actions`. All other catalogue writes remain ingestion-only.
 
 Patient-data privacy (cases/recommendations) is handled separately in
 Phase 13 — this migration deliberately does not touch it.

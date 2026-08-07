@@ -4,6 +4,8 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { toast } from "sonner";
 import { getCaseFn } from "@/lib/cases.functions";
+import { productImageProps } from "@/lib/product-images";
+import type { ProductImageRef } from "@/lib/recommend-products";
 import {
   exportCaseFn,
   getCaseFeedbackFn,
@@ -66,6 +68,9 @@ type RecRow = {
   safety_net: string | null;
   alternatives: unknown;
   onset: string | null;
+  /** Phase 9: primary pack shot resolved from the governed catalogue at
+   *  read time (null when no approved image or catalogue not migrated). */
+  image?: ProductImageRef | null;
 };
 
 type SeverityTier = "contraindicated" | "major" | "moderate" | "minor";
@@ -368,12 +373,23 @@ function RecCard({
     (r.safety_net ?? "").trim() === STANDARD_PRODUCT_SAFETY_NET;
   const showSafetyNet = !(suppressStandardProductBoilerplate && isStandardSafetyNet);
 
+  // Phase 9: approved primary pack shot for catalogue product cards.
+  const packShot = isProduct ? productImageProps(r.image) : null;
+
   return (
     <article
       className={`pp-glass p-5 ${isSafety ? "pp-safety" : ""} ${isProduct ? "pp-product" : ""}`}
     >
       <div className="flex items-start gap-3">
-        <Icon className={`h-5 w-5 mt-0.5 ${isSafety ? "text-signal" : "text-accent"}`} />
+        {packShot ? (
+          <img
+            {...packShot}
+            loading="lazy"
+            className="h-20 w-20 shrink-0 rounded-md border border-hairline object-contain bg-white"
+          />
+        ) : (
+          <Icon className={`h-5 w-5 mt-0.5 ${isSafety ? "text-signal" : "text-accent"}`} />
+        )}
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between gap-3">
             <div className="min-w-0">
@@ -627,10 +643,11 @@ function RecommendationGroup({
     else buckets.minor.push(r);
   }
 
-  // Minor product bucket with 3+ items → compact list, not full cards.
-  const minorCompact = isProduct && buckets.minor.length >= 3;
-  // Severity sub-buckets only render inside product_recommendation.
-  // For other types the cards keep the existing simple stack.
+  // Phase 10: within a severity bucket, show the top 3 ranked products as
+  // full cards and put the remainder behind an explicit expansion. This
+  // replaces the old behaviour where the minor bucket collapsed entirely
+  // into a name-only list (which hid the strongest matches when 3+ products
+  // fired).
   const showSubGroups = isProduct;
 
   return (
@@ -666,7 +683,6 @@ function RecommendationGroup({
             (s) => buckets[s].length > 0,
           ).map((s) => {
             const bucket = buckets[s];
-            const compact = s === "minor" && minorCompact;
             return (
               <div key={s}>
                 <h3 className="text-[10px] uppercase tracking-wider text-muted-foreground/80 mb-2 flex items-center gap-2">
@@ -674,37 +690,86 @@ function RecommendationGroup({
                   <span className="text-foreground/50">·</span>
                   <span className="text-foreground/60">{bucket.length}</span>
                 </h3>
-                {compact ? (
-                  <CompactMinorList
-                    items={bucket}
-                    feedback={feedback}
-                    caseId={caseId}
-                  />
-                ) : (
-                  <div className="space-y-3">
-                    {bucket.map((r) => {
-                      const latest = (feedback ?? []).find(
-                        (f) => f.recommendation_id === r.recommendation_id,
-                      );
-                      return (
-                        <RecCard
-                          key={r.recommendation_id}
-                          r={r}
-                          caseId={caseId}
-                          latestStatus={(latest?.status as FeedbackStatus | undefined) ?? null}
-                          latestNotes={latest?.notes ?? null}
-                          suppressStandardProductBoilerplate
-                        />
-                      );
-                    })}
-                  </div>
-                )}
+                <ProductBucketList items={bucket} feedback={feedback} caseId={caseId} />
               </div>
             );
           })}
         </div>
       )}
     </section>
+  );
+}
+
+const INITIAL_VISIBLE_PRODUCTS = 3;
+
+/** Renders one severity bucket of product recommendations: the top
+ *  INITIAL_VISIBLE_PRODUCTS by rank as full cards, the rest behind a
+ *  "Show N more" toggle as a compact expandable list. */
+function ProductBucketList({
+  items,
+  feedback,
+  caseId,
+}: {
+  items: RecRow[];
+  feedback: FeedbackRow[] | undefined;
+  caseId: string;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const visible = items.slice(0, INITIAL_VISIBLE_PRODUCTS);
+  const hidden = items.slice(INITIAL_VISIBLE_PRODUCTS);
+
+  return (
+    <div className="space-y-3">
+      {visible.map((r) => {
+        const latest = (feedback ?? []).find(
+          (f) => f.recommendation_id === r.recommendation_id,
+        );
+        return (
+          <RecCard
+            key={r.recommendation_id}
+            r={r}
+            caseId={caseId}
+            latestStatus={(latest?.status as FeedbackStatus | undefined) ?? null}
+            latestNotes={latest?.notes ?? null}
+            suppressStandardProductBoilerplate
+          />
+        );
+      })}
+      {hidden.length > 0 && (
+        <div className="no-print">
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-wider text-muted-foreground hover:text-foreground"
+            aria-expanded={expanded}
+          >
+            <ChevronDown
+              className={`h-3 w-3 transition-transform ${expanded ? "rotate-0" : "-rotate-90"}`}
+            />
+            {expanded ? "Hide" : "Show"} {hidden.length} more product
+            {hidden.length === 1 ? "" : "s"}
+          </button>
+          {expanded && (
+            <div className="mt-3">
+              <CompactMinorList items={hidden} feedback={feedback} caseId={caseId} />
+            </div>
+          )}
+        </div>
+      )}
+      {/* Print fallback: collapsed products still appear (names only) in
+          printouts, where the interactive toggle is unavailable. */}
+      {hidden.length > 0 && (
+        <ul className="hidden print:block text-xs text-muted-foreground space-y-0.5">
+          {hidden.map((r) => (
+            <li key={r.recommendation_id}>
+              {r.title}
+              {r.brand ? ` · ${r.brand}` : ""}
+              {r.product_id ? ` · ${r.product_id}` : ""}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }
 

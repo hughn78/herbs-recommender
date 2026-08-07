@@ -4,11 +4,13 @@
 // patient reviews require a staff session; rows are owned by the reviewer
 // (RLS owner policies), and a transient mode runs without persistence.
 import { createServerFn } from "@tanstack/react-start";
+import type { SupabaseClient } from "@supabase/supabase-js";
 import { publicSupabase } from "./public-supabase-middleware";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { runEngine, type PatientCtx, type SafetyRuleRow } from "./engine";
 import { loadEngineProducts } from "./catalogue-products";
 import { loadOntologyTagMaps } from "./ontology";
+import type { ProductImageRef } from "./recommend-products";
 import { attachEvidence } from "./retrieval";
 import { runAiSenseCheck } from "./ai-sense-check";
 
@@ -108,9 +110,69 @@ export const getCaseFn = createServerFn({ method: "GET" })
     if (caseRes.error) throw new Error(caseRes.error.message);
     if (recsRes.error) throw new Error(recsRes.error.message);
     if (!caseRes.data) throw new Error("Case not found");
+
+    // Phase 8/9: attach primary pack shots to product recommendation rows.
+    // Images stay in the governed catalogue (single source of truth) rather
+    // than being denormalised into the recommendations table; any catalogue
+    // read failure simply means no images on this render.
+    const recs = recsRes.data ?? [];
+    const hogCodes = Array.from(
+      new Set(
+        recs
+          .filter((r) => r.recommendation_type === "product_recommendation")
+          .map((r) => r.product_id)
+          .filter((id): id is string => typeof id === "string" && id.startsWith("HOG-")),
+      ),
+    );
+    let imageByHog = new Map<string, ProductImageRef>();
+    if (hogCodes.length > 0) {
+      try {
+        // The generated Database types predate the governed catalogue;
+        // query these tables through the untyped client like the catalogue
+        // and ontology loaders do.
+        const db = context.supabase as unknown as SupabaseClient;
+        const { data: prods } = await db
+          .from("catalogue_products")
+          .select("product_id, hog_code")
+          .in("hog_code", hogCodes);
+        const uuidToHog = new Map(
+          (prods ?? []).map((p) => [p.product_id as string, p.hog_code as string]),
+        );
+        if (uuidToHog.size > 0) {
+          const { data: images } = await db
+            .from("product_images")
+            .select("product_id, storage_path, alt_text, width, height, is_primary")
+            .in("product_id", Array.from(uuidToHog.keys()));
+          const byProduct = new Map<string, NonNullable<typeof images>>();
+          for (const img of images ?? []) {
+            if (!img.storage_path) continue;
+            const list = byProduct.get(img.product_id) ?? [];
+            list.push(img);
+            byProduct.set(img.product_id, list);
+          }
+          for (const [uuid, imgs] of byProduct) {
+            const hog = uuidToHog.get(uuid);
+            if (!hog) continue;
+            const pick = imgs.find((i) => i.is_primary) ?? imgs[0];
+            imageByHog.set(hog, {
+              storage_path: pick.storage_path as string,
+              alt_text: pick.alt_text,
+              width: pick.width,
+              height: pick.height,
+            });
+          }
+        }
+      } catch {
+        imageByHog = new Map(); // catalogue not migrated yet — render without images
+      }
+    }
+
     return {
       patientCase: caseRes.data,
-      recommendations: recsRes.data ?? [],
+      recommendations: recs.map((r) => ({
+        ...r,
+        image: (r.product_id && imageByHog.get(r.product_id)) ?? null,
+      })),
       senseCheck: auditRes.data ?? null,
     };
   });

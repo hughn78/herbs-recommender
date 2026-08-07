@@ -1,7 +1,7 @@
 // Deterministic guardrail engine (Phase 1) + product recommendations (Phase 5)
 // + structured rationale on every rec (Phase 6).
 // Runs on the server inside a serverFn. No AI, no vector search.
-import { recommendProducts, type ProductRow, type TagMaps } from "./recommend-products";
+import { recommendProducts, type ProductRow, type ProductImageRef, type TagMaps } from "./recommend-products";
 import {
   buildRationale,
   type Rationale,
@@ -76,6 +76,8 @@ export type GeneratedRec = {
   matched_patient_factors: string[];
   matched_product_tags?: string[];
   source_references: Array<{ source: string; tier_label: string; note: string }>;
+  /** Phase 8: primary pack shot for product recommendation cards. */
+  image?: ProductImageRef | null;
 };
 
 const TYPE_BASE_SCORE: Record<RecType, number> = {
@@ -503,6 +505,7 @@ export function runEngine(
         matched_patient_factors: pr.matched_patient_factors,
         matched_product_tags: pr.matched_product_tags,
         source_references: pr.source_references,
+        image: pr.image ?? null,
       });
     }
   }

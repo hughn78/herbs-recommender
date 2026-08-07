@@ -7,7 +7,7 @@
 // behaviour during rollout while making approved catalogue data authoritative.
 
 import type { SupabaseClient } from "@supabase/supabase-js";
-import type { ProductRow, ProductSourceRef } from "./recommend-products";
+import type { ProductImageRef, ProductRow, ProductSourceRef } from "./recommend-products";
 
 const LEGACY_PRODUCT_SELECT =
   "product_id, name, brand, category, active_ingredients, indications, cautions, pack_sizes, schedule, reviewed, source_url, notes, clinical_use_tags, avoid_if_tags, medicine_interaction_flags, counselling_flags";
@@ -35,7 +35,8 @@ const CATALOGUE_PRODUCT_SELECT = `
   ),
   product_indications(text, clinical_use_tag, source_page, review_status),
   product_warnings(text, avoid_if_tags, source_page, review_status),
-  product_interaction_flags(interaction_text, flags, source_page)
+  product_interaction_flags(interaction_text, flags, source_page),
+  product_images(storage_path, alt_text, width, height, is_primary)
 `;
 
 type KeywordRow = {
@@ -78,6 +79,14 @@ type InteractionRow = {
   source_page: number | null;
 };
 
+type ImageJoinRow = {
+  storage_path: string | null;
+  alt_text: string | null;
+  width: number | null;
+  height: number | null;
+  is_primary: boolean | null;
+};
+
 type CatalogueProductRow = {
   hog_code: string;
   name: string;
@@ -92,6 +101,7 @@ type CatalogueProductRow = {
   product_indications: IndicationRow[] | IndicationRow | null;
   product_warnings: WarningRow[] | WarningRow | null;
   product_interaction_flags: InteractionRow[] | InteractionRow | null;
+  product_images: ImageJoinRow[] | ImageJoinRow | null;
 };
 
 export type EngineProductLoad = {
@@ -181,6 +191,22 @@ function mapCatalogueProduct(row: CatalogueProductRow): ProductRow {
     medicine_interaction_flags: interactionFlags,
     counselling_flags: keywordsOfType("counselling_flag"),
     source_references: [catalogueCitation(row)],
+    image: primaryImage(row),
+  };
+}
+
+/** Phase 8: pick the approved primary pack shot (fall back to the first
+ *  image with a storage object). Images without an uploaded object are
+ *  skipped so cards never render a broken image. */
+function primaryImage(row: CatalogueProductRow): ProductImageRef | null {
+  const images = asArray(row.product_images).filter((i) => !!i.storage_path);
+  if (!images.length) return null;
+  const pick = images.find((i) => i.is_primary) ?? images[0];
+  return {
+    storage_path: pick.storage_path as string,
+    alt_text: pick.alt_text,
+    width: pick.width,
+    height: pick.height,
   };
 }
 

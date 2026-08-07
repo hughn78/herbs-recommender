@@ -170,3 +170,25 @@ SQL migrations as files and pushing them via GitHub, on the
 assumption that Lovable would apply them. It does not. Future schema
 work goes through the Lovable agent. This README is the durable
 record of that rule.
+
+## 2026-08-07 — governed catalogue migrations (hand-apply required)
+
+The Herbs of Gold intelligence work adds four hand-authored migrations that
+must be pasted into the Lovable/Supabase SQL editor in this order (all
+idempotent):
+
+1. `supabase/migrations/20260807100000_governed_catalogue.sql` — normalised
+   governed catalogue (22 tables), provenance chain, search ontology, RLS.
+2. `supabase/migrations/20260807101000_product_image_storage.sql` — public
+   `product-images` storage bucket.
+3. `supabase/migrations/20260807110000_privacy_lockdown.sql` — anonymous
+   patient-data lockdown, owner policies, staff reference reads.
+4. `supabase/migrations/20260807120000_governance_workflow.sql` — Phase 14
+   least-privilege review grants for authenticated staff.
+
+After applying, set `SUPABASE_SERVICE_ROLE_KEY` and run
+`python3 -m pipeline.ingest --apply` (see `docs/ingestion-pipeline.md`),
+then use the `/app/governance` page (or its bulk-approve bar) to approve
+the initial 103 products so the governed catalogue starts driving
+recommendations. Record the run in `migrations/APPLIED.md` per the rule
+above.

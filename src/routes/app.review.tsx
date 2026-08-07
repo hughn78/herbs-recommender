@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { getDictionaryFn, createCaseFn, type ConfirmedMed } from "@/lib/cases.functions";
 import type { GeneratedRec } from "@/lib/engine";
+import { productImageProps } from "@/lib/product-images";
 import { parseMedications, type DictEntry, type ParsedItem } from "@/lib/parser";
 import { Check, AlertCircle, HelpCircle, X, ShieldCheck } from "lucide-react";
 
@@ -434,21 +435,35 @@ function TransientResults({
             {group.severity} · {group.items.length}
           </h2>
           <div className="space-y-3">
-            {group.items.map((r, i) => (
+            {group.items.map((r, i) => {
+              const packShot =
+                r.recommendation_type === "product_recommendation"
+                  ? productImageProps(r.image)
+                  : null;
+              return (
               <article key={`${r.rank}-${r.title}-${i}`} className="pp-glass p-5">
                 <div className="flex items-start justify-between gap-3">
-                  <div className="min-w-0">
-                    <p className="text-[11px] uppercase tracking-wider text-muted-foreground">
-                      {TYPE_LABEL[r.recommendation_type] ?? r.recommendation_type}
-                    </p>
-                    <h3 className="mt-1 font-display text-lg leading-snug">{r.title}</h3>
-                    {(r.brand || r.product_id) && (
-                      <p className="mt-1 text-xs text-muted-foreground">
-                        {r.brand}
-                        {r.brand && r.product_id ? " · " : ""}
-                        {r.product_id ? <span className="font-mono">{r.product_id}</span> : null}
-                      </p>
+                  <div className="flex items-start gap-3 min-w-0">
+                    {packShot && (
+                      <img
+                        {...packShot}
+                        loading="lazy"
+                        className="h-20 w-20 shrink-0 rounded-md border border-hairline object-contain bg-white"
+                      />
                     )}
+                    <div className="min-w-0">
+                      <p className="text-[11px] uppercase tracking-wider text-muted-foreground">
+                        {TYPE_LABEL[r.recommendation_type] ?? r.recommendation_type}
+                      </p>
+                      <h3 className="mt-1 font-display text-lg leading-snug">{r.title}</h3>
+                      {(r.brand || r.product_id) && (
+                        <p className="mt-1 text-xs text-muted-foreground">
+                          {r.brand}
+                          {r.brand && r.product_id ? " · " : ""}
+                          {r.product_id ? <span className="font-mono">{r.product_id}</span> : null}
+                        </p>
+                      )}
+                    </div>
                   </div>
                   <span className="pp-chip text-[11px] shrink-0">
                     {r.confidence} confidence · {r.confidence_score}
@@ -502,7 +517,8 @@ function TransientResults({
                   </div>
                 )}
               </article>
-            ))}
+              );
+            })}
           </div>
         </section>
       ))}

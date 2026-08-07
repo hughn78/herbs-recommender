@@ -23,6 +23,16 @@ export type ProductSourceRef = {
   url?: string;
 };
 
+/** Phase 8: primary pack shot from the governed catalogue. storage_path is
+ *  the object key inside the public `product-images` bucket; the UI resolves
+ *  it to a public URL. Legacy rows leave this unset. */
+export type ProductImageRef = {
+  storage_path: string;
+  alt_text: string | null;
+  width: number | null;
+  height: number | null;
+};
+
 export type ProductRow = {
   product_id: string;
   name: string;
@@ -43,6 +53,8 @@ export type ProductRow = {
   /** Phase 7: governed-catalogue citations. Legacy rows leave this unset and
    *  receive the old generic catalogue reference below. */
   source_references?: ProductSourceRef[];
+  /** Phase 8: primary pack shot, when the catalogue has an approved image. */
+  image?: ProductImageRef | null;
 };
 
 export type ProductRecommendation = {
@@ -66,6 +78,8 @@ export type ProductRecommendation = {
   rationale: Rationale;
   severity_tier: SeverityTier;
   confidence_score: number;
+  /** Phase 8: primary pack shot carried through for the result card. */
+  image?: ProductImageRef | null;
 };
 
 export type DrugClassTagMap = Record<string, string[]>;
@@ -597,6 +611,7 @@ export function recommendProducts(
       }),
       severity_tier: "minor",
       confidence_score: confidenceScore,
+      image: product.image ?? null,
     });
   }
 
