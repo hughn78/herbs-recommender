@@ -1,0 +1,826 @@
+[
+  {
+    "product_id": "HOG-0001",
+    "product_name": "Acetyl L-Carnitine",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0002",
+    "product_name": "Activated B Complex",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0003",
+    "product_name": "Activated B12 Spray",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0004",
+    "product_name": "Activated Folate 500",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0005",
+    "product_name": "Activated Sublingual B12",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0006",
+    "product_name": "Alpha Lipoic 300",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0007",
+    "product_name": "Astra Recharge",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0008",
+    "product_name": "B Sustained Release",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0009",
+    "product_name": "Berberine ImmunoPlex",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0010",
+    "product_name": "Bergamot Cholesterol Care",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0011",
+    "product_name": "Bio Curcumin 5400",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0012",
+    "product_name": "Biotin 3mg",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0013",
+    "product_name": "Breastfeeding Support",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0014",
+    "product_name": "Bromelain Forte",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0015",
+    "product_name": "Bulgarian Tribulus Complex",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0016",
+    "product_name": "Calcium K2 with D3",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0017",
+    "product_name": "Candida Relief",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0018",
+    "product_name": "Children’s Calci Care",
+    "in_docx": true,
+    "in_xlsx_toc": false,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0019",
+    "product_name": "Children’s Calm Care",
+    "in_docx": true,
+    "in_xlsx_toc": false,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0020",
+    "product_name": "Children’s Fish-i Care",
+    "in_docx": true,
+    "in_xlsx_toc": false,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0021",
+    "product_name": "Children’s Immune Care",
+    "in_docx": true,
+    "in_xlsx_toc": false,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0022",
+    "product_name": "Children’s Magnesium Care",
+    "in_docx": true,
+    "in_xlsx_toc": false,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0023",
+    "product_name": "Children’s Multi Care",
+    "in_docx": true,
+    "in_xlsx_toc": false,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0024",
+    "product_name": "Children’s Probiotic 15 Billion",
+    "in_docx": true,
+    "in_xlsx_toc": false,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0025",
+    "product_name": "Chromium MAX",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0026",
+    "product_name": "Clear Skin",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0027",
+    "product_name": "Cold & Flu Strike",
+    "in_docx": true,
+    "in_xlsx_toc": false,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0028",
+    "product_name": "Collagen",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0029",
+    "product_name": "Collagen Forte",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0030",
+    "product_name": "Collagen Gold",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0031",
+    "product_name": "CoQ10 150mg",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0032",
+    "product_name": "Cranberry 70 000",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": false
+  },
+  {
+    "product_id": "HOG-0033",
+    "product_name": "Digest-Zymes",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0034",
+    "product_name": "Echinacea 4000 Complex",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0035",
+    "product_name": "Elderberry Echinacea & Olive Leaf",
+    "in_docx": true,
+    "in_xlsx_toc": false,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0036",
+    "product_name": "Evening Primrose Oil Daily",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0037",
+    "product_name": "Fish Oil 1000",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0038",
+    "product_name": "Folic Acid Complex",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0039",
+    "product_name": "Ginkgo Biloba 6000",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0040",
+    "product_name": "Ginseng 4 Energy Gold",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0041",
+    "product_name": "GlucoPlex",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0042",
+    "product_name": "Glucosamine MAX",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0043",
+    "product_name": "Gout Relief Complex",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0044",
+    "product_name": "Grape Seed Gold",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0045",
+    "product_name": "Gut Care",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0046",
+    "product_name": "Hawthorn 4500",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0047",
+    "product_name": "Hayfever & Sinus Ease",
+    "in_docx": true,
+    "in_xlsx_toc": false,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0048",
+    "product_name": "Hormone Metabolism",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0049",
+    "product_name": "Iodine MAX",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0050",
+    "product_name": "Liver Care",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0051",
+    "product_name": "Lung Care",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0052",
+    "product_name": "Macu-Guard",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0053",
+    "product_name": "Magnesium Chewable",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0054",
+    "product_name": "Magnesium Citrate 900",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0055",
+    "product_name": "Magnesium Forte",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0056",
+    "product_name": "Magnesium Muscle Cream",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0057",
+    "product_name": "Magnesium Night Plus",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0058",
+    "product_name": "Mega B Complex",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0059",
+    "product_name": "Memory & Cognition Gold",
+    "in_docx": true,
+    "in_xlsx_toc": false,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0060",
+    "product_name": "Menopause Relief",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0061",
+    "product_name": "Mind Ease",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0062",
+    "product_name": "Muscle Resuscitation",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0063",
+    "product_name": "Mushroom 5 Complex",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0064",
+    "product_name": "Natural Vitamin E 500IU",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0065",
+    "product_name": "Niacin 100mg Extended Release",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0066",
+    "product_name": "Olive Leaf",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0067",
+    "product_name": "Olive Leaf 7500",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0068",
+    "product_name": "Organic Iron MAX",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0069",
+    "product_name": "Organic Oregano Oil",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0070",
+    "product_name": "Pain Relief PEA",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0071",
+    "product_name": "ParaStrike",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0072",
+    "product_name": "Pregnancy Plus 1-2-3",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0073",
+    "product_name": "Probiotic 60 Billion",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0074",
+    "product_name": "Prostate Pro",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0075",
+    "product_name": "Quercetin Complex",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0076",
+    "product_name": "Raspberry Leaf",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0077",
+    "product_name": "Resveratrol AdvantAGE",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0078",
+    "product_name": "Sea Buckthorn Oil",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0079",
+    "product_name": "Selenium 150 MAX",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0080",
+    "product_name": "Silica Hair Skin & Nails",
+    "in_docx": true,
+    "in_xlsx_toc": false,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0081",
+    "product_name": "Silica Hair Solution",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0082",
+    "product_name": "Sleep Ease",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0083",
+    "product_name": "Slippery Elm 400mg",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0084",
+    "product_name": "St John's Wort 3600",
+    "in_docx": true,
+    "in_xlsx_toc": false,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0085",
+    "product_name": "St Mary’s Thistle 35 000",
+    "in_docx": true,
+    "in_xlsx_toc": false,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0086",
+    "product_name": "Stress Ease",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0087",
+    "product_name": "Sublingual B12 1000",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0088",
+    "product_name": "Super Brahmi 6000",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0089",
+    "product_name": "Super Calcium Plus with Boron",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0091",
+    "product_name": "Triple Strength Omega-3",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0092",
+    "product_name": "Tyrosine 1000",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0093",
+    "product_name": "Ubiquinol 100mg",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0094",
+    "product_name": "Ubiquinol 150mg",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0095",
+    "product_name": "Vitamin B1 100mg",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0096",
+    "product_name": "Vitamin B2 200mg",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0097",
+    "product_name": "Vitamin B3 500mg",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0098",
+    "product_name": "Vitamin B5 500mg",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0099",
+    "product_name": "Vitamin B6 100mg",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0100",
+    "product_name": "Vitamin C 1000 Plus",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0101",
+    "product_name": "Vitamin D3 1000",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0102",
+    "product_name": "Vitamin K2 180 MAX",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  },
+  {
+    "product_id": "HOG-0103",
+    "product_name": "Vitex 1000",
+    "in_docx": true,
+    "in_xlsx_toc": true,
+    "in_pdf_index": false,
+    "in_markdown": true
+  }
+]

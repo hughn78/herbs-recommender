@@ -165,16 +165,40 @@ sense_check_audits, user_roles` + function `has_role`.
      `has_role`); `has_role` EXECUTE revoked from all API roles, granted to
      `service_role` only.
 
-**Expected-but-absent corpus (mission-critical):** the mission expects
-`HerbsOfGold_KnowledgeBase/`, `markdown/herbsofgold_technical_manual.md`,
-PDF/DOCX/XLSX manuals, `inspect/*.html`, and a ZIP. **None exist in the repo,
-in git history, or anywhere on this machine** (searched home dir, Downloads,
-Desktop, Documents, Spotlight, `*_scraped` dirs, `Pharma_KB_Unified`,
-`PrescriberKB`). The only HOG product data available is the 103-row SQL seed
-in `scripts/bring_live_db_current.sql` and whatever lives in the live DB.
-Two test files reference the corpus at
-`/Users/hughn78/herbsofgold_scraped/HerbsOfGold_KnowledgeBase/output/herbs_of_gold_products.json`
-— path absent, hence the 2 baseline test failures.
+**Corpus — FOUND (2026-08-07):** the owner placed the complete scrape at
+`docs/herbsofgold_scraped/` inside the workspace (gitignored; originals
+preserved unchanged). Contents:
+- `herbsofgold_technical_manual.pdf` (206 pp, text-selectable — source of
+  truth), `.docx` (10,317 paragraphs, 103 H1 product sections), `.xlsx`
+  (flattened export; TOC product→page map), `markdown/…md` (readability
+  cross-check). PDF/DOCX/XLSX/MD are **not identical** — each has unique
+  material (PDF dotted-leader ingredient tables; DOCX prose monographs; XLSX
+  TOC mapping; MD none).
+- `HerbsOfGold_KnowledgeBase/` — a complete prior 8-script Python extraction
+  pipeline (`scripts/01–08`), with `extracted/`, `intermediate/`, `output/`
+  (`herbs_of_gold_products.json` — 103 products, structured ingredients /
+  directions / indications / cautions / interactions / clinical tags /
+  source-page references; 819 RAG chunks; extraction + validation reports).
+- `inspect/*.html` — 4 pages (2 login screens, post-login landing, tech-manual
+  link page); no product images, confirms the manual came from a pharmacist
+  portal behind login.
+- `HerbsOfGold_KnowledgeBase.zip` — archive duplicate of the KB directory.
+- `.venv/`, `chrome_profile/`, `cookies.txt`, `downloads/` — scraper
+  artefacts (~2 GB); **not corpus, excluded from git** (cookies.txt contains
+  session material — never commit).
+- **Images:** the DOCX and XLSX each embed **137 unique large PNGs** (>20 KB,
+  content-hash distinct) — product pack shots for the 103 products — plus
+  ~120–133 small boilerplate graphics. Markdown and inspect HTML contain no
+  product imagery.
+- **Known data gaps (from the corpus's own validation report):** AUST L
+  numbers absent from all 103 products (not printed in the manual); 22
+  products missing structured ingredient strengths; 2 missing dose; 13
+  missing cautions; 4 missing dosage form; 7 TOC-only entries not among the
+  103 (Probiotic + SB, Lysine 1000 + Olive Leaf, Men's Multi +, Ultra Zinc +,
+  Women's Multi +, Zinc Forte + C, Notes); 144 extraction issues logged;
+  extraction confidence 78 High / 25 Medium / 0 Low.
+- The two previously failing tests were repointed at this corpus via
+  `HOG_CATALOGUE_PATH` (commit d9936eb).
 
 ## 8. Authentication & role behaviour
 
@@ -218,10 +242,16 @@ functions, retrieval, ingestion. 8 tests skipped.
   `indications[]`, `cautions[]`, `pack_sizes[]`, schedule, tags, notes
   (HOG-#### code embedded in `notes`). No variants, no ingredients table, no
   images table, no claims/citations, no provenance beyond a single
-  `source_url`.
-- Images: **zero.** No image files, no `<img>` product references, no storage
-  bucket usage for images, `public/` contains only `favicon.ico`. Product
-  cards render no imagery at all (not even a placeholder component).
+  `source_url`. **Update 2026-08-07:** the corpus's
+  `output/herbs_of_gold_products.json` provides a much richer structured
+  model (per-ingredient strength/unit/form, adult/child directions,
+  typed+severity-classified cautions, interactions, 268 clinical-use tags,
+  330 avoid-if tags, source-page references) — this is the basis for the
+  governed catalogue (Phase 4).
+- Images: **none in the application.** No image files, no `<img>` product
+  references, no storage bucket usage, `public/` has only `favicon.ico`.
+  **Update 2026-08-07:** 137 unique product pack-shot PNGs exist embedded in
+  the corpus DOCX/XLSX — extraction and product mapping is Phase 3.
 - Live-DB counts (products/reviewed/chunks/etc.): **not yet verified** —
   network probe to the Supabase REST API was attempted but shell approvals
   expired; will be recorded in §13 once run.
@@ -305,8 +335,10 @@ runbook (documented only in MIGRATIONS_README).
 
 ## 15. Baseline failure register (pre-existing, to preserve)
 
-1. `precision-floor-validation.test.ts` — ENOENT corpus JSON (environment, not code).
-2. `recommend-products.integration.test.ts` — ENOENT corpus JSON (same).
+1. ~~`precision-floor-validation.test.ts` — ENOENT corpus JSON~~ **RESOLVED
+   2026-08-07** (corpus supplied; tests repointed via `HOG_CATALOGUE_PATH`).
+2. ~~`recommend-products.integration.test.ts` — ENOENT corpus JSON~~ **RESOLVED
+   2026-08-07** (same).
 3. 944 lint errors (943 prettier-formatting, fixable wholesale; pre-existing).
 4. 6 lint warnings (react-hooks exhaustive-deps etc.).
 5. Git index corrupted by `._*` AppleDouble files (fixed during setup).
