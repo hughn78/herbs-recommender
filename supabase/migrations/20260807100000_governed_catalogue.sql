@@ -210,7 +210,7 @@ CREATE TABLE IF NOT EXISTS public.product_keywords (
   keyword_type text NOT NULL DEFAULT 'search',
   provenance text NOT NULL DEFAULT 'source_corpus',
   approved   boolean NOT NULL DEFAULT true,
-  UNIQUE (product_id, keyword)
+  UNIQUE (product_id, keyword_type, keyword)
 );
 CREATE INDEX IF NOT EXISTS product_keywords_keyword_idx ON public.product_keywords (keyword);
 
@@ -238,7 +238,7 @@ CREATE TABLE IF NOT EXISTS public.source_documents (
   role         text,                                     -- source_of_truth | cross_check | …
   extracted_at timestamptz,
   created_at   timestamptz NOT NULL DEFAULT now(),
-  UNIQUE (corpus_path, sha256)
+  UNIQUE (corpus_path)
 );
 
 CREATE TABLE IF NOT EXISTS public.source_sections (

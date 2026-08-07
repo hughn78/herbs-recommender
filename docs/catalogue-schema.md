@@ -33,7 +33,8 @@ one `is_primary` per product, provenance in `original_source`) ·
 (strength/unit/equivalence, never flattened) · `product_indications` ·
 `product_directions` · `product_warnings` (typed + severity + avoid_if_tags) ·
 `product_interaction_flags` · `product_population_rules` ·
-`product_keywords` · `product_synonyms`
+`product_keywords` (typed search terms plus corpus clinical-use / avoid-if /
+interaction / counselling tags) · `product_synonyms`
 
 Knowledge governance:
 `source_documents` (sha256 + role) · `source_sections` ·

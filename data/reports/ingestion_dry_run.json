@@ -1,14 +1,19 @@
 {
   "stats": {
     "catalogue_products": 103,
+    "product_variants": 121,
     "ingredients": 153,
     "product_ingredients": 249,
     "product_directions": 103,
     "product_indications": 123,
     "product_warnings": 90,
     "product_interaction_flags": 96,
+    "product_keywords": 737,
     "product_images": 115,
+    "source_documents": 5,
+    "source_sections": 103,
     "source_claims": 659,
+    "claim_citations": 659,
     "data_quality_issues": 144,
     "source_files": 50
   },

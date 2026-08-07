@@ -16,6 +16,13 @@
 import type { SafetyRuleRow, PatientCtx } from "./engine";
 import { buildRationale, type Rationale, type SeverityTier, type EvidenceLevel } from "./rationale";
 
+export type ProductSourceRef = {
+  source: string;
+  tier_label: string;
+  note: string;
+  url?: string;
+};
+
 export type ProductRow = {
   product_id: string;
   name: string;
@@ -33,6 +40,9 @@ export type ProductRow = {
   avoid_if_tags: string[];
   medicine_interaction_flags: string[];
   counselling_flags: string[];
+  /** Phase 7: governed-catalogue citations. Legacy rows leave this unset and
+   *  receive the old generic catalogue reference below. */
+  source_references?: ProductSourceRef[];
 };
 
 export type ProductRecommendation = {
@@ -562,13 +572,15 @@ export function recommendProducts(
       matched_medicines: matchedMeds,
       matched_patient_factors: matchedFactors,
       matched_product_tags: matchedTags,
-      source_references: [
-        {
-          source: "Herbs of Gold Technical Manual",
-          tier_label: "Pharmacist-reviewed catalogue",
-          note: product.product_id,
-        },
-      ],
+      source_references: product.source_references?.length
+        ? product.source_references
+        : [
+            {
+              source: "Herbs of Gold Technical Manual",
+              tier_label: "Pharmacist-reviewed catalogue",
+              note: product.product_id,
+            },
+          ],
       rationale: buildRationale({
         ruleId: `product:${product.product_id}`,
         severity: "minor",

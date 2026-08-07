@@ -375,3 +375,22 @@ runbook (documented only in MIGRATIONS_README).
   shared anonymous `user_id IS NULL` rows.
 - Verification after these changes: `npm test` — 117/117 passed;
   `npx tsc --noEmit` — passed; `npm run build` — passed.
+
+### Phase 7 — governed catalogue product reads and per-product citations
+
+- New `src/lib/catalogue-products.ts` loads approved rows from the normalised
+  catalogue (`catalogue_products` plus variants, keywords, ingredients,
+  indications, warnings and interaction flags) for both the recommendation
+  engine and the product-list server function. The legacy flat `products`
+  table remains a migration fallback only.
+- Product recommendations now carry per-product source references from the
+  Herbs of Gold Technical Manual (`HOG-#### · PDF source page N`) instead of
+  only the old generic canned catalogue note.
+- Ingestion staging now also publishes 121 pack-size variants, 737 typed
+  product keywords (source duplicates collapsed), 5 source documents,
+  103 source sections and 659 page-level `claim_citations`; the
+  `product_ingredients` upsert key was corrected to
+  `(product_id, content_key)` before first live apply.
+- Verification after these changes: `python3 -m pipeline.ingest --dry-run` —
+  passed; `npm test` — 118/118 passed; `npx tsc --noEmit` — passed;
+  `npm run build` — passed.

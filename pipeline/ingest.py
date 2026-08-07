@@ -105,11 +105,27 @@ def stage_catalogue() -> dict:
 
     # ingredients registry (dedupe by normalised name)
     ing_registry: dict[str, dict] = {}
-    prod_rows, pi_rows, ind_rows, dir_rows, warn_rows, int_rows = [], [], [], [], [], []
-    claim_rows, issue_rows = [], []
+    prod_rows, variant_rows, pi_rows, ind_rows, dir_rows, warn_rows, int_rows = [], [], [], [], [], [], []
+    keyword_rows, claim_rows, issue_rows = [], [], []
+    source_document_rows = _source_document_rows()
+    source_section_rows, citation_rows = [], []
+    source_ref_by_hog: dict[str, dict] = {}
 
     for p in products:
         hog = p["product_id"]
+        source_ref = (p.get("source_references") or [{}])[0]
+        source_ref_by_hog[hog] = source_ref
+        if source_ref.get("source_file"):
+            source_section_rows.append(
+                {
+                    "document_path": source_ref.get("source_file"),
+                    "hog_code": hog,
+                    "heading": source_ref.get("source_section"),
+                    "page": source_ref.get("source_page"),
+                    "text": _dedupe_lines(source_ref.get("extracted_text") or "") or None,
+                }
+            )
+
         prod_rows.append(
             {
                 "hog_code": hog,
@@ -121,12 +137,37 @@ def stage_catalogue() -> dict:
                 "status": "current",
                 "austl": (p.get("austl") or "").strip() or None,
                 "extraction_confidence": csv_conf.get(hog),
-                "source_page": (p.get("source_references") or [{}])[0].get("source_page"),
+                "source_page": source_ref.get("source_page"),
                 "review_status": "needs_review"
                 if (p.get("review") or {}).get("review_status") != "Reviewed"
                 else "approved",
             }
         )
+
+        for pack_size in _pack_variants(p.get("pack_size") or ""):
+            variant_rows.append(
+                {"hog_code": hog, "pack_size": pack_size, "status": "current"}
+            )
+
+        clinical_tags = p.get("clinical_tags") or {}
+        for field, keyword_type in (
+            ("clinical_use_tags", "clinical_use_tag"),
+            ("avoid_if_tags", "avoid_if_tag"),
+            ("medicine_interaction_flags", "medicine_interaction_flag"),
+            ("counselling_flags", "counselling_flag"),
+        ):
+            for keyword in clinical_tags.get(field, []):
+                keyword = str(keyword).strip()
+                if keyword:
+                    keyword_rows.append(
+                        {
+                            "hog_code": hog,
+                            "keyword": keyword,
+                            "keyword_type": keyword_type,
+                            "provenance": "source_corpus",
+                            "approved": True,
+                        }
+                    )
 
         d = p.get("directions") or {}
         dir_rows.append(
@@ -277,18 +318,110 @@ def stage_catalogue() -> dict:
             }
         )
 
+    # The source clinical_tags arrays occasionally repeat a tag (notably
+    # renal_impairment_caution). Natural-key identity is type+keyword, so
+    # collapse repeats while preserving first-seen order.
+    keyword_rows = list(
+        {
+            (r["hog_code"], r["keyword_type"], r["keyword"]): r
+            for r in keyword_rows
+        }.values()
+    )
+
+    # Per-claim citations back to the corpus. claim_citations is the table
+    # the References explorer and product cards use for page-level evidence.
+    for claim in claim_rows:
+        ref = source_ref_by_hog.get(claim["hog_code"], {})
+        document_path = ref.get("source_file")
+        if not document_path:
+            continue
+        citation_rows.append(
+            {
+                "claim_hog_code": claim["hog_code"],
+                "claim_type": claim["claim_type"],
+                "claim_content_key": claim["content_key"],
+                "document_path": document_path,
+                "page": claim.get("source_page") or ref.get("source_page"),
+                "section_heading": ref.get("source_section"),
+                "excerpt": claim["text"][:500],
+                "source_format": document_path.rsplit(".", 1)[-1].lower(),
+            }
+        )
+
     return {
         "catalogue_products": prod_rows,
+        "product_variants": variant_rows,
         "ingredients": list(ing_registry.values()),
         "product_ingredients": pi_rows,
         "product_directions": dir_rows,
         "product_indications": ind_rows,
         "product_warnings": warn_rows,
         "product_interaction_flags": int_rows,
+        "product_keywords": keyword_rows,
         "product_images": img_rows,
+        "source_documents": source_document_rows,
+        "source_sections": source_section_rows,
         "source_claims": claim_rows,
+        "claim_citations": citation_rows,
         "data_quality_issues": issue_rows,
     }
+
+
+def _source_document_rows() -> list[dict]:
+    """Register the small set of real source documents (not pipeline
+    intermediates). Paths are corpus-relative and hashed for idempotency."""
+    roles = {
+        "pdf": "source_of_truth",
+        "docx": "cross_check",
+        "xlsx": "cross_check",
+        "markdown": "readability_cross_check",
+        "kb_zip": "archive_duplicate",
+    }
+    titles = {
+        "pdf": "Herbs of Gold Technical Manual (PDF)",
+        "docx": "Herbs of Gold Technical Manual (DOCX)",
+        "xlsx": "Herbs of Gold Technical Manual (XLSX)",
+        "markdown": "Herbs of Gold Technical Manual (Markdown)",
+        "kb_zip": "Prior Herbs of Gold KnowledgeBase archive",
+    }
+    rows = []
+    for key, path in corpus.SOURCE_FILES.items():
+        if not path.exists():
+            continue
+        rows.append(
+            {
+                "title": titles[key],
+                "format": key,
+                "corpus_path": str(path.relative_to(corpus.CORPUS_ROOT)),
+                "sha256": corpus.sha256_file(path),
+                "page_count": 206 if key == "pdf" else None,
+                "role": roles[key],
+            }
+        )
+    return rows
+
+
+def _pack_variants(raw: str) -> list[str]:
+    """Split source pack-size strings such as "60 / 120 capsules" into
+    variant rows without inventing data. Ambiguous strings stay verbatim."""
+    raw = " ".join(str(raw).split())
+    if not raw:
+        return []
+    parts = [p.strip() for p in raw.replace(",", " / ").split("/") if p.strip()]
+    if len(parts) == 1:
+        return [raw]
+    import re
+
+    unit = re.sub(r"^[\d.\s/]+", "", raw).strip()
+    out = []
+    for part in parts:
+        has_letters = bool(re.search(r"[a-zA-Z]", part))
+        starts_numeric = bool(re.match(r"^\d", part))
+        if starts_numeric and unit and not has_letters:
+            out.append(f"{part} {unit}")
+        else:
+            out.append(part)
+    return list(dict.fromkeys(out))
 
 
 def _ck(*parts: str) -> str:
@@ -354,11 +487,40 @@ def main() -> int:
     for k, v in sorted(stats.items()):
         print(f"  {k}: {v}")
 
-    # validation: required fields
+    # validation: required fields + natural-key uniqueness (upsert safety)
     failures = []
     for r in staged["catalogue_products"]:
         if not r["hog_code"] or not r["name"]:
             failures.append(f"product missing identity: {r}")
+
+    def duplicate_keys(rows: list[dict], key_fn, label: str) -> None:
+        seen, dupes = set(), set()
+        for row in rows:
+            key = key_fn(row)
+            if key in seen:
+                dupes.add(key)
+            seen.add(key)
+        for key in sorted(dupes):
+            failures.append(f"duplicate {label}: {key}")
+
+    duplicate_keys(
+        staged["product_keywords"],
+        lambda r: (r["hog_code"], r["keyword_type"], r["keyword"]),
+        "product keyword key",
+    )
+    duplicate_keys(
+        staged["product_variants"],
+        lambda r: (r["hog_code"], r["pack_size"]),
+        "product variant key",
+    )
+    duplicate_keys(
+        staged["claim_citations"],
+        lambda r: (
+            r["claim_hog_code"], r["claim_type"], r["claim_content_key"],
+            r["document_path"], r["page"], r["section_heading"],
+        ),
+        "claim citation key",
+    )
     if failures:
         print("VALIDATION FAILED:", *failures, sep="\n  ")
         return 1
@@ -392,10 +554,37 @@ def main() -> int:
     run = rest.insert("ingestion_runs", [{"dry_run": False, "source_hashes": hashes, "stats": stats}])
 
     try:
+        # provenance documents first: sections/citations reference their UUIDs
+        rest.upsert("source_documents", staged["source_documents"], "corpus_path")
+        docs = rest.select("source_documents?select=document_id,corpus_path")
+        did = {d["corpus_path"]: d["document_id"] for d in docs}
+        rest.upsert(
+            "source_sections",
+            [
+                {**{k: v for k, v in r.items() if k != "document_path"},
+                 "document_id": did[r["document_path"]]}
+                for r in staged["source_sections"]
+            ],
+            "document_id,hog_code,heading,page",
+        )
+
         # identity map: hog_code -> uuid
         rest.upsert("catalogue_products", staged["catalogue_products"], "hog_code")
         prods = rest.select("catalogue_products?select=product_id,hog_code")
         pid = {p["hog_code"]: p["product_id"] for p in prods}
+
+        rest.upsert(
+            "product_variants",
+            [{**{k: v for k, v in r.items() if k != "hog_code"}, "product_id": pid[r["hog_code"]]}
+             for r in staged["product_variants"]],
+            "product_id,pack_size",
+        )
+        rest.upsert(
+            "product_keywords",
+            [{**{k: v for k, v in r.items() if k != "hog_code"}, "product_id": pid[r["hog_code"]]}
+             for r in staged["product_keywords"]],
+            "product_id,keyword_type,keyword",
+        )
 
         rest.upsert("ingredients", staged["ingredients"], "canonical_name")
         ings = rest.select("ingredients?select=ingredient_id,name_normalised")
@@ -408,7 +597,7 @@ def main() -> int:
                  "product_id": pid[r["hog_code"]], "ingredient_id": iid[r["ingredient_norm"]]}
                 for r in staged["product_ingredients"]
             ],
-            "product_id,ingredient_id",
+            "product_id,content_key",
         )
         rest.upsert(
             "product_directions",
@@ -441,11 +630,31 @@ def main() -> int:
             )
         rest.upsert("product_images", image_rows, "sha256")
 
-        # claims + quality issues
+        # claims + citations + quality issues
         rest.upsert(
             "source_claims",
             [{k: v for k, v in r.items() if k != "source_page"} for r in staged["source_claims"]],
             "hog_code,claim_type,content_key",
+        )
+        claims = rest.select("source_claims?select=claim_id,hog_code,claim_type,content_key")
+        cid = {
+            (c["hog_code"], c["claim_type"], c["content_key"]): c["claim_id"]
+            for c in claims
+        }
+        rest.upsert(
+            "claim_citations",
+            [
+                {
+                    "claim_id": cid[(r["claim_hog_code"], r["claim_type"], r["claim_content_key"])],
+                    "document_id": did[r["document_path"]],
+                    "page": r["page"],
+                    "section_heading": r["section_heading"],
+                    "excerpt": r["excerpt"],
+                    "source_format": r["source_format"],
+                }
+                for r in staged["claim_citations"]
+            ],
+            "claim_id,document_id,page,section_heading",
         )
         rest.upsert(
             "data_quality_issues",

@@ -7,7 +7,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { publicSupabase } from "./public-supabase-middleware";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { runEngine, type PatientCtx, type SafetyRuleRow } from "./engine";
-import type { ProductRow } from "./recommend-products";
+import { loadEngineProducts } from "./catalogue-products";
 import { attachEvidence } from "./retrieval";
 import { runAiSenseCheck } from "./ai-sense-check";
 
@@ -77,15 +77,10 @@ export const listCasesFn = createServerFn({ method: "GET" })
 export const listProductsFn = createServerFn({ method: "GET" })
   .middleware([publicSupabase])
   .handler(async ({ context }) => {
-    const { data, error } = await context.supabase
-      .from("products")
-      .select(
-        "product_id, name, brand, category, active_ingredients, indications, cautions, pack_sizes, schedule, reviewed, clinical_use_tags, avoid_if_tags",
-      )
-      .order("brand", { ascending: true })
-      .order("name", { ascending: true });
-    if (error) throw new Error(error.message);
-    return data ?? [];
+    // Same authoritative product source as the engine: approved governed
+    // catalogue first, legacy flat table only as a migration fallback.
+    const load = await loadEngineProducts(context.supabase);
+    return load.products;
   });
 
 export const getCaseFn = createServerFn({ method: "GET" })
@@ -128,17 +123,17 @@ export const createCaseFn = createServerFn({ method: "POST" })
     // RLS owner policies make rows visible only to their creator.
     const userId: string = context.userId;
 
-    const [rulesRes, productsRes] = await Promise.all([
+    // Phase 7: approved governed-catalogue products are authoritative. The
+    // loader falls back to the legacy flat table while the new catalogue is
+    // being migrated and clinically reviewed.
+    const [rulesRes, productLoad] = await Promise.all([
       supabase.from("safety_rules").select("*"),
-      supabase
-        .from("products")
-        .select(
-          "product_id, name, brand, category, active_ingredients, indications, cautions, pack_sizes, schedule, reviewed, source_url, notes, clinical_use_tags, avoid_if_tags, medicine_interaction_flags, counselling_flags",
-        )
-        .eq("reviewed", true),
+      loadEngineProducts(supabase),
     ]);
     if (rulesRes.error) throw new Error(rulesRes.error.message);
-    if (productsRes.error) throw new Error(productsRes.error.message);
+    if (productLoad.catalogueError) {
+      console.warn(`[catalogue] falling back to legacy products: ${productLoad.catalogueError}`);
+    }
     const rules: SafetyRuleRow[] = (rulesRes.data ?? []).map((r) => ({
       rule_id: r.rule_id,
       name: r.name,
@@ -155,32 +150,7 @@ export const createCaseFn = createServerFn({ method: "POST" })
       review_required: !!r.review_required,
     }));
 
-    const products: ProductRow[] = (productsRes.data ?? []).map((p) => ({
-      product_id: p.product_id,
-      name: p.name,
-      brand: p.brand ?? null,
-      category: p.category ?? null,
-      active_ingredients: Array.isArray(p.active_ingredients)
-        ? (p.active_ingredients as string[])
-        : [],
-      indications: Array.isArray(p.indications) ? (p.indications as string[]) : [],
-      cautions: Array.isArray(p.cautions) ? (p.cautions as string[]) : [],
-      pack_sizes: Array.isArray(p.pack_sizes) ? (p.pack_sizes as string[]) : [],
-      schedule: p.schedule ?? null,
-      reviewed: !!p.reviewed,
-      source_url: p.source_url ?? null,
-      notes: p.notes ?? null,
-      clinical_use_tags: Array.isArray(p.clinical_use_tags)
-        ? (p.clinical_use_tags as string[])
-        : [],
-      avoid_if_tags: Array.isArray(p.avoid_if_tags) ? (p.avoid_if_tags as string[]) : [],
-      medicine_interaction_flags: Array.isArray(p.medicine_interaction_flags)
-        ? (p.medicine_interaction_flags as string[])
-        : [],
-      counselling_flags: Array.isArray(p.counselling_flags)
-        ? (p.counselling_flags as string[])
-        : [],
-    }));
+    const products = productLoad.products;
 
     const ctx: PatientCtx = {
       age: data.age,

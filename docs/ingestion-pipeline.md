@@ -45,10 +45,12 @@ environment only, never commit it.
 
 ## Current staging results (dry-run, 2026-08-07)
 
-103 products · 153 ingredients · 249 product-ingredient rows ·
-103 directions · 123 indications · 90 warnings · 96 interaction flags ·
-115 catalogue images · 659 source claims · 144 data-quality issues ·
-50 source files hashed.
+103 products · 121 pack-size variants · 153 ingredients ·
+249 product-ingredient rows · 103 directions · 123 indications ·
+90 warnings · 96 interaction flags · 737 typed product keywords ·
+115 catalogue images · 5 source documents · 103 source sections ·
+659 source claims · 659 page-level claim citations ·
+144 data-quality issues · 50 source files hashed.
 
 ## One-time manual steps (live project)
 
@@ -58,8 +60,10 @@ environment only, never commit it.
    `supabase/MIGRATIONS_README.md`).
 2. Set `SUPABASE_SERVICE_ROLE_KEY` in the environment.
 3. Run `python3 -m pipeline.ingest --apply`.
-4. Verify: 103 rows in `catalogue_products`, 115 in `product_images`,
-   659 in `source_claims`; check `ingestion_runs` shows `complete`.
+4. Verify: 103 rows in `catalogue_products`, 121 in `product_variants`,
+   737 in `product_keywords`, 115 in `product_images`, 659 in
+   `source_claims`, and 659 in `claim_citations`; check `ingestion_runs`
+   shows `complete`.
 
 ## Known gaps carried into the review queue
 
