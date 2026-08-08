@@ -10,10 +10,15 @@ import { join } from "node:path";
 import { recommendProducts, type ProductRow } from "./recommend-products";
 import type { SafetyRuleRow, PatientCtx } from "./engine";
 
-const CATALOGUE_PATH = join(
-  process.env.HOME ?? "/tmp",
-  "herbsofgold_scraped/HerbsOfGold_KnowledgeBase/output/herbs_of_gold_products.json",
-);
+// Corpus lives in the repo workspace at docs/herbsofgold_scraped (gitignored —
+// original scraped source material, do not modify). Override with
+// HOG_CATALOGUE_PATH when running against a different copy.
+const CATALOGUE_PATH =
+  process.env.HOG_CATALOGUE_PATH ??
+  join(
+    __dirname,
+    "../../docs/herbsofgold_scraped/HerbsOfGold_KnowledgeBase/output/herbs_of_gold_products.json",
+  );
 
 type HogIngredient = {
   ingredient_name?: string;

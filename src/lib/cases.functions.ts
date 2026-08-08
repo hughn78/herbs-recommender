@@ -1,10 +1,16 @@
 // Server functions for PharmaPrompt OS.
 // Phase 1: deterministic rule engine. Phase 3: KB evidence attachment.
-// Phase 5: product recommendations.
+// Phase 5: product recommendations. Phase 13: authenticated clinical flow —
+// patient reviews require a staff session; rows are owned by the reviewer
+// (RLS owner policies), and a transient mode runs without persistence.
 import { createServerFn } from "@tanstack/react-start";
+import type { SupabaseClient } from "@supabase/supabase-js";
 import { publicSupabase } from "./public-supabase-middleware";
+import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { runEngine, type PatientCtx, type SafetyRuleRow } from "./engine";
-import type { ProductRow } from "./recommend-products";
+import { loadEngineProducts } from "./catalogue-products";
+import { loadOntologyTagMaps } from "./ontology";
+import type { ProductImageRef } from "./recommend-products";
 import { attachEvidence } from "./retrieval";
 import { runAiSenseCheck } from "./ai-sense-check";
 
@@ -29,6 +35,10 @@ export type CaseInput = {
   pathology_notes: string;
   pharmacist_notes: string;
   confirmed_medications: ConfirmedMed[];
+  /** Phase 13: run the engine and return results WITHOUT persisting any
+   *  patient context. Transient reviews never appear in past reviews and
+   *  are excluded from analytics/audit tables. */
+  transient?: boolean;
 };
 
 export const getDictionaryFn = createServerFn({ method: "GET" })
@@ -55,8 +65,9 @@ export const listSafetyRulesFn = createServerFn({ method: "GET" })
   });
 
 export const listCasesFn = createServerFn({ method: "GET" })
-  .middleware([publicSupabase])
+  .middleware([requireSupabaseAuth])
   .handler(async ({ context }) => {
+    // RLS owner policies scope this to the signed-in reviewer's own cases.
     const { data, error } = await context.supabase
       .from("patient_cases")
       .select("case_id, case_label, age, sex, symptoms, created_at")
@@ -69,19 +80,14 @@ export const listCasesFn = createServerFn({ method: "GET" })
 export const listProductsFn = createServerFn({ method: "GET" })
   .middleware([publicSupabase])
   .handler(async ({ context }) => {
-    const { data, error } = await context.supabase
-      .from("products")
-      .select(
-        "product_id, name, brand, category, active_ingredients, indications, cautions, pack_sizes, schedule, reviewed, clinical_use_tags, avoid_if_tags",
-      )
-      .order("brand", { ascending: true })
-      .order("name", { ascending: true });
-    if (error) throw new Error(error.message);
-    return data ?? [];
+    // Same authoritative product source as the engine: approved governed
+    // catalogue first, legacy flat table only as a migration fallback.
+    const load = await loadEngineProducts(context.supabase);
+    return load.products;
   });
 
 export const getCaseFn = createServerFn({ method: "GET" })
-  .middleware([publicSupabase])
+  .middleware([requireSupabaseAuth])
   .inputValidator((d: { caseId: string }) => d)
   .handler(async ({ data, context }) => {
     const [caseRes, recsRes, auditRes] = await Promise.all([
@@ -104,31 +110,99 @@ export const getCaseFn = createServerFn({ method: "GET" })
     if (caseRes.error) throw new Error(caseRes.error.message);
     if (recsRes.error) throw new Error(recsRes.error.message);
     if (!caseRes.data) throw new Error("Case not found");
+
+    // Phase 8/9: attach primary pack shots to product recommendation rows.
+    // Images stay in the governed catalogue (single source of truth) rather
+    // than being denormalised into the recommendations table; any catalogue
+    // read failure simply means no images on this render.
+    const recs = recsRes.data ?? [];
+    const hogCodes = Array.from(
+      new Set(
+        recs
+          .filter((r) => r.recommendation_type === "product_recommendation")
+          .map((r) => r.product_id)
+          .filter((id): id is string => typeof id === "string" && id.startsWith("HOG-")),
+      ),
+    );
+    let imageByHog = new Map<string, ProductImageRef>();
+    if (hogCodes.length > 0) {
+      try {
+        // The generated Database types predate the governed catalogue;
+        // query these tables through the untyped client like the catalogue
+        // and ontology loaders do.
+        const db = context.supabase as unknown as SupabaseClient;
+        const { data: prods } = await db
+          .from("catalogue_products")
+          .select("product_id, hog_code")
+          .in("hog_code", hogCodes);
+        const uuidToHog = new Map(
+          (prods ?? []).map((p) => [p.product_id as string, p.hog_code as string]),
+        );
+        if (uuidToHog.size > 0) {
+          const { data: images } = await db
+            .from("product_images")
+            .select("product_id, storage_path, alt_text, width, height, is_primary")
+            .in("product_id", Array.from(uuidToHog.keys()));
+          const byProduct = new Map<string, NonNullable<typeof images>>();
+          for (const img of images ?? []) {
+            if (!img.storage_path) continue;
+            const list = byProduct.get(img.product_id) ?? [];
+            list.push(img);
+            byProduct.set(img.product_id, list);
+          }
+          for (const [uuid, imgs] of byProduct) {
+            const hog = uuidToHog.get(uuid);
+            if (!hog) continue;
+            const pick = imgs.find((i) => i.is_primary) ?? imgs[0];
+            imageByHog.set(hog, {
+              storage_path: pick.storage_path as string,
+              alt_text: pick.alt_text,
+              width: pick.width,
+              height: pick.height,
+            });
+          }
+        }
+      } catch {
+        imageByHog = new Map(); // catalogue not migrated yet — render without images
+      }
+    }
+
     return {
       patientCase: caseRes.data,
-      recommendations: recsRes.data ?? [],
+      recommendations: recs.map((r) => ({
+        ...r,
+        image: (r.product_id && imageByHog.get(r.product_id)) ?? null,
+      })),
       senseCheck: auditRes.data ?? null,
     };
   });
 
 export const createCaseFn = createServerFn({ method: "POST" })
-  .middleware([publicSupabase])
+  .middleware([requireSupabaseAuth])
   .inputValidator((d: CaseInput) => d)
   .handler(async ({ data, context }) => {
     const { supabase } = context;
-    const userId: string | null = null;
+    // Phase 13: the reviewer owns the case. No more hardcoded null —
+    // RLS owner policies make rows visible only to their creator.
+    const userId: string = context.userId;
 
-    const [rulesRes, productsRes] = await Promise.all([
+    // Phase 7: approved governed-catalogue products are authoritative. The
+    // loader falls back to the legacy flat table while the new catalogue is
+    // being migrated and clinically reviewed.
+    const [rulesRes, productLoad, ontologyLoad] = await Promise.all([
       supabase.from("safety_rules").select("*"),
-      supabase
-        .from("products")
-        .select(
-          "product_id, name, brand, category, active_ingredients, indications, cautions, pack_sizes, schedule, reviewed, source_url, notes, clinical_use_tags, avoid_if_tags, medicine_interaction_flags, counselling_flags",
-        )
-        .eq("reviewed", true),
+      loadEngineProducts(supabase),
+      loadOntologyTagMaps(supabase),
     ]);
     if (rulesRes.error) throw new Error(rulesRes.error.message);
-    if (productsRes.error) throw new Error(productsRes.error.message);
+    if (productLoad.catalogueError) {
+      console.warn(`[catalogue] falling back to legacy products: ${productLoad.catalogueError}`);
+    }
+    // Phase 6: ontology tag maps are an enhancement — on any failure the
+    // engine falls back to its built-in default maps.
+    if (ontologyLoad.error) {
+      console.warn(`[ontology] falling back to built-in tag maps: ${ontologyLoad.error}`);
+    }
     const rules: SafetyRuleRow[] = (rulesRes.data ?? []).map((r) => ({
       rule_id: r.rule_id,
       name: r.name,
@@ -145,32 +219,7 @@ export const createCaseFn = createServerFn({ method: "POST" })
       review_required: !!r.review_required,
     }));
 
-    const products: ProductRow[] = (productsRes.data ?? []).map((p) => ({
-      product_id: p.product_id,
-      name: p.name,
-      brand: p.brand ?? null,
-      category: p.category ?? null,
-      active_ingredients: Array.isArray(p.active_ingredients)
-        ? (p.active_ingredients as string[])
-        : [],
-      indications: Array.isArray(p.indications) ? (p.indications as string[]) : [],
-      cautions: Array.isArray(p.cautions) ? (p.cautions as string[]) : [],
-      pack_sizes: Array.isArray(p.pack_sizes) ? (p.pack_sizes as string[]) : [],
-      schedule: p.schedule ?? null,
-      reviewed: !!p.reviewed,
-      source_url: p.source_url ?? null,
-      notes: p.notes ?? null,
-      clinical_use_tags: Array.isArray(p.clinical_use_tags)
-        ? (p.clinical_use_tags as string[])
-        : [],
-      avoid_if_tags: Array.isArray(p.avoid_if_tags) ? (p.avoid_if_tags as string[]) : [],
-      medicine_interaction_flags: Array.isArray(p.medicine_interaction_flags)
-        ? (p.medicine_interaction_flags as string[])
-        : [],
-      counselling_flags: Array.isArray(p.counselling_flags)
-        ? (p.counselling_flags as string[])
-        : [],
-    }));
+    const products = productLoad.products;
 
     const ctx: PatientCtx = {
       age: data.age,
@@ -186,9 +235,39 @@ export const createCaseFn = createServerFn({ method: "POST" })
       confirmed_medications: data.confirmed_medications,
     };
 
-    const baseRecs = await attachEvidence(supabase, runEngine(ctx, rules, products));
-    const sense = await runAiSenseCheck(ctx, baseRecs);
+    const baseRecs = await attachEvidence(supabase, runEngine(ctx, rules, products, ontologyLoad.maps));
+    // Transient reviews must not send patient context to the external AI
+    // gateway. They receive deterministic results only; no audit row is
+    // persisted below either.
+    const sense = data.transient
+      ? {
+          status: "skipped" as const,
+          model: "transient-deterministic-only",
+          latency_ms: 0,
+          recs: baseRecs,
+          applied: [],
+          rejected: [],
+          error: "AI sense-check disabled for unsaved transient review",
+        }
+      : await runAiSenseCheck(ctx, baseRecs);
     const recs = sense.recs;
+
+    // ---- Transient mode: return results without persisting anything ----
+    // The patient context never reaches the database and is excluded from
+    // audit/analytics tables. The client keeps results in memory only and
+    // clearly labels the review as unsaved.
+    if (data.transient) {
+      return {
+        case_id: null,
+        transient: true,
+        recommendations: recs,
+        sense_check: {
+          status: sense.status,
+          model: sense.model,
+          overall_note: sense.overall_note ?? null,
+        },
+      };
+    }
 
     const { data: caseRow, error: caseErr } = await supabase
       .from("patient_cases")

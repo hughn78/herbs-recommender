@@ -1,0 +1,6702 @@
+{
+  "b082fddedca504280388f0e2f2739fa15b70b98ee4a576468d948ccba1f04f1d": {
+    "sha256": "b082fddedca504280388f0e2f2739fa15b70b98ee4a576468d948ccba1f04f1d",
+    "bytes": 165059,
+    "ext": "png",
+    "width": 371,
+    "height": 562,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image1.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "product_packshot",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0,
+    "derived_path": "data/derived/images/b082fddedca504280388f0e2f2739fa15b70b98ee4a576468d948ccba1f04f1d.png"
+  },
+  "5e93bb5d782949fdc32a4260db07712c53729b7bc97a9670fc2c0d321d7cdf46": {
+    "sha256": "5e93bb5d782949fdc32a4260db07712c53729b7bc97a9670fc2c0d321d7cdf46",
+    "bytes": 167252,
+    "ext": "png",
+    "width": 367,
+    "height": 558,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image2.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "product_packshot",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0,
+    "derived_path": "data/derived/images/5e93bb5d782949fdc32a4260db07712c53729b7bc97a9670fc2c0d321d7cdf46.png"
+  },
+  "4be4ddabdafba7bfc3bd3ad105a01faaefc0e2788bac7b7fad0d14a37f470535": {
+    "sha256": "4be4ddabdafba7bfc3bd3ad105a01faaefc0e2788bac7b7fad0d14a37f470535",
+    "bytes": 158999,
+    "ext": "png",
+    "width": 366,
+    "height": 562,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image3.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "product_packshot",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0,
+    "derived_path": "data/derived/images/4be4ddabdafba7bfc3bd3ad105a01faaefc0e2788bac7b7fad0d14a37f470535.png"
+  },
+  "1f069461342bb2b14717ec171617ca32e090ffeded4b56c57a3a2d5f9c01d4bd": {
+    "sha256": "1f069461342bb2b14717ec171617ca32e090ffeded4b56c57a3a2d5f9c01d4bd",
+    "bytes": 160225,
+    "ext": "png",
+    "width": 371,
+    "height": 562,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image4.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "product_packshot",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0,
+    "derived_path": "data/derived/images/1f069461342bb2b14717ec171617ca32e090ffeded4b56c57a3a2d5f9c01d4bd.png"
+  },
+  "07a738e7b187189f01ef876765fcf782e7622f2d7a24aa9b8803ce8a8e6a14ee": {
+    "sha256": "07a738e7b187189f01ef876765fcf782e7622f2d7a24aa9b8803ce8a8e6a14ee",
+    "bytes": 171982,
+    "ext": "png",
+    "width": 380,
+    "height": 577,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image5.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "product_packshot",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0,
+    "derived_path": "data/derived/images/07a738e7b187189f01ef876765fcf782e7622f2d7a24aa9b8803ce8a8e6a14ee.png"
+  },
+  "88c92edc034da503ffc1685489da92ea46d4b23dd5dd2e8d687468837294ca85": {
+    "sha256": "88c92edc034da503ffc1685489da92ea46d4b23dd5dd2e8d687468837294ca85",
+    "bytes": 1092,
+    "ext": "png",
+    "width": 18,
+    "height": 44,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image6.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "boilerplate",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0
+  },
+  "1cad0990ec4ace79cbd5634026ecc3c52bb7fbd3ef15470e8ffe3a1238ae4e91": {
+    "sha256": "1cad0990ec4ace79cbd5634026ecc3c52bb7fbd3ef15470e8ffe3a1238ae4e91",
+    "bytes": 5995,
+    "ext": "png",
+    "width": 74,
+    "height": 71,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image7.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image7.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {},
+    "role": "boilerplate",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0
+  },
+  "2e8d9a09811f090c1975983069406bd9df0a594d39f438a7dc4d558de2e8a575": {
+    "sha256": "2e8d9a09811f090c1975983069406bd9df0a594d39f438a7dc4d558de2e8a575",
+    "bytes": 2103,
+    "ext": "png",
+    "width": 37,
+    "height": 41,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image8.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "boilerplate",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0
+  },
+  "a7ee215c4ccf5fa891f156cf248bf0ba02dba67b04cb2d098b0b81e15f0ccb63": {
+    "sha256": "a7ee215c4ccf5fa891f156cf248bf0ba02dba67b04cb2d098b0b81e15f0ccb63",
+    "bytes": 788,
+    "ext": "png",
+    "width": 28,
+    "height": 26,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image9.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "boilerplate",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0
+  },
+  "cb583e0f8917c6bbeef4a3f5fddd0e3cac02768ef5f2bada03f4f2abeef48e4f": {
+    "sha256": "cb583e0f8917c6bbeef4a3f5fddd0e3cac02768ef5f2bada03f4f2abeef48e4f",
+    "bytes": 1957,
+    "ext": "png",
+    "width": 41,
+    "height": 32,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image10.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "boilerplate",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0
+  },
+  "669d581bf22cf5749fc9ba5472013dcc57f3a99207abc8419db35f7e6f3844e4": {
+    "sha256": "669d581bf22cf5749fc9ba5472013dcc57f3a99207abc8419db35f7e6f3844e4",
+    "bytes": 3829,
+    "ext": "png",
+    "width": 66,
+    "height": 66,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image11.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image9.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0037": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0037",
+    "product_name": "Fish Oil 1000",
+    "match_confidence": 1.0
+  },
+  "49a618b5c2e5ed281cf268e7294312345c4fb8345aeb3335f946dcac59656fff": {
+    "sha256": "49a618b5c2e5ed281cf268e7294312345c4fb8345aeb3335f946dcac59656fff",
+    "bytes": 608,
+    "ext": "png",
+    "width": 14,
+    "height": 18,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image12.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "boilerplate",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0
+  },
+  "ed0a35a27b48cce87da6fa2d06803cb25d94689e2489dcd224e74300bac16edc": {
+    "sha256": "ed0a35a27b48cce87da6fa2d06803cb25d94689e2489dcd224e74300bac16edc",
+    "bytes": 592,
+    "ext": "png",
+    "width": 15,
+    "height": 18,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image13.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "boilerplate",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0
+  },
+  "1ca7a82b747152f382ad5f97add1b17c1a67c30e51cc302553c83575fda2b9e3": {
+    "sha256": "1ca7a82b747152f382ad5f97add1b17c1a67c30e51cc302553c83575fda2b9e3",
+    "bytes": 601,
+    "ext": "png",
+    "width": 14,
+    "height": 18,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image14.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "boilerplate",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0
+  },
+  "375f4f8c0d7f323bb6c503f05e09ce27e4b650b0855d4d287d0a7f677b2702af": {
+    "sha256": "375f4f8c0d7f323bb6c503f05e09ce27e4b650b0855d4d287d0a7f677b2702af",
+    "bytes": 1044,
+    "ext": "png",
+    "width": 38,
+    "height": 37,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image15.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "boilerplate",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0
+  },
+  "03d86ad3c1be3aecb3c1b82f30a1868b74f1bdbdc5ffc498a2fa72de7b8d543a": {
+    "sha256": "03d86ad3c1be3aecb3c1b82f30a1868b74f1bdbdc5ffc498a2fa72de7b8d543a",
+    "bytes": 207178,
+    "ext": "png",
+    "width": 450,
+    "height": 645,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image16.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0001": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0001",
+    "product_name": "Acetyl L-Carnitine",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/03d86ad3c1be3aecb3c1b82f30a1868b74f1bdbdc5ffc498a2fa72de7b8d543a.png"
+  },
+  "ddc8089134f872b0234ef12e61be3ba14765bfe7021334dbc3c1a224af3a1e75": {
+    "sha256": "ddc8089134f872b0234ef12e61be3ba14765bfe7021334dbc3c1a224af3a1e75",
+    "bytes": 3538,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image17.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0001": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0001",
+    "product_name": "Acetyl L-Carnitine",
+    "match_confidence": 1.0
+  },
+  "64a05a262d29de22068893dfa279edc911cf273907d7faeba1ff623f957713db": {
+    "sha256": "64a05a262d29de22068893dfa279edc911cf273907d7faeba1ff623f957713db",
+    "bytes": 217502,
+    "ext": "png",
+    "width": 452,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image18.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0002": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0002",
+    "product_name": "Activated B Complex",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/64a05a262d29de22068893dfa279edc911cf273907d7faeba1ff623f957713db.png"
+  },
+  "e96fc4f72960c1a92d76f917d99a7aed46bb2cbde90bda552898b548e47a3170": {
+    "sha256": "e96fc4f72960c1a92d76f917d99a7aed46bb2cbde90bda552898b548e47a3170",
+    "bytes": 3545,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image19.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0002": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0002",
+    "product_name": "Activated B Complex",
+    "match_confidence": 1.0
+  },
+  "ffc3004816c8749c716a5657015d94f8a3fbc98fb4e232f84bab631dfe81b485": {
+    "sha256": "ffc3004816c8749c716a5657015d94f8a3fbc98fb4e232f84bab631dfe81b485",
+    "bytes": 119150,
+    "ext": "jpeg",
+    "width": 1352,
+    "height": 860,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image20.jpeg",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "content_graphic",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0
+  },
+  "5c8a5391d2c44575a334a6379eb940c6b358707cc72b2fb08aadb0424a2b524e": {
+    "sha256": "5c8a5391d2c44575a334a6379eb940c6b358707cc72b2fb08aadb0424a2b524e",
+    "bytes": 12514,
+    "ext": "png",
+    "width": 344,
+    "height": 67,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image21.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "boilerplate",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0
+  },
+  "3fb2e690c7681552771c4c52eeb1d7b27309158efee6c8b42b49bc25a9b6f556": {
+    "sha256": "3fb2e690c7681552771c4c52eeb1d7b27309158efee6c8b42b49bc25a9b6f556",
+    "bytes": 123512,
+    "ext": "png",
+    "width": 554,
+    "height": 738,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image22.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0003": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0003",
+    "product_name": "Activated B12 Spray",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/3fb2e690c7681552771c4c52eeb1d7b27309158efee6c8b42b49bc25a9b6f556.png"
+  },
+  "e293e44029ff6abbed7df1077175509506c5cb39c900db800eee3fc6c145fcd5": {
+    "sha256": "e293e44029ff6abbed7df1077175509506c5cb39c900db800eee3fc6c145fcd5",
+    "bytes": 3684,
+    "ext": "png",
+    "width": 55,
+    "height": 55,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image23.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0003": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0003",
+    "product_name": "Activated B12 Spray",
+    "match_confidence": 1.0
+  },
+  "3b7b699e8772be5653e5dff123db49e730e5257497ccc2522bd67a6b748e65a9": {
+    "sha256": "3b7b699e8772be5653e5dff123db49e730e5257497ccc2522bd67a6b748e65a9",
+    "bytes": 213478,
+    "ext": "png",
+    "width": 450,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image24.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0004": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0004",
+    "product_name": "Activated Folate 500",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/3b7b699e8772be5653e5dff123db49e730e5257497ccc2522bd67a6b748e65a9.png"
+  },
+  "4a32a604ad17192a4baca07f903d9df299923d16313b9bb314bc7f324587e743": {
+    "sha256": "4a32a604ad17192a4baca07f903d9df299923d16313b9bb314bc7f324587e743",
+    "bytes": 3542,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image25.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0004": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0004",
+    "product_name": "Activated Folate 500",
+    "match_confidence": 1.0
+  },
+  "fef3319b099fa768972a5c255a4c7c0aaf4cdf45745cc576d4f256572f2d3e82": {
+    "sha256": "fef3319b099fa768972a5c255a4c7c0aaf4cdf45745cc576d4f256572f2d3e82",
+    "bytes": 75155,
+    "ext": "jpeg",
+    "width": 1040,
+    "height": 680,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image26.jpeg",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "content_graphic",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0
+  },
+  "8c0276d2218b7685efaea088c9bf777fbfd8b0b5af4c97f71ab62c45af9999bd": {
+    "sha256": "8c0276d2218b7685efaea088c9bf777fbfd8b0b5af4c97f71ab62c45af9999bd",
+    "bytes": 211418,
+    "ext": "png",
+    "width": 450,
+    "height": 647,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image27.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0005": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0005",
+    "product_name": "Activated Sublingual B12",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/8c0276d2218b7685efaea088c9bf777fbfd8b0b5af4c97f71ab62c45af9999bd.png"
+  },
+  "6078dfad8bfbb7d20bb98dfb0491adc917be7858a37217d1fce639d5d4273eb6": {
+    "sha256": "6078dfad8bfbb7d20bb98dfb0491adc917be7858a37217d1fce639d5d4273eb6",
+    "bytes": 3543,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image28.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0005": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0005",
+    "product_name": "Activated Sublingual B12",
+    "match_confidence": 1.0
+  },
+  "eb4d671db9b71db086134a1aaff1e1ba365b8d1f0bb87159f75f1664a4b3c548": {
+    "sha256": "eb4d671db9b71db086134a1aaff1e1ba365b8d1f0bb87159f75f1664a4b3c548",
+    "bytes": 221528,
+    "ext": "png",
+    "width": 463,
+    "height": 676,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image29.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0006": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0006",
+    "product_name": "Alpha Lipoic 300",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/eb4d671db9b71db086134a1aaff1e1ba365b8d1f0bb87159f75f1664a4b3c548.png"
+  },
+  "be579197c083a32f011c9e07efa54764ac4cc3d97ce62dc7eb727b7b84ad512b": {
+    "sha256": "be579197c083a32f011c9e07efa54764ac4cc3d97ce62dc7eb727b7b84ad512b",
+    "bytes": 3535,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image30.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image30.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image30.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image30.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image30.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image25.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0006": 1,
+      "HOG-0014": 1,
+      "HOG-0051": 1,
+      "HOG-0061": 1,
+      "HOG-0095": 1,
+      "HOG-0048": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0006",
+    "product_name": "Alpha Lipoic 300",
+    "match_confidence": 0.167
+  },
+  "8b0e6cdbd7d2a1048e264d33f5d5bcb23872ba2bb30ac0573d967dad13bbfced": {
+    "sha256": "8b0e6cdbd7d2a1048e264d33f5d5bcb23872ba2bb30ac0573d967dad13bbfced",
+    "bytes": 235121,
+    "ext": "png",
+    "width": 558,
+    "height": 701,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image31.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0007": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0007",
+    "product_name": "Astra Recharge",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/8b0e6cdbd7d2a1048e264d33f5d5bcb23872ba2bb30ac0573d967dad13bbfced.png"
+  },
+  "79e3312273a2a492ef54b650c055350a4395e6401be6e392f283543f8c28a4f8": {
+    "sha256": "79e3312273a2a492ef54b650c055350a4395e6401be6e392f283543f8c28a4f8",
+    "bytes": 3685,
+    "ext": "png",
+    "width": 55,
+    "height": 55,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image32.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image26.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0007": 1,
+      "HOG-0004": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0007",
+    "product_name": "Astra Recharge",
+    "match_confidence": 0.5
+  },
+  "0eb3910cd852154a17f4554dce09df65fc9fd03eadc622f189104ec1ccd60587": {
+    "sha256": "0eb3910cd852154a17f4554dce09df65fc9fd03eadc622f189104ec1ccd60587",
+    "bytes": 212886,
+    "ext": "png",
+    "width": 463,
+    "height": 676,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image33.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0008": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0008",
+    "product_name": "B Sustained Release",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/0eb3910cd852154a17f4554dce09df65fc9fd03eadc622f189104ec1ccd60587.png"
+  },
+  "54a274a7147aefa3e6023685011f7dd5bd71ef7045292a5ebefc5b3f7b19b23f": {
+    "sha256": "54a274a7147aefa3e6023685011f7dd5bd71ef7045292a5ebefc5b3f7b19b23f",
+    "bytes": 3541,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image34.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image34.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image34.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image28.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0008": 1,
+      "HOG-0012": 1,
+      "HOG-0047": 1,
+      "HOG-0028": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0008",
+    "product_name": "B Sustained Release",
+    "match_confidence": 0.25
+  },
+  "a8ad444dd21dba9a7000a1e73693d9f958cba9a45b273cf397d0b5f56814fa12": {
+    "sha256": "a8ad444dd21dba9a7000a1e73693d9f958cba9a45b273cf397d0b5f56814fa12",
+    "bytes": 225374,
+    "ext": "png",
+    "width": 463,
+    "height": 676,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image35.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0009": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0009",
+    "product_name": "Berberine ImmunoPlex",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/a8ad444dd21dba9a7000a1e73693d9f958cba9a45b273cf397d0b5f56814fa12.png"
+  },
+  "a69cfe517868eb9af7ed4427104485e6efd84d8f3fd96a832a9d2e8bd40b92c8": {
+    "sha256": "a69cfe517868eb9af7ed4427104485e6efd84d8f3fd96a832a9d2e8bd40b92c8",
+    "bytes": 3533,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image36.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image36.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image36.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image30.png",
+        "match_method": "xlsx_anchor_cell"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image30.png",
+        "match_method": "xlsx_anchor_cell"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image30.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0009": 2,
+      "HOG-0011": 1,
+      "HOG-0065": 1,
+      "HOG-0008": 1,
+      "HOG-0062": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0009",
+    "product_name": "Berberine ImmunoPlex",
+    "match_confidence": 0.333
+  },
+  "b46e38a1fea1ff1485593c49a2d113cc2729adb209d489cfe708ae47a7c00787": {
+    "sha256": "b46e38a1fea1ff1485593c49a2d113cc2729adb209d489cfe708ae47a7c00787",
+    "bytes": 221368,
+    "ext": "png",
+    "width": 463,
+    "height": 676,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image37.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0010": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0010",
+    "product_name": "Bergamot Cholesterol Care",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/b46e38a1fea1ff1485593c49a2d113cc2729adb209d489cfe708ae47a7c00787.png"
+  },
+  "75c6b2550854b975ded8836f8aa92364690080af31c28b67a1c4d70b59745f7a": {
+    "sha256": "75c6b2550854b975ded8836f8aa92364690080af31c28b67a1c4d70b59745f7a",
+    "bytes": 3533,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image38.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image33.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0010": 1,
+      "HOG-0009": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0010",
+    "product_name": "Bergamot Cholesterol Care",
+    "match_confidence": 0.5
+  },
+  "327a36ea3a0049d3169874834daeb3a8e3c96358578505f310d4c93d935d023a": {
+    "sha256": "327a36ea3a0049d3169874834daeb3a8e3c96358578505f310d4c93d935d023a",
+    "bytes": 232693,
+    "ext": "png",
+    "width": 439,
+    "height": 637,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image39.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0011": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0011",
+    "product_name": "Bio Curcumin 5400",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/327a36ea3a0049d3169874834daeb3a8e3c96358578505f310d4c93d935d023a.png"
+  },
+  "b56a7dc70e55d38e9dc884e125c044633948a4dfb03b764d757190b96fed5dad": {
+    "sha256": "b56a7dc70e55d38e9dc884e125c044633948a4dfb03b764d757190b96fed5dad",
+    "bytes": 73026,
+    "ext": "jpeg",
+    "width": 744,
+    "height": 872,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image40.jpeg",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0011": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0011",
+    "product_name": "Bio Curcumin 5400",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/b56a7dc70e55d38e9dc884e125c044633948a4dfb03b764d757190b96fed5dad.jpeg"
+  },
+  "954eb8910b4379e4c3acbb412bbaf1b049bf7ebdb5cc9cae70f773ee9d60542e": {
+    "sha256": "954eb8910b4379e4c3acbb412bbaf1b049bf7ebdb5cc9cae70f773ee9d60542e",
+    "bytes": 93167,
+    "ext": "jpeg",
+    "width": 693,
+    "height": 502,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image41.jpeg",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0011": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0011",
+    "product_name": "Bio Curcumin 5400",
+    "match_confidence": 1.0
+  },
+  "f9bc39ace664f55d2b06508afa3524fd86da9fa57d7e3455a65bf82435fed0b9": {
+    "sha256": "f9bc39ace664f55d2b06508afa3524fd86da9fa57d7e3455a65bf82435fed0b9",
+    "bytes": 40342,
+    "ext": "jpeg",
+    "width": 624,
+    "height": 450,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image42.jpeg",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image37.jpeg",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0011": 1,
+      "HOG-0009": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0011",
+    "product_name": "Bio Curcumin 5400",
+    "match_confidence": 0.5
+  },
+  "b9e409f46569829ae829ac33fc0a9e929c9590f7119c9d810e87ec4478c05152": {
+    "sha256": "b9e409f46569829ae829ac33fc0a9e929c9590f7119c9d810e87ec4478c05152",
+    "bytes": 217280,
+    "ext": "png",
+    "width": 468,
+    "height": 681,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image43.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0012": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0012",
+    "product_name": "Biotin 3mg",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/b9e409f46569829ae829ac33fc0a9e929c9590f7119c9d810e87ec4478c05152.png"
+  },
+  "3c82c6f763891534fffaf45198df31646be522a52ccc2b21ee741f3e5b5c4868": {
+    "sha256": "3c82c6f763891534fffaf45198df31646be522a52ccc2b21ee741f3e5b5c4868",
+    "bytes": 211378,
+    "ext": "png",
+    "width": 450,
+    "height": 655,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image44.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0013": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0013",
+    "product_name": "Breastfeeding Support",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/3c82c6f763891534fffaf45198df31646be522a52ccc2b21ee741f3e5b5c4868.png"
+  },
+  "cf8cfaa65fce7bbd710263cfee564eaa2caab30d66f419a9a123ec4dfebec015": {
+    "sha256": "cf8cfaa65fce7bbd710263cfee564eaa2caab30d66f419a9a123ec4dfebec015",
+    "bytes": 3534,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image45.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0013": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0013",
+    "product_name": "Breastfeeding Support",
+    "match_confidence": 1.0
+  },
+  "c2185fac2c725c9163f50d34f83248175b3306d0e380358cf45b111d34ec2385": {
+    "sha256": "c2185fac2c725c9163f50d34f83248175b3306d0e380358cf45b111d34ec2385",
+    "bytes": 226775,
+    "ext": "png",
+    "width": 463,
+    "height": 676,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image46.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0014": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0014",
+    "product_name": "Bromelain Forte",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/c2185fac2c725c9163f50d34f83248175b3306d0e380358cf45b111d34ec2385.png"
+  },
+  "11dc1a84f51558faa1b5d9d732115c59b184d20044b8c85b30afcbefd64afaf1": {
+    "sha256": "11dc1a84f51558faa1b5d9d732115c59b184d20044b8c85b30afcbefd64afaf1",
+    "bytes": 1950,
+    "ext": "png",
+    "width": 82,
+    "height": 17,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image47.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0014": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0014",
+    "product_name": "Bromelain Forte",
+    "match_confidence": 1.0
+  },
+  "ba0e04ce7f47bcbac79ea41755605a1e41aa992afb7275a79bcfe3a83f674e11": {
+    "sha256": "ba0e04ce7f47bcbac79ea41755605a1e41aa992afb7275a79bcfe3a83f674e11",
+    "bytes": 6402,
+    "ext": "png",
+    "width": 350,
+    "height": 49,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image48.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0014": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0014",
+    "product_name": "Bromelain Forte",
+    "match_confidence": 1.0
+  },
+  "75455e3dbfba721bed5a34faae2bcaa7ed5458ae3951c0b0dc016afa8326874c": {
+    "sha256": "75455e3dbfba721bed5a34faae2bcaa7ed5458ae3951c0b0dc016afa8326874c",
+    "bytes": 5749,
+    "ext": "png",
+    "width": 272,
+    "height": 50,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image49.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0014": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0014",
+    "product_name": "Bromelain Forte",
+    "match_confidence": 1.0
+  },
+  "ba5ca1160c49b78a92ea9654c3e22337693c1670592ebdbfb0333d8c39e0deb1": {
+    "sha256": "ba5ca1160c49b78a92ea9654c3e22337693c1670592ebdbfb0333d8c39e0deb1",
+    "bytes": 5151,
+    "ext": "png",
+    "width": 233,
+    "height": 18,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image50.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0014": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0014",
+    "product_name": "Bromelain Forte",
+    "match_confidence": 1.0
+  },
+  "c5eb65a369f4290b3fd0c77c9b3e9a3378808f8084e0e36e8985d4c9107ddfc1": {
+    "sha256": "c5eb65a369f4290b3fd0c77c9b3e9a3378808f8084e0e36e8985d4c9107ddfc1",
+    "bytes": 1465,
+    "ext": "png",
+    "width": 52,
+    "height": 18,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image51.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0014": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0014",
+    "product_name": "Bromelain Forte",
+    "match_confidence": 1.0
+  },
+  "aa2e63af6950ec8cf48ea9bf3097cc0e929139b2d47b807f8221c6454ac6cdb2": {
+    "sha256": "aa2e63af6950ec8cf48ea9bf3097cc0e929139b2d47b807f8221c6454ac6cdb2",
+    "bytes": 1814,
+    "ext": "png",
+    "width": 72,
+    "height": 17,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image52.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0014": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0014",
+    "product_name": "Bromelain Forte",
+    "match_confidence": 1.0
+  },
+  "f9fdf4c02724fda139c1d8b7ab6157dbeefeb9f8d31e9e7c669e232547267008": {
+    "sha256": "f9fdf4c02724fda139c1d8b7ab6157dbeefeb9f8d31e9e7c669e232547267008",
+    "bytes": 1573,
+    "ext": "png",
+    "width": 57,
+    "height": 17,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image53.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0014": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0014",
+    "product_name": "Bromelain Forte",
+    "match_confidence": 1.0
+  },
+  "bb5f567ec061ce097c5537139b8defff8d4e6bd7cc77e77d0ed9a9b24503b704": {
+    "sha256": "bb5f567ec061ce097c5537139b8defff8d4e6bd7cc77e77d0ed9a9b24503b704",
+    "bytes": 8865,
+    "ext": "png",
+    "width": 431,
+    "height": 17,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image54.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0014": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0014",
+    "product_name": "Bromelain Forte",
+    "match_confidence": 1.0
+  },
+  "4a5487768416ffbc379f0feae1e6831f5cd4dace253892761a0a713450beb11c": {
+    "sha256": "4a5487768416ffbc379f0feae1e6831f5cd4dace253892761a0a713450beb11c",
+    "bytes": 224859,
+    "ext": "png",
+    "width": 427,
+    "height": 643,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image55.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0015": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0015",
+    "product_name": "Bulgarian Tribulus Complex",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/4a5487768416ffbc379f0feae1e6831f5cd4dace253892761a0a713450beb11c.png"
+  },
+  "9f7019408afc18788ce9efd1421a4493b2a90656e143e68fdef932dac265069f": {
+    "sha256": "9f7019408afc18788ce9efd1421a4493b2a90656e143e68fdef932dac265069f",
+    "bytes": 3537,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image56.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image51.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0015": 1,
+      "HOG-0075": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0015",
+    "product_name": "Bulgarian Tribulus Complex",
+    "match_confidence": 0.5
+  },
+  "c845571152656f938c79c494dd6ff939fa53ceec880625ee8e456d65b06ceed2": {
+    "sha256": "c845571152656f938c79c494dd6ff939fa53ceec880625ee8e456d65b06ceed2",
+    "bytes": 190990,
+    "ext": "png",
+    "width": 580,
+    "height": 701,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image57.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0016": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0016",
+    "product_name": "Calcium K2 with D3",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/c845571152656f938c79c494dd6ff939fa53ceec880625ee8e456d65b06ceed2.png"
+  },
+  "b3c5dfb50e6170db871b8bab8b7848cff748b1343f9f41612f2b58b6949d19e2": {
+    "sha256": "b3c5dfb50e6170db871b8bab8b7848cff748b1343f9f41612f2b58b6949d19e2",
+    "bytes": 49990,
+    "ext": "png",
+    "width": 1072,
+    "height": 287,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image58.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0016": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0016",
+    "product_name": "Calcium K2 with D3",
+    "match_confidence": 1.0
+  },
+  "430440f76f6f469b65d9e6d3343158669213d7b9f9a75d0ac94d37f3bc501a50": {
+    "sha256": "430440f76f6f469b65d9e6d3343158669213d7b9f9a75d0ac94d37f3bc501a50",
+    "bytes": 53246,
+    "ext": "png",
+    "width": 1072,
+    "height": 481,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image59.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0016": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0016",
+    "product_name": "Calcium K2 with D3",
+    "match_confidence": 1.0
+  },
+  "fb1cb0ae621434728768afae7fa5747d18fc742490cb59058de22ef5845d3853": {
+    "sha256": "fb1cb0ae621434728768afae7fa5747d18fc742490cb59058de22ef5845d3853",
+    "bytes": 56250,
+    "ext": "jpeg",
+    "width": 1014,
+    "height": 524,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image60.jpeg",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image55.jpeg",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0016": 1,
+      "HOG-0009": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0016",
+    "product_name": "Calcium K2 with D3",
+    "match_confidence": 0.5
+  },
+  "7442e21b84048df6258dd241a9c1b61603467d41055bd0bbeab57fa3e6a2c0e8": {
+    "sha256": "7442e21b84048df6258dd241a9c1b61603467d41055bd0bbeab57fa3e6a2c0e8",
+    "bytes": 211902,
+    "ext": "png",
+    "width": 455,
+    "height": 678,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image61.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0017": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0017",
+    "product_name": "Candida Relief",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/7442e21b84048df6258dd241a9c1b61603467d41055bd0bbeab57fa3e6a2c0e8.png"
+  },
+  "d5889aac5103bcd9dfbb67585d93c5da370a418b58ea1c750b729e09001f30f9": {
+    "sha256": "d5889aac5103bcd9dfbb67585d93c5da370a418b58ea1c750b729e09001f30f9",
+    "bytes": 3545,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image62.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image62.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image62.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image62.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image62.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image62.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image57.png",
+        "match_method": "xlsx_anchor_cell"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image57.png",
+        "match_method": "xlsx_anchor_cell"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image57.png",
+        "match_method": "xlsx_anchor_cell"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image57.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0017": 1,
+      "HOG-0044": 1,
+      "HOG-0054": 1,
+      "HOG-0060": 1,
+      "HOG-0076": 1,
+      "HOG-0090": 1,
+      "HOG-0075": 1,
+      "HOG-0028": 1,
+      "HOG-0059": 1,
+      "HOG-0080": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0017",
+    "product_name": "Candida Relief",
+    "match_confidence": 0.1
+  },
+  "c686d8c4e54b6bf9665098cb8aa8224f7b57240e0a30c77ee540b225e87edb48": {
+    "sha256": "c686d8c4e54b6bf9665098cb8aa8224f7b57240e0a30c77ee540b225e87edb48",
+    "bytes": 218104,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image63.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0018": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0018",
+    "product_name": "Children’s Calci Care",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/c686d8c4e54b6bf9665098cb8aa8224f7b57240e0a30c77ee540b225e87edb48.png"
+  },
+  "8e8908734a7a44d1ed8a1562747f8aa2db57931ad12d89ae7ab65031a08c4547": {
+    "sha256": "8e8908734a7a44d1ed8a1562747f8aa2db57931ad12d89ae7ab65031a08c4547",
+    "bytes": 3544,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image64.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image64.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0018": 1,
+      "HOG-0103": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0018",
+    "product_name": "Children’s Calci Care",
+    "match_confidence": 0.5
+  },
+  "b403a50e0d8c5ec4867b67bc534f4d8842503cba4f1e95fab2ab42a771f855df": {
+    "sha256": "b403a50e0d8c5ec4867b67bc534f4d8842503cba4f1e95fab2ab42a771f855df",
+    "bytes": 1074,
+    "ext": "png",
+    "width": 32,
+    "height": 31,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image65.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image65.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image65.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0018": 1,
+      "HOG-0019": 1,
+      "HOG-0021": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0018",
+    "product_name": "Children’s Calci Care",
+    "match_confidence": 0.333
+  },
+  "ae49d79e223e56d2f72106e43578a90ecc810eaf980a3c3ddc340ec24368ce00": {
+    "sha256": "ae49d79e223e56d2f72106e43578a90ecc810eaf980a3c3ddc340ec24368ce00",
+    "bytes": 211421,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image66.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0019": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0019",
+    "product_name": "Children’s Calm Care",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/ae49d79e223e56d2f72106e43578a90ecc810eaf980a3c3ddc340ec24368ce00.png"
+  },
+  "32a2a7b64a823bf95f731f6b4a3533b2afbc2e36d5c17c452d376fa3d233c4a5": {
+    "sha256": "32a2a7b64a823bf95f731f6b4a3533b2afbc2e36d5c17c452d376fa3d233c4a5",
+    "bytes": 224277,
+    "ext": "png",
+    "width": 459,
+    "height": 670,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image67.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0020": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0020",
+    "product_name": "Children’s Fish-i Care",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/32a2a7b64a823bf95f731f6b4a3533b2afbc2e36d5c17c452d376fa3d233c4a5.png"
+  },
+  "6d52cc5c8612804be13a151a196baed1fcf298d5b30f680e5851f6c6d5fa1281": {
+    "sha256": "6d52cc5c8612804be13a151a196baed1fcf298d5b30f680e5851f6c6d5fa1281",
+    "bytes": 1034,
+    "ext": "png",
+    "width": 31,
+    "height": 31,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image68.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0020": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0020",
+    "product_name": "Children’s Fish-i Care",
+    "match_confidence": 1.0
+  },
+  "7fd1a7e6194b7509e5566ad1950165e677c73ae6d6b6c88a746b510cdf5d09a7": {
+    "sha256": "7fd1a7e6194b7509e5566ad1950165e677c73ae6d6b6c88a746b510cdf5d09a7",
+    "bytes": 215421,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image69.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0021": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0021",
+    "product_name": "Children’s Immune Care",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/7fd1a7e6194b7509e5566ad1950165e677c73ae6d6b6c88a746b510cdf5d09a7.png"
+  },
+  "212d882c36397676f907c5966ccba65b33750c219229c68148fae075479caea9": {
+    "sha256": "212d882c36397676f907c5966ccba65b33750c219229c68148fae075479caea9",
+    "bytes": 232705,
+    "ext": "png",
+    "width": 459,
+    "height": 670,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image70.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0022": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0022",
+    "product_name": "Children’s Magnesium Care",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/212d882c36397676f907c5966ccba65b33750c219229c68148fae075479caea9.png"
+  },
+  "f678130afd41ed896faa9c7de657cded02e3e3b47cb2ab6b889d4fd12edb9e44": {
+    "sha256": "f678130afd41ed896faa9c7de657cded02e3e3b47cb2ab6b889d4fd12edb9e44",
+    "bytes": 3550,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image71.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image66.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0022": 1,
+      "HOG-0075": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0022",
+    "product_name": "Children’s Magnesium Care",
+    "match_confidence": 0.5
+  },
+  "5237cc57624f2683bc32885575516ffde7368100c88648da320893b31842f9f0": {
+    "sha256": "5237cc57624f2683bc32885575516ffde7368100c88648da320893b31842f9f0",
+    "bytes": 1045,
+    "ext": "png",
+    "width": 31,
+    "height": 30,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image72.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image72.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image72.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0022": 1,
+      "HOG-0023": 1,
+      "HOG-0024": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0022",
+    "product_name": "Children’s Magnesium Care",
+    "match_confidence": 0.333
+  },
+  "9bb57ea9db48d86d14eff91a6069c07f1a78f044b58a76674d1af9f2e00d161c": {
+    "sha256": "9bb57ea9db48d86d14eff91a6069c07f1a78f044b58a76674d1af9f2e00d161c",
+    "bytes": 216851,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image73.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0023": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0023",
+    "product_name": "Children’s Multi Care",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/9bb57ea9db48d86d14eff91a6069c07f1a78f044b58a76674d1af9f2e00d161c.png"
+  },
+  "7d0f22d40b7909034a26fb230e8747cbfc96cf7eea5b7b353de85369c214d150": {
+    "sha256": "7d0f22d40b7909034a26fb230e8747cbfc96cf7eea5b7b353de85369c214d150",
+    "bytes": 3563,
+    "ext": "png",
+    "width": 55,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image74.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0023": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0023",
+    "product_name": "Children’s Multi Care",
+    "match_confidence": 1.0
+  },
+  "cc8f61bbbb79b700ef8be11ee759a17b47e031175cc790e072584fe97dc270e9": {
+    "sha256": "cc8f61bbbb79b700ef8be11ee759a17b47e031175cc790e072584fe97dc270e9",
+    "bytes": 217620,
+    "ext": "png",
+    "width": 506,
+    "height": 662,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image75.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0024": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0024",
+    "product_name": "Children’s Probiotic 15 Billion",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/cc8f61bbbb79b700ef8be11ee759a17b47e031175cc790e072584fe97dc270e9.png"
+  },
+  "26465c3990d21926ba37360f9eb7aeaaffea334ce1d2cffb8859ec6fec9be3b7": {
+    "sha256": "26465c3990d21926ba37360f9eb7aeaaffea334ce1d2cffb8859ec6fec9be3b7",
+    "bytes": 3552,
+    "ext": "png",
+    "width": 55,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image76.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0024": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0024",
+    "product_name": "Children’s Probiotic 15 Billion",
+    "match_confidence": 1.0
+  },
+  "6aea97076583e176e833093ebf2d330af5280cbad04fb746154715075dd4dfa7": {
+    "sha256": "6aea97076583e176e833093ebf2d330af5280cbad04fb746154715075dd4dfa7",
+    "bytes": 197470,
+    "ext": "png",
+    "width": 450,
+    "height": 652,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image77.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0025": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0025",
+    "product_name": "Chromium MAX",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/6aea97076583e176e833093ebf2d330af5280cbad04fb746154715075dd4dfa7.png"
+  },
+  "9acfafdcc8f1dcd58f117acac12fd6c0d846a991c97231b0a36164ae2b5fde23": {
+    "sha256": "9acfafdcc8f1dcd58f117acac12fd6c0d846a991c97231b0a36164ae2b5fde23",
+    "bytes": 3551,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image78.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image78.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0025": 1,
+      "HOG-0094": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0025",
+    "product_name": "Chromium MAX",
+    "match_confidence": 0.5
+  },
+  "9f2a58dfedcae9aa1ee210617ae93cee6dede72064fa2cac4dede8f7048c2025": {
+    "sha256": "9f2a58dfedcae9aa1ee210617ae93cee6dede72064fa2cac4dede8f7048c2025",
+    "bytes": 208778,
+    "ext": "png",
+    "width": 461,
+    "height": 643,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image79.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0026": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0026",
+    "product_name": "Clear Skin",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/9f2a58dfedcae9aa1ee210617ae93cee6dede72064fa2cac4dede8f7048c2025.png"
+  },
+  "f065fd31e5f1db22d543fa216c1c4cbd7d7a49f84a094e93623956b48a66514e": {
+    "sha256": "f065fd31e5f1db22d543fa216c1c4cbd7d7a49f84a094e93623956b48a66514e",
+    "bytes": 3545,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image80.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image74.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0026": 1,
+      "HOG-0024": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0026",
+    "product_name": "Clear Skin",
+    "match_confidence": 0.5
+  },
+  "81dd79b66c01e56fc078e54aa730ba184bf463a2ec11df943430a36caee0fde8": {
+    "sha256": "81dd79b66c01e56fc078e54aa730ba184bf463a2ec11df943430a36caee0fde8",
+    "bytes": 221040,
+    "ext": "png",
+    "width": 463,
+    "height": 676,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image81.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0027": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0027",
+    "product_name": "Cold & Flu Strike",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/81dd79b66c01e56fc078e54aa730ba184bf463a2ec11df943430a36caee0fde8.png"
+  },
+  "289c8a05388ecb7509153274f684ebb558c904293e59ec46ab6e62218b2df399": {
+    "sha256": "289c8a05388ecb7509153274f684ebb558c904293e59ec46ab6e62218b2df399",
+    "bytes": 3540,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image82.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image82.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image77.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0027": 1,
+      "HOG-0088": 1,
+      "HOG-0024": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0027",
+    "product_name": "Cold & Flu Strike",
+    "match_confidence": 0.333
+  },
+  "3aa2431463c605b0cade69bb3e0320b7bc7e7aab6b735f19dae9901ecf053abd": {
+    "sha256": "3aa2431463c605b0cade69bb3e0320b7bc7e7aab6b735f19dae9901ecf053abd",
+    "bytes": 206335,
+    "ext": "png",
+    "width": 453,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image83.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0028": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0028",
+    "product_name": "Collagen",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/3aa2431463c605b0cade69bb3e0320b7bc7e7aab6b735f19dae9901ecf053abd.png"
+  },
+  "ef9e614bb0071e28ef457a9e20eee87ca44316462e30a46d23fd8ea3a7dbfc53": {
+    "sha256": "ef9e614bb0071e28ef457a9e20eee87ca44316462e30a46d23fd8ea3a7dbfc53",
+    "bytes": 51012,
+    "ext": "jpeg",
+    "width": 760,
+    "height": 432,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image84.jpeg",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0028": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0028",
+    "product_name": "Collagen",
+    "match_confidence": 1.0
+  },
+  "5c9201c01f9b97fdea414c7c8422d9b764c16de3b1eb3a12432ec1b4be534168": {
+    "sha256": "5c9201c01f9b97fdea414c7c8422d9b764c16de3b1eb3a12432ec1b4be534168",
+    "bytes": 175572,
+    "ext": "png",
+    "width": 559,
+    "height": 670,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image85.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0029": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0029",
+    "product_name": "Collagen Forte",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/5c9201c01f9b97fdea414c7c8422d9b764c16de3b1eb3a12432ec1b4be534168.png"
+  },
+  "50f9612822553f9ba30931cd1edbf34c51b3ea19482b8c190a62ade92e99dbc7": {
+    "sha256": "50f9612822553f9ba30931cd1edbf34c51b3ea19482b8c190a62ade92e99dbc7",
+    "bytes": 57398,
+    "ext": "jpeg",
+    "width": 816,
+    "height": 463,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image86.jpeg",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image86.jpeg",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0029": 1,
+      "HOG-0030": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0029",
+    "product_name": "Collagen Forte",
+    "match_confidence": 0.5
+  },
+  "997bca4cc09893ba213c5793f69036127f36b92cbe3995c61e3236ab2c2d9171": {
+    "sha256": "997bca4cc09893ba213c5793f69036127f36b92cbe3995c61e3236ab2c2d9171",
+    "bytes": 2722,
+    "ext": "png",
+    "width": 106,
+    "height": 13,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image87.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0029": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0029",
+    "product_name": "Collagen Forte",
+    "match_confidence": 1.0
+  },
+  "abb4b7562574fc2f37ad2f4942ba36ff607783f2a9c18b586b00654f198e1b8a": {
+    "sha256": "abb4b7562574fc2f37ad2f4942ba36ff607783f2a9c18b586b00654f198e1b8a",
+    "bytes": 4331,
+    "ext": "png",
+    "width": 109,
+    "height": 73,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image88.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0029": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0029",
+    "product_name": "Collagen Forte",
+    "match_confidence": 1.0
+  },
+  "6b25d19eae4fb2d946c7675dd72e2f425bfaf5ed059f220eca4584c257dc4734": {
+    "sha256": "6b25d19eae4fb2d946c7675dd72e2f425bfaf5ed059f220eca4584c257dc4734",
+    "bytes": 7113,
+    "ext": "png",
+    "width": 133,
+    "height": 87,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image89.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0029": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0029",
+    "product_name": "Collagen Forte",
+    "match_confidence": 1.0
+  },
+  "75407ca0d519d426f4ded03df856926d668703d50a4843fe4efc020f431eaca4": {
+    "sha256": "75407ca0d519d426f4ded03df856926d668703d50a4843fe4efc020f431eaca4",
+    "bytes": 13993,
+    "ext": "png",
+    "width": 530,
+    "height": 268,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image90.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image90.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0029": 1,
+      "HOG-0030": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0029",
+    "product_name": "Collagen Forte",
+    "match_confidence": 0.5
+  },
+  "05135d1d9d6497af225a986879c9a0702cce920544b344f2de1df10981a9af98": {
+    "sha256": "05135d1d9d6497af225a986879c9a0702cce920544b344f2de1df10981a9af98",
+    "bytes": 3467,
+    "ext": "png",
+    "width": 493,
+    "height": 29,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image91.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image91.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0029": 1,
+      "HOG-0030": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0029",
+    "product_name": "Collagen Forte",
+    "match_confidence": 0.5
+  },
+  "86a122a51c5227783dd2a72fef1ede19ed693a089b7f9e1819f8708380b5778d": {
+    "sha256": "86a122a51c5227783dd2a72fef1ede19ed693a089b7f9e1819f8708380b5778d",
+    "bytes": 11018,
+    "ext": "png",
+    "width": 524,
+    "height": 240,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image92.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image92.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0029": 1,
+      "HOG-0030": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0029",
+    "product_name": "Collagen Forte",
+    "match_confidence": 0.5
+  },
+  "4aad059e19f0a23a2538ed20ef6b543d6290c281c5bdf89395e12b5f6a8a6624": {
+    "sha256": "4aad059e19f0a23a2538ed20ef6b543d6290c281c5bdf89395e12b5f6a8a6624",
+    "bytes": 5509,
+    "ext": "png",
+    "width": 501,
+    "height": 34,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image93.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image93.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0029": 1,
+      "HOG-0030": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0029",
+    "product_name": "Collagen Forte",
+    "match_confidence": 0.5
+  },
+  "399f499ad6468a6fc06965e67b49d08ef4bc940a24d4f04694e969ad667e8ebc": {
+    "sha256": "399f499ad6468a6fc06965e67b49d08ef4bc940a24d4f04694e969ad667e8ebc",
+    "bytes": 179728,
+    "ext": "png",
+    "width": 545,
+    "height": 655,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image94.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0030": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0030",
+    "product_name": "Collagen Gold",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/399f499ad6468a6fc06965e67b49d08ef4bc940a24d4f04694e969ad667e8ebc.png"
+  },
+  "de15e7a305f977aabe7338051744ec190989eefe6044f0d64c984eb430de61a2": {
+    "sha256": "de15e7a305f977aabe7338051744ec190989eefe6044f0d64c984eb430de61a2",
+    "bytes": 2408,
+    "ext": "png",
+    "width": 51,
+    "height": 51,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image95.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0030": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0030",
+    "product_name": "Collagen Gold",
+    "match_confidence": 1.0
+  },
+  "71f86db784a30114522a4b855458f512b12d90e5c8faa13ce9ea86c0de181511": {
+    "sha256": "71f86db784a30114522a4b855458f512b12d90e5c8faa13ce9ea86c0de181511",
+    "bytes": 2426,
+    "ext": "png",
+    "width": 51,
+    "height": 51,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image96.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0030": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0030",
+    "product_name": "Collagen Gold",
+    "match_confidence": 1.0
+  },
+  "ea35965c3edb3b3cbf8889fbb2592ddb6d90e7a5fb9aa6d3cb59aa2f402b81fc": {
+    "sha256": "ea35965c3edb3b3cbf8889fbb2592ddb6d90e7a5fb9aa6d3cb59aa2f402b81fc",
+    "bytes": 2711,
+    "ext": "png",
+    "width": 106,
+    "height": 13,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image97.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0030": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0030",
+    "product_name": "Collagen Gold",
+    "match_confidence": 1.0
+  },
+  "cec5918a703ae82a26432b20b44b04dc0a2ce2bdb9b450bb8f745ce5cc4ff37f": {
+    "sha256": "cec5918a703ae82a26432b20b44b04dc0a2ce2bdb9b450bb8f745ce5cc4ff37f",
+    "bytes": 4313,
+    "ext": "png",
+    "width": 109,
+    "height": 73,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image98.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0030": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0030",
+    "product_name": "Collagen Gold",
+    "match_confidence": 1.0
+  },
+  "be3cbc131c4b9b1016749eea4e0169ef5cc43fe2c0348d08a42169ce67423429": {
+    "sha256": "be3cbc131c4b9b1016749eea4e0169ef5cc43fe2c0348d08a42169ce67423429",
+    "bytes": 7132,
+    "ext": "png",
+    "width": 133,
+    "height": 87,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image99.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0030": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0030",
+    "product_name": "Collagen Gold",
+    "match_confidence": 1.0
+  },
+  "7a5425cf0beed178f608d5009a525a279abeed41b7d5faa319e37ce375013907": {
+    "sha256": "7a5425cf0beed178f608d5009a525a279abeed41b7d5faa319e37ce375013907",
+    "bytes": 205403,
+    "ext": "png",
+    "width": 463,
+    "height": 676,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image100.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0031": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0031",
+    "product_name": "CoQ10 150mg",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/7a5425cf0beed178f608d5009a525a279abeed41b7d5faa319e37ce375013907.png"
+  },
+  "1b9f017bae571b0207993173290952d225927d7d49f98dd21faf7b924c5ac44f": {
+    "sha256": "1b9f017bae571b0207993173290952d225927d7d49f98dd21faf7b924c5ac44f",
+    "bytes": 214289,
+    "ext": "png",
+    "width": 461,
+    "height": 673,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image101.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0032": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0032",
+    "product_name": "Cranberry 70 000",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/1b9f017bae571b0207993173290952d225927d7d49f98dd21faf7b924c5ac44f.png"
+  },
+  "5c2d93ca9497b087ce7c7241f1e9b508c383d13389df3b3738ab46b8cfb617b4": {
+    "sha256": "5c2d93ca9497b087ce7c7241f1e9b508c383d13389df3b3738ab46b8cfb617b4",
+    "bytes": 3541,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image102.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image102.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image95.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0032": 1,
+      "HOG-0077": 1,
+      "HOG-0072": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0032",
+    "product_name": "Cranberry 70 000",
+    "match_confidence": 0.333
+  },
+  "f40607386be8e80f741cf51d24d6522040488f90912c7cd72f56c34189705e3d": {
+    "sha256": "f40607386be8e80f741cf51d24d6522040488f90912c7cd72f56c34189705e3d",
+    "bytes": 195049,
+    "ext": "png",
+    "width": 454,
+    "height": 613,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image103.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0033": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0033",
+    "product_name": "Digest-Zymes",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/f40607386be8e80f741cf51d24d6522040488f90912c7cd72f56c34189705e3d.png"
+  },
+  "0100e350faae7c677960c3e467346a96c6b70cfb16cefc692c2645ffc90e2d94": {
+    "sha256": "0100e350faae7c677960c3e467346a96c6b70cfb16cefc692c2645ffc90e2d94",
+    "bytes": 3534,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image104.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0033": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0033",
+    "product_name": "Digest-Zymes",
+    "match_confidence": 1.0
+  },
+  "3c6ea0db8da72a95c1df24e718382487ec226f1f19b2f8a23a0bea029f9de09e": {
+    "sha256": "3c6ea0db8da72a95c1df24e718382487ec226f1f19b2f8a23a0bea029f9de09e",
+    "bytes": 213290,
+    "ext": "png",
+    "width": 461,
+    "height": 643,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image105.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0034": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0034",
+    "product_name": "Echinacea 4000 Complex",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/3c6ea0db8da72a95c1df24e718382487ec226f1f19b2f8a23a0bea029f9de09e.png"
+  },
+  "24a62cb5879a741ea9b15bc8c780a8d0b4c288e7c20e0f6c4392b72ca2e77405": {
+    "sha256": "24a62cb5879a741ea9b15bc8c780a8d0b4c288e7c20e0f6c4392b72ca2e77405",
+    "bytes": 3558,
+    "ext": "png",
+    "width": 55,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image106.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0034": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0034",
+    "product_name": "Echinacea 4000 Complex",
+    "match_confidence": 1.0
+  },
+  "f2d890a533f006df974f5ce40a827231604d632b74e95fd8216eb691166d8924": {
+    "sha256": "f2d890a533f006df974f5ce40a827231604d632b74e95fd8216eb691166d8924",
+    "bytes": 204221,
+    "ext": "png",
+    "width": 407,
+    "height": 610,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image107.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0035": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0035",
+    "product_name": "Elderberry Echinacea & Olive Leaf",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/f2d890a533f006df974f5ce40a827231604d632b74e95fd8216eb691166d8924.png"
+  },
+  "41da3e0d1128cf1880acd64142b2c5451d6a78aeacf165e87c878e32429c8046": {
+    "sha256": "41da3e0d1128cf1880acd64142b2c5451d6a78aeacf165e87c878e32429c8046",
+    "bytes": 3538,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image108.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0035": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0035",
+    "product_name": "Elderberry Echinacea & Olive Leaf",
+    "match_confidence": 1.0
+  },
+  "93dde57042d9a75dd1a6ff0a3a6b3729121b9cbc8ae12e4824ff069e8642c969": {
+    "sha256": "93dde57042d9a75dd1a6ff0a3a6b3729121b9cbc8ae12e4824ff069e8642c969",
+    "bytes": 1054,
+    "ext": "png",
+    "width": 31,
+    "height": 30,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image109.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0035": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0035",
+    "product_name": "Elderberry Echinacea & Olive Leaf",
+    "match_confidence": 1.0
+  },
+  "199fadfd5954f608c08648a73c0240f557097f890f67e74e1eb531db1fb3f1ad": {
+    "sha256": "199fadfd5954f608c08648a73c0240f557097f890f67e74e1eb531db1fb3f1ad",
+    "bytes": 234548,
+    "ext": "png",
+    "width": 558,
+    "height": 687,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image110.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0036": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0036",
+    "product_name": "Evening Primrose Oil Daily",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/199fadfd5954f608c08648a73c0240f557097f890f67e74e1eb531db1fb3f1ad.png"
+  },
+  "bb23bfdfac6f474a6678f58eedb6497023e27bf7c2d9b1309488652296223dfe": {
+    "sha256": "bb23bfdfac6f474a6678f58eedb6497023e27bf7c2d9b1309488652296223dfe",
+    "bytes": 26274,
+    "ext": "jpeg",
+    "width": 832,
+    "height": 664,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image111.jpeg",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0036": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0036",
+    "product_name": "Evening Primrose Oil Daily",
+    "match_confidence": 1.0
+  },
+  "5776535cb5cd283615ad5c5da38f05e16df9f7bd65f557f4fc2b6dbfad874d3d": {
+    "sha256": "5776535cb5cd283615ad5c5da38f05e16df9f7bd65f557f4fc2b6dbfad874d3d",
+    "bytes": 235506,
+    "ext": "png",
+    "width": 589,
+    "height": 687,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image112.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0037": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0037",
+    "product_name": "Fish Oil 1000",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/5776535cb5cd283615ad5c5da38f05e16df9f7bd65f557f4fc2b6dbfad874d3d.png"
+  },
+  "ba71f40ac699e16d14cae370cfda71484a467d0dbe0d7fab34540b9bddebca44": {
+    "sha256": "ba71f40ac699e16d14cae370cfda71484a467d0dbe0d7fab34540b9bddebca44",
+    "bytes": 214373,
+    "ext": "png",
+    "width": 450,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image113.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0038": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0038",
+    "product_name": "Folic Acid Complex",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/ba71f40ac699e16d14cae370cfda71484a467d0dbe0d7fab34540b9bddebca44.png"
+  },
+  "085bafdcb93f322695286564b509c60875da48232ac7becae5c45259047198ca": {
+    "sha256": "085bafdcb93f322695286564b509c60875da48232ac7becae5c45259047198ca",
+    "bytes": 3545,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image114.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image114.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0038": 1,
+      "HOG-0045": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0038",
+    "product_name": "Folic Acid Complex",
+    "match_confidence": 0.5
+  },
+  "98b906c142ad161cb9f39c7b7a598bcd231375eac826fe9780e382b3597dd5fe": {
+    "sha256": "98b906c142ad161cb9f39c7b7a598bcd231375eac826fe9780e382b3597dd5fe",
+    "bytes": 224676,
+    "ext": "png",
+    "width": 461,
+    "height": 673,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image115.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0039": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0039",
+    "product_name": "Ginkgo Biloba 6000",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/98b906c142ad161cb9f39c7b7a598bcd231375eac826fe9780e382b3597dd5fe.png"
+  },
+  "05c99954f51f58023868b9588a4204bce82d694166a485f705ea1b82e31b63ea": {
+    "sha256": "05c99954f51f58023868b9588a4204bce82d694166a485f705ea1b82e31b63ea",
+    "bytes": 3548,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image116.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image116.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image116.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image116.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image109.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0039": 1,
+      "HOG-0050": 1,
+      "HOG-0052": 1,
+      "HOG-0085": 1,
+      "HOG-0048": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0039",
+    "product_name": "Ginkgo Biloba 6000",
+    "match_confidence": 0.2
+  },
+  "9f295d00ec56549debafa54d3d6f4c3dea684c977fb21a29efc81ce4d5f8c772": {
+    "sha256": "9f295d00ec56549debafa54d3d6f4c3dea684c977fb21a29efc81ce4d5f8c772",
+    "bytes": 1212,
+    "ext": "png",
+    "width": 52,
+    "height": 19,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image117.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0039": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0039",
+    "product_name": "Ginkgo Biloba 6000",
+    "match_confidence": 1.0
+  },
+  "466341b4988883fd3c39bb57da4de2e8f1e43c6c2789a2c5df09673a5f1a1b4c": {
+    "sha256": "466341b4988883fd3c39bb57da4de2e8f1e43c6c2789a2c5df09673a5f1a1b4c",
+    "bytes": 2319,
+    "ext": "png",
+    "width": 90,
+    "height": 20,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image118.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0039": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0039",
+    "product_name": "Ginkgo Biloba 6000",
+    "match_confidence": 1.0
+  },
+  "712c9e86aeeb72fcf0cf975048b337795c88cd482cc0d50d61c0909578aab94e": {
+    "sha256": "712c9e86aeeb72fcf0cf975048b337795c88cd482cc0d50d61c0909578aab94e",
+    "bytes": 2096,
+    "ext": "png",
+    "width": 79,
+    "height": 25,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image119.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image112.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0039": 1,
+      "HOG-0028": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0039",
+    "product_name": "Ginkgo Biloba 6000",
+    "match_confidence": 0.5
+  },
+  "e703e72d4411393cd81d0cfba8903dc4af4778de80ea533556374bc34b467f02": {
+    "sha256": "e703e72d4411393cd81d0cfba8903dc4af4778de80ea533556374bc34b467f02",
+    "bytes": 2488,
+    "ext": "png",
+    "width": 88,
+    "height": 25,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image120.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0039": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0039",
+    "product_name": "Ginkgo Biloba 6000",
+    "match_confidence": 1.0
+  },
+  "23a820739f042ab0937a64adc65c76bb6ad48c4739b4a9d6d647c98505a8f1b9": {
+    "sha256": "23a820739f042ab0937a64adc65c76bb6ad48c4739b4a9d6d647c98505a8f1b9",
+    "bytes": 2152,
+    "ext": "png",
+    "width": 87,
+    "height": 25,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image121.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image114.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0039": 1,
+      "HOG-0028": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0039",
+    "product_name": "Ginkgo Biloba 6000",
+    "match_confidence": 0.5
+  },
+  "e5712ea16d86e6d331974a0aa8d9a825f0b3aa3ccf730718ce701ef799b5b58b": {
+    "sha256": "e5712ea16d86e6d331974a0aa8d9a825f0b3aa3ccf730718ce701ef799b5b58b",
+    "bytes": 2406,
+    "ext": "png",
+    "width": 86,
+    "height": 26,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image122.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0039": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0039",
+    "product_name": "Ginkgo Biloba 6000",
+    "match_confidence": 1.0
+  },
+  "385c86c2576c2929eaf0c61471f81151b411940add2c85849fbdbcd2351ae7b9": {
+    "sha256": "385c86c2576c2929eaf0c61471f81151b411940add2c85849fbdbcd2351ae7b9",
+    "bytes": 1741,
+    "ext": "png",
+    "width": 75,
+    "height": 20,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image123.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0039": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0039",
+    "product_name": "Ginkgo Biloba 6000",
+    "match_confidence": 1.0
+  },
+  "d35183afd12f374e3e56bf543e200e5a5deaebea9176327d370b6e2cbdd66a69": {
+    "sha256": "d35183afd12f374e3e56bf543e200e5a5deaebea9176327d370b6e2cbdd66a69",
+    "bytes": 1132,
+    "ext": "png",
+    "width": 40,
+    "height": 26,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image124.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0039": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0039",
+    "product_name": "Ginkgo Biloba 6000",
+    "match_confidence": 1.0
+  },
+  "7cba78648fbcf2cd4d2c6dee1f0cee57c4b35ac7e410b9f5bc9df63986a14e33": {
+    "sha256": "7cba78648fbcf2cd4d2c6dee1f0cee57c4b35ac7e410b9f5bc9df63986a14e33",
+    "bytes": 1197,
+    "ext": "png",
+    "width": 47,
+    "height": 20,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image125.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0039": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0039",
+    "product_name": "Ginkgo Biloba 6000",
+    "match_confidence": 1.0
+  },
+  "d381941a91529f6cb6850e11ab0947e686bb9b26670d87d39bebc9fd61f31c71": {
+    "sha256": "d381941a91529f6cb6850e11ab0947e686bb9b26670d87d39bebc9fd61f31c71",
+    "bytes": 2349,
+    "ext": "png",
+    "width": 86,
+    "height": 25,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image126.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0039": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0039",
+    "product_name": "Ginkgo Biloba 6000",
+    "match_confidence": 1.0
+  },
+  "3393787ea58b27d44132c482813b38114268bbd114f8dfe48b602cb67f0e7537": {
+    "sha256": "3393787ea58b27d44132c482813b38114268bbd114f8dfe48b602cb67f0e7537",
+    "bytes": 1697,
+    "ext": "png",
+    "width": 76,
+    "height": 19,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image127.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0039": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0039",
+    "product_name": "Ginkgo Biloba 6000",
+    "match_confidence": 1.0
+  },
+  "42615a2eb2804a2c4c43d70db66578429c701f8b1f0c8ce70db96b9a648c2cba": {
+    "sha256": "42615a2eb2804a2c4c43d70db66578429c701f8b1f0c8ce70db96b9a648c2cba",
+    "bytes": 2010,
+    "ext": "png",
+    "width": 88,
+    "height": 17,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image128.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0039": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0039",
+    "product_name": "Ginkgo Biloba 6000",
+    "match_confidence": 1.0
+  },
+  "9b0c0a5f9e698af4b415ada79e2cb799eeae3ce47be59f3af380a238d717837b": {
+    "sha256": "9b0c0a5f9e698af4b415ada79e2cb799eeae3ce47be59f3af380a238d717837b",
+    "bytes": 223540,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image129.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0040": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0040",
+    "product_name": "Ginseng 4 Energy Gold",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/9b0c0a5f9e698af4b415ada79e2cb799eeae3ce47be59f3af380a238d717837b.png"
+  },
+  "48d18fc453997ddd09016f1c7efacd8ce0dd2cc62dd8a67cf6f427549ccae7ab": {
+    "sha256": "48d18fc453997ddd09016f1c7efacd8ce0dd2cc62dd8a67cf6f427549ccae7ab",
+    "bytes": 3549,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image130.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image123.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0040": 1,
+      "HOG-0028": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0040",
+    "product_name": "Ginseng 4 Energy Gold",
+    "match_confidence": 0.5
+  },
+  "a3bb3e6371c62ed205da422148d81335d2dae91d9b42d1abcbf0ea312bc652bf": {
+    "sha256": "a3bb3e6371c62ed205da422148d81335d2dae91d9b42d1abcbf0ea312bc652bf",
+    "bytes": 207904,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image131.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0040": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0040",
+    "product_name": "Ginseng 4 Energy Gold",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/a3bb3e6371c62ed205da422148d81335d2dae91d9b42d1abcbf0ea312bc652bf.png"
+  },
+  "722169c31c142422a1fb23a8e86798b85c00f4f5bf2934bbec71a46bcce4eead": {
+    "sha256": "722169c31c142422a1fb23a8e86798b85c00f4f5bf2934bbec71a46bcce4eead",
+    "bytes": 208648,
+    "ext": "png",
+    "width": 610,
+    "height": 640,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image132.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0042": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0042",
+    "product_name": "Glucosamine MAX",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/722169c31c142422a1fb23a8e86798b85c00f4f5bf2934bbec71a46bcce4eead.png"
+  },
+  "eec871811c132dd56164f0d62591267597d6ecad3569b948c8ac6042a3a45c8e": {
+    "sha256": "eec871811c132dd56164f0d62591267597d6ecad3569b948c8ac6042a3a45c8e",
+    "bytes": 302058,
+    "ext": "png",
+    "width": 645,
+    "height": 614,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image133.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0042": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0042",
+    "product_name": "Glucosamine MAX",
+    "match_confidence": 1.0
+  },
+  "fd73ac2dc95de5451f795518ced2b5d0e34bea2945f47895b8425cd6bfda442e": {
+    "sha256": "fd73ac2dc95de5451f795518ced2b5d0e34bea2945f47895b8425cd6bfda442e",
+    "bytes": 217789,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image134.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0043": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0043",
+    "product_name": "Gout Relief Complex",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/fd73ac2dc95de5451f795518ced2b5d0e34bea2945f47895b8425cd6bfda442e.png"
+  },
+  "5632ff62b2094253983b74342a4fbb1e31c031d013cc4d47ad7b7d519d4be1b1": {
+    "sha256": "5632ff62b2094253983b74342a4fbb1e31c031d013cc4d47ad7b7d519d4be1b1",
+    "bytes": 3546,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image135.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image135.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image128.png",
+        "match_method": "xlsx_anchor_cell"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image128.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0043": 1,
+      "HOG-0059": 1,
+      "HOG-0028": 1,
+      "HOG-0057": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0043",
+    "product_name": "Gout Relief Complex",
+    "match_confidence": 0.25
+  },
+  "d1b77aeadc83de59bff3b1c163fc8bf78ec3d3ee74c8d566bb0c6ff69aaf2c89": {
+    "sha256": "d1b77aeadc83de59bff3b1c163fc8bf78ec3d3ee74c8d566bb0c6ff69aaf2c89",
+    "bytes": 218903,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image136.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0044": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0044",
+    "product_name": "Grape Seed Gold",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/d1b77aeadc83de59bff3b1c163fc8bf78ec3d3ee74c8d566bb0c6ff69aaf2c89.png"
+  },
+  "0187479b4cfbda42f30b6c0d2a12bb207507878d0e2fc02c426fa490106c7d59": {
+    "sha256": "0187479b4cfbda42f30b6c0d2a12bb207507878d0e2fc02c426fa490106c7d59",
+    "bytes": 201678,
+    "ext": "png",
+    "width": 581,
+    "height": 671,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image137.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0045": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0045",
+    "product_name": "Gut Care",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/0187479b4cfbda42f30b6c0d2a12bb207507878d0e2fc02c426fa490106c7d59.png"
+  },
+  "1c555a4f7820edfe3282d48cdebc9c727d98605c577cb522f5171e5c80b32302": {
+    "sha256": "1c555a4f7820edfe3282d48cdebc9c727d98605c577cb522f5171e5c80b32302",
+    "bytes": 225096,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image138.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0046": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0046",
+    "product_name": "Hawthorn 4500",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/1c555a4f7820edfe3282d48cdebc9c727d98605c577cb522f5171e5c80b32302.png"
+  },
+  "8f909deb04865bf7054bd7c27deebb569277595bdd73fcb0959c6b9672b3b3f0": {
+    "sha256": "8f909deb04865bf7054bd7c27deebb569277595bdd73fcb0959c6b9672b3b3f0",
+    "bytes": 3545,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image139.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0046": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0046",
+    "product_name": "Hawthorn 4500",
+    "match_confidence": 1.0
+  },
+  "ac0e28780314dced95eca6a6741aa9c86eb275ad846478bf87977990dbcfe2e8": {
+    "sha256": "ac0e28780314dced95eca6a6741aa9c86eb275ad846478bf87977990dbcfe2e8",
+    "bytes": 217887,
+    "ext": "png",
+    "width": 461,
+    "height": 673,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image140.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0047": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0047",
+    "product_name": "Hayfever & Sinus Ease",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/ac0e28780314dced95eca6a6741aa9c86eb275ad846478bf87977990dbcfe2e8.png"
+  },
+  "3cc997a7aee0a1626e22a9390a9104e1cf9455f351135c5c30650f21304a53ab": {
+    "sha256": "3cc997a7aee0a1626e22a9390a9104e1cf9455f351135c5c30650f21304a53ab",
+    "bytes": 226083,
+    "ext": "png",
+    "width": 461,
+    "height": 672,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image141.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0048": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0048",
+    "product_name": "Hormone Metabolism",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/3cc997a7aee0a1626e22a9390a9104e1cf9455f351135c5c30650f21304a53ab.png"
+  },
+  "bc6cf3888952b1cb614b2983ce14c1de9c682d54044432256efc9dfe09b1db45": {
+    "sha256": "bc6cf3888952b1cb614b2983ce14c1de9c682d54044432256efc9dfe09b1db45",
+    "bytes": 3544,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image142.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image135.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0048": 1,
+      "HOG-0028": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0048",
+    "product_name": "Hormone Metabolism",
+    "match_confidence": 0.5
+  },
+  "2c336ad2bcbbb3fa5b3bc269216f88fe6acad590c77244da440d0ed51a9e9a61": {
+    "sha256": "2c336ad2bcbbb3fa5b3bc269216f88fe6acad590c77244da440d0ed51a9e9a61",
+    "bytes": 81464,
+    "ext": "jpeg",
+    "width": 1032,
+    "height": 648,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image143.jpeg",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "content_graphic",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0
+  },
+  "10a2bfb98fa90ba2523ef326e81c2d6a446c393f30329464ffdf93ac64cc642e": {
+    "sha256": "10a2bfb98fa90ba2523ef326e81c2d6a446c393f30329464ffdf93ac64cc642e",
+    "bytes": 208240,
+    "ext": "png",
+    "width": 452,
+    "height": 655,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image144.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0049": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0049",
+    "product_name": "Iodine MAX",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/10a2bfb98fa90ba2523ef326e81c2d6a446c393f30329464ffdf93ac64cc642e.png"
+  },
+  "7be7830df384df722bffb4c2b06c57d20d562b17525c6707a4a6df11deefa919": {
+    "sha256": "7be7830df384df722bffb4c2b06c57d20d562b17525c6707a4a6df11deefa919",
+    "bytes": 3540,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image145.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0049": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0049",
+    "product_name": "Iodine MAX",
+    "match_confidence": 1.0
+  },
+  "1cb72c5aa0eec2fef31460f4d5922062c2062020673b27c7eebcb0f7671b4cb7": {
+    "sha256": "1cb72c5aa0eec2fef31460f4d5922062c2062020673b27c7eebcb0f7671b4cb7",
+    "bytes": 194370,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image146.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0050": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0050",
+    "product_name": "Liver Care",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/1cb72c5aa0eec2fef31460f4d5922062c2062020673b27c7eebcb0f7671b4cb7.png"
+  },
+  "8abbdbfe99dc054eab04a1238e35367c471b8048cb777fe4ced03e841b53cc78": {
+    "sha256": "8abbdbfe99dc054eab04a1238e35367c471b8048cb777fe4ced03e841b53cc78",
+    "bytes": 206303,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image147.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0051": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0051",
+    "product_name": "Lung Care",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/8abbdbfe99dc054eab04a1238e35367c471b8048cb777fe4ced03e841b53cc78.png"
+  },
+  "6028a254390de556bcff7b4e56690922e20ce62b19bec13cf10ce95cd4a33ba5": {
+    "sha256": "6028a254390de556bcff7b4e56690922e20ce62b19bec13cf10ce95cd4a33ba5",
+    "bytes": 221149,
+    "ext": "png",
+    "width": 415,
+    "height": 613,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image148.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0051": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0051",
+    "product_name": "Lung Care",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/6028a254390de556bcff7b4e56690922e20ce62b19bec13cf10ce95cd4a33ba5.png"
+  },
+  "f02886d739ff380664a157a96d9eba8662476c81d36fef6db249e980e61bd2ad": {
+    "sha256": "f02886d739ff380664a157a96d9eba8662476c81d36fef6db249e980e61bd2ad",
+    "bytes": 3541,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image149.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0051": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0051",
+    "product_name": "Lung Care",
+    "match_confidence": 1.0
+  },
+  "28a69d67db73de8220f0234ddbbd8c70fb78992416e85cd5b68260f77b568c52": {
+    "sha256": "28a69d67db73de8220f0234ddbbd8c70fb78992416e85cd5b68260f77b568c52",
+    "bytes": 202905,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image150.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0052": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0052",
+    "product_name": "Macu-Guard",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/28a69d67db73de8220f0234ddbbd8c70fb78992416e85cd5b68260f77b568c52.png"
+  },
+  "16710fc67bead33bfd9de0a29d363578bc113c137875896e68f204430f8deae4": {
+    "sha256": "16710fc67bead33bfd9de0a29d363578bc113c137875896e68f204430f8deae4",
+    "bytes": 215399,
+    "ext": "png",
+    "width": 589,
+    "height": 712,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image151.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0053": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0053",
+    "product_name": "Magnesium Chewable",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/16710fc67bead33bfd9de0a29d363578bc113c137875896e68f204430f8deae4.png"
+  },
+  "71a39aa37f16c3ce8287e8a93c7eb5245a6b14d869e24763da1bef229b3a41f9": {
+    "sha256": "71a39aa37f16c3ce8287e8a93c7eb5245a6b14d869e24763da1bef229b3a41f9",
+    "bytes": 3684,
+    "ext": "png",
+    "width": 55,
+    "height": 55,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image152.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0053": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0053",
+    "product_name": "Magnesium Chewable",
+    "match_confidence": 1.0
+  },
+  "8b7d81bcf8dd474a56ea94494f8262de4105317d6b8c70e025e73a58caf70f8e": {
+    "sha256": "8b7d81bcf8dd474a56ea94494f8262de4105317d6b8c70e025e73a58caf70f8e",
+    "bytes": 221584,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image153.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0054": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0054",
+    "product_name": "Magnesium Citrate 900",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/8b7d81bcf8dd474a56ea94494f8262de4105317d6b8c70e025e73a58caf70f8e.png"
+  },
+  "d8bc6f1fa82142888f5b37e0f9c829e18e8e4c27b8b1adba33f76daa564eab35": {
+    "sha256": "d8bc6f1fa82142888f5b37e0f9c829e18e8e4c27b8b1adba33f76daa564eab35",
+    "bytes": 211683,
+    "ext": "png",
+    "width": 450,
+    "height": 655,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image154.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0055": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0055",
+    "product_name": "Magnesium Forte",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/d8bc6f1fa82142888f5b37e0f9c829e18e8e4c27b8b1adba33f76daa564eab35.png"
+  },
+  "445a7267eb7084bc0d0b58d915af1c79752a132759ac8d97d019bf8f78521aaa": {
+    "sha256": "445a7267eb7084bc0d0b58d915af1c79752a132759ac8d97d019bf8f78521aaa",
+    "bytes": 3548,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image155.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0055": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0055",
+    "product_name": "Magnesium Forte",
+    "match_confidence": 1.0
+  },
+  "9f1240581f065238fb9707ff8c8cc5df3fab6fed1c0e0c63324944a56d6b096e": {
+    "sha256": "9f1240581f065238fb9707ff8c8cc5df3fab6fed1c0e0c63324944a56d6b096e",
+    "bytes": 154300,
+    "ext": "png",
+    "width": 453,
+    "height": 627,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image156.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0056": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0056",
+    "product_name": "Magnesium Muscle Cream",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/9f1240581f065238fb9707ff8c8cc5df3fab6fed1c0e0c63324944a56d6b096e.png"
+  },
+  "dcb9c8198c47682302b67a616c5c24bdc23e1c4c56d4aa963ffa08aaba288554": {
+    "sha256": "dcb9c8198c47682302b67a616c5c24bdc23e1c4c56d4aa963ffa08aaba288554",
+    "bytes": 3542,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image157.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image157.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image150.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0056": 1,
+      "HOG-0080": 1,
+      "HOG-0072": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0056",
+    "product_name": "Magnesium Muscle Cream",
+    "match_confidence": 0.333
+  },
+  "c443683042f92a14cf8919e4777ddfd67f88b6a506ded97512960560f235e8eb": {
+    "sha256": "c443683042f92a14cf8919e4777ddfd67f88b6a506ded97512960560f235e8eb",
+    "bytes": 202299,
+    "ext": "png",
+    "width": 453,
+    "height": 649,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image158.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0057": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0057",
+    "product_name": "Magnesium Night Plus",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/c443683042f92a14cf8919e4777ddfd67f88b6a506ded97512960560f235e8eb.png"
+  },
+  "c7abb6e5d5fa747a340ee3334b3633b4475ab9d0bd7ea2f1acd41c4f307837c1": {
+    "sha256": "c7abb6e5d5fa747a340ee3334b3633b4475ab9d0bd7ea2f1acd41c4f307837c1",
+    "bytes": 3544,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image159.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image152.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0057": 1,
+      "HOG-0056": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0057",
+    "product_name": "Magnesium Night Plus",
+    "match_confidence": 0.5
+  },
+  "348b2b4533396194ad03229c152a1e583bb629d89055fe7c710a597a67b90af4": {
+    "sha256": "348b2b4533396194ad03229c152a1e583bb629d89055fe7c710a597a67b90af4",
+    "bytes": 215448,
+    "ext": "png",
+    "width": 461,
+    "height": 673,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image160.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0058": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0058",
+    "product_name": "Mega B Complex",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/348b2b4533396194ad03229c152a1e583bb629d89055fe7c710a597a67b90af4.png"
+  },
+  "119708ca4f946d082554d86c390cc09438719bb7732ee612668bed73f4f4f528": {
+    "sha256": "119708ca4f946d082554d86c390cc09438719bb7732ee612668bed73f4f4f528",
+    "bytes": 3542,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image161.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0058": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0058",
+    "product_name": "Mega B Complex",
+    "match_confidence": 1.0
+  },
+  "4910ca3c88d50d8b7c9a68fd9488f8cae9ad0e572920fbffb08d4b96a885ea73": {
+    "sha256": "4910ca3c88d50d8b7c9a68fd9488f8cae9ad0e572920fbffb08d4b96a885ea73",
+    "bytes": 208784,
+    "ext": "png",
+    "width": 456,
+    "height": 666,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image162.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0059": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0059",
+    "product_name": "Memory & Cognition Gold",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/4910ca3c88d50d8b7c9a68fd9488f8cae9ad0e572920fbffb08d4b96a885ea73.png"
+  },
+  "94f57a5731d2addb0a96880d40043d77941596262462d13adfa583e89a875233": {
+    "sha256": "94f57a5731d2addb0a96880d40043d77941596262462d13adfa583e89a875233",
+    "bytes": 208767,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image163.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "product_packshot",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0,
+    "derived_path": "data/derived/images/94f57a5731d2addb0a96880d40043d77941596262462d13adfa583e89a875233.png"
+  },
+  "c2d6221512468b7af0dcb12b14f320850235c9e8a4aa70f37a81581b85a01d3c": {
+    "sha256": "c2d6221512468b7af0dcb12b14f320850235c9e8a4aa70f37a81581b85a01d3c",
+    "bytes": 3543,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image164.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image164.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image164.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image164.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image157.png",
+        "match_method": "xlsx_anchor_cell"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image157.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0072": 1,
+      "HOG-0073": 1,
+      "HOG-0082": 1,
+      "HOG-0059": 1,
+      "HOG-0080": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0072",
+    "product_name": "Pregnancy Plus 1-2-3",
+    "match_confidence": 0.2
+  },
+  "c23102d044540e675a49e73ec318f455c3ed239dd5e28608f7a55d17c794679c": {
+    "sha256": "c23102d044540e675a49e73ec318f455c3ed239dd5e28608f7a55d17c794679c",
+    "bytes": 213533,
+    "ext": "png",
+    "width": 458,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image165.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0060": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0060",
+    "product_name": "Menopause Relief",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/c23102d044540e675a49e73ec318f455c3ed239dd5e28608f7a55d17c794679c.png"
+  },
+  "07e616d004be8b9a5f827ed452d4eb76cacdc40830b4ece47ce63459140142be": {
+    "sha256": "07e616d004be8b9a5f827ed452d4eb76cacdc40830b4ece47ce63459140142be",
+    "bytes": 219515,
+    "ext": "png",
+    "width": 463,
+    "height": 676,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image166.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0061": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0061",
+    "product_name": "Mind Ease",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/07e616d004be8b9a5f827ed452d4eb76cacdc40830b4ece47ce63459140142be.png"
+  },
+  "10a8bf84c14d2170d1f82035d66acc69d5e2335ce0493ee36ed9b5507d6850d7": {
+    "sha256": "10a8bf84c14d2170d1f82035d66acc69d5e2335ce0493ee36ed9b5507d6850d7",
+    "bytes": 196941,
+    "ext": "png",
+    "width": 545,
+    "height": 653,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image167.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0062": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0062",
+    "product_name": "Muscle Resuscitation",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/10a8bf84c14d2170d1f82035d66acc69d5e2335ce0493ee36ed9b5507d6850d7.png"
+  },
+  "acb11c8a0748eceace16b3d7b061e5c0897308251c71ff98af893fd727b43b74": {
+    "sha256": "acb11c8a0748eceace16b3d7b061e5c0897308251c71ff98af893fd727b43b74",
+    "bytes": 3537,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image168.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0062": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0062",
+    "product_name": "Muscle Resuscitation",
+    "match_confidence": 1.0
+  },
+  "58982d9c5ab7c9c135078c113647398cd8bf9370620c10214a9326c98626a18f": {
+    "sha256": "58982d9c5ab7c9c135078c113647398cd8bf9370620c10214a9326c98626a18f",
+    "bytes": 225019,
+    "ext": "png",
+    "width": 463,
+    "height": 676,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image169.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0063": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0063",
+    "product_name": "Mushroom 5 Complex",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/58982d9c5ab7c9c135078c113647398cd8bf9370620c10214a9326c98626a18f.png"
+  },
+  "ce14a745acb5a062b5ef53a1692a3e6d151a1e228a256aee2354891c22b2d77e": {
+    "sha256": "ce14a745acb5a062b5ef53a1692a3e6d151a1e228a256aee2354891c22b2d77e",
+    "bytes": 3540,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image170.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image170.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0063": 1,
+      "HOG-0068": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0063",
+    "product_name": "Mushroom 5 Complex",
+    "match_confidence": 0.5
+  },
+  "d97ff67fff588fc9ac734a83e80bd16c6a8861074a20a99902f6b9f9abef5772": {
+    "sha256": "d97ff67fff588fc9ac734a83e80bd16c6a8861074a20a99902f6b9f9abef5772",
+    "bytes": 226846,
+    "ext": "png",
+    "width": 463,
+    "height": 676,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image171.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0064": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0064",
+    "product_name": "Natural Vitamin E 500IU",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/d97ff67fff588fc9ac734a83e80bd16c6a8861074a20a99902f6b9f9abef5772.png"
+  },
+  "b46694f9ec74212f8ce1c73d7d4152258d11dcb5782f285be4f9ca6db76490c7": {
+    "sha256": "b46694f9ec74212f8ce1c73d7d4152258d11dcb5782f285be4f9ca6db76490c7",
+    "bytes": 3538,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image172.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image172.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image172.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image165.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0064": 1,
+      "HOG-0084": 1,
+      "HOG-0100": 1,
+      "HOG-0080": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0064",
+    "product_name": "Natural Vitamin E 500IU",
+    "match_confidence": 0.25
+  },
+  "d9d58fbe5b9e9f45e898cc9f9276d9d7cc83022750e7b558114c8df442a501dd": {
+    "sha256": "d9d58fbe5b9e9f45e898cc9f9276d9d7cc83022750e7b558114c8df442a501dd",
+    "bytes": 231400,
+    "ext": "png",
+    "width": 453,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image173.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0065": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0065",
+    "product_name": "Niacin 100mg Extended Release",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/d9d58fbe5b9e9f45e898cc9f9276d9d7cc83022750e7b558114c8df442a501dd.png"
+  },
+  "af74923f4f11bba9ba510c17cf4732f7151384fc068da2325f609bf7546e62d9": {
+    "sha256": "af74923f4f11bba9ba510c17cf4732f7151384fc068da2325f609bf7546e62d9",
+    "bytes": 174042,
+    "ext": "png",
+    "width": 456,
+    "height": 666,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image174.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0066": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0066",
+    "product_name": "Olive Leaf",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/af74923f4f11bba9ba510c17cf4732f7151384fc068da2325f609bf7546e62d9.png"
+  },
+  "6b67cff03fd670bacc624907b1214f97c00d55aa52ec4b4054b0e9a5b2f8e529": {
+    "sha256": "6b67cff03fd670bacc624907b1214f97c00d55aa52ec4b4054b0e9a5b2f8e529",
+    "bytes": 3543,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image175.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image175.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0066": 1,
+      "HOG-0083": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0066",
+    "product_name": "Olive Leaf",
+    "match_confidence": 0.5
+  },
+  "11811b9d1b73f5a3975bcdbb9bb335e223a0cd6b78a2b468b02bd6e79b3fe920": {
+    "sha256": "11811b9d1b73f5a3975bcdbb9bb335e223a0cd6b78a2b468b02bd6e79b3fe920",
+    "bytes": 227410,
+    "ext": "png",
+    "width": 462,
+    "height": 670,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image176.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0067": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0067",
+    "product_name": "Olive Leaf 7500",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/11811b9d1b73f5a3975bcdbb9bb335e223a0cd6b78a2b468b02bd6e79b3fe920.png"
+  },
+  "2139745eccc36187779a3987fba672482838c1af1f35930c245d1a5053d256c4": {
+    "sha256": "2139745eccc36187779a3987fba672482838c1af1f35930c245d1a5053d256c4",
+    "bytes": 3622,
+    "ext": "png",
+    "width": 54,
+    "height": 55,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image177.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0067": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0067",
+    "product_name": "Olive Leaf 7500",
+    "match_confidence": 1.0
+  },
+  "920e18658fa25627917c4a6b14fa201c95d7666f483d087abbe550dcb91a8213": {
+    "sha256": "920e18658fa25627917c4a6b14fa201c95d7666f483d087abbe550dcb91a8213",
+    "bytes": 204120,
+    "ext": "png",
+    "width": 458,
+    "height": 663,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image178.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0068": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0068",
+    "product_name": "Organic Iron MAX",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/920e18658fa25627917c4a6b14fa201c95d7666f483d087abbe550dcb91a8213.png"
+  },
+  "677d8e18525b0533c2a291d88100a2486774c6c74705d53a2d34663c574128ad": {
+    "sha256": "677d8e18525b0533c2a291d88100a2486774c6c74705d53a2d34663c574128ad",
+    "bytes": 226943,
+    "ext": "png",
+    "width": 464,
+    "height": 665,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image179.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0069": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0069",
+    "product_name": "Organic Oregano Oil",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/677d8e18525b0533c2a291d88100a2486774c6c74705d53a2d34663c574128ad.png"
+  },
+  "ca6c62e22eceab6f09174cd348a5c1c294f43137bc5b6f4fa4f357fc17d7e82c": {
+    "sha256": "ca6c62e22eceab6f09174cd348a5c1c294f43137bc5b6f4fa4f357fc17d7e82c",
+    "bytes": 3618,
+    "ext": "png",
+    "width": 54,
+    "height": 55,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image180.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image173.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0069": 1,
+      "HOG-0062": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0069",
+    "product_name": "Organic Oregano Oil",
+    "match_confidence": 0.5
+  },
+  "15c33877935ddc22ede244a0cfe324f57ae52007c52974a878d3b0bca6c0841b": {
+    "sha256": "15c33877935ddc22ede244a0cfe324f57ae52007c52974a878d3b0bca6c0841b",
+    "bytes": 206812,
+    "ext": "png",
+    "width": 450,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image181.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0070": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0070",
+    "product_name": "Pain Relief PEA",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/15c33877935ddc22ede244a0cfe324f57ae52007c52974a878d3b0bca6c0841b.png"
+  },
+  "98ac9e3d862b4b433bd608e737d8eb4ab4a22451742507b611a9d220a39d2494": {
+    "sha256": "98ac9e3d862b4b433bd608e737d8eb4ab4a22451742507b611a9d220a39d2494",
+    "bytes": 3549,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image182.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image174.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0070": 1,
+      "HOG-0062": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0070",
+    "product_name": "Pain Relief PEA",
+    "match_confidence": 0.5
+  },
+  "a3c7ba0497e361f34a9777e8102645c045cc7c352791181eb259f2dfdcb2d3c0": {
+    "sha256": "a3c7ba0497e361f34a9777e8102645c045cc7c352791181eb259f2dfdcb2d3c0",
+    "bytes": 50184,
+    "ext": "jpeg",
+    "width": 867,
+    "height": 444,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image183.jpeg",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0070": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0070",
+    "product_name": "Pain Relief PEA",
+    "match_confidence": 1.0
+  },
+  "86716b861d1fa5e23b005ba2b542cd8ef694661a0f598463fc4caf30a6162ae9": {
+    "sha256": "86716b861d1fa5e23b005ba2b542cd8ef694661a0f598463fc4caf30a6162ae9",
+    "bytes": 50746,
+    "ext": "jpeg",
+    "width": 1024,
+    "height": 576,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image184.jpeg",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0070": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0070",
+    "product_name": "Pain Relief PEA",
+    "match_confidence": 1.0
+  },
+  "151d587a6473aa99f6f5d0f2f7532eeff153123c1b74ff6909ba0c4652d56a99": {
+    "sha256": "151d587a6473aa99f6f5d0f2f7532eeff153123c1b74ff6909ba0c4652d56a99",
+    "bytes": 92813,
+    "ext": "png",
+    "width": 802,
+    "height": 486,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image185.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0070": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0070",
+    "product_name": "Pain Relief PEA",
+    "match_confidence": 1.0
+  },
+  "0b38cd58ef6eb8523a07d54b2c5e506f9ed0476b914dc217bafb96a04e03714a": {
+    "sha256": "0b38cd58ef6eb8523a07d54b2c5e506f9ed0476b914dc217bafb96a04e03714a",
+    "bytes": 94908,
+    "ext": "png",
+    "width": 765,
+    "height": 453,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image186.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0070": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0070",
+    "product_name": "Pain Relief PEA",
+    "match_confidence": 1.0
+  },
+  "3ee06aa2b2200ae854191ca9e39bccbc7e469126c28ed98eabbe0f48d56e089d": {
+    "sha256": "3ee06aa2b2200ae854191ca9e39bccbc7e469126c28ed98eabbe0f48d56e089d",
+    "bytes": 215061,
+    "ext": "png",
+    "width": 468,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image187.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0071": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0071",
+    "product_name": "ParaStrike",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/3ee06aa2b2200ae854191ca9e39bccbc7e469126c28ed98eabbe0f48d56e089d.png"
+  },
+  "f17cae42601ef965aa3c973c382b8a985ee97ba056a9b38405c175e96bb7fe13": {
+    "sha256": "f17cae42601ef965aa3c973c382b8a985ee97ba056a9b38405c175e96bb7fe13",
+    "bytes": 3540,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image188.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image188.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image181.png",
+        "match_method": "xlsx_anchor_cell"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image181.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0071": 1,
+      "HOG-0092": 1,
+      "HOG-0062": 1,
+      "HOG-0091": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0071",
+    "product_name": "ParaStrike",
+    "match_confidence": 0.25
+  },
+  "3d1f921fa470f743720b7b49aa30e1e807d8c45bd4e737935b16f0316c07353a": {
+    "sha256": "3d1f921fa470f743720b7b49aa30e1e807d8c45bd4e737935b16f0316c07353a",
+    "bytes": 223157,
+    "ext": "png",
+    "width": 470,
+    "height": 654,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image189.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0072": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0072",
+    "product_name": "Pregnancy Plus 1-2-3",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/3d1f921fa470f743720b7b49aa30e1e807d8c45bd4e737935b16f0316c07353a.png"
+  },
+  "d78e81a37aa15a35fe73d2a30378fd2a21fa60a065e79053a0cb5e8295aae481": {
+    "sha256": "d78e81a37aa15a35fe73d2a30378fd2a21fa60a065e79053a0cb5e8295aae481",
+    "bytes": 210644,
+    "ext": "png",
+    "width": 449,
+    "height": 654,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image190.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0072": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0072",
+    "product_name": "Pregnancy Plus 1-2-3",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/d78e81a37aa15a35fe73d2a30378fd2a21fa60a065e79053a0cb5e8295aae481.png"
+  },
+  "b08db835c872aede441c17da7ba39ebe12e8f5d20e3a4d56c30ce16aec6592b5": {
+    "sha256": "b08db835c872aede441c17da7ba39ebe12e8f5d20e3a4d56c30ce16aec6592b5",
+    "bytes": 222900,
+    "ext": "png",
+    "width": 450,
+    "height": 654,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image191.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0073": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0073",
+    "product_name": "Probiotic 60 Billion",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/b08db835c872aede441c17da7ba39ebe12e8f5d20e3a4d56c30ce16aec6592b5.png"
+  },
+  "7abe6441e4cda8ec0f4bc772b388262a98e6ca5f7fc50fcc837c9e437d6a94ae": {
+    "sha256": "7abe6441e4cda8ec0f4bc772b388262a98e6ca5f7fc50fcc837c9e437d6a94ae",
+    "bytes": 223104,
+    "ext": "png",
+    "width": 461,
+    "height": 672,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image192.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0074": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0074",
+    "product_name": "Prostate Pro",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/7abe6441e4cda8ec0f4bc772b388262a98e6ca5f7fc50fcc837c9e437d6a94ae.png"
+  },
+  "4e733e28cdd8c88f543999d147fa4bbdae5f3f3789dadb8aa7615690046273dc": {
+    "sha256": "4e733e28cdd8c88f543999d147fa4bbdae5f3f3789dadb8aa7615690046273dc",
+    "bytes": 3550,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image193.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image186.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0074": 1,
+      "HOG-0072": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0074",
+    "product_name": "Prostate Pro",
+    "match_confidence": 0.5
+  },
+  "dd68f965dc232757c8875dbf7337fd083a7a742775c2e13c1aa801a445474571": {
+    "sha256": "dd68f965dc232757c8875dbf7337fd083a7a742775c2e13c1aa801a445474571",
+    "bytes": 212658,
+    "ext": "png",
+    "width": 452,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image194.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0075": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0075",
+    "product_name": "Quercetin Complex",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/dd68f965dc232757c8875dbf7337fd083a7a742775c2e13c1aa801a445474571.png"
+  },
+  "65660fb790dab1304aadc0ab09253696a01772c87cad0538a25a88d2ffb15e45": {
+    "sha256": "65660fb790dab1304aadc0ab09253696a01772c87cad0538a25a88d2ffb15e45",
+    "bytes": 3547,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image195.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image195.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image195.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image187.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0075": 1,
+      "HOG-0081": 1,
+      "HOG-0099": 1,
+      "HOG-0080": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0075",
+    "product_name": "Quercetin Complex",
+    "match_confidence": 0.25
+  },
+  "06ceec554dccb4d7c59d7c4d233ae951bcca680e16842a18549e82dd9ea2b7df": {
+    "sha256": "06ceec554dccb4d7c59d7c4d233ae951bcca680e16842a18549e82dd9ea2b7df",
+    "bytes": 21929,
+    "ext": "png",
+    "width": 614,
+    "height": 95,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image196.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0075": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0075",
+    "product_name": "Quercetin Complex",
+    "match_confidence": 1.0
+  },
+  "cd0838cdfcca712459cd28302d9f988f7235d38381397b20af34d30c334321d5": {
+    "sha256": "cd0838cdfcca712459cd28302d9f988f7235d38381397b20af34d30c334321d5",
+    "bytes": 6228,
+    "ext": "png",
+    "width": 154,
+    "height": 52,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image197.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0075": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0075",
+    "product_name": "Quercetin Complex",
+    "match_confidence": 1.0
+  },
+  "b0c9943ab3bc304b918e3f7c8eb576ae42c912f9992d63b5d86baf357752841d": {
+    "sha256": "b0c9943ab3bc304b918e3f7c8eb576ae42c912f9992d63b5d86baf357752841d",
+    "bytes": 4751,
+    "ext": "png",
+    "width": 113,
+    "height": 41,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image198.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0075": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0075",
+    "product_name": "Quercetin Complex",
+    "match_confidence": 1.0
+  },
+  "d6ed980c15b08a38d931799cd525b2c1c034c418258a3cf05af356b6e3a1b873": {
+    "sha256": "d6ed980c15b08a38d931799cd525b2c1c034c418258a3cf05af356b6e3a1b873",
+    "bytes": 2138,
+    "ext": "png",
+    "width": 85,
+    "height": 19,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image199.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0075": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0075",
+    "product_name": "Quercetin Complex",
+    "match_confidence": 1.0
+  },
+  "d11d58e5c4f15582531794efb1eb430b6b5a963d3db27380497a5f7844742701": {
+    "sha256": "d11d58e5c4f15582531794efb1eb430b6b5a963d3db27380497a5f7844742701",
+    "bytes": 25971,
+    "ext": "png",
+    "width": 673,
+    "height": 195,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image200.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0075": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0075",
+    "product_name": "Quercetin Complex",
+    "match_confidence": 1.0
+  },
+  "37fd23aa631f2e108ce862388d1e674434a7598ebe4c9dbd80af0457bda0d085": {
+    "sha256": "37fd23aa631f2e108ce862388d1e674434a7598ebe4c9dbd80af0457bda0d085",
+    "bytes": 2610,
+    "ext": "png",
+    "width": 80,
+    "height": 25,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image201.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0075": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0075",
+    "product_name": "Quercetin Complex",
+    "match_confidence": 1.0
+  },
+  "d707b6e00e3162e0a9fb669bcf1c14fa3b493812cfd42574f974ada45455b6f2": {
+    "sha256": "d707b6e00e3162e0a9fb669bcf1c14fa3b493812cfd42574f974ada45455b6f2",
+    "bytes": 24176,
+    "ext": "png",
+    "width": 550,
+    "height": 361,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image202.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image195.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0075": 1,
+      "HOG-0072": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0075",
+    "product_name": "Quercetin Complex",
+    "match_confidence": 0.5
+  },
+  "964c38ac27e467d96ce012f992248935d4628c85192f54deeebd78c297ada320": {
+    "sha256": "964c38ac27e467d96ce012f992248935d4628c85192f54deeebd78c297ada320",
+    "bytes": 222264,
+    "ext": "png",
+    "width": 453,
+    "height": 655,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image203.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0076": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0076",
+    "product_name": "Raspberry Leaf",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/964c38ac27e467d96ce012f992248935d4628c85192f54deeebd78c297ada320.png"
+  },
+  "a53319668d4251262a062e2c7cd93e0e1db9938ff8872f9d18a5b799ee1ae356": {
+    "sha256": "a53319668d4251262a062e2c7cd93e0e1db9938ff8872f9d18a5b799ee1ae356",
+    "bytes": 216307,
+    "ext": "png",
+    "width": 453,
+    "height": 625,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image204.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0077": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0077",
+    "product_name": "Resveratrol AdvantAGE",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/a53319668d4251262a062e2c7cd93e0e1db9938ff8872f9d18a5b799ee1ae356.png"
+  },
+  "0c68bc30083acc1d58c0872f2a16e7faddb420d8183d2ce4fa4c44169d9aa80c": {
+    "sha256": "0c68bc30083acc1d58c0872f2a16e7faddb420d8183d2ce4fa4c44169d9aa80c",
+    "bytes": 219930,
+    "ext": "png",
+    "width": 462,
+    "height": 668,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image205.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0078": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0078",
+    "product_name": "Sea Buckthorn Oil",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/0c68bc30083acc1d58c0872f2a16e7faddb420d8183d2ce4fa4c44169d9aa80c.png"
+  },
+  "0403521b75bdf4a449b4e5166e2170a444261c13e4c7f23ed4b7efeb1b95f0e7": {
+    "sha256": "0403521b75bdf4a449b4e5166e2170a444261c13e4c7f23ed4b7efeb1b95f0e7",
+    "bytes": 3550,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image206.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image198.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0078": 1,
+      "HOG-0072": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0078",
+    "product_name": "Sea Buckthorn Oil",
+    "match_confidence": 0.5
+  },
+  "ac20be8755570a06f49d77ef6ab118eca49d9dda7036b77e962a41bb6118fb42": {
+    "sha256": "ac20be8755570a06f49d77ef6ab118eca49d9dda7036b77e962a41bb6118fb42",
+    "bytes": 215965,
+    "ext": "png",
+    "width": 453,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image207.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0079": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0079",
+    "product_name": "Selenium 150 MAX",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/ac20be8755570a06f49d77ef6ab118eca49d9dda7036b77e962a41bb6118fb42.png"
+  },
+  "c940e375d45b76fdabacddf2b0a3e2b69b2f559df23f1f3c0723d751d88cdccc": {
+    "sha256": "c940e375d45b76fdabacddf2b0a3e2b69b2f559df23f1f3c0723d751d88cdccc",
+    "bytes": 3535,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image208.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "docx",
+        "member": "word/media/image208.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0079": 1,
+      "HOG-0101": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0079",
+    "product_name": "Selenium 150 MAX",
+    "match_confidence": 0.5
+  },
+  "2b648df35e77b19438fe384d3a98e4e1fc817386118dbd31ef926305b6241406": {
+    "sha256": "2b648df35e77b19438fe384d3a98e4e1fc817386118dbd31ef926305b6241406",
+    "bytes": 216175,
+    "ext": "png",
+    "width": 450,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image209.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0080": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0080",
+    "product_name": "Silica Hair Skin & Nails",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/2b648df35e77b19438fe384d3a98e4e1fc817386118dbd31ef926305b6241406.png"
+  },
+  "7d7f5bb83edab30de3120a0f0f8b2e728b6c6d4086cbbba072085b665a990c08": {
+    "sha256": "7d7f5bb83edab30de3120a0f0f8b2e728b6c6d4086cbbba072085b665a990c08",
+    "bytes": 167903,
+    "ext": "png",
+    "width": 470,
+    "height": 686,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image210.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0081": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0081",
+    "product_name": "Silica Hair Solution",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/7d7f5bb83edab30de3120a0f0f8b2e728b6c6d4086cbbba072085b665a990c08.png"
+  },
+  "7f27fcbeb1db1cbd6bd426e5cf3a7fcc200e18945863cb5310532916e7eaed1a": {
+    "sha256": "7f27fcbeb1db1cbd6bd426e5cf3a7fcc200e18945863cb5310532916e7eaed1a",
+    "bytes": 222018,
+    "ext": "png",
+    "width": 456,
+    "height": 666,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image211.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0082": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0082",
+    "product_name": "Sleep Ease",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/7f27fcbeb1db1cbd6bd426e5cf3a7fcc200e18945863cb5310532916e7eaed1a.png"
+  },
+  "a6ad28a1ed000557a4279db13245a728fd828a87026ae77cf57ebaeff70f9bee": {
+    "sha256": "a6ad28a1ed000557a4279db13245a728fd828a87026ae77cf57ebaeff70f9bee",
+    "bytes": 219730,
+    "ext": "png",
+    "width": 453,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image212.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0083": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0083",
+    "product_name": "Slippery Elm 400mg",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/a6ad28a1ed000557a4279db13245a728fd828a87026ae77cf57ebaeff70f9bee.png"
+  },
+  "ffc2960a5e237b59b81ddea69833e5b147cab63bd30db8d72186a52e53ec76cb": {
+    "sha256": "ffc2960a5e237b59b81ddea69833e5b147cab63bd30db8d72186a52e53ec76cb",
+    "bytes": 226338,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image213.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0084": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0084",
+    "product_name": "St John's Wort 3600",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/ffc2960a5e237b59b81ddea69833e5b147cab63bd30db8d72186a52e53ec76cb.png"
+  },
+  "4caa9b1850f97661565052dbe30c1bd9fd3ada220dc4bd532282c52e1836d7df": {
+    "sha256": "4caa9b1850f97661565052dbe30c1bd9fd3ada220dc4bd532282c52e1836d7df",
+    "bytes": 208586,
+    "ext": "png",
+    "width": 456,
+    "height": 666,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image214.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0085": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0085",
+    "product_name": "St Mary’s Thistle 35 000",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/4caa9b1850f97661565052dbe30c1bd9fd3ada220dc4bd532282c52e1836d7df.png"
+  },
+  "7f19904d0c989c42ae08af30724ebdcb2be1d1eeaca87a420aff9f81fc1de1e4": {
+    "sha256": "7f19904d0c989c42ae08af30724ebdcb2be1d1eeaca87a420aff9f81fc1de1e4",
+    "bytes": 208788,
+    "ext": "png",
+    "width": 450,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image215.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0086": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0086",
+    "product_name": "Stress Ease",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/7f19904d0c989c42ae08af30724ebdcb2be1d1eeaca87a420aff9f81fc1de1e4.png"
+  },
+  "2b15ee841e57af02d1e03abd00b534b75f7f22f7f4f7ab779a72ff59a23633e5": {
+    "sha256": "2b15ee841e57af02d1e03abd00b534b75f7f22f7f4f7ab779a72ff59a23633e5",
+    "bytes": 224143,
+    "ext": "png",
+    "width": 453,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image216.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0087": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0087",
+    "product_name": "Sublingual B12 1000",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/2b15ee841e57af02d1e03abd00b534b75f7f22f7f4f7ab779a72ff59a23633e5.png"
+  },
+  "9eacb93b3ca020c49ca34623285711bf58741c2fd459dfc8d9936f0be3dde3d3": {
+    "sha256": "9eacb93b3ca020c49ca34623285711bf58741c2fd459dfc8d9936f0be3dde3d3",
+    "bytes": 3538,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image217.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0087": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0087",
+    "product_name": "Sublingual B12 1000",
+    "match_confidence": 1.0
+  },
+  "cbb5905e6c4f56e0002b119afab70cf6dbb05fce5e019ae7135b024607e62fd5": {
+    "sha256": "cbb5905e6c4f56e0002b119afab70cf6dbb05fce5e019ae7135b024607e62fd5",
+    "bytes": 224101,
+    "ext": "png",
+    "width": 453,
+    "height": 657,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image218.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0088": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0088",
+    "product_name": "Super Brahmi 6000",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/cbb5905e6c4f56e0002b119afab70cf6dbb05fce5e019ae7135b024607e62fd5.png"
+  },
+  "b0acef6c0951e3e4236119566c82d5857eec149d03cd42dfcd2344229a811511": {
+    "sha256": "b0acef6c0951e3e4236119566c82d5857eec149d03cd42dfcd2344229a811511",
+    "bytes": 1109,
+    "ext": "png",
+    "width": 32,
+    "height": 30,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image219.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0088": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0088",
+    "product_name": "Super Brahmi 6000",
+    "match_confidence": 1.0
+  },
+  "94d096b5d7bab2b420befbb4fd306b40cb32788577fdfa54b53ec237c09b85e1": {
+    "sha256": "94d096b5d7bab2b420befbb4fd306b40cb32788577fdfa54b53ec237c09b85e1",
+    "bytes": 87136,
+    "ext": "png",
+    "width": 1006,
+    "height": 510,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image220.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0088": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0088",
+    "product_name": "Super Brahmi 6000",
+    "match_confidence": 1.0
+  },
+  "db4619f988afffe2e144e53aa9dbd4456f0bdb55ae13f5ff41720aadc48c193e": {
+    "sha256": "db4619f988afffe2e144e53aa9dbd4456f0bdb55ae13f5ff41720aadc48c193e",
+    "bytes": 68496,
+    "ext": "png",
+    "width": 1005,
+    "height": 528,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image221.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0088": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0088",
+    "product_name": "Super Brahmi 6000",
+    "match_confidence": 1.0
+  },
+  "77648544e5dd11c17238fa3a4c502e72ba55c33c2a8d7f6e22ff14370867048c": {
+    "sha256": "77648544e5dd11c17238fa3a4c502e72ba55c33c2a8d7f6e22ff14370867048c",
+    "bytes": 59714,
+    "ext": "png",
+    "width": 659,
+    "height": 353,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image222.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image213.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0088": 1,
+      "HOG-0080": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0088",
+    "product_name": "Super Brahmi 6000",
+    "match_confidence": 0.5
+  },
+  "b7acc6edd06f4a7e4d9c4e798b5022b4602202caead970c138750c8b2397168a": {
+    "sha256": "b7acc6edd06f4a7e4d9c4e798b5022b4602202caead970c138750c8b2397168a",
+    "bytes": 198529,
+    "ext": "png",
+    "width": 452,
+    "height": 583,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image223.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0089": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0089",
+    "product_name": "Super Calcium Plus with Boron",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/b7acc6edd06f4a7e4d9c4e798b5022b4602202caead970c138750c8b2397168a.png"
+  },
+  "6d9a509f4e3931d3d6c90c35208198cefb529a87c8e074d94722c8c83ad5a1be": {
+    "sha256": "6d9a509f4e3931d3d6c90c35208198cefb529a87c8e074d94722c8c83ad5a1be",
+    "bytes": 218788,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image224.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/6d9a509f4e3931d3d6c90c35208198cefb529a87c8e074d94722c8c83ad5a1be.png"
+  },
+  "a6cf8fd0f3b066ad44dcca9ddfbd9b4f31508c6ab0a8caaeccd88d6f9fc48b89": {
+    "sha256": "a6cf8fd0f3b066ad44dcca9ddfbd9b4f31508c6ab0a8caaeccd88d6f9fc48b89",
+    "bytes": 16278,
+    "ext": "png",
+    "width": 411,
+    "height": 91,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image225.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 1.0
+  },
+  "6b937528d3a0f4bfb006e41b0dfd222ce5b2d501c6d774f4986cfe485114e361": {
+    "sha256": "6b937528d3a0f4bfb006e41b0dfd222ce5b2d501c6d774f4986cfe485114e361",
+    "bytes": 966,
+    "ext": "png",
+    "width": 32,
+    "height": 22,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image226.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 1.0
+  },
+  "5a201b5733f02bd60223332cf769e92905e14ed8c198a8b7a89f1c337106bcac": {
+    "sha256": "5a201b5733f02bd60223332cf769e92905e14ed8c198a8b7a89f1c337106bcac",
+    "bytes": 190,
+    "ext": "png",
+    "width": 16,
+    "height": 21,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image227.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 1.0
+  },
+  "da9d1ad4f42d3ee8bf71e918f7f70dd8e4f8f90537c5555c9561d4e314f726c7": {
+    "sha256": "da9d1ad4f42d3ee8bf71e918f7f70dd8e4f8f90537c5555c9561d4e314f726c7",
+    "bytes": 1238,
+    "ext": "png",
+    "width": 40,
+    "height": 22,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image228.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 1.0
+  },
+  "d77303d8d258b20dd8a8e1e0f8a7c5367d05de1d7c1b06706785d1707b62b748": {
+    "sha256": "d77303d8d258b20dd8a8e1e0f8a7c5367d05de1d7c1b06706785d1707b62b748",
+    "bytes": 957,
+    "ext": "png",
+    "width": 31,
+    "height": 15,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image229.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 1.0
+  },
+  "b1041b99e0c7582589492eeb4031b7af82f15086e32ac54e41b75ab90b33876b": {
+    "sha256": "b1041b99e0c7582589492eeb4031b7af82f15086e32ac54e41b75ab90b33876b",
+    "bytes": 1747,
+    "ext": "png",
+    "width": 50,
+    "height": 27,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image230.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image224.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1,
+      "HOG-0103": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 0.5
+  },
+  "ac5f5ee2bcd42088238bfcd4b4ed2c27c27b2a09e1aa5f9e7ad5326965c40def": {
+    "sha256": "ac5f5ee2bcd42088238bfcd4b4ed2c27c27b2a09e1aa5f9e7ad5326965c40def",
+    "bytes": 2111,
+    "ext": "png",
+    "width": 73,
+    "height": 29,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image231.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 1.0
+  },
+  "84ddef6cd8ae649c9d91497337a257e815c3af1322364bb89b934e873d68d3ba": {
+    "sha256": "84ddef6cd8ae649c9d91497337a257e815c3af1322364bb89b934e873d68d3ba",
+    "bytes": 934,
+    "ext": "png",
+    "width": 32,
+    "height": 15,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image232.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 1.0
+  },
+  "a2ca6777bad70b996b3adaa3e7ba4662de4197d5c92166eb17e91c670ab21118": {
+    "sha256": "a2ca6777bad70b996b3adaa3e7ba4662de4197d5c92166eb17e91c670ab21118",
+    "bytes": 607,
+    "ext": "png",
+    "width": 31,
+    "height": 21,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image233.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image226.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1,
+      "HOG-0080": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 0.5
+  },
+  "7f7c46197eb65b113e9bff2a253064bf991a3e3fd3e0c8d2d4e26b61d62e9fc1": {
+    "sha256": "7f7c46197eb65b113e9bff2a253064bf991a3e3fd3e0c8d2d4e26b61d62e9fc1",
+    "bytes": 905,
+    "ext": "png",
+    "width": 31,
+    "height": 22,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image234.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image227.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1,
+      "HOG-0080": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 0.5
+  },
+  "512599c1c3505bc8e076e734f3312d40081b1a9ccbdfde75ebdf44f2e233accf": {
+    "sha256": "512599c1c3505bc8e076e734f3312d40081b1a9ccbdfde75ebdf44f2e233accf",
+    "bytes": 1215,
+    "ext": "png",
+    "width": 39,
+    "height": 22,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image235.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 1.0
+  },
+  "dc1cbb179ec6df44327916072fa7237f1ddfa009af2e3212e1e4ec66bed2aa75": {
+    "sha256": "dc1cbb179ec6df44327916072fa7237f1ddfa009af2e3212e1e4ec66bed2aa75",
+    "bytes": 940,
+    "ext": "png",
+    "width": 32,
+    "height": 15,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image236.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 1.0
+  },
+  "c75c0150cfa8d1d5ed03a5b39fe4121a87de46aa424e9cb51160b14673655da9": {
+    "sha256": "c75c0150cfa8d1d5ed03a5b39fe4121a87de46aa424e9cb51160b14673655da9",
+    "bytes": 1803,
+    "ext": "png",
+    "width": 48,
+    "height": 28,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image237.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image229.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1,
+      "HOG-0103": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 0.5
+  },
+  "4edf513caa2b734cc5fbb85f8a69bd8cd73a9be90e4d3a459982fffbe672d71e": {
+    "sha256": "4edf513caa2b734cc5fbb85f8a69bd8cd73a9be90e4d3a459982fffbe672d71e",
+    "bytes": 2043,
+    "ext": "png",
+    "width": 73,
+    "height": 29,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image238.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 1.0
+  },
+  "113ba2e967bfaa2418f4f3fffffa0d3ec26fdadf3a3248e6ff1f6858fb495169": {
+    "sha256": "113ba2e967bfaa2418f4f3fffffa0d3ec26fdadf3a3248e6ff1f6858fb495169",
+    "bytes": 928,
+    "ext": "png",
+    "width": 31,
+    "height": 15,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image239.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 1.0
+  },
+  "18ee78025abf82eacf9019a1e15c719dfff79472e6c16225364ff4d4958f4786": {
+    "sha256": "18ee78025abf82eacf9019a1e15c719dfff79472e6c16225364ff4d4958f4786",
+    "bytes": 7159,
+    "ext": "png",
+    "width": 325,
+    "height": 29,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image240.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image231.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1,
+      "HOG-0075": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 0.5
+  },
+  "b2f94b43c77ce0401b3fd0a650fc76bb1115e5ab9b057ff171e8c720f86216dd": {
+    "sha256": "b2f94b43c77ce0401b3fd0a650fc76bb1115e5ab9b057ff171e8c720f86216dd",
+    "bytes": 12891,
+    "ext": "png",
+    "width": 358,
+    "height": 93,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image241.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 1.0
+  },
+  "9b3911ad0dc2caf097182e1f9644e8598fe89a206fb0040fdcd59338565ae87d": {
+    "sha256": "9b3911ad0dc2caf097182e1f9644e8598fe89a206fb0040fdcd59338565ae87d",
+    "bytes": 2301,
+    "ext": "png",
+    "width": 95,
+    "height": 18,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image242.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 1.0
+  },
+  "2f2aa6553696b66f7210084601e1ce4e43221c084e972c97793338e230b780e5": {
+    "sha256": "2f2aa6553696b66f7210084601e1ce4e43221c084e972c97793338e230b780e5",
+    "bytes": 1171,
+    "ext": "png",
+    "width": 42,
+    "height": 18,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image243.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 1.0
+  },
+  "9c320496ef8d892d5830ee933c17dda37d167bdee8aa76018d96fba4e151465f": {
+    "sha256": "9c320496ef8d892d5830ee933c17dda37d167bdee8aa76018d96fba4e151465f",
+    "bytes": 348,
+    "ext": "png",
+    "width": 34,
+    "height": 34,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image244.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0090": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0090",
+    "product_name": "Thyroid Support",
+    "match_confidence": 1.0
+  },
+  "a0275c6d36a85122c6f6c982646898ec56aa034e4b940b94577a19548aaffbf9": {
+    "sha256": "a0275c6d36a85122c6f6c982646898ec56aa034e4b940b94577a19548aaffbf9",
+    "bytes": 217689,
+    "ext": "png",
+    "width": 470,
+    "height": 628,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image245.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0091": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0091",
+    "product_name": "Triple Strength Omega-3",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/a0275c6d36a85122c6f6c982646898ec56aa034e4b940b94577a19548aaffbf9.png"
+  },
+  "dabe5a5284418c101abc7d150e4e19ebec8ae482ac503cff9f1323f0bf3e008a": {
+    "sha256": "dabe5a5284418c101abc7d150e4e19ebec8ae482ac503cff9f1323f0bf3e008a",
+    "bytes": 215006,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image246.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0092": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0092",
+    "product_name": "Tyrosine 1000",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/dabe5a5284418c101abc7d150e4e19ebec8ae482ac503cff9f1323f0bf3e008a.png"
+  },
+  "a5fb12c9c5fa0dd29b54a111142334621d70681fc933506d3b1785529acb06e3": {
+    "sha256": "a5fb12c9c5fa0dd29b54a111142334621d70681fc933506d3b1785529acb06e3",
+    "bytes": 201934,
+    "ext": "png",
+    "width": 462,
+    "height": 673,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image247.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0093": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0093",
+    "product_name": "Ubiquinol 100mg",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/a5fb12c9c5fa0dd29b54a111142334621d70681fc933506d3b1785529acb06e3.png"
+  },
+  "ce7bb5c5721ffd90bf4cdd3798fdbfc6ac79ba1f2d9ae66f36e21e2c1c001141": {
+    "sha256": "ce7bb5c5721ffd90bf4cdd3798fdbfc6ac79ba1f2d9ae66f36e21e2c1c001141",
+    "bytes": 212200,
+    "ext": "png",
+    "width": 462,
+    "height": 673,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image248.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0094": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0094",
+    "product_name": "Ubiquinol 150mg",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/ce7bb5c5721ffd90bf4cdd3798fdbfc6ac79ba1f2d9ae66f36e21e2c1c001141.png"
+  },
+  "ae1510f3b46d2b7f670fd43facb57bdf101c9f5e401a96c39583fa70b475929d": {
+    "sha256": "ae1510f3b46d2b7f670fd43facb57bdf101c9f5e401a96c39583fa70b475929d",
+    "bytes": 194253,
+    "ext": "png",
+    "width": 459,
+    "height": 669,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image249.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0094": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0094",
+    "product_name": "Ubiquinol 150mg",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/ae1510f3b46d2b7f670fd43facb57bdf101c9f5e401a96c39583fa70b475929d.png"
+  },
+  "2c06dcc265a2f419516f875c99f05a26c265f049aefd2452e831b0c4442d0669": {
+    "sha256": "2c06dcc265a2f419516f875c99f05a26c265f049aefd2452e831b0c4442d0669",
+    "bytes": 223723,
+    "ext": "png",
+    "width": 464,
+    "height": 673,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image250.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0095": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0095",
+    "product_name": "Vitamin B1 100mg",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/2c06dcc265a2f419516f875c99f05a26c265f049aefd2452e831b0c4442d0669.png"
+  },
+  "3c4bab03c65bb0282fd53cb4778bb30e3fafccfb3d7839af47e53013e6904318": {
+    "sha256": "3c4bab03c65bb0282fd53cb4778bb30e3fafccfb3d7839af47e53013e6904318",
+    "bytes": 218082,
+    "ext": "png",
+    "width": 456,
+    "height": 658,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image251.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0096": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0096",
+    "product_name": "Vitamin B2 200mg",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/3c4bab03c65bb0282fd53cb4778bb30e3fafccfb3d7839af47e53013e6904318.png"
+  },
+  "a566685f57a4cf7790b2c945c2c4443dc42f7156dbca6e590c9004b6b3e6fd2a": {
+    "sha256": "a566685f57a4cf7790b2c945c2c4443dc42f7156dbca6e590c9004b6b3e6fd2a",
+    "bytes": 3542,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image252.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0096": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0096",
+    "product_name": "Vitamin B2 200mg",
+    "match_confidence": 1.0
+  },
+  "19201b1ea45f5ac3ca0d45b77b3d58352dc95918bf18271ecec331cfefeabfe5": {
+    "sha256": "19201b1ea45f5ac3ca0d45b77b3d58352dc95918bf18271ecec331cfefeabfe5",
+    "bytes": 199539,
+    "ext": "png",
+    "width": 447,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image253.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0097": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0097",
+    "product_name": "Vitamin B3 500mg",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/19201b1ea45f5ac3ca0d45b77b3d58352dc95918bf18271ecec331cfefeabfe5.png"
+  },
+  "5e6e79bf4d0c8a889c29b58f8e9e59536b71859beabe51425eaef018ca86f14f": {
+    "sha256": "5e6e79bf4d0c8a889c29b58f8e9e59536b71859beabe51425eaef018ca86f14f",
+    "bytes": 3535,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image254.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image240.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0097": 1,
+      "HOG-0091": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0097",
+    "product_name": "Vitamin B3 500mg",
+    "match_confidence": 0.5
+  },
+  "9519c8f013d1af33d9d0fa1c1c7c366058574c51af6214f58d7fd06d64a12cd6": {
+    "sha256": "9519c8f013d1af33d9d0fa1c1c7c366058574c51af6214f58d7fd06d64a12cd6",
+    "bytes": 217378,
+    "ext": "png",
+    "width": 451,
+    "height": 652,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image255.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0098": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0098",
+    "product_name": "Vitamin B5 500mg",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/9519c8f013d1af33d9d0fa1c1c7c366058574c51af6214f58d7fd06d64a12cd6.png"
+  },
+  "cdd3682c4fb2a92929785295f21d1a49d4d5766933009ca6c250b632f3c887dd": {
+    "sha256": "cdd3682c4fb2a92929785295f21d1a49d4d5766933009ca6c250b632f3c887dd",
+    "bytes": 3550,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image256.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image243.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0098": 1,
+      "HOG-0091": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0098",
+    "product_name": "Vitamin B5 500mg",
+    "match_confidence": 0.5
+  },
+  "4d507a45d05695c978d104c73f6e262cde7513b4a3fbf3e990828f9cb024fd47": {
+    "sha256": "4d507a45d05695c978d104c73f6e262cde7513b4a3fbf3e990828f9cb024fd47",
+    "bytes": 209145,
+    "ext": "png",
+    "width": 453,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image257.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0099": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0099",
+    "product_name": "Vitamin B6 100mg",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/4d507a45d05695c978d104c73f6e262cde7513b4a3fbf3e990828f9cb024fd47.png"
+  },
+  "b840220be93bf7a7b20155bdafb2fd748efeeaadd4bb87b3f77e8dd90d9428c0": {
+    "sha256": "b840220be93bf7a7b20155bdafb2fd748efeeaadd4bb87b3f77e8dd90d9428c0",
+    "bytes": 210975,
+    "ext": "png",
+    "width": 453,
+    "height": 655,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image258.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0100": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0100",
+    "product_name": "Vitamin C 1000 Plus",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/b840220be93bf7a7b20155bdafb2fd748efeeaadd4bb87b3f77e8dd90d9428c0.png"
+  },
+  "e960b0bf82a001e24893a406c56bf20bf7da8905f0e9a063fc829e37a45ad316": {
+    "sha256": "e960b0bf82a001e24893a406c56bf20bf7da8905f0e9a063fc829e37a45ad316",
+    "bytes": 226396,
+    "ext": "png",
+    "width": 452,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image259.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0101": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0101",
+    "product_name": "Vitamin D3 1000",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/e960b0bf82a001e24893a406c56bf20bf7da8905f0e9a063fc829e37a45ad316.png"
+  },
+  "cc278e4b9b581e89c3e1ab6e97a4c19d06658172b9d571d861299003c63bb62e": {
+    "sha256": "cc278e4b9b581e89c3e1ab6e97a4c19d06658172b9d571d861299003c63bb62e",
+    "bytes": 213765,
+    "ext": "png",
+    "width": 450,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image260.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0102": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0102",
+    "product_name": "Vitamin K2 180 MAX",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/cc278e4b9b581e89c3e1ab6e97a4c19d06658172b9d571d861299003c63bb62e.png"
+  },
+  "97d81a3198a47ddaeb26c4d1c283bb6122da222b095363b246d12bfcabe1b1e3": {
+    "sha256": "97d81a3198a47ddaeb26c4d1c283bb6122da222b095363b246d12bfcabe1b1e3",
+    "bytes": 4635,
+    "ext": "jpeg",
+    "width": 384,
+    "height": 104,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image261.jpeg",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image248.jpeg",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0102": 1,
+      "HOG-0091": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0102",
+    "product_name": "Vitamin K2 180 MAX",
+    "match_confidence": 0.5
+  },
+  "7c1a8b9a0e466e3eced59c04fd5d625a363e0b46a7c4c80726458d585f1784c4": {
+    "sha256": "7c1a8b9a0e466e3eced59c04fd5d625a363e0b46a7c4c80726458d585f1784c4",
+    "bytes": 7591,
+    "ext": "jpeg",
+    "width": 592,
+    "height": 104,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image262.jpeg",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image249.jpeg",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0102": 1,
+      "HOG-0091": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0102",
+    "product_name": "Vitamin K2 180 MAX",
+    "match_confidence": 0.5
+  },
+  "4867f9fbf8e3f28e377415a359263311a3c90f1fc61486062a6aeb6bc5d91a6e": {
+    "sha256": "4867f9fbf8e3f28e377415a359263311a3c90f1fc61486062a6aeb6bc5d91a6e",
+    "bytes": 16056,
+    "ext": "jpeg",
+    "width": 812,
+    "height": 166,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image263.jpeg",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {},
+    "role": "boilerplate",
+    "product_id": null,
+    "product_name": null,
+    "match_confidence": 0
+  },
+  "d121d8e3210b5915c36ffb9b09f368a2743b0d39e6249a1d4fc54a895b831f20": {
+    "sha256": "d121d8e3210b5915c36ffb9b09f368a2743b0d39e6249a1d4fc54a895b831f20",
+    "bytes": 16208,
+    "ext": "jpeg",
+    "width": 736,
+    "height": 240,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image264.jpeg",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image251.jpeg",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0102": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0102",
+    "product_name": "Vitamin K2 180 MAX",
+    "match_confidence": 1.0
+  },
+  "ace20229eed260185f098a2e80b8773e679c1bc4d4c3cc441317f52caf85c5b7": {
+    "sha256": "ace20229eed260185f098a2e80b8773e679c1bc4d4c3cc441317f52caf85c5b7",
+    "bytes": 219374,
+    "ext": "png",
+    "width": 452,
+    "height": 656,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image265.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0103": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0103",
+    "product_name": "Vitex 1000",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/ace20229eed260185f098a2e80b8773e679c1bc4d4c3cc441317f52caf85c5b7.png"
+  },
+  "3fa00c5b63f0f5f9a6ab31c8b7619962405441c71fb8d66db280d40408b089ea": {
+    "sha256": "3fa00c5b63f0f5f9a6ab31c8b7619962405441c71fb8d66db280d40408b089ea",
+    "bytes": 3541,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image266.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image253.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0103": 1,
+      "HOG-0102": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0103",
+    "product_name": "Vitex 1000",
+    "match_confidence": 0.5
+  },
+  "6c0caf6920418bea1839e4b03fe6fd17043b9a4970a99c0d0618e4d8fb6ed092": {
+    "sha256": "6c0caf6920418bea1839e4b03fe6fd17043b9a4970a99c0d0618e4d8fb6ed092",
+    "bytes": 112,
+    "ext": "png",
+    "width": 20,
+    "height": 1,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image267.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0103": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0103",
+    "product_name": "Vitex 1000",
+    "match_confidence": 1.0
+  },
+  "95bb2d17b00b2faf7226785d67957c90113b219518fa44a6dcb5c90b02d25c05": {
+    "sha256": "95bb2d17b00b2faf7226785d67957c90113b219518fa44a6dcb5c90b02d25c05",
+    "bytes": 210359,
+    "ext": "png",
+    "width": 452,
+    "height": 659,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image268.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0103": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0103",
+    "product_name": "Vitex 1000",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/95bb2d17b00b2faf7226785d67957c90113b219518fa44a6dcb5c90b02d25c05.png"
+  },
+  "e9f7ec77d970656832f7ddc066aba115cd6b796ef3238e9a0f9bf0bb2aae0ffb": {
+    "sha256": "e9f7ec77d970656832f7ddc066aba115cd6b796ef3238e9a0f9bf0bb2aae0ffb",
+    "bytes": 3538,
+    "ext": "png",
+    "width": 54,
+    "height": 54,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image269.png",
+        "match_method": "docx_heading_section"
+      },
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image255.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0103": 1,
+      "HOG-0102": 1
+    },
+    "role": "boilerplate",
+    "product_id": "HOG-0103",
+    "product_name": "Vitex 1000",
+    "match_confidence": 0.5
+  },
+  "330be8b640cbbd549e76bb203f50808398c3b0762ee455e7ac980e41d50fb1bf": {
+    "sha256": "330be8b640cbbd549e76bb203f50808398c3b0762ee455e7ac980e41d50fb1bf",
+    "bytes": 211022,
+    "ext": "png",
+    "width": 453,
+    "height": 616,
+    "occurrences": [
+      {
+        "archive": "docx",
+        "member": "word/media/image270.png",
+        "match_method": "docx_heading_section"
+      }
+    ],
+    "product_votes": {
+      "HOG-0103": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0103",
+    "product_name": "Vitex 1000",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/330be8b640cbbd549e76bb203f50808398c3b0762ee455e7ac980e41d50fb1bf.png"
+  },
+  "a5d5f80bdf72cf8e4c3ffeaef787f0b2517e04b90ad050d86666e7a8eaa4fee2": {
+    "sha256": "a5d5f80bdf72cf8e4c3ffeaef787f0b2517e04b90ad050d86666e7a8eaa4fee2",
+    "bytes": 49766,
+    "ext": "png",
+    "width": 763,
+    "height": 499,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image21.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0004": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0004",
+    "product_name": "Activated Folate 500",
+    "match_confidence": 1.0
+  },
+  "eea446adb33fb0cc47094546df56ebbd1724151238e145b46eeec48908124b12": {
+    "sha256": "eea446adb33fb0cc47094546df56ebbd1724151238e145b46eeec48908124b12",
+    "bytes": 70333,
+    "ext": "jpeg",
+    "width": 507,
+    "height": 367,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image35.jpeg",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0009": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0009",
+    "product_name": "Berberine ImmunoPlex",
+    "match_confidence": 1.0
+  },
+  "fe0f7f2fb7bad22d9d94adebd3abe4d5ad935641c2c236c79c0ced458598acc6": {
+    "sha256": "fe0f7f2fb7bad22d9d94adebd3abe4d5ad935641c2c236c79c0ced458598acc6",
+    "bytes": 65892,
+    "ext": "jpeg",
+    "width": 546,
+    "height": 639,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image36.jpeg",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0009": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0009",
+    "product_name": "Berberine ImmunoPlex",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/fe0f7f2fb7bad22d9d94adebd3abe4d5ad935641c2c236c79c0ced458598acc6.jpeg"
+  },
+  "cc0f10debc7f24c5ccab46d39d5c949663bdbf04d1858d680804e4b921f48e14": {
+    "sha256": "cc0f10debc7f24c5ccab46d39d5c949663bdbf04d1858d680804e4b921f48e14",
+    "bytes": 127403,
+    "ext": "png",
+    "width": 425,
+    "height": 514,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image52.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0075": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0075",
+    "product_name": "Quercetin Complex",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/cc0f10debc7f24c5ccab46d39d5c949663bdbf04d1858d680804e4b921f48e14.png"
+  },
+  "a5981730f2ef47ef2a45557e369829336023c76b27ccef30f4f60babf8327684": {
+    "sha256": "a5981730f2ef47ef2a45557e369829336023c76b27ccef30f4f60babf8327684",
+    "bytes": 20368,
+    "ext": "png",
+    "width": 786,
+    "height": 209,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image54.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0009": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0009",
+    "product_name": "Berberine ImmunoPlex",
+    "match_confidence": 1.0
+  },
+  "1beee93da15c21300d64507ec1c514589aa59e81568b20025bc0fbc48af2fd26": {
+    "sha256": "1beee93da15c21300d64507ec1c514589aa59e81568b20025bc0fbc48af2fd26",
+    "bytes": 117131,
+    "ext": "png",
+    "width": 409,
+    "height": 490,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image80.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0040": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0040",
+    "product_name": "Ginseng 4 Energy Gold",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/1beee93da15c21300d64507ec1c514589aa59e81568b20025bc0fbc48af2fd26.png"
+  },
+  "98f33227e3a7a16720d89e7998f2660d0810222cd12b6d98d6e9ed4c1a339257": {
+    "sha256": "98f33227e3a7a16720d89e7998f2660d0810222cd12b6d98d6e9ed4c1a339257",
+    "bytes": 23700,
+    "ext": "jpeg",
+    "width": 610,
+    "height": 487,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image104.jpeg",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0028": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0028",
+    "product_name": "Collagen",
+    "match_confidence": 1.0
+  },
+  "4b9656c42a4e2f65802befcf3e4f5fb193696fa58e4b6431eec1ab0801e63a69": {
+    "sha256": "4b9656c42a4e2f65802befcf3e4f5fb193696fa58e4b6431eec1ab0801e63a69",
+    "bytes": 209529,
+    "ext": "png",
+    "width": 473,
+    "height": 449,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image126.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0075": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0075",
+    "product_name": "Quercetin Complex",
+    "match_confidence": 1.0
+  },
+  "a0ce1603d36086154fbcbe82658fdc61fe9dc1c110126a4c43ca6c3688a15260": {
+    "sha256": "a0ce1603d36086154fbcbe82658fdc61fe9dc1c110126a4c43ca6c3688a15260",
+    "bytes": 71636,
+    "ext": "jpeg",
+    "width": 757,
+    "height": 475,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image136.jpeg",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0048": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0048",
+    "product_name": "Hormone Metabolism",
+    "match_confidence": 1.0
+  },
+  "58d2c17d22824791cc4360a47ddab2963b366e6997a5fc4a8ce0a5bc5a189307": {
+    "sha256": "58d2c17d22824791cc4360a47ddab2963b366e6997a5fc4a8ce0a5bc5a189307",
+    "bytes": 138121,
+    "ext": "png",
+    "width": 432,
+    "height": 522,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image144.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0103": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0103",
+    "product_name": "Vitex 1000",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/58d2c17d22824791cc4360a47ddab2963b366e6997a5fc4a8ce0a5bc5a189307.png"
+  },
+  "910f883d850184e2bbca353db33278d0682b4828b96a221cce7497a21022f1fb": {
+    "sha256": "910f883d850184e2bbca353db33278d0682b4828b96a221cce7497a21022f1fb",
+    "bytes": 151406,
+    "ext": "png",
+    "width": 331,
+    "height": 479,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image166.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0062": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0062",
+    "product_name": "Muscle Resuscitation",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/910f883d850184e2bbca353db33278d0682b4828b96a221cce7497a21022f1fb.png"
+  },
+  "349e8221acff53f1154167df5a0888cb36fbdca3cf5d5cecdb13263ccd262422": {
+    "sha256": "349e8221acff53f1154167df5a0888cb36fbdca3cf5d5cecdb13263ccd262422",
+    "bytes": 42217,
+    "ext": "jpeg",
+    "width": 634,
+    "height": 325,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image176.jpeg",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0062": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0062",
+    "product_name": "Muscle Resuscitation",
+    "match_confidence": 1.0
+  },
+  "9955c34c59baee7d5994c7cf15e0f2439e72014473dbf3de22210f970a644e02": {
+    "sha256": "9955c34c59baee7d5994c7cf15e0f2439e72014473dbf3de22210f970a644e02",
+    "bytes": 49497,
+    "ext": "jpeg",
+    "width": 751,
+    "height": 422,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image177.jpeg",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0062": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0062",
+    "product_name": "Muscle Resuscitation",
+    "match_confidence": 1.0
+  },
+  "a1fc60d9736f8f9792bc3261e17c076be386f5a40d238be5f4ce090341cb15cb": {
+    "sha256": "a1fc60d9736f8f9792bc3261e17c076be386f5a40d238be5f4ce090341cb15cb",
+    "bytes": 69750,
+    "ext": "png",
+    "width": 748,
+    "height": 451,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image178.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0062": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0062",
+    "product_name": "Muscle Resuscitation",
+    "match_confidence": 1.0
+  },
+  "074691b08285aa721693eb17a5c82285e6c5485cfd32b756e5b1b786038b939e": {
+    "sha256": "074691b08285aa721693eb17a5c82285e6c5485cfd32b756e5b1b786038b939e",
+    "bytes": 70293,
+    "ext": "png",
+    "width": 713,
+    "height": 421,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image179.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0062": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0062",
+    "product_name": "Muscle Resuscitation",
+    "match_confidence": 1.0
+  },
+  "ebf405597b5d2b78471aec5f17fdace109089a730d2d09c4a33e7ac74c97005d": {
+    "sha256": "ebf405597b5d2b78471aec5f17fdace109089a730d2d09c4a33e7ac74c97005d",
+    "bytes": 47774,
+    "ext": "png",
+    "width": 735,
+    "height": 373,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image214.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0080": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0080",
+    "product_name": "Silica Hair Skin & Nails",
+    "match_confidence": 1.0
+  },
+  "7beaa4d5d5018e509adbf5947dbb19aedbaaf969703ebc2bdceb5ed270d45bcd": {
+    "sha256": "7beaa4d5d5018e509adbf5947dbb19aedbaaf969703ebc2bdceb5ed270d45bcd",
+    "bytes": 37257,
+    "ext": "png",
+    "width": 737,
+    "height": 387,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image215.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0080": 1
+    },
+    "role": "content_graphic",
+    "product_id": "HOG-0080",
+    "product_name": "Silica Hair Skin & Nails",
+    "match_confidence": 1.0
+  },
+  "31d9727404e506142157a1e50a87fa9d7f0b576e5107a8282aa59c2cbfde2a8b": {
+    "sha256": "31d9727404e506142157a1e50a87fa9d7f0b576e5107a8282aa59c2cbfde2a8b",
+    "bytes": 170241,
+    "ext": "png",
+    "width": 331,
+    "height": 450,
+    "occurrences": [
+      {
+        "archive": "xlsx",
+        "member": "xl/media/image256.png",
+        "match_method": "xlsx_anchor_cell"
+      }
+    ],
+    "product_votes": {
+      "HOG-0102": 1
+    },
+    "role": "product_packshot",
+    "product_id": "HOG-0102",
+    "product_name": "Vitamin K2 180 MAX",
+    "match_confidence": 1.0,
+    "derived_path": "data/derived/images/31d9727404e506142157a1e50a87fa9d7f0b576e5107a8282aa59c2cbfde2a8b.png"
+  }
+}

@@ -8,6 +8,9 @@ export default defineConfig({
   test: {
     environment: "node",
     include: ["src/**/*.test.ts", "src/**/*.test.tsx"],
+    // Exclude macOS AppleDouble junk (._*) that external volumes create
+    // alongside real files; vitest otherwise tries to transform them.
+    exclude: ["**/._*", "**/node_modules/**"],
     globals: false,
   },
 });

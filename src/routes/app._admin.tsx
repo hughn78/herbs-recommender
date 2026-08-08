@@ -1,5 +1,5 @@
-// Sign-in gate for content-management pages only. The clinical review flow
-// itself is public — no patient identity is stored.
+// Sign-in gate for content-management pages. The parent /app route also
+// requires authentication before any clinical review workflow is reachable.
 import { createFileRoute, Outlet, redirect } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
 

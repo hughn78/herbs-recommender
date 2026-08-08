@@ -1,7 +1,7 @@
 // Deterministic guardrail engine (Phase 1) + product recommendations (Phase 5)
 // + structured rationale on every rec (Phase 6).
 // Runs on the server inside a serverFn. No AI, no vector search.
-import { recommendProducts, type ProductRow } from "./recommend-products";
+import { recommendProducts, type ProductRow, type ProductImageRef, type TagMaps } from "./recommend-products";
 import {
   buildRationale,
   type Rationale,
@@ -76,6 +76,8 @@ export type GeneratedRec = {
   matched_patient_factors: string[];
   matched_product_tags?: string[];
   source_references: Array<{ source: string; tier_label: string; note: string }>;
+  /** Phase 8: primary pack shot for product recommendation cards. */
+  image?: ProductImageRef | null;
 };
 
 const TYPE_BASE_SCORE: Record<RecType, number> = {
@@ -281,6 +283,7 @@ export function runEngine(
   ctx: PatientCtx,
   rules: SafetyRuleRow[],
   products: ProductRow[] = [],
+  maps: Partial<TagMaps> = {},
 ): GeneratedRec[] {
   const factors = detectPatientFactors(ctx);
   const classes = new Set(
@@ -472,8 +475,14 @@ export function runEngine(
         .filter((id) => id && !id.startsWith("engine:") && !id.startsWith("red_flag:") && !id.startsWith("otc_interaction:")),
     );
     const triggeredRules = rules.filter((r) => triggeredRuleIds.has(r.rule_id));
-    const productRecs = recommendProducts(ctx, products, triggeredRules);
-    // Convert ProductRecommendation to GeneratedRec shape
+    // Phase 6: ontology-driven tag maps (consumer wording, brand aliases,
+    // clinical synonyms) are passed through; recommendProducts falls back to
+    // its built-in defaults for any map not supplied.
+    const productRecs = recommendProducts(ctx, products, triggeredRules, maps);
+    // Convert ProductRecommendation to GeneratedRec shape.
+    // Rank-flattening fix: carry through the per-product confidence and
+    // confidence_score computed in recommendProducts (previously every
+    // product rec collapsed to "Medium"/50, discarding match strength).
     for (const pr of productRecs) {
       recs.push({
         recommendation_type: "product_recommendation",
@@ -481,10 +490,10 @@ export function runEngine(
         product_id: pr.product_id,
         product_name: pr.product_name,
         brand: pr.brand,
-        confidence: "Medium",
-        confidence_score: 50,
+        confidence: pr.confidence,
+        confidence_score: pr.confidence_score,
         severity_tier: "minor",
-        score: TYPE_BASE_SCORE.product_recommendation + 50,
+        score: pr.score,
         rank: 0,
         why_triggered: pr.why_triggered,
         rationale: pr.rationale,
@@ -496,6 +505,7 @@ export function runEngine(
         matched_patient_factors: pr.matched_patient_factors,
         matched_product_tags: pr.matched_product_tags,
         source_references: pr.source_references,
+        image: pr.image ?? null,
       });
     }
   }

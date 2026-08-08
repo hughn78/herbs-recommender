@@ -171,7 +171,9 @@ export const searchKbFn = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((d: { query: string; limit?: number }) => d)
   .handler(async ({ data, context }) => {
-    await assertAdmin(context);
+    // Phase 11 fix: reference search is available to ALL authenticated
+    // pharmacy staff, not only admins. Ingestion controls stay admin-only
+    // (assertAdmin above). kb_chunks contains no patient data.
     const q = (data.query ?? "").trim();
     if (!q) return { results: [] };
     const limit = Math.min(Math.max(data.limit ?? 20, 1), 50);

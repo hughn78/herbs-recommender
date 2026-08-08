@@ -27,10 +27,15 @@ import * as path from "node:path";
 import { recommendProducts, type ProductRow } from "./recommend-products";
 import type { PatientCtx } from "./engine";
 
-const HOG_PATH = path.join(
-  process.env.HOME ?? "/Users/hughn78",
-  "herbsofgold_scraped/HerbsOfGold_KnowledgeBase/output/herbs_of_gold_products.json",
-);
+// Corpus lives in the repo workspace at docs/herbsofgold_scraped (gitignored —
+// original scraped source material, do not modify). Override with
+// HOG_CATALOGUE_PATH when running against a different copy.
+const HOG_PATH =
+  process.env.HOG_CATALOGUE_PATH ??
+  path.join(
+    __dirname,
+    "../../docs/herbsofgold_scraped/HerbsOfGold_KnowledgeBase/output/herbs_of_gold_products.json",
+  );
 
 function loadCatalogue(): ProductRow[] {
   const raw = fs.readFileSync(HOG_PATH, "utf-8");

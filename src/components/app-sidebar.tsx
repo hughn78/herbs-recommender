@@ -1,6 +1,6 @@
 import { Link, useRouterState, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Home, FilePlus2, ListChecks, BookOpen, Package, Inbox, ShieldCheck, Settings, LogOut, LogIn } from "lucide-react";
+import { Home, FilePlus2, ListChecks, BookOpen, Package, Inbox, ShieldCheck, Settings, LogOut, LogIn, ClipboardCheck } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -26,6 +26,7 @@ const stubItems = [
   { title: "Safety rules", url: "/app/rules", icon: ShieldCheck },
   { title: "References", url: "/app/references", icon: BookOpen },
   { title: "Products", url: "/app/products", icon: Package },
+  { title: "Catalogue governance", url: "/app/governance", icon: ClipboardCheck },
   { title: "Set-up", url: "/app/setup", icon: Settings },
 ];
 

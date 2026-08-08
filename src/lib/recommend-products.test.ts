@@ -522,3 +522,51 @@ describe("recommendProducts — output shape", () => {
     expect(recs).toEqual([]);
   });
 });
+
+describe("Phase 7 — governed catalogue citations", () => {
+  it("carries the product's own source reference through to the recommendation", () => {
+    const ctx: PatientCtx = {
+      age: 42,
+      sex: "female",
+      pregnancy_status: "no",
+      breastfeeding_status: "no",
+      allergies: "NKDA",
+      medical_history: "",
+      symptoms: "fatigue",
+      counselling_goal: "",
+      existing_supplements: "",
+      pathology_notes: "",
+      confirmed_medications: [],
+    };
+    const products: ProductRow[] = [
+      makeProduct({
+        product_id: "HOG-0004",
+        name: "Activated Folate 500",
+        brand: "Herbs of Gold",
+        clinical_use_tags: ["folate_support", "b12_support"],
+        source_references: [
+          {
+            source: "Herbs of Gold Technical Manual",
+            tier_label: "Manufacturer product monograph",
+            note: "HOG-0004 · PDF source page 8",
+          },
+        ],
+      }),
+    ];
+
+    const recs = recommendProducts(ctx, products, [], {
+      drugClassMap: DRUG_CLASS_MAP,
+      factorMap: FACTOR_MAP,
+      symptomMap: { fatigue: ["folate_support", "b12_support"] },
+    });
+
+    expect(recs).toHaveLength(1);
+    expect(recs[0].source_references).toEqual([
+      {
+        source: "Herbs of Gold Technical Manual",
+        tier_label: "Manufacturer product monograph",
+        note: "HOG-0004 · PDF source page 8",
+      },
+    ]);
+  });
+});

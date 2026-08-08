@@ -16,6 +16,23 @@
 import type { SafetyRuleRow, PatientCtx } from "./engine";
 import { buildRationale, type Rationale, type SeverityTier, type EvidenceLevel } from "./rationale";
 
+export type ProductSourceRef = {
+  source: string;
+  tier_label: string;
+  note: string;
+  url?: string;
+};
+
+/** Phase 8: primary pack shot from the governed catalogue. storage_path is
+ *  the object key inside the public `product-images` bucket; the UI resolves
+ *  it to a public URL. Legacy rows leave this unset. */
+export type ProductImageRef = {
+  storage_path: string;
+  alt_text: string | null;
+  width: number | null;
+  height: number | null;
+};
+
 export type ProductRow = {
   product_id: string;
   name: string;
@@ -33,6 +50,11 @@ export type ProductRow = {
   avoid_if_tags: string[];
   medicine_interaction_flags: string[];
   counselling_flags: string[];
+  /** Phase 7: governed-catalogue citations. Legacy rows leave this unset and
+   *  receive the old generic catalogue reference below. */
+  source_references?: ProductSourceRef[];
+  /** Phase 8: primary pack shot, when the catalogue has an approved image. */
+  image?: ProductImageRef | null;
 };
 
 export type ProductRecommendation = {
@@ -56,6 +78,8 @@ export type ProductRecommendation = {
   rationale: Rationale;
   severity_tier: SeverityTier;
   confidence_score: number;
+  /** Phase 8: primary pack shot carried through for the result card. */
+  image?: ProductImageRef | null;
 };
 
 export type DrugClassTagMap = Record<string, string[]>;
@@ -517,6 +541,10 @@ export function recommendProducts(
 
     const baseScore = 400;
     const score = baseScore + matchedTags.length * 20;
+    // Explainable numeric confidence: 40 base + 10 per matched tag (cap 90).
+    // Preserved through engine.ts so product recs rank by actual match
+    // strength instead of collapsing to a flat 50 (rank-flattening fix).
+    const confidenceScore = Math.min(90, 40 + matchedTags.length * 10);
 
     const triggerParts: string[] = [];
     if (matchedMeds.length) {
@@ -558,13 +586,15 @@ export function recommendProducts(
       matched_medicines: matchedMeds,
       matched_patient_factors: matchedFactors,
       matched_product_tags: matchedTags,
-      source_references: [
-        {
-          source: "Herbs of Gold Technical Manual",
-          tier_label: "Pharmacist-reviewed catalogue",
-          note: product.product_id,
-        },
-      ],
+      source_references: product.source_references?.length
+        ? product.source_references
+        : [
+            {
+              source: "Herbs of Gold Technical Manual",
+              tier_label: "Pharmacist-reviewed catalogue",
+              note: product.product_id,
+            },
+          ],
       rationale: buildRationale({
         ruleId: `product:${product.product_id}`,
         severity: "minor",
@@ -580,7 +610,8 @@ export function recommendProducts(
         mechanism: "clinical",
       }),
       severity_tier: "minor",
-      confidence_score: 50,
+      confidence_score: confidenceScore,
+      image: product.image ?? null,
     });
   }
 

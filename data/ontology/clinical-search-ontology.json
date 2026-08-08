@@ -1,0 +1,416 @@
+{
+  "version": 1,
+  "description": "Curated clinical/search ontology for the Herbs of Gold pharmacist tool. Maps consumer wording, clinical synonyms, brand aliases and spelling variants to the clinical-use tags that governed catalogue products actually carry. Tags were chosen against the real corpus tag set (see data/reports); every row is pharmacist-reviewable in the Phase 14 governance workflow. This file is the seed loaded by pipeline/ingest.py into ontology_concepts + ontology_synonyms.",
+  "concepts": [
+    {
+      "concept_type": "medication_class",
+      "canonical_label": "diabetes",
+      "clinical_use_tags": ["b12_support", "magnesium_support"],
+      "synonyms": [
+        { "term": "metformin", "synonym_type": "clinical_synonym" },
+        { "term": "antidiabetic", "synonym_type": "clinical_synonym" },
+        { "term": "t2dm", "synonym_type": "clinical_synonym" },
+        { "term": "diabetes medication", "synonym_type": "consumer_wording" },
+        { "term": "blood sugar medication", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "medication_class",
+      "canonical_label": "ppi",
+      "clinical_use_tags": ["b12_support", "magnesium_support", "calcium_support"],
+      "synonyms": [
+        { "term": "proton pump inhibitor", "synonym_type": "clinical_synonym" },
+        { "term": "omeprazole", "synonym_type": "clinical_synonym" },
+        { "term": "esomeprazole", "synonym_type": "clinical_synonym" },
+        { "term": "pantoprazole", "synonym_type": "clinical_synonym" },
+        { "term": "nexium", "synonym_type": "medicine_brand_alias" },
+        { "term": "acid suppressant", "synonym_type": "consumer_wording" },
+        { "term": "reflux medication", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "medication_class",
+      "canonical_label": "statin",
+      "clinical_use_tags": ["heart_health", "magnesium_support"],
+      "synonyms": [
+        { "term": "atorvastatin", "synonym_type": "clinical_synonym" },
+        { "term": "rosuvastatin", "synonym_type": "clinical_synonym" },
+        { "term": "simvastatin", "synonym_type": "clinical_synonym" },
+        { "term": "lipitor", "synonym_type": "medicine_brand_alias" },
+        { "term": "crestor", "synonym_type": "medicine_brand_alias" },
+        { "term": "zocor", "synonym_type": "medicine_brand_alias" },
+        { "term": "cholesterol medication", "synonym_type": "consumer_wording" },
+        { "term": "cholesterol tablets", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "medication_class",
+      "canonical_label": "ssri",
+      "clinical_use_tags": ["b12_support", "folate_support"],
+      "synonyms": [
+        { "term": "sertraline", "synonym_type": "clinical_synonym" },
+        { "term": "escitalopram", "synonym_type": "clinical_synonym" },
+        { "term": "fluoxetine", "synonym_type": "clinical_synonym" },
+        { "term": "zoloft", "synonym_type": "medicine_brand_alias" },
+        { "term": "lexapro", "synonym_type": "medicine_brand_alias" },
+        { "term": "prozac", "synonym_type": "medicine_brand_alias" },
+        { "term": "antidepressant", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "medication_class",
+      "canonical_label": "snri",
+      "clinical_use_tags": ["b12_support"],
+      "synonyms": [
+        { "term": "venlafaxine", "synonym_type": "clinical_synonym" },
+        { "term": "duloxetine", "synonym_type": "clinical_synonym" },
+        { "term": "desvenlafaxine", "synonym_type": "clinical_synonym" },
+        { "term": "effexor", "synonym_type": "medicine_brand_alias" },
+        { "term": "cymbalta", "synonym_type": "medicine_brand_alias" },
+        { "term": "pristiq", "synonym_type": "medicine_brand_alias" }
+      ]
+    },
+    {
+      "concept_type": "medication_class",
+      "canonical_label": "bisphosphonate",
+      "clinical_use_tags": ["calcium_support", "vitamin_d_support"],
+      "synonyms": [
+        { "term": "alendronate", "synonym_type": "clinical_synonym" },
+        { "term": "risedronate", "synonym_type": "clinical_synonym" },
+        { "term": "fosamax", "synonym_type": "medicine_brand_alias" },
+        { "term": "actonel", "synonym_type": "medicine_brand_alias" },
+        { "term": "osteoporosis medication", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "medication_class",
+      "canonical_label": "thyroid",
+      "clinical_use_tags": ["iron_support"],
+      "synonyms": [
+        { "term": "levothyroxine", "synonym_type": "clinical_synonym" },
+        { "term": "thyroxine", "synonym_type": "clinical_synonym" },
+        { "term": "synthroid", "synonym_type": "medicine_brand_alias" },
+        { "term": "oroxine", "synonym_type": "medicine_brand_alias" },
+        { "term": "thyroid medication", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "medication_class",
+      "canonical_label": "corticosteroid",
+      "clinical_use_tags": ["calcium_support", "vitamin_d_support"],
+      "synonyms": [
+        { "term": "prednisolone", "synonym_type": "clinical_synonym" },
+        { "term": "prednisone", "synonym_type": "clinical_synonym" },
+        { "term": "dexamethasone", "synonym_type": "clinical_synonym" },
+        { "term": "steroid tablets", "synonym_type": "consumer_wording" },
+        { "term": "cortisone", "synonym_type": "consumer_wording" }
+      ]
+    },
+
+    {
+      "concept_type": "patient_factor",
+      "canonical_label": "elderly",
+      "clinical_use_tags": ["calcium_support", "vitamin_d_support", "b12_support"],
+      "synonyms": [
+        { "term": "older adult", "synonym_type": "consumer_wording" },
+        { "term": "senior", "synonym_type": "consumer_wording" },
+        { "term": "aged 65+", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "patient_factor",
+      "canonical_label": "pregnancy",
+      "clinical_use_tags": ["folate_support", "iron_support", "pregnancy_support"],
+      "synonyms": [
+        { "term": "pregnant", "synonym_type": "consumer_wording" },
+        { "term": "gestation", "synonym_type": "clinical_synonym" }
+      ]
+    },
+    {
+      "concept_type": "patient_factor",
+      "canonical_label": "breastfeeding",
+      "clinical_use_tags": ["b12_support", "calcium_support"],
+      "synonyms": [
+        { "term": "lactation", "synonym_type": "clinical_synonym" },
+        { "term": "nursing", "synonym_type": "consumer_wording" },
+        { "term": "breast feeding", "synonym_type": "spelling_variant" }
+      ]
+    },
+    {
+      "concept_type": "patient_factor",
+      "canonical_label": "postmenopausal",
+      "clinical_use_tags": ["calcium_support", "vitamin_d_support", "bone_health"],
+      "synonyms": [
+        { "term": "after menopause", "synonym_type": "consumer_wording" },
+        { "term": "post-menopausal", "synonym_type": "spelling_variant" }
+      ]
+    },
+    {
+      "concept_type": "patient_factor",
+      "canonical_label": "diabetes",
+      "clinical_use_tags": ["magnesium_support", "b12_support"],
+      "synonyms": [
+        { "term": "diabetic", "synonym_type": "consumer_wording" },
+        { "term": "type 2 diabetes", "synonym_type": "clinical_synonym" }
+      ]
+    },
+    {
+      "concept_type": "patient_factor",
+      "canonical_label": "hypertension",
+      "clinical_use_tags": ["magnesium_support", "heart_health"],
+      "synonyms": [
+        { "term": "high blood pressure", "synonym_type": "consumer_wording" },
+        { "term": "raised blood pressure", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "patient_factor",
+      "canonical_label": "renal_disease",
+      "clinical_use_tags": [],
+      "synonyms": [
+        { "term": "ckd", "synonym_type": "clinical_synonym" },
+        { "term": "kidney disease", "synonym_type": "consumer_wording" },
+        { "term": "renal impairment", "synonym_type": "clinical_synonym" }
+      ]
+    },
+    {
+      "concept_type": "patient_factor",
+      "canonical_label": "hepatic_disease",
+      "clinical_use_tags": [],
+      "synonyms": [
+        { "term": "liver disease", "synonym_type": "consumer_wording" },
+        { "term": "cirrhosis", "synonym_type": "clinical_synonym" }
+      ]
+    },
+    {
+      "concept_type": "patient_factor",
+      "canonical_label": "child",
+      "clinical_use_tags": [],
+      "synonyms": [
+        { "term": "paediatric", "synonym_type": "clinical_synonym" },
+        { "term": "pediatric", "synonym_type": "spelling_variant" }
+      ]
+    },
+    {
+      "concept_type": "patient_factor",
+      "canonical_label": "polypharmacy",
+      "clinical_use_tags": [],
+      "synonyms": [
+        { "term": "multiple medications", "synonym_type": "consumer_wording" },
+        { "term": "5+ medicines", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "patient_factor",
+      "canonical_label": "swallowing_difficulty",
+      "clinical_use_tags": [],
+      "synonyms": [
+        { "term": "dysphagia", "synonym_type": "clinical_synonym" },
+        { "term": "trouble swallowing", "synonym_type": "consumer_wording" },
+        { "term": "difficulty swallowing tablets", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "patient_factor",
+      "canonical_label": "allergy_risk",
+      "clinical_use_tags": [],
+      "synonyms": [
+        { "term": "drug allergy", "synonym_type": "consumer_wording" },
+        { "term": "allergies", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "patient_factor",
+      "canonical_label": "bleeding_risk",
+      "clinical_use_tags": [],
+      "synonyms": [
+        { "term": "bleeding tendency", "synonym_type": "clinical_synonym" },
+        { "term": "on blood thinners", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "patient_factor",
+      "canonical_label": "mineral_timing_risk",
+      "clinical_use_tags": [],
+      "synonyms": [
+        { "term": "mineral interaction risk", "synonym_type": "curated_search" }
+      ]
+    },
+    {
+      "concept_type": "patient_factor",
+      "canonical_label": "existing_supplement_duplication",
+      "clinical_use_tags": [],
+      "synonyms": [
+        { "term": "already taking supplements", "synonym_type": "consumer_wording" },
+        { "term": "already taking vitamin d", "synonym_type": "consumer_wording" }
+      ]
+    },
+
+    {
+      "concept_type": "symptom",
+      "canonical_label": "muscle cramps",
+      "clinical_use_tags": ["magnesium_support", "muscle_cramps"],
+      "synonyms": [
+        { "term": "cramp", "synonym_type": "consumer_wording" },
+        { "term": "cramps", "synonym_type": "consumer_wording" },
+        { "term": "leg cramps", "synonym_type": "consumer_wording" },
+        { "term": "night cramps", "synonym_type": "consumer_wording" },
+        { "term": "muscle ache", "synonym_type": "consumer_wording" },
+        { "term": "muscle pain", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "symptom",
+      "canonical_label": "fatigue",
+      "clinical_use_tags": ["b12_support", "iron_support", "energy_support"],
+      "synonyms": [
+        { "term": "tired", "synonym_type": "consumer_wording" },
+        { "term": "tired all the time", "synonym_type": "consumer_wording" },
+        { "term": "low energy", "synonym_type": "consumer_wording" },
+        { "term": "no energy", "synonym_type": "consumer_wording" },
+        { "term": "exhaustion", "synonym_type": "consumer_wording" },
+        { "term": "lethargy", "synonym_type": "clinical_synonym" }
+      ]
+    },
+    {
+      "concept_type": "symptom",
+      "canonical_label": "poor sleep",
+      "clinical_use_tags": ["sleep_support", "magnesium_support"],
+      "synonyms": [
+        { "term": "sleep", "synonym_type": "consumer_wording" },
+        { "term": "insomnia", "synonym_type": "clinical_synonym" },
+        { "term": "trouble sleeping", "synonym_type": "consumer_wording" },
+        { "term": "can't sleep", "synonym_type": "consumer_wording" },
+        { "term": "sleepless", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "symptom",
+      "canonical_label": "stress",
+      "clinical_use_tags": ["stress_support", "nervous_system_support"],
+      "synonyms": [
+        { "term": "stressed", "synonym_type": "consumer_wording" },
+        { "term": "anxiety", "synonym_type": "clinical_synonym" },
+        { "term": "anxious", "synonym_type": "consumer_wording" },
+        { "term": "feeling overwhelmed", "synonym_type": "consumer_wording" },
+        { "term": "nervous tension", "synonym_type": "clinical_synonym" }
+      ]
+    },
+    {
+      "concept_type": "health_goal",
+      "canonical_label": "immunity",
+      "clinical_use_tags": ["immune_support"],
+      "synonyms": [
+        { "term": "immune", "synonym_type": "consumer_wording" },
+        { "term": "frequent colds", "synonym_type": "consumer_wording" },
+        { "term": "keep getting sick", "synonym_type": "consumer_wording" },
+        { "term": "always sick", "synonym_type": "consumer_wording" },
+        { "term": "boost immune system", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "symptom",
+      "canonical_label": "joint pain",
+      "clinical_use_tags": ["joint_health"],
+      "synonyms": [
+        { "term": "joint", "synonym_type": "consumer_wording" },
+        { "term": "arthritis", "synonym_type": "clinical_synonym" },
+        { "term": "sore joints", "synonym_type": "consumer_wording" },
+        { "term": "stiff joints", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "symptom",
+      "canonical_label": "hair and nails",
+      "clinical_use_tags": ["hair_nail_support"],
+      "synonyms": [
+        { "term": "hair loss", "synonym_type": "consumer_wording" },
+        { "term": "hair thinning", "synonym_type": "consumer_wording" },
+        { "term": "brittle nails", "synonym_type": "consumer_wording" },
+        { "term": "weak nails", "synonym_type": "consumer_wording" },
+        { "term": "hair", "synonym_type": "consumer_wording" },
+        { "term": "nail", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "health_goal",
+      "canonical_label": "menopause",
+      "clinical_use_tags": ["women_health", "bone_health"],
+      "synonyms": [
+        { "term": "menopausal", "synonym_type": "consumer_wording" },
+        { "term": "hot flushes", "synonym_type": "consumer_wording" },
+        { "term": "hot flashes", "synonym_type": "spelling_variant" },
+        { "term": "perimenopause", "synonym_type": "clinical_synonym" }
+      ]
+    },
+    {
+      "concept_type": "health_goal",
+      "canonical_label": "pregnancy planning",
+      "clinical_use_tags": ["folate_support", "pregnancy_support", "iron_support"],
+      "synonyms": [
+        { "term": "preconception", "synonym_type": "clinical_synonym" },
+        { "term": "trying to conceive", "synonym_type": "consumer_wording" },
+        { "term": "planning a baby", "synonym_type": "consumer_wording" },
+        { "term": "conceive", "synonym_type": "consumer_wording" },
+        { "term": "ttc", "synonym_type": "consumer_wording" },
+        { "term": "planning", "synonym_type": "consumer_wording" },
+        { "term": "pregnancy", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "symptom",
+      "canonical_label": "low iron",
+      "clinical_use_tags": ["iron_support", "energy_support"],
+      "synonyms": [
+        { "term": "iron deficiency", "synonym_type": "clinical_synonym" },
+        { "term": "anaemia", "synonym_type": "clinical_synonym" },
+        { "term": "anemia", "synonym_type": "spelling_variant" },
+        { "term": "low ferritin", "synonym_type": "clinical_synonym" }
+      ]
+    },
+    {
+      "concept_type": "symptom",
+      "canonical_label": "reflux",
+      "clinical_use_tags": ["gut_health"],
+      "synonyms": [
+        { "term": "heartburn", "synonym_type": "consumer_wording" },
+        { "term": "indigestion", "synonym_type": "consumer_wording" },
+        { "term": "acid reflux", "synonym_type": "consumer_wording" },
+        { "term": "gord", "synonym_type": "clinical_synonym" },
+        { "term": "gerd", "synonym_type": "spelling_variant" }
+      ]
+    },
+    {
+      "concept_type": "health_goal",
+      "canonical_label": "magnesium request",
+      "clinical_use_tags": ["magnesium_support"],
+      "synonyms": [
+        { "term": "wants magnesium", "synonym_type": "consumer_wording" },
+        { "term": "magnesium", "synonym_type": "consumer_wording" },
+        { "term": "magnesium supplement", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "health_goal",
+      "canonical_label": "bone health",
+      "clinical_use_tags": ["bone_health", "calcium_support", "vitamin_d_support"],
+      "synonyms": [
+        { "term": "osteoporosis", "synonym_type": "clinical_synonym" },
+        { "term": "osteopenia", "synonym_type": "clinical_synonym" },
+        { "term": "bone density", "synonym_type": "consumer_wording" },
+        { "term": "weak bones", "synonym_type": "consumer_wording" },
+        { "term": "bone", "synonym_type": "consumer_wording" }
+      ]
+    },
+    {
+      "concept_type": "health_goal",
+      "canonical_label": "skin health",
+      "clinical_use_tags": ["skin_health"],
+      "synonyms": [
+        { "term": "skin", "synonym_type": "consumer_wording" },
+        { "term": "eczema", "synonym_type": "clinical_synonym" },
+        { "term": "dry skin", "synonym_type": "consumer_wording" }
+      ]
+    }
+  ]
+}
