@@ -49,12 +49,20 @@ function Landing() {
             </div>
             <span className="font-display text-base text-teal-foreground">PharmaPrompt OS</span>
           </div>
-          <Link
-            to="/app"
-            className="rounded-lg bg-amber px-4 py-2 text-sm font-medium text-amber-foreground transition-colors hover:bg-amber/85"
-          >
-            Open the app
-          </Link>
+          <div className="flex items-center gap-3">
+            <Link
+              to="/auth"
+              className="rounded-lg bg-white/10 px-4 py-2 text-sm font-medium text-teal-foreground transition-colors hover:bg-white/20"
+            >
+              Sign in
+            </Link>
+            <Link
+              to="/app"
+              className="rounded-lg bg-amber px-4 py-2 text-sm font-medium text-amber-foreground transition-colors hover:bg-amber/85"
+            >
+              Open the app
+            </Link>
+          </div>
         </header>
 
         <section className="mx-auto max-w-[1280px] px-8 pt-16 pb-28 md:pt-24 md:pb-32">
@@ -113,6 +121,16 @@ function Landing() {
               How it works
             </a>
           </motion.div>
+
+          <motion.p
+            initial="hidden"
+            animate="show"
+            variants={fadeUp}
+            custom={4}
+            className="mt-4 text-xs text-teal-foreground/60"
+          >
+            Staff tool — you’ll be asked to sign in or create an account first.
+          </motion.p>
         </section>
       </div>
 
@@ -151,19 +169,35 @@ function Landing() {
       <section className="mx-auto max-w-[1280px] px-8 pb-16 md:pb-28">
         <div className="pp-island px-8 py-14 md:px-14 md:py-20">
           <h2 className="max-w-2xl font-display text-3xl leading-tight text-[#F3F1EC] md:text-[40px]">
-            No sign-in. No patient identifiers. Just the review.
+            One staff sign-in. Everything inside stays open.
           </h2>
           <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-[#F3F1EC]/70">
-            Open a review, paste the medication list, and work through the guardrails. Nothing that
-            identifies a patient is ever collected or stored.
+            Sign-in protects patient context in saved reviews. Prefer not to keep anything? Tick
+            “Do not save this review” for a transient run — nothing is persisted. The governed
+            catalogue and reference library sit behind the same sign-in, with per-product sources
+            on every card.
           </p>
-          <Link
-            to="/app/review"
-            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-amber px-5 py-3 text-sm font-medium text-amber-foreground transition-colors hover:bg-amber/85"
-          >
-            Start a review
-            <ArrowRight className="h-4 w-4" />
-          </Link>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Link
+              to="/app/review"
+              className="inline-flex items-center gap-2 rounded-lg bg-amber px-5 py-3 text-sm font-medium text-amber-foreground transition-colors hover:bg-amber/85"
+            >
+              Start a review
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              to="/app/products"
+              className="inline-flex items-center rounded-lg bg-white/10 px-5 py-3 text-sm font-medium text-[#F3F1EC] transition-colors hover:bg-white/20"
+            >
+              Browse the catalogue
+            </Link>
+            <Link
+              to="/app/references"
+              className="inline-flex items-center rounded-lg bg-white/10 px-5 py-3 text-sm font-medium text-[#F3F1EC] transition-colors hover:bg-white/20"
+            >
+              Search references
+            </Link>
+          </div>
         </div>
       </section>
 
