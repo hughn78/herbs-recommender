@@ -6,7 +6,6 @@
 import { createServerFn } from "@tanstack/react-start";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { publicSupabase } from "./public-supabase-middleware";
-import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { runEngine, type PatientCtx, type SafetyRuleRow } from "./engine";
 import { loadEngineProducts } from "./catalogue-products";
 import { loadOntologyTagMaps } from "./ontology";
@@ -65,9 +64,8 @@ export const listSafetyRulesFn = createServerFn({ method: "GET" })
   });
 
 export const listCasesFn = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .handler(async ({ context }) => {
-    // RLS owner policies scope this to the signed-in reviewer's own cases.
     const { data, error } = await context.supabase
       .from("patient_cases")
       .select("case_id, case_label, age, sex, symptoms, created_at")
@@ -87,7 +85,7 @@ export const listProductsFn = createServerFn({ method: "GET" })
   });
 
 export const getCaseFn = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .inputValidator((d: { caseId: string }) => d)
   .handler(async ({ data, context }) => {
     const [caseRes, recsRes, auditRes] = await Promise.all([
@@ -178,13 +176,13 @@ export const getCaseFn = createServerFn({ method: "GET" })
   });
 
 export const createCaseFn = createServerFn({ method: "POST" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .inputValidator((d: CaseInput) => d)
   .handler(async ({ data, context }) => {
     const { supabase } = context;
-    // Phase 13: the reviewer owns the case. No more hardcoded null —
-    // RLS owner policies make rows visible only to their creator.
-    const userId: string = context.userId;
+    // Public access model: no sign-in, no patient identifiers, so cases are
+    // stored ownerless and RLS allows anonymous management of null-owner rows.
+    const userId: string | null = context.userId;
 
     // Phase 7: approved governed-catalogue products are authoritative. The
     // loader falls back to the legacy flat table while the new catalogue is
