@@ -8,6 +8,7 @@
 
 import { createServerFn } from "@tanstack/react-start";
 import type { SupabaseClient } from "@supabase/supabase-js";
+import { publicSupabase } from "./public-supabase-middleware";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 
 export type ReviewQueueSummary = {
@@ -110,7 +111,7 @@ async function countWhere(
 }
 
 export const getReviewQueueFn = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .handler(async ({ context }): Promise<ReviewQueue> => {
     const db = context.supabase as unknown as SupabaseClient;
 

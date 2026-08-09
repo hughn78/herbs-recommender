@@ -12,7 +12,7 @@
 
 import { createServerFn } from "@tanstack/react-start";
 import type { SupabaseClient } from "@supabase/supabase-js";
-import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
+import { publicSupabase } from "./public-supabase-middleware";
 import type { ProductImageRef } from "./recommend-products";
 
 export type CatalogueProductSummary = {
@@ -189,7 +189,7 @@ export type CatalogueListResult =
  * (migration not applied) — the page then falls back to the legacy list.
  */
 export const listCatalogueProductsFn = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .handler(async ({ context }): Promise<CatalogueListResult> => {
     const db = context.supabase as unknown as SupabaseClient;
     const { data, error } = await db
@@ -206,7 +206,7 @@ export const listCatalogueProductsFn = createServerFn({ method: "GET" })
 
 /** Full structured detail for one product, including evidence-claim count. */
 export const getCatalogueProductFn = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .inputValidator((d: { hogCode: string }) => d)
   .handler(async ({ data, context }): Promise<CatalogueProductDetail | null> => {
     const db = context.supabase as unknown as SupabaseClient;
