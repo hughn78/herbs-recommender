@@ -10,6 +10,13 @@ import { createServerFn } from "@tanstack/react-start";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { publicSupabase } from "./public-supabase-middleware";
 
+// The governed provenance tables ship with the Phase 14 catalogue migration.
+// Until it is applied, missing tables must degrade to empty results rather
+// than crashing the References page.
+function isMissingSchema(message: string): boolean {
+  return /schema cache/i.test(message) || /does not exist/i.test(message);
+}
+
 export type SourceDocumentRow = {
   documentId: string;
   title: string;
@@ -51,7 +58,10 @@ export const listSourceDocumentsFn = createServerFn({ method: "GET" })
       .from("source_documents")
       .select("document_id, title, format, corpus_path, sha256, page_count, role, source_sections(section_id)")
       .order("role", { ascending: true });
-    if (error) throw new Error(error.message);
+    if (error) {
+      if (isMissingSchema(error.message)) return [];
+      throw new Error(error.message);
+    }
     return (data ?? []).map((d) => ({
       documentId: d.document_id as string,
       title: d.title as string,
@@ -75,7 +85,10 @@ export const listDocumentSectionsFn = createServerFn({ method: "GET" })
       .eq("document_id", data.documentId)
       .order("page", { ascending: true, nullsFirst: false })
       .order("hog_code", { ascending: true });
-    if (error) throw new Error(error.message);
+    if (error) {
+      if (isMissingSchema(error.message)) return [];
+      throw new Error(error.message);
+    }
     return (rows ?? []).map((s) => ({
       sectionId: s.section_id as string,
       hogCode: s.hog_code as string,
@@ -98,7 +111,10 @@ export const listProductClaimsFn = createServerFn({ method: "GET" })
       .select("claim_id, claim_type, text, extraction_confidence, review_status")
       .eq("hog_code", data.hogCode)
       .order("claim_type", { ascending: true });
-    if (error) throw new Error(error.message);
+    if (error) {
+      if (isMissingSchema(error.message)) return [];
+      throw new Error(error.message);
+    }
     if (!claims?.length) return [];
 
     const claimIds = claims.map((c) => c.claim_id as string);
@@ -106,7 +122,7 @@ export const listProductClaimsFn = createServerFn({ method: "GET" })
       .from("claim_citations")
       .select("claim_id, page, section_heading, excerpt, source_documents(title)")
       .in("claim_id", claimIds);
-    if (citErr) throw new Error(citErr.message);
+    if (citErr && !isMissingSchema(citErr.message)) throw new Error(citErr.message);
 
     const byClaim = new Map<string, ProductClaimRow["citations"]>();
     for (const cit of citations ?? []) {
