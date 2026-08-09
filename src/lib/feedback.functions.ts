@@ -27,12 +27,13 @@ export const undoFeedbackFn = createServerFn({ method: "POST" })
   .middleware([publicSupabase])
   .inputValidator((d: { recommendation_id: string }) => d)
   .handler(async ({ data, context }) => {
-    // Delete only the latest feedback for this rec by this signed-in reviewer.
+    // Public access model: feedback rows are ownerless, so undo targets the
+    // latest anonymous feedback for this recommendation.
     const { data: latest, error: selErr } = await context.supabase
       .from("pharmacist_feedback")
       .select("feedback_id")
       .eq("recommendation_id", data.recommendation_id)
-      .eq("user_id", context.userId)
+      .is("user_id", null)
       .order("created_at", { ascending: false })
       .limit(1)
       .maybeSingle();
