@@ -96,6 +96,17 @@ const ENTITY_TABLE: Record<
   },
 };
 
+// Governance tables ship with the Phase 14 catalogue migration. Until it is
+// applied, missing tables/columns must degrade to an empty queue rather than
+// crashing the page.
+function isMissingSchema(message: string): boolean {
+  return (
+    /schema cache/i.test(message) ||
+    /does not exist/i.test(message) ||
+    /relation .* does not exist/i.test(message)
+  );
+}
+
 async function countWhere(
   db: SupabaseClient,
   table: string,
@@ -106,8 +117,22 @@ async function countWhere(
     .from(table)
     .select("*", { count: "exact", head: true })
     .eq(column, value);
-  if (error) throw new Error(error.message);
+  if (error) {
+    if (isMissingSchema(error.message)) return 0;
+    throw new Error(error.message);
+  }
   return count ?? 0;
+}
+
+async function selectRows<T>(
+  run: () => PromiseLike<{ data: unknown; error: { message: string } | null }>,
+): Promise<T[]> {
+  const { data, error } = await run();
+  if (error) {
+    if (isMissingSchema(error.message)) return [];
+    throw new Error(error.message);
+  }
+  return (data ?? []) as T[];
 }
 
 export const getReviewQueueFn = createServerFn({ method: "GET" })
