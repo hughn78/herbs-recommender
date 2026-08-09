@@ -8,7 +8,7 @@
 
 import { createServerFn } from "@tanstack/react-start";
 import type { SupabaseClient } from "@supabase/supabase-js";
-import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
+import { publicSupabase } from "./public-supabase-middleware";
 
 export type SourceDocumentRow = {
   documentId: string;
@@ -44,7 +44,7 @@ export type ProductClaimRow = {
 };
 
 export const listSourceDocumentsFn = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .handler(async ({ context }): Promise<SourceDocumentRow[]> => {
     const db = context.supabase as unknown as SupabaseClient;
     const { data, error } = await db
@@ -65,7 +65,7 @@ export const listSourceDocumentsFn = createServerFn({ method: "GET" })
   });
 
 export const listDocumentSectionsFn = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .inputValidator((d: { documentId: string }) => d)
   .handler(async ({ data, context }): Promise<SourceSectionRow[]> => {
     const db = context.supabase as unknown as SupabaseClient;
@@ -89,7 +89,7 @@ export const listDocumentSectionsFn = createServerFn({ method: "GET" })
  *  powers the "Evidence" view on the product detail page and the References
  *  explorer's per-product mode. */
 export const listProductClaimsFn = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+  .middleware([publicSupabase])
   .inputValidator((d: { hogCode: string }) => d)
   .handler(async ({ data, context }): Promise<ProductClaimRow[]> => {
     const db = context.supabase as unknown as SupabaseClient;
