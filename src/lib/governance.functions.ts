@@ -96,6 +96,17 @@ const ENTITY_TABLE: Record<
   },
 };
 
+// Governance tables ship with the Phase 14 catalogue migration. Until it is
+// applied, missing tables/columns must degrade to an empty queue rather than
+// crashing the page.
+function isMissingSchema(message: string): boolean {
+  return (
+    /schema cache/i.test(message) ||
+    /does not exist/i.test(message) ||
+    /relation .* does not exist/i.test(message)
+  );
+}
+
 async function countWhere(
   db: SupabaseClient,
   table: string,
@@ -106,8 +117,22 @@ async function countWhere(
     .from(table)
     .select("*", { count: "exact", head: true })
     .eq(column, value);
-  if (error) throw new Error(error.message);
+  if (error) {
+    if (isMissingSchema(error.message)) return 0;
+    throw new Error(error.message);
+  }
   return count ?? 0;
+}
+
+async function selectRows<T>(
+  run: () => PromiseLike<{ data: unknown; error: { message: string } | null }>,
+): Promise<T[]> {
+  const { data, error } = await run();
+  if (error) {
+    if (isMissingSchema(error.message)) return [];
+    throw new Error(error.message);
+  }
+  return (data ?? []) as T[];
 }
 
 export const getReviewQueueFn = createServerFn({ method: "GET" })
@@ -123,8 +148,8 @@ export const getReviewQueueFn = createServerFn({ method: "GET" })
       unapprovedSynonyms,
       openDataQualityIssues,
       openExtractionConflicts,
-      productsRes,
-      issuesRes,
+      productRows,
+      issueRows,
     ] = await Promise.all([
       countWhere(db, "catalogue_products", "review_status", "needs_review"),
       countWhere(db, "source_claims", "review_status", "needs_review"),
@@ -133,21 +158,22 @@ export const getReviewQueueFn = createServerFn({ method: "GET" })
       countWhere(db, "ontology_synonyms", "approved", "false"),
       countWhere(db, "data_quality_issues", "status", "open"),
       countWhere(db, "extraction_conflicts", "status", "open"),
-      db
-        .from("catalogue_products")
-        .select("product_id, hog_code, name, brand, review_status, extraction_confidence, source_page")
-        .eq("review_status", "needs_review")
-        .order("hog_code", { ascending: true }),
-      db
-        .from("data_quality_issues")
-        .select("issue_id, hog_code, issue_type, description, severity, status")
-        .eq("status", "open")
-        .order("severity", { ascending: true })
-        .limit(100),
+      selectRows<Record<string, unknown>>(() =>
+        db
+          .from("catalogue_products")
+          .select("product_id, hog_code, name, brand, review_status, extraction_confidence, source_page")
+          .eq("review_status", "needs_review")
+          .order("hog_code", { ascending: true }),
+      ),
+      selectRows<Record<string, unknown>>(() =>
+        db
+          .from("data_quality_issues")
+          .select("issue_id, hog_code, issue_type, description, severity, status")
+          .eq("status", "open")
+          .order("severity", { ascending: true })
+          .limit(100),
+      ),
     ]);
-
-    if (productsRes.error) throw new Error(productsRes.error.message);
-    if (issuesRes.error) throw new Error(issuesRes.error.message);
 
     return {
       summary: {
@@ -159,7 +185,7 @@ export const getReviewQueueFn = createServerFn({ method: "GET" })
         openDataQualityIssues,
         openExtractionConflicts,
       },
-      products: (productsRes.data ?? []).map((p) => ({
+      products: productRows.map((p) => ({
         productId: p.product_id as string,
         hogCode: p.hog_code as string,
         name: p.name as string,
@@ -168,7 +194,7 @@ export const getReviewQueueFn = createServerFn({ method: "GET" })
         extractionConfidence: (p.extraction_confidence as string | null) ?? null,
         sourcePage: (p.source_page as number | null) ?? null,
       })),
-      issues: (issuesRes.data ?? []).map((i) => ({
+      issues: issueRows.map((i) => ({
         issueId: i.issue_id as string,
         hogCode: (i.hog_code as string | null) ?? null,
         issueType: i.issue_type as string,
