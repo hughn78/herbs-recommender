@@ -1,18 +1,12 @@
-import { createFileRoute, Outlet, redirect } from "@tanstack/react-router";
+import { createFileRoute, Outlet } from "@tanstack/react-router";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { DisclaimerFooter } from "@/components/disclaimer-footer";
-import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/app")({
   ssr: false,
-  beforeLoad: async () => {
-    // Phase 13: clinical reviews contain patient context and must never be
-    // reachable anonymously. Reference-data reads remain public elsewhere.
-    const { data, error } = await supabase.auth.getUser();
-    if (error || !data.user) throw redirect({ to: "/auth" });
-    return { user: data.user };
-  },
+  // Clinical review is public: no patient identifiers are stored.
+  // Only /app/_admin/* pages require sign-in (see app._admin.tsx).
   component: AppLayout,
 });
 
