@@ -14,6 +14,216 @@ export type Database = {
   }
   public: {
     Tables: {
+      catalogue_products: {
+        Row: {
+          austl: string | null
+          brand: string
+          category: string | null
+          created_at: string
+          dosage_form: string | null
+          extraction_confidence: string | null
+          hog_code: string
+          name: string
+          name_normalised: string
+          product_family: string | null
+          product_id: string
+          review_status: string
+          reviewer_notes: string | null
+          source_page: number | null
+          status: string
+          subcategory: string | null
+          updated_at: string
+        }
+        Insert: {
+          austl?: string | null
+          brand?: string
+          category?: string | null
+          created_at?: string
+          dosage_form?: string | null
+          extraction_confidence?: string | null
+          hog_code: string
+          name: string
+          name_normalised: string
+          product_family?: string | null
+          product_id?: string
+          review_status?: string
+          reviewer_notes?: string | null
+          source_page?: number | null
+          status?: string
+          subcategory?: string | null
+          updated_at?: string
+        }
+        Update: {
+          austl?: string | null
+          brand?: string
+          category?: string | null
+          created_at?: string
+          dosage_form?: string | null
+          extraction_confidence?: string | null
+          hog_code?: string
+          name?: string
+          name_normalised?: string
+          product_family?: string | null
+          product_id?: string
+          review_status?: string
+          reviewer_notes?: string | null
+          source_page?: number | null
+          status?: string
+          subcategory?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      catalogue_review_actions: {
+        Row: {
+          action: string
+          action_id: string
+          created_at: string
+          entity_id: string
+          entity_type: string
+          new_value: Json | null
+          previous_value: Json | null
+          reason: string | null
+          reviewer: string | null
+        }
+        Insert: {
+          action: string
+          action_id?: string
+          created_at?: string
+          entity_id: string
+          entity_type: string
+          new_value?: Json | null
+          previous_value?: Json | null
+          reason?: string | null
+          reviewer?: string | null
+        }
+        Update: {
+          action?: string
+          action_id?: string
+          created_at?: string
+          entity_id?: string
+          entity_type?: string
+          new_value?: Json | null
+          previous_value?: Json | null
+          reason?: string | null
+          reviewer?: string | null
+        }
+        Relationships: []
+      }
+      claim_citations: {
+        Row: {
+          citation_id: string
+          claim_id: string
+          document_id: string | null
+          excerpt: string | null
+          page: number | null
+          section_heading: string | null
+          source_format: string | null
+        }
+        Insert: {
+          citation_id?: string
+          claim_id: string
+          document_id?: string | null
+          excerpt?: string | null
+          page?: number | null
+          section_heading?: string | null
+          source_format?: string | null
+        }
+        Update: {
+          citation_id?: string
+          claim_id?: string
+          document_id?: string | null
+          excerpt?: string | null
+          page?: number | null
+          section_heading?: string | null
+          source_format?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "claim_citations_claim_id_fkey"
+            columns: ["claim_id"]
+            isOneToOne: false
+            referencedRelation: "source_claims"
+            referencedColumns: ["claim_id"]
+          },
+          {
+            foreignKeyName: "claim_citations_document_id_fkey"
+            columns: ["document_id"]
+            isOneToOne: false
+            referencedRelation: "source_documents"
+            referencedColumns: ["document_id"]
+          },
+        ]
+      }
+      data_quality_issues: {
+        Row: {
+          created_at: string
+          description: string | null
+          hog_code: string | null
+          issue_id: string
+          issue_type: string
+          severity: string | null
+          source_file: string | null
+          source_page: number | null
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          hog_code?: string | null
+          issue_id?: string
+          issue_type: string
+          severity?: string | null
+          source_file?: string | null
+          source_page?: number | null
+          status?: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          hog_code?: string | null
+          issue_id?: string
+          issue_type?: string
+          severity?: string | null
+          source_file?: string | null
+          source_page?: number | null
+          status?: string
+        }
+        Relationships: []
+      }
+      extraction_conflicts: {
+        Row: {
+          conflict_id: string
+          created_at: string
+          field: string
+          hog_code: string
+          resolution: string | null
+          resolved_at: string | null
+          status: string
+          values: Json
+        }
+        Insert: {
+          conflict_id?: string
+          created_at?: string
+          field: string
+          hog_code: string
+          resolution?: string | null
+          resolved_at?: string | null
+          status?: string
+          values: Json
+        }
+        Update: {
+          conflict_id?: string
+          created_at?: string
+          field?: string
+          hog_code?: string
+          resolution?: string | null
+          resolved_at?: string | null
+          status?: string
+          values?: Json
+        }
+        Relationships: []
+      }
       ingestion_jobs: {
         Row: {
           bucket: string
@@ -53,6 +263,98 @@ export type Database = {
           source_label?: string
           status?: string
           updated_at?: string
+        }
+        Relationships: []
+      }
+      ingestion_runs: {
+        Row: {
+          dry_run: boolean
+          finished_at: string | null
+          last_error: string | null
+          run_id: string
+          source_hashes: Json
+          started_at: string
+          stats: Json
+          status: string
+          triggered_by: string | null
+        }
+        Insert: {
+          dry_run?: boolean
+          finished_at?: string | null
+          last_error?: string | null
+          run_id?: string
+          source_hashes?: Json
+          started_at?: string
+          stats?: Json
+          status?: string
+          triggered_by?: string | null
+        }
+        Update: {
+          dry_run?: boolean
+          finished_at?: string | null
+          last_error?: string | null
+          run_id?: string
+          source_hashes?: Json
+          started_at?: string
+          stats?: Json
+          status?: string
+          triggered_by?: string | null
+        }
+        Relationships: []
+      }
+      ingredient_aliases: {
+        Row: {
+          alias: string
+          alias_id: string
+          alias_type: string
+          approved: boolean
+          ingredient_id: string
+          provenance: string
+        }
+        Insert: {
+          alias: string
+          alias_id?: string
+          alias_type?: string
+          approved?: boolean
+          ingredient_id: string
+          provenance?: string
+        }
+        Update: {
+          alias?: string
+          alias_id?: string
+          alias_type?: string
+          approved?: boolean
+          ingredient_id?: string
+          provenance?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ingredient_aliases_ingredient_id_fkey"
+            columns: ["ingredient_id"]
+            isOneToOne: false
+            referencedRelation: "ingredients"
+            referencedColumns: ["ingredient_id"]
+          },
+        ]
+      }
+      ingredients: {
+        Row: {
+          canonical_name: string
+          created_at: string
+          ingredient_id: string
+          name_normalised: string
+        }
+        Insert: {
+          canonical_name: string
+          created_at?: string
+          ingredient_id?: string
+          name_normalised: string
+        }
+        Update: {
+          canonical_name?: string
+          created_at?: string
+          ingredient_id?: string
+          name_normalised?: string
         }
         Relationships: []
       }
@@ -188,6 +490,68 @@ export type Database = {
         }
         Relationships: []
       }
+      ontology_concepts: {
+        Row: {
+          canonical_label: string
+          clinical_use_tags: string[]
+          concept_id: string
+          concept_type: string
+          created_at: string
+        }
+        Insert: {
+          canonical_label: string
+          clinical_use_tags?: string[]
+          concept_id?: string
+          concept_type: string
+          created_at?: string
+        }
+        Update: {
+          canonical_label?: string
+          clinical_use_tags?: string[]
+          concept_id?: string
+          concept_type?: string
+          created_at?: string
+        }
+        Relationships: []
+      }
+      ontology_synonyms: {
+        Row: {
+          approved: boolean
+          concept_id: string
+          created_at: string
+          provenance: string
+          synonym_id: string
+          synonym_type: string
+          term: string
+        }
+        Insert: {
+          approved?: boolean
+          concept_id: string
+          created_at?: string
+          provenance?: string
+          synonym_id?: string
+          synonym_type: string
+          term: string
+        }
+        Update: {
+          approved?: boolean
+          concept_id?: string
+          created_at?: string
+          provenance?: string
+          synonym_id?: string
+          synonym_type?: string
+          term?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ontology_synonyms_concept_id_fkey"
+            columns: ["concept_id"]
+            isOneToOne: false
+            referencedRelation: "ontology_concepts"
+            referencedColumns: ["concept_id"]
+          },
+        ]
+      }
       patient_cases: {
         Row: {
           age: number | null
@@ -302,6 +666,447 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "recommendations"
             referencedColumns: ["recommendation_id"]
+          },
+        ]
+      }
+      product_directions: {
+        Row: {
+          adult_dose: string | null
+          child_dose: string | null
+          duration: string | null
+          product_id: string
+          raw_text: string | null
+          timing: string | null
+        }
+        Insert: {
+          adult_dose?: string | null
+          child_dose?: string | null
+          duration?: string | null
+          product_id: string
+          raw_text?: string | null
+          timing?: string | null
+        }
+        Update: {
+          adult_dose?: string | null
+          child_dose?: string | null
+          duration?: string | null
+          product_id?: string
+          raw_text?: string | null
+          timing?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "product_directions_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: true
+            referencedRelation: "catalogue_products"
+            referencedColumns: ["product_id"]
+          },
+        ]
+      }
+      product_images: {
+        Row: {
+          alt_text: string | null
+          bytes: number | null
+          created_at: string
+          derived_path: string | null
+          height: number | null
+          image_id: string
+          is_primary: boolean
+          match_confidence: number | null
+          match_method: string | null
+          mime_type: string | null
+          original_source: Json
+          product_id: string | null
+          review_status: string
+          role: string
+          sha256: string
+          source_url: string | null
+          storage_path: string | null
+          width: number | null
+        }
+        Insert: {
+          alt_text?: string | null
+          bytes?: number | null
+          created_at?: string
+          derived_path?: string | null
+          height?: number | null
+          image_id?: string
+          is_primary?: boolean
+          match_confidence?: number | null
+          match_method?: string | null
+          mime_type?: string | null
+          original_source?: Json
+          product_id?: string | null
+          review_status?: string
+          role?: string
+          sha256: string
+          source_url?: string | null
+          storage_path?: string | null
+          width?: number | null
+        }
+        Update: {
+          alt_text?: string | null
+          bytes?: number | null
+          created_at?: string
+          derived_path?: string | null
+          height?: number | null
+          image_id?: string
+          is_primary?: boolean
+          match_confidence?: number | null
+          match_method?: string | null
+          mime_type?: string | null
+          original_source?: Json
+          product_id?: string | null
+          review_status?: string
+          role?: string
+          sha256?: string
+          source_url?: string | null
+          storage_path?: string | null
+          width?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "product_images_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "catalogue_products"
+            referencedColumns: ["product_id"]
+          },
+        ]
+      }
+      product_indications: {
+        Row: {
+          clinical_use_tag: string | null
+          content_key: string
+          indication_id: string
+          indication_type: string
+          product_id: string
+          review_status: string
+          source_page: number | null
+          text: string
+        }
+        Insert: {
+          clinical_use_tag?: string | null
+          content_key: string
+          indication_id?: string
+          indication_type?: string
+          product_id: string
+          review_status?: string
+          source_page?: number | null
+          text: string
+        }
+        Update: {
+          clinical_use_tag?: string | null
+          content_key?: string
+          indication_id?: string
+          indication_type?: string
+          product_id?: string
+          review_status?: string
+          source_page?: number | null
+          text?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "product_indications_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "catalogue_products"
+            referencedColumns: ["product_id"]
+          },
+        ]
+      }
+      product_ingredients: {
+        Row: {
+          content_key: string
+          equivalent_amount: string | null
+          equivalent_name: string | null
+          equivalent_unit: string | null
+          extraction_confidence: string | null
+          ingredient_form: string | null
+          ingredient_id: string
+          product_id: string
+          product_ingredient_id: string
+          raw_text: string | null
+          source_page: number | null
+          standardised_to: string | null
+          strength: string | null
+          strength_unit: string | null
+        }
+        Insert: {
+          content_key: string
+          equivalent_amount?: string | null
+          equivalent_name?: string | null
+          equivalent_unit?: string | null
+          extraction_confidence?: string | null
+          ingredient_form?: string | null
+          ingredient_id: string
+          product_id: string
+          product_ingredient_id?: string
+          raw_text?: string | null
+          source_page?: number | null
+          standardised_to?: string | null
+          strength?: string | null
+          strength_unit?: string | null
+        }
+        Update: {
+          content_key?: string
+          equivalent_amount?: string | null
+          equivalent_name?: string | null
+          equivalent_unit?: string | null
+          extraction_confidence?: string | null
+          ingredient_form?: string | null
+          ingredient_id?: string
+          product_id?: string
+          product_ingredient_id?: string
+          raw_text?: string | null
+          source_page?: number | null
+          standardised_to?: string | null
+          strength?: string | null
+          strength_unit?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "product_ingredients_ingredient_id_fkey"
+            columns: ["ingredient_id"]
+            isOneToOne: false
+            referencedRelation: "ingredients"
+            referencedColumns: ["ingredient_id"]
+          },
+          {
+            foreignKeyName: "product_ingredients_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "catalogue_products"
+            referencedColumns: ["product_id"]
+          },
+        ]
+      }
+      product_interaction_flags: {
+        Row: {
+          action: string | null
+          content_key: string
+          flag_id: string
+          flags: string[]
+          ingredient_name: string | null
+          interacting_medicine_or_class: string | null
+          interaction_text: string
+          product_id: string
+          severity: string | null
+          source_page: number | null
+        }
+        Insert: {
+          action?: string | null
+          content_key: string
+          flag_id?: string
+          flags?: string[]
+          ingredient_name?: string | null
+          interacting_medicine_or_class?: string | null
+          interaction_text: string
+          product_id: string
+          severity?: string | null
+          source_page?: number | null
+        }
+        Update: {
+          action?: string | null
+          content_key?: string
+          flag_id?: string
+          flags?: string[]
+          ingredient_name?: string | null
+          interacting_medicine_or_class?: string | null
+          interaction_text?: string
+          product_id?: string
+          severity?: string | null
+          source_page?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "product_interaction_flags_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "catalogue_products"
+            referencedColumns: ["product_id"]
+          },
+        ]
+      }
+      product_keywords: {
+        Row: {
+          approved: boolean
+          keyword: string
+          keyword_id: string
+          keyword_type: string
+          product_id: string
+          provenance: string
+        }
+        Insert: {
+          approved?: boolean
+          keyword: string
+          keyword_id?: string
+          keyword_type?: string
+          product_id: string
+          provenance?: string
+        }
+        Update: {
+          approved?: boolean
+          keyword?: string
+          keyword_id?: string
+          keyword_type?: string
+          product_id?: string
+          provenance?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "product_keywords_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "catalogue_products"
+            referencedColumns: ["product_id"]
+          },
+        ]
+      }
+      product_population_rules: {
+        Row: {
+          product_id: string
+          rule_id: string
+          rule_type: string
+          rule_value: string
+          source: string | null
+        }
+        Insert: {
+          product_id: string
+          rule_id?: string
+          rule_type: string
+          rule_value: string
+          source?: string | null
+        }
+        Update: {
+          product_id?: string
+          rule_id?: string
+          rule_type?: string
+          rule_value?: string
+          source?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "product_population_rules_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "catalogue_products"
+            referencedColumns: ["product_id"]
+          },
+        ]
+      }
+      product_synonyms: {
+        Row: {
+          approved: boolean
+          product_id: string
+          provenance: string
+          synonym: string
+          synonym_id: string
+          synonym_type: string
+        }
+        Insert: {
+          approved?: boolean
+          product_id: string
+          provenance?: string
+          synonym: string
+          synonym_id?: string
+          synonym_type?: string
+        }
+        Update: {
+          approved?: boolean
+          product_id?: string
+          provenance?: string
+          synonym?: string
+          synonym_id?: string
+          synonym_type?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "product_synonyms_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "catalogue_products"
+            referencedColumns: ["product_id"]
+          },
+        ]
+      }
+      product_variants: {
+        Row: {
+          created_at: string
+          pack_size: string
+          product_id: string
+          sku: string | null
+          status: string
+          variant_id: string
+        }
+        Insert: {
+          created_at?: string
+          pack_size: string
+          product_id: string
+          sku?: string | null
+          status?: string
+          variant_id?: string
+        }
+        Update: {
+          created_at?: string
+          pack_size?: string
+          product_id?: string
+          sku?: string | null
+          status?: string
+          variant_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "product_variants_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "catalogue_products"
+            referencedColumns: ["product_id"]
+          },
+        ]
+      }
+      product_warnings: {
+        Row: {
+          avoid_if_tags: string[]
+          content_key: string
+          product_id: string
+          review_status: string
+          severity: string | null
+          source_page: number | null
+          text: string
+          warning_id: string
+          warning_type: string
+        }
+        Insert: {
+          avoid_if_tags?: string[]
+          content_key: string
+          product_id: string
+          review_status?: string
+          severity?: string | null
+          source_page?: number | null
+          text: string
+          warning_id?: string
+          warning_type?: string
+        }
+        Update: {
+          avoid_if_tags?: string[]
+          content_key?: string
+          product_id?: string
+          review_status?: string
+          severity?: string | null
+          source_page?: number | null
+          text?: string
+          warning_id?: string
+          warning_type?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "product_warnings_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "catalogue_products"
+            referencedColumns: ["product_id"]
           },
         ]
       }
@@ -615,6 +1420,119 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "patient_cases"
             referencedColumns: ["case_id"]
+          },
+        ]
+      }
+      source_claims: {
+        Row: {
+          claim_id: string
+          claim_type: string
+          content_key: string
+          created_at: string
+          explicit_or_inferred: string
+          extraction_confidence: string | null
+          hog_code: string
+          review_status: string
+          reviewer_notes: string | null
+          structured: Json | null
+          text: string
+        }
+        Insert: {
+          claim_id?: string
+          claim_type: string
+          content_key: string
+          created_at?: string
+          explicit_or_inferred?: string
+          extraction_confidence?: string | null
+          hog_code: string
+          review_status?: string
+          reviewer_notes?: string | null
+          structured?: Json | null
+          text: string
+        }
+        Update: {
+          claim_id?: string
+          claim_type?: string
+          content_key?: string
+          created_at?: string
+          explicit_or_inferred?: string
+          extraction_confidence?: string | null
+          hog_code?: string
+          review_status?: string
+          reviewer_notes?: string | null
+          structured?: Json | null
+          text?: string
+        }
+        Relationships: []
+      }
+      source_documents: {
+        Row: {
+          corpus_path: string
+          created_at: string
+          document_id: string
+          extracted_at: string | null
+          format: string
+          page_count: number | null
+          role: string | null
+          sha256: string
+          title: string
+        }
+        Insert: {
+          corpus_path: string
+          created_at?: string
+          document_id?: string
+          extracted_at?: string | null
+          format: string
+          page_count?: number | null
+          role?: string | null
+          sha256: string
+          title: string
+        }
+        Update: {
+          corpus_path?: string
+          created_at?: string
+          document_id?: string
+          extracted_at?: string | null
+          format?: string
+          page_count?: number | null
+          role?: string | null
+          sha256?: string
+          title?: string
+        }
+        Relationships: []
+      }
+      source_sections: {
+        Row: {
+          document_id: string
+          heading: string | null
+          hog_code: string | null
+          page: number | null
+          section_id: string
+          text: string | null
+        }
+        Insert: {
+          document_id: string
+          heading?: string | null
+          hog_code?: string | null
+          page?: number | null
+          section_id?: string
+          text?: string | null
+        }
+        Update: {
+          document_id?: string
+          heading?: string | null
+          hog_code?: string | null
+          page?: number | null
+          section_id?: string
+          text?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "source_sections_document_id_fkey"
+            columns: ["document_id"]
+            isOneToOne: false
+            referencedRelation: "source_documents"
+            referencedColumns: ["document_id"]
           },
         ]
       }
