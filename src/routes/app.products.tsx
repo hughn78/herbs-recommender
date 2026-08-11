@@ -195,9 +195,8 @@ function CatalogueBrowser({ products }: { products: CatalogueProductSummary[] })
             <Card key={p.hogCode} className="p-4 bg-card/60 backdrop-blur-sm space-y-2">
               <div className="flex items-start gap-3">
                 {img ? (
-                  <img
-                    {...img}
-                    loading="lazy"
+                  <PackShot
+                    image={p.image}
                     className="h-16 w-16 shrink-0 rounded-md border border-hairline object-contain bg-white"
                   />
                 ) : (

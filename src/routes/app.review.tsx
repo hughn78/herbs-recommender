@@ -444,9 +444,8 @@ function TransientResults({
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex items-start gap-3 min-w-0">
                     {packShot && (
-                      <img
-                        {...packShot}
-                        loading="lazy"
+                      <PackShot
+                        image={r.image}
                         className="h-20 w-20 shrink-0 rounded-md border border-hairline object-contain bg-white"
                       />
                     )}

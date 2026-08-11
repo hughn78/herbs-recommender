@@ -71,8 +71,8 @@ function ProductDetailPage() {
       <Card className="p-6 bg-card/60 backdrop-blur-sm">
         <div className="flex items-start gap-5">
           {img ? (
-            <img
-              {...img}
+            <PackShot
+              image={p.image}
               className="h-32 w-32 shrink-0 rounded-md border border-hairline object-contain bg-white"
             />
           ) : (

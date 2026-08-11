@@ -382,9 +382,8 @@ function RecCard({
     >
       <div className="flex items-start gap-3">
         {packShot ? (
-          <img
-            {...packShot}
-            loading="lazy"
+          <PackShot
+            image={r.image}
             className="h-20 w-20 shrink-0 rounded-md border border-hairline object-contain bg-white"
           />
         ) : (
