@@ -9,25 +9,25 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as AuthRouteImport } from './routes/auth'
-import { Route as AppRouteImport } from './routes/app'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AppRouteImport } from './routes/app'
+import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AppIndexRouteImport } from './routes/app.index'
-import { Route as AppReviewRouteImport } from './routes/app.review'
-import { Route as AppReferencesRouteImport } from './routes/app.references'
-import { Route as AppQueueRouteImport } from './routes/app.queue'
-import { Route as AppGovernanceRouteImport } from './routes/app.governance'
-import { Route as AppCasesRouteImport } from './routes/app.cases'
 import { Route as AppAdminRouteImport } from './routes/app._admin'
+import { Route as AppCasesRouteImport } from './routes/app.cases'
+import { Route as AppGovernanceRouteImport } from './routes/app.governance'
+import { Route as AppQueueRouteImport } from './routes/app.queue'
+import { Route as AppReferencesRouteImport } from './routes/app.references'
+import { Route as AppReviewRouteImport } from './routes/app.review'
+import { Route as AppAdminRulesRouteImport } from './routes/app._admin.rules'
+import { Route as AppAdminSetupRouteImport } from './routes/app._admin.setup'
+import { Route as AppCaseCaseIdRouteImport } from './routes/app.case.$caseId'
 import { Route as AppProductsIndexRouteImport } from './routes/app.products.index'
 import { Route as AppProductsHogCodeRouteImport } from './routes/app.products.$hogCode'
-import { Route as AppCaseCaseIdRouteImport } from './routes/app.case.$caseId'
-import { Route as AppAdminSetupRouteImport } from './routes/app._admin.setup'
-import { Route as AppAdminRulesRouteImport } from './routes/app._admin.rules'
 
-const AuthRoute = AuthRouteImport.update({
-  id: '/auth',
-  path: '/auth',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AppRoute = AppRouteImport.update({
@@ -35,9 +35,9 @@ const AppRoute = AppRouteImport.update({
   path: '/app',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AppIndexRoute = AppIndexRouteImport.update({
@@ -45,24 +45,8 @@ const AppIndexRoute = AppIndexRouteImport.update({
   path: '/',
   getParentRoute: () => AppRoute,
 } as any)
-const AppReviewRoute = AppReviewRouteImport.update({
-  id: '/review',
-  path: '/review',
-  getParentRoute: () => AppRoute,
-} as any)
-const AppReferencesRoute = AppReferencesRouteImport.update({
-  id: '/references',
-  path: '/references',
-  getParentRoute: () => AppRoute,
-} as any)
-const AppQueueRoute = AppQueueRouteImport.update({
-  id: '/queue',
-  path: '/queue',
-  getParentRoute: () => AppRoute,
-} as any)
-const AppGovernanceRoute = AppGovernanceRouteImport.update({
-  id: '/governance',
-  path: '/governance',
+const AppAdminRoute = AppAdminRouteImport.update({
+  id: '/_admin',
   getParentRoute: () => AppRoute,
 } as any)
 const AppCasesRoute = AppCasesRouteImport.update({
@@ -70,8 +54,39 @@ const AppCasesRoute = AppCasesRouteImport.update({
   path: '/cases',
   getParentRoute: () => AppRoute,
 } as any)
-const AppAdminRoute = AppAdminRouteImport.update({
-  id: '/_admin',
+const AppGovernanceRoute = AppGovernanceRouteImport.update({
+  id: '/governance',
+  path: '/governance',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppQueueRoute = AppQueueRouteImport.update({
+  id: '/queue',
+  path: '/queue',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppReferencesRoute = AppReferencesRouteImport.update({
+  id: '/references',
+  path: '/references',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppReviewRoute = AppReviewRouteImport.update({
+  id: '/review',
+  path: '/review',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppAdminRulesRoute = AppAdminRulesRouteImport.update({
+  id: '/rules',
+  path: '/rules',
+  getParentRoute: () => AppAdminRoute,
+} as any)
+const AppAdminSetupRoute = AppAdminSetupRouteImport.update({
+  id: '/setup',
+  path: '/setup',
+  getParentRoute: () => AppAdminRoute,
+} as any)
+const AppCaseCaseIdRoute = AppCaseCaseIdRouteImport.update({
+  id: '/case/$caseId',
+  path: '/case/$caseId',
   getParentRoute: () => AppRoute,
 } as any)
 const AppProductsIndexRoute = AppProductsIndexRouteImport.update({
@@ -84,25 +99,10 @@ const AppProductsHogCodeRoute = AppProductsHogCodeRouteImport.update({
   path: '/products/$hogCode',
   getParentRoute: () => AppRoute,
 } as any)
-const AppCaseCaseIdRoute = AppCaseCaseIdRouteImport.update({
-  id: '/case/$caseId',
-  path: '/case/$caseId',
-  getParentRoute: () => AppRoute,
-} as any)
-const AppAdminSetupRoute = AppAdminSetupRouteImport.update({
-  id: '/setup',
-  path: '/setup',
-  getParentRoute: () => AppAdminRoute,
-} as any)
-const AppAdminRulesRoute = AppAdminRulesRouteImport.update({
-  id: '/rules',
-  path: '/rules',
-  getParentRoute: () => AppAdminRoute,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/app': typeof AppAdminRouteWithChildren
+  '/app': typeof AppRouteWithChildren
   '/auth': typeof AuthRoute
   '/app/cases': typeof AppCasesRoute
   '/app/governance': typeof AppGovernanceRoute
@@ -208,11 +208,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/auth': {
-      id: '/auth'
-      path: '/auth'
-      fullPath: '/auth'
-      preLoaderRoute: typeof AuthRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/app': {
@@ -222,11 +222,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/app/': {
@@ -236,32 +236,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppIndexRouteImport
       parentRoute: typeof AppRoute
     }
-    '/app/review': {
-      id: '/app/review'
-      path: '/review'
-      fullPath: '/app/review'
-      preLoaderRoute: typeof AppReviewRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/app/references': {
-      id: '/app/references'
-      path: '/references'
-      fullPath: '/app/references'
-      preLoaderRoute: typeof AppReferencesRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/app/queue': {
-      id: '/app/queue'
-      path: '/queue'
-      fullPath: '/app/queue'
-      preLoaderRoute: typeof AppQueueRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/app/governance': {
-      id: '/app/governance'
-      path: '/governance'
-      fullPath: '/app/governance'
-      preLoaderRoute: typeof AppGovernanceRouteImport
+    '/app/_admin': {
+      id: '/app/_admin'
+      path: ''
+      fullPath: '/app'
+      preLoaderRoute: typeof AppAdminRouteImport
       parentRoute: typeof AppRoute
     }
     '/app/cases': {
@@ -271,11 +250,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppCasesRouteImport
       parentRoute: typeof AppRoute
     }
-    '/app/_admin': {
-      id: '/app/_admin'
-      path: ''
-      fullPath: '/app'
-      preLoaderRoute: typeof AppAdminRouteImport
+    '/app/governance': {
+      id: '/app/governance'
+      path: '/governance'
+      fullPath: '/app/governance'
+      preLoaderRoute: typeof AppGovernanceRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/queue': {
+      id: '/app/queue'
+      path: '/queue'
+      fullPath: '/app/queue'
+      preLoaderRoute: typeof AppQueueRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/references': {
+      id: '/app/references'
+      path: '/references'
+      fullPath: '/app/references'
+      preLoaderRoute: typeof AppReferencesRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/review': {
+      id: '/app/review'
+      path: '/review'
+      fullPath: '/app/review'
+      preLoaderRoute: typeof AppReviewRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/_admin/rules': {
+      id: '/app/_admin/rules'
+      path: '/rules'
+      fullPath: '/app/rules'
+      preLoaderRoute: typeof AppAdminRulesRouteImport
+      parentRoute: typeof AppAdminRoute
+    }
+    '/app/_admin/setup': {
+      id: '/app/_admin/setup'
+      path: '/setup'
+      fullPath: '/app/setup'
+      preLoaderRoute: typeof AppAdminSetupRouteImport
+      parentRoute: typeof AppAdminRoute
+    }
+    '/app/case/$caseId': {
+      id: '/app/case/$caseId'
+      path: '/case/$caseId'
+      fullPath: '/app/case/$caseId'
+      preLoaderRoute: typeof AppCaseCaseIdRouteImport
       parentRoute: typeof AppRoute
     }
     '/app/products/': {
@@ -291,27 +312,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/app/products/$hogCode'
       preLoaderRoute: typeof AppProductsHogCodeRouteImport
       parentRoute: typeof AppRoute
-    }
-    '/app/case/$caseId': {
-      id: '/app/case/$caseId'
-      path: '/case/$caseId'
-      fullPath: '/app/case/$caseId'
-      preLoaderRoute: typeof AppCaseCaseIdRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/app/_admin/setup': {
-      id: '/app/_admin/setup'
-      path: '/setup'
-      fullPath: '/app/setup'
-      preLoaderRoute: typeof AppAdminSetupRouteImport
-      parentRoute: typeof AppAdminRoute
-    }
-    '/app/_admin/rules': {
-      id: '/app/_admin/rules'
-      path: '/rules'
-      fullPath: '/app/rules'
-      preLoaderRoute: typeof AppAdminRulesRouteImport
-      parentRoute: typeof AppAdminRoute
     }
   }
 }
@@ -366,3 +366,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
