@@ -1,0 +1,104 @@
+ProductID,ProductName,ProductName_Normalised,Brand,DocxHasSubsections,DocxSubsectionCount,DocxTableCount,XlsxTocPage,XlsxInToc,PdfPageHint,SourceCount
+HOG-0001,Acetyl L-Carnitine,acetyl l carnitine,Herbs of Gold,True,8,0,1,True,1,2
+HOG-0002,Activated B Complex,activated b complex,Herbs of Gold,True,8,0,3,True,3,2
+HOG-0003,Activated B12 Spray,activated b12 spray,Herbs of Gold,True,8,0,6,True,6,2
+HOG-0004,Activated Folate 500,activated folate 500,Herbs of Gold,True,4,0,8,True,8,2
+HOG-0005,Activated Sublingual B12,activated sublingual b12,Herbs of Gold,True,8,0,10,True,10,2
+HOG-0006,Alpha Lipoic 300,alpha lipoic 300,Herbs of Gold,True,8,0,12,True,12,2
+HOG-0007,Astra Recharge,astra recharge,Herbs of Gold,True,8,0,13,True,13,2
+HOG-0008,B Sustained Release,b sustained release,Herbs of Gold,True,4,0,15,True,15,2
+HOG-0009,Berberine ImmunoPlex,berberine immunoplex,Herbs of Gold,True,4,0,17,True,17,2
+HOG-0010,Bergamot Cholesterol Care,bergamot cholesterol care,Herbs of Gold,True,8,0,19,True,19,2
+HOG-0011,Bio Curcumin 5400,bio curcumin 5400,Herbs of Gold,True,8,2,21,True,21,2
+HOG-0012,Biotin 3mg,biotin 3mg,Herbs of Gold,True,8,0,23,True,23,2
+HOG-0013,Breastfeeding Support,breastfeeding support,Herbs of Gold,True,8,0,24,True,24,2
+HOG-0014,Bromelain Forte,bromelain forte,Herbs of Gold,True,8,0,25,True,25,2
+HOG-0015,Bulgarian Tribulus Complex,bulgarian tribulus complex,Herbs of Gold,True,8,0,27,True,27,2
+HOG-0016,Calcium K2 with D3,calcium k2 with d3,Herbs of Gold,True,8,0,29,True,29,2
+HOG-0017,Candida Relief,candida relief,Herbs of Gold,True,8,0,32,True,32,2
+HOG-0018,Children’s Calci Care,children s calci care,Herbs of Gold,True,8,0,33,True,33,2
+HOG-0019,Children’s Calm Care,children s calm care,Herbs of Gold,True,8,0,35,True,35,2
+HOG-0020,Children’s Fish-i Care,children s fish i care,Herbs of Gold,True,8,1,36,True,36,2
+HOG-0021,Children’s Immune Care,children s immune care,Herbs of Gold,True,8,0,37,True,37,2
+HOG-0022,Children’s Magnesium Care,children s magnesium care,Herbs of Gold,True,8,0,38,True,38,2
+HOG-0023,Children’s Multi Care,children s multi care,Herbs of Gold,True,4,0,40,True,40,2
+HOG-0024,Children’s Probiotic 15 Billion,children s probiotic 15 billion,Herbs of Gold,True,4,0,42,True,42,2
+HOG-0025,Chromium MAX,chromium max,Herbs of Gold,True,7,0,44,True,44,2
+HOG-0026,Clear Skin,clear skin,Herbs of Gold,True,8,0,45,True,45,2
+HOG-0027,Cold & Flu Strike,cold flu strike,Herbs of Gold,True,8,0,47,True,47,2
+HOG-0028,Collagen,collagen,Herbs of Gold,True,8,4,49,True,49,2
+HOG-0029,Collagen Forte,collagen forte,Herbs of Gold,True,7,4,51,True,51,2
+HOG-0030,Collagen Gold,collagen gold,Herbs of Gold,True,8,8,54,True,54,2
+HOG-0031,CoQ10 150mg,coq10 150mg,Herbs of Gold,True,8,0,57,True,57,2
+HOG-0032,Cranberry 70 000,cranberry 70 000,Herbs of Gold,True,8,0,59,True,59,2
+HOG-0033,Digest-Zymes,digest zymes,Herbs of Gold,True,8,4,60,True,60,2
+HOG-0034,Echinacea 4000 Complex,echinacea 4000 complex,Herbs of Gold,True,8,0,62,True,62,2
+HOG-0035,Elderberry Echinacea & Olive Leaf,elderberry echinacea olive leaf,Herbs of Gold,True,7,0,64,True,64,2
+HOG-0036,Evening Primrose Oil Daily,evening primrose oil daily,Herbs of Gold,True,8,0,65,True,65,2
+HOG-0037,Fish Oil 1000,fish oil 1000,Herbs of Gold,True,8,0,66,True,66,2
+HOG-0038,Folic Acid Complex,folic acid complex,Herbs of Gold,True,8,0,68,True,68,2
+HOG-0039,Ginkgo Biloba 6000,ginkgo biloba 6000,Herbs of Gold,True,7,0,70,True,70,2
+HOG-0040,Ginseng 4 Energy Gold,ginseng 4 energy gold,Herbs of Gold,True,12,0,72,True,72,2
+HOG-0041,GlucoPlex,glucoplex,Herbs of Gold,True,4,0,74,True,74,2
+HOG-0042,Glucosamine MAX,glucosamine max,Herbs of Gold,True,8,0,76,True,76,2
+HOG-0043,Gout Relief Complex,gout relief complex,Herbs of Gold,True,8,0,78,True,78,2
+HOG-0044,Grape Seed Gold,grape seed gold,Herbs of Gold,True,8,0,80,True,80,2
+HOG-0045,Gut Care,gut care,Herbs of Gold,True,8,0,82,True,82,2
+HOG-0046,Hawthorn 4500,hawthorn 4500,Herbs of Gold,True,6,0,84,True,84,2
+HOG-0047,Hayfever & Sinus Ease,hayfever sinus ease,Herbs of Gold,True,8,0,85,True,85,2
+HOG-0048,Hormone Metabolism,hormone metabolism,Herbs of Gold,True,4,0,87,True,87,2
+HOG-0049,Iodine MAX,iodine max,Herbs of Gold,True,8,0,90,True,90,2
+HOG-0050,Liver Care,liver care,Herbs of Gold,True,8,0,92,True,92,2
+HOG-0051,Lung Care,lung care,Herbs of Gold,True,16,0,94,True,94,2
+HOG-0052,Macu-Guard,macu guard,Herbs of Gold,True,8,0,97,True,97,2
+HOG-0053,Magnesium Chewable,magnesium chewable,Herbs of Gold,True,3,0,99,True,99,2
+HOG-0054,Magnesium Citrate 900,magnesium citrate 900,Herbs of Gold,True,4,0,101,True,101,2
+HOG-0055,Magnesium Forte,magnesium forte,Herbs of Gold,True,8,0,103,True,103,2
+HOG-0056,Magnesium Muscle Cream,magnesium muscle cream,Herbs of Gold,True,4,0,105,True,105,2
+HOG-0057,Magnesium Night Plus,magnesium night plus,Herbs of Gold,True,4,0,107,True,107,2
+HOG-0058,Mega B Complex,mega b complex,Herbs of Gold,True,8,0,109,True,109,2
+HOG-0059,Memory & Cognition Gold,memory cognition gold,Herbs of Gold,True,4,0,111,True,111,2
+HOG-0060,Menopause Relief,menopause relief,Herbs of Gold,True,8,0,116,True,116,2
+HOG-0061,Mind Ease,mind ease,Herbs of Gold,True,8,0,118,True,118,2
+HOG-0062,Muscle Resuscitation,muscle resuscitation,Herbs of Gold,True,4,0,120,True,120,2
+HOG-0063,Mushroom 5 Complex,mushroom 5 complex,Herbs of Gold,True,8,0,122,True,122,2
+HOG-0064,Natural Vitamin E 500IU,natural vitamin e 500iu,Herbs of Gold,True,8,0,124,True,124,2
+HOG-0065,Niacin 100mg Extended Release,niacin 100mg extended release,Herbs of Gold,True,8,0,126,True,126,2
+HOG-0066,Olive Leaf,olive leaf,Herbs of Gold,True,8,0,127,True,127,2
+HOG-0067,Olive Leaf 7500,olive leaf 7500,Herbs of Gold,True,8,0,129,True,129,2
+HOG-0068,Organic Iron MAX,organic iron max,Herbs of Gold,True,8,0,130,True,130,2
+HOG-0069,Organic Oregano Oil,organic oregano oil,Herbs of Gold,True,8,2,132,True,132,2
+HOG-0070,Pain Relief PEA,pain relief pea,Herbs of Gold,True,8,0,134,True,134,2
+HOG-0071,ParaStrike,parastrike,Herbs of Gold,True,8,0,137,True,137,2
+HOG-0072,Pregnancy Plus 1-2-3,pregnancy plus 1 2 3,Herbs of Gold,True,8,1,139,True,139,2
+HOG-0073,Probiotic 60 Billion,probiotic 60 billion,Herbs of Gold,True,8,2,144,True,144,2
+HOG-0074,Prostate Pro,prostate pro,Herbs of Gold,True,8,0,146,True,146,2
+HOG-0075,Quercetin Complex,quercetin complex,Herbs of Gold,True,8,0,148,True,148,2
+HOG-0076,Raspberry Leaf,raspberry leaf,Herbs of Gold,True,7,0,150,True,150,2
+HOG-0077,Resveratrol AdvantAGE,resveratrol advantage,Herbs of Gold,True,8,0,151,True,151,2
+HOG-0078,Sea Buckthorn Oil,sea buckthorn oil,Herbs of Gold,True,8,0,153,True,153,2
+HOG-0079,Selenium 150 MAX,selenium 150 max,Herbs of Gold,True,8,0,155,True,155,2
+HOG-0080,Silica Hair Skin & Nails,silica hair skin nails,Herbs of Gold,True,8,0,156,True,156,2
+HOG-0081,Silica Hair Solution,silica hair solution,Herbs of Gold,True,8,0,159,True,159,2
+HOG-0082,Sleep Ease,sleep ease,Herbs of Gold,True,8,0,161,True,161,2
+HOG-0083,Slippery Elm 400mg,slippery elm 400mg,Herbs of Gold,True,8,0,163,True,163,2
+HOG-0084,St John's Wort 3600,st john s wort 3600,Herbs of Gold,True,8,0,164,True,164,2
+HOG-0085,St Mary’s Thistle 35 000,st mary s thistle 35 000,Herbs of Gold,True,8,0,165,True,165,2
+HOG-0086,Stress Ease,stress ease,Herbs of Gold,True,8,0,167,True,167,2
+HOG-0087,Sublingual B12 1000,sublingual b12 1000,Herbs of Gold,True,8,0,169,True,169,2
+HOG-0088,Super Brahmi 6000,super brahmi 6000,Herbs of Gold,True,8,0,170,True,170,2
+HOG-0089,Super Calcium Plus with Boron,super calcium plus with boron,Herbs of Gold,True,8,0,172,True,172,2
+HOG-0090,Thyroid Support,thyroid support,Herbs of Gold,True,8,0,174,True,174,2
+HOG-0091,Triple Strength Omega-3,triple strength omega 3,Herbs of Gold,True,4,2,176,True,176,2
+HOG-0092,Tyrosine 1000,tyrosine 1000,Herbs of Gold,True,8,0,179,True,179,2
+HOG-0093,Ubiquinol 100mg,ubiquinol 100mg,Herbs of Gold,True,8,0,180,True,180,2
+HOG-0094,Ubiquinol 150mg,ubiquinol 150mg,Herbs of Gold,True,16,0,182,True,182,2
+HOG-0095,Vitamin B1 100mg,vitamin b1 100mg,Herbs of Gold,True,8,0,186,True,186,2
+HOG-0096,Vitamin B2 200mg,vitamin b2 200mg,Herbs of Gold,True,8,0,187,True,187,2
+HOG-0097,Vitamin B3 500mg,vitamin b3 500mg,Herbs of Gold,True,7,0,188,True,188,2
+HOG-0098,Vitamin B5 500mg,vitamin b5 500mg,Herbs of Gold,True,8,0,189,True,189,2
+HOG-0099,Vitamin B6 100mg,vitamin b6 100mg,Herbs of Gold,True,8,0,190,True,190,2
+HOG-0100,Vitamin C 1000 Plus,vitamin c 1000 plus,Herbs of Gold,True,8,0,192,True,192,2
+HOG-0101,Vitamin D3 1000,vitamin d3 1000,Herbs of Gold,True,8,0,194,True,194,2
+HOG-0102,Vitamin K2 180 MAX,vitamin k2 180 max,Herbs of Gold,True,8,2,195,True,195,2
+HOG-0103,Vitex 1000,vitex 1000,Herbs of Gold,True,24,0,198,True,198,2

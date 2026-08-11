@@ -1,0 +1,60 @@
+Herbs of Gold — Validation Summary
+============================================================
+Generated: 2026-06-09T22:17:29
+
+Total products exported: 103
+  - High confidence: 78
+  - Medium confidence: 25
+  - Low confidence: 0
+
+Products with ingredients: 81
+Products missing ingredients: 22
+Products with dose: 101
+Products missing dose: 2
+Products with cautions: 90
+Products missing cautions: 13
+Products missing AUST L: 103 (all — AUSTL not in source)
+Products missing dosage form: 4
+
+Products requiring pharmacist review (prioritised):
+  [HIGH] HOG-0001  Acetyl L-Carnitine  (missing AUST L)
+  [HIGH] HOG-0002  Activated B Complex  (missing AUST L)
+  [HIGH] HOG-0003  Activated B12 Spray  (missing AUST L, missing ingredients)
+  [HIGH] HOG-0004  Activated Folate 500  (missing AUST L, no cautions extracted)
+  [HIGH] HOG-0005  Activated Sublingual B12  (missing AUST L, missing ingredients)
+  [HIGH] HOG-0006  Alpha Lipoic 300  (missing AUST L, missing ingredients)
+  [HIGH] HOG-0007  Astra Recharge  (missing AUST L, missing ingredients)
+  [HIGH] HOG-0008  B Sustained Release  (missing AUST L, no cautions extracted)
+  [HIGH] HOG-0009  Berberine ImmunoPlex  (missing AUST L, no cautions extracted)
+  [HIGH] HOG-0010  Bergamot Cholesterol Care  (missing AUST L, missing ingredients)
+  [HIGH] HOG-0011  Bio Curcumin 5400  (missing AUST L, missing ingredients)
+  [HIGH] HOG-0012  Biotin 3mg  (missing AUST L)
+  [HIGH] HOG-0013  Breastfeeding Support  (missing AUST L)
+  [HIGH] HOG-0014  Bromelain Forte  (missing AUST L, missing ingredients)
+  [HIGH] HOG-0015  Bulgarian Tribulus Complex  (missing AUST L)
+  [HIGH] HOG-0016  Calcium K2 with D3  (missing AUST L)
+  [HIGH] HOG-0017  Candida Relief  (missing AUST L)
+  [HIGH] HOG-0018  Children’s Calci Care  (missing AUST L)
+  [HIGH] HOG-0019  Children’s Calm Care  (missing AUST L)
+  [HIGH] HOG-0020  Children’s Fish-i Care  (missing AUST L)
+  [HIGH] HOG-0021  Children’s Immune Care  (missing AUST L)
+  [HIGH] HOG-0022  Children’s Magnesium Care  (missing AUST L)
+  [HIGH] HOG-0023  Children’s Multi Care  (missing AUST L, missing ingredients, no cautions extracted)
+  [HIGH] HOG-0024  Children’s Probiotic 15 Billion  (missing AUST L, no cautions extracted)
+  [HIGH] HOG-0025  Chromium MAX  (missing AUST L)
+  [HIGH] HOG-0026  Clear Skin  (missing AUST L, missing ingredients)
+  [HIGH] HOG-0027  Cold & Flu Strike  (missing AUST L)
+  [HIGH] HOG-0028  Collagen  (missing AUST L, missing ingredients)
+  [HIGH] HOG-0029  Collagen Forte  (missing AUST L, missing ingredients)
+  [HIGH] HOG-0030  Collagen Gold  (missing AUST L, missing ingredients)
+  [HIGH] HOG-0031  CoQ10 150mg  (missing AUST L)
+  [HIGH] HOG-0032  Cranberry 70 000  (missing AUST L)
+  [HIGH] HOG-0033  Digest-Zymes  (missing AUST L)
+  [HIGH] HOG-0034  Echinacea 4000 Complex  (missing AUST L, missing ingredients)
+  [HIGH] HOG-0035  Elderberry Echinacea & Olive Leaf  (missing AUST L)
+  [HIGH] HOG-0036  Evening Primrose Oil Daily  (missing AUST L, missing ingredients)
+  [HIGH] HOG-0037  Fish Oil 1000  (missing AUST L)
+  [HIGH] HOG-0038  Folic Acid Complex  (missing AUST L)
+  [HIGH] HOG-0039  Ginkgo Biloba 6000  (missing AUST L, missing dose)
+  [HIGH] HOG-0040  Ginseng 4 Energy Gold  (missing AUST L)
+  ... and 63 more

@@ -1,0 +1,1466 @@
+ProductID,Brand,ProductName,ProductName_Normalised,AUSTL,DosageForm,PackSize,AdultDose,ChildDose,Directions,Indications_Summary,Cautions_Summary,Contraindications_Summary,Interactions_Summary,PregnancyBreastfeeding_Summary,EvidenceNotes,ClinicalUseTags,AvoidIfTags,MedicineInteractionFlags,CounsellingPointSummary,SourceFile_Primary,SourcePage,SourceSection,ExtractionConfidence,ReviewStatus,Notes
+HOG-0001,Herbs of Gold,Acetyl L-Carnitine,acetyl l carnitine,,capsule,60 / 120 capsules,"Take 2 capsules, once or twice daily, with food, or as directed by your health professional.",,"Adults - Take 2 capsules, once or twice daily, with food, or as directed by your health professional.","High strength
+Fat metabolism
+Acetylated form
+
+High strength
+Fat metabolism
+Acetylated form","Not recommended in pregnancy due to a lack of safety data.
+Caution in individuals with chronic liver disease or epilepsy.
+
+Not recommended in pregnancy due to a lack of safety data.
+Caution in individuals with chronic liver disease or epilepsy.",,"Caution with anticoagulants/antiplatelets – L-carnitine may theoretically potentiate drug effects and increase the risk of bleeding. Monitor.
+Caution with levothyroxine – L-carnitine may theoretically decrease effectiveness of levothyroxine. Monitor thyroid function.
+
+Caution with anticoagulants/antiplatelets – L-carnitine may theoretically potentiate drug effects and increase the risk of bleeding. Monitor.
+Caution with levothyroxine – L-carnitine may theoretically decrease effectiveness of levo","Not recommended in pregnancy due to a lack of safety data.
+Caution in individuals with chronic liver disease or epilepsy.
+
+Not recommended in pregnancy due to a lack of safety data.
+Caution in individuals with chronic liver disease or epilepsy.",~2 reference markers in DOCX text,energy_support,"pregnancy_review_required, liver_impairment_caution, seizure_disorder_review_required",,"Adult dose: Take 2 capsules, once or twice daily, with food, or as directed by your health professional. | Key ingredients: Acetyl levocarnitine hydrochlo | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,1,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0002,Herbs of Gold,Activated B Complex,activated b complex,,capsule,30 / 60 capsules,"Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional.","Activated B2, B6 & B12
+Activated folate (Quatrefolic®)
+Supports energy production
+
+Activated B2, B6 & B12
+Activated folate (Quatrefolic®)
+Supports energy production","B vitamins are stimulatory in nature. To avoid any sleep interferance, avoid taking before bed.
+Taking at night may result in more vivid dreams (vitamin B6).","B vitamins are stimulatory in nature. To avoid any sleep interferance, avoid taking before bed.
+Taking at night may result in more vivid dreams (vitamin B6).","Caution with cholestyramine and colestipol (hypolipidaemic agents) | may decrease the absorption of vitamin B3 and folate. Separate dose by at least 4-6 hours.
+Caution with phenobarbital and phenytoin (anticonvulsants) - high doses of vitamin B6 or folate can decrease their efficacy. Monitor.
+Caution with L-Dopa - vitamin B6 increases the peripheral metabolism of levodopa and may lower levodopa levels for CNS penetration, resulting in reduced levodopa effects. The effect of pyridoxine is prevent",,~1 reference markers in DOCX text,"calcium_support, bone_health, b12_support, energy_support, nervous_system_support, joint_health (review)","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, levothyroxine, renal_impairment_caution, warfarin, anticoagulant_review_required, shellfish_allergy_caution","anticoagulant, bisphosphonate, levothyroxine, quinolone_antibiotic, tetracycline_antibiotic, warfarin","Adult dose: Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional. | Key ingredients: Thiamine hydrochloride, Riboflavin sodium phosphate, Nicotinamide | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,3,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0003,Herbs of Gold,Activated B12 Spray,activated b12 spray,,spray,,"Shake well before use.
+Adults and children over 12 years – Spray once or twice under the tongue daily, or as directed by your health professional.",,"Shake well before use.
+Adults and children over 12 years – Spray once or twice under the tongue daily, or as directed by your health professional.","High strength
+Active B12 ready for use in the body
+Delicious mixed berry flavour
+Nervous system health
+Prevents dietary B12 deficiency
+Supports energy production
+Cardiovascular system health
+Blood health
+Cognitive function & brain health
+Naturally sweetened with Stevia
+Convenient & efficient mode of delivery
+Alternative to tablets
+
+High strength
+Active B12 ready for use in the body
+Delicious mixed berry flavour
+Nervous system health
+Prevents dietary B12 deficiency
+Supports energy production
+Card","None noted at the recommended dose.
+
+None noted at the recommended dose.",,"None noted at the recommended dose.
+Several medications can decrease the absorption of vitamin B12 or increase the risk of deficiency, such as acid-suppressing
+medications (PPIs e.g. omeprazole and histamine2 (H2)-receptor antagonists), metformin (hypoglycaemic), oral contraceptives, neomycin (antibiotic) and colchicine (anti-gout).
+
+None noted at the recommended dose.
+Several medications can decrease the absorption of vitamin B12 or increase the risk of deficiency, such as acid-suppressing
+medi",,~2 reference markers in DOCX text,,,,"Adult dose: Shake well before use.
+Adults and children over 12 years – Spray once or twice under the tongue daily, or as directed by | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,6,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0004,Herbs of Gold,Activated Folate 500,activated folate 500,,capsule,60 capsules,"Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional.","Methylfolate (5-MTHF)
+Active form of folic acid
+With Quatrefolic®
+
+Methylfolate (5-MTHF)
+Active form of folic acid
+With Quatrefolic®",,,,,~0 reference markers in DOCX text,"folate_support, pregnancy_support, joint_health (review)","warfarin, anticoagulant_review_required, shellfish_allergy_caution","anticoagulant, warfarin","Adult dose: Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional. | Key ingredients: Levomefolic glucosamine (Quatr",herbsofgold_technical_manual.pdf,8,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0005,Herbs of Gold,Activated Sublingual B12,activated sublingual b12,,tablet,,"Adults and children over 12 years – Dissolve 1 tablet under the tongue, once or twice daily, or as directed by your health professional.",,"Adults and children over 12 years – Dissolve 1 tablet under the tongue, once or twice daily, or as directed by your health professional.","Nervous system health
+Dissolves under the tongue
+Active B12 ready for use in the body
+
+Nervous system health
+Dissolves under the tongue
+Active B12 ready for use in the body","None noted at the recommended dose.
+
+None noted at the recommended dose.",,"None noted at the recommended dose.
+Several medications can decrease the absorption of vitamin B12 or increase the risk of deficiency, such as acid-suppressing medications (PPIs e.g. omeprazole and histamine2 (H2)-receptor antagonists), metformin (hypoglycaemic), oral contraceptives, neomycin (antibiotic) and colchicine (anti-gout).
+
+None noted at the recommended dose.
+Several medications can decrease the absorption of vitamin B12 or increase the risk of deficiency, such as acid-suppressing medi",,~2 reference markers in DOCX text,,,,"Adult dose: Adults and children over 12 years – Dissolve 1 tablet under the tongue, once or twice daily, or as directed by your heal | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,10,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0006,Herbs of Gold,Alpha Lipoic 300,alpha lipoic 300,,capsule,60 / 120 capsules,"Adults and children over 12 years - Take 1 capsule, once or twice daily, before food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 capsule, once or twice daily, before food, or as directed by your health professional.","High strength
+Antioxidant recycler",Caution using high doses or long-term during pregnancy due to a lack of safety data. Alpha Lipoic acid has been used safely during pregnancy at doses up to 600mg daily for up to 4 weeks.,,"Caution with hypoglycaemic medication - alpha Lipoic acid may have an additive effect. Monitor blood sugar levels.
+Alpha Lipoic acid has metal chelating activity - separate dose from copper, zinc and manganese by 3 hours.",Caution using high doses or long-term during pregnancy due to a lack of safety data. Alpha Lipoic acid has been used safely during pregnancy at doses up to 600mg daily for up to 4 weeks.,~0 reference markers in DOCX text,"antioxidant_support, blood_sugar_support (review)","antidiabetic, pregnancy_review_required",antidiabetic,"Adult dose: Adults and children over 12 years - Take 1 capsule, once or twice daily, before food, or as directed by your health prof | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,12,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0007,Herbs of Gold,Astra Recharge,astra recharge,,tablet,30 / 60 tablets,"Take 1 tablet, twice daily, with food, or as directed by your health professional.",,"Adults – Take 1 tablet, twice daily, with food, or as directed by your health professional.","High-strength Astragalus
+Comprehensive herbal formula plus Reishi
+
+High-strength Astragalus
+Comprehensive herbal formula plus Reishi","Contraindicated during pregnancy and breastfeeding as specific safety data is lacking.
+Astragalus is not recommended for use during the acute stage of an infection.
+
+Contraindicated during pregnancy and breastfeeding as specific safety data is lacking.
+Astragalus is not recommended for use during the acute stage of an infection.",,"Contraindicated with sirolimus - Schisandra increases concentrations in the blood which increases the risk of adverse effects.
+Caution with immunosuppressant medication given the immune stimulating nature of the formula.
+Caution with drugs metabolised by the CYP3A4 enzyme - Schisandra may potentiate the effects. Monitor.
+Caution with midazolam (benzodiazepine) - Schisandra increases the amount of drug in the body, increasing the risk of side effects.
+Caution with heart or blood pressure medicati","Contraindicated during pregnancy and breastfeeding as specific safety data is lacking.
+Astragalus is not recommended for use during the acute stage of an infection.
+
+Contraindicated during pregnancy and breastfeeding as specific safety data is lacking.
+Astragalus is not recommended for use during the acute stage of an infection.",~8 reference markers in DOCX text,,"pregnancy_review_required, breastfeeding_review_required",,"Adult dose: Take 1 tablet, twice daily, with food, or as directed by your health professional. | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,13,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0008,Herbs of Gold,B Sustained Release,b sustained release,,tablet,60 / 120 tablets,"Take 1 tablet daily, with food, or as directed by your health professional.",,"Adults - Take 1 tablet daily, with food, or as directed by your health professional.","High strength
+Modified release over 8 hours
+Supports energy production
+
+High strength
+Modified release over 8 hours
+Supports energy production",,,,,~0 reference markers in DOCX text,"calcium_support, bone_health, b12_support, energy_support, nervous_system_support, folate_support, pregnancy_support, immune_support, antioxidant_support, skin_health, hair_nail_support","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, levothyroxine, renal_impairment_caution","bisphosphonate, levothyroxine, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Take 1 tablet daily, with food, or as directed by your health professional. | Key ingredients: Thiamine hydrochloride (vitami, Riboflavin (vitamin B2), Nicotinamide",herbsofgold_technical_manual.pdf,15,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0009,Herbs of Gold,Berberine ImmunoPlex,berberine immunoplex,,tablet,30 tablets,"Adults and children over 12 years - Take 1 tablet, twice daily, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 tablet, twice daily, with food, or as directed by your health professional.","High strength
+Liver & digestive system health
+
+High strength
+Liver & digestive system health",,,,,~4 reference markers in DOCX text,blood_sugar_support (review),antidiabetic,antidiabetic,"Adult dose: Adults and children over 12 years - Take 1 tablet, twice daily, with food, or as directed by your health professional. | Key ingredients: Phellodendron amurense (Phello, Berberis vulgaris (Barberry) s, TOTAL BERBERINE",herbsofgold_technical_manual.pdf,17,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0010,Herbs of Gold,Bergamot Cholesterol Care,bergamot cholesterol care,,tablet,60 tablets,"Take 1 tablet, twice daily, before main meals, or as directed by your health professional.",,"Adults - Take 1 tablet, twice daily, before main meals, or as directed by your health professional.","Bergamot extract 500mg
+With Globe artichoke
+
+Bergamot extract 500mg
+With Globe artichoke","Not recommended in pregnancy or breastfeeding due to a lack of safety data.
+Contraindicated with bile duct obstruction.
+Caution in individuals with severe hepatocellular disease, septic cholycystitis, intestinal spasm or ileus, or unconjugated hyperbilirubinaemia.
+Contraindicated in individuals allergic to Asteraceae/Compositae (Daisy) family.
+
+Not recommended in pregnancy or breastfeeding due to a lack of safety data.
+Contraindicated with bile duct obstruction.
+Caution in individuals with sever",,"Caution with cholesterol-lowering medication – may have additive effects.
+Caution with hypoglycaemic medication – may have additive effects.
+Caution with colchicine (used in Gout) – Bergamot has been found to cause a small decrease in blood concentrations of the drug.
+Caution with dextromethorphan (decongestant/antitussive) – Bergamot may increase drug absorption, which may increase the risk of side effects.
+Janda, E., Lascala, A., Martino, C., Ragusa, S., Nucera, S., Walker, R., ... & Mollace, ","Not recommended in pregnancy or breastfeeding due to a lack of safety data.
+Contraindicated with bile duct obstruction.
+Caution in individuals with severe hepatocellular disease, septic cholycystitis, intestinal spasm or ileus, or unconjugated hyperbilirubinaemia.
+Contraindicated in individuals allergic to Asteraceae/Compositae (Daisy) family.
+
+Not recommended in pregnancy or breastfeeding due to a lack of safety data.
+Contraindicated with bile duct obstruction.
+Caution in individuals with severe hepatocellular disease, septic cholycystitis, intestinal spasm or ileus, or unconjugated hyperbilirubinaemia.
+Contraindicated in individuals allergic to Asteraceae/Compositae (Daisy) family.",~4 reference markers in DOCX text,,"pregnancy_review_required, breastfeeding_review_required",,"Adult dose: Take 1 tablet, twice daily, before main meals, or as directed by your health professional. | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,19,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0011,Herbs of Gold,Bio Curcumin 5400,bio curcumin 5400,,tablet,30 / 60 tablets,"Take 1 tablet, twice daily, with food, or as directed by your health professional.",,"Adults - Take 1 tablet, twice daily, with food, or as directed by your health professional.","Relieves symptoms of mild arthritis
+Anti-inflammatory
+Acute or chronic use
+
+Relieves symptoms of mild arthritis
+Anti-inflammatory
+Acute or chronic use","The safety of Meriva® curcumin during pregnancy and breastfeeding has not been established.
+
+The safety of Meriva® curcumin during pregnancy and breastfeeding has not been established.",,"None noted at the recommended dose.
+
+None noted at the recommended dose.","The safety of Meriva® curcumin during pregnancy and breastfeeding has not been established.
+
+The safety of Meriva® curcumin during pregnancy and breastfeeding has not been established.",~4 reference markers in DOCX text,"antioxidant_support, joint health (review)","anticoagulant_review_required, antiplatelet, pregnancy_review_required, breastfeeding_review_required","anticoagulant, antiplatelet","Adult dose: Take 1 tablet, twice daily, with food, or as directed by your health professional. | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,21,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0012,Herbs of Gold,Biotin 3mg,biotin 3mg,,tablet,60 tablets,"Adults and children over 12 years - Take 1 tablet daily, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 tablet daily, with food, or as directed by your health professional.","Biotin, also known as vitamin B7, forms part of the B vitamin family. Biotin is involved in cell growth, fatty acid production and in the metabolism of carbohydrates, fats and proteins.
+Biotin is a water-soluble vitamin and is an essential cofactor for 5 carboxylase enzymes including:
+Acetyl-coenzyme A (CoA) carboxylase 1 and acetyl-CoA carboxylase 2: binds bicarbonate to acetyl-CoA to form malonyl-CoA, required for the production of fatty acids.
+Pyruvate carboxylase: critical for gluconeogenesi","Biotin shares the sodium-dependent multivitamin transporter (SMVT) with vitamin B5. Theoretically, this may reduce vitamin B5 absorption due to competitive inhibition of the transporter.",,None noted at the recommended dose.,,~1 reference markers in DOCX text,hair_nail_support,,,"Adult dose: Adults and children over 12 years - Take 1 tablet daily, with food, or as directed by your health professional. | Key ingredients: Biotin (vitamin B7) | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,23,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0013,Herbs of Gold,Breastfeeding Support,breastfeeding support,,tablet,60 tablets,"Adults only - Take 1 tablet, once or twice daily, with food, or as directed by your health professional.",,"Adults only - Take 1 tablet, once or twice daily, with food, or as directed by your health professional.","Breastfeeding Support contains two herbs, Fenugreek and Blessed thistle, to support milk supply in breastfeeding women.
+Fenugreek and Blessed thistle are herbal galactagogues. A galactagogue is a substance that promotes the secretion and flow of milk.
+A 2015 qualitative study found that Fenugreek and Blessed thistle were the two most commonly used herbal galactagogues1.
+Breastfeeding
+During pregnancy, breasts change and develop to be ready to supply milk. The amount of breastmilk usually increas","Contraindicated in pregnancy - Fenugreek can cause uterine contractions, increasing the risk of early labour or miscarriage.",,"Caution with warfarin and other anticoagulant or antiplatelet drugs - Fenugreek may affect blood coagulation (based on an isolated case report). Monitor.
+Caution with hypoglycaemic drugs - Fenugreek may have additive effects. Monitor blood glucose.
+Caution with iron - Fenugreek can inhibit iron absorption. Separate dose by 2 hours.","Contraindicated in pregnancy - Fenugreek can cause uterine contractions, increasing the risk of early labour or miscarriage.",~3 reference markers in DOCX text,"blood_sugar_support (review), breastfeeding_review_required","antidiabetic, pregnancy_review_required",antidiabetic,"Adult dose: Adults only - Take 1 tablet, once or twice daily, with food, or as directed by your health professional. | Key ingredients: Trigonella foenum-graecum (Fen, Cnicus benedictus (Blessed thi | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,24,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0014,Herbs of Gold,Bromelain Forte,bromelain forte,,capsule,60 capsules,"Adults and children over 12 years – For digestion: Take 1 capsule, twice daily, before meals.
+For soft tissue trauma: Take 1 capsule daily, between meals. Or take as directed by your health professional.
+Children under 12 years – Take only as directed by your health professional.",,"Adults and children over 12 years – For digestion: Take 1 capsule, twice daily, before meals.
+For soft tissue trauma: Take 1 capsule daily, between meals. Or take as directed by your health professional.
+Children under 12 years – Take only as directed by your health professional.","Reduces pain, swelling & inflammation associated with tissue trauma/injury
+
+Reduces pain, swelling & inflammation associated with tissue trauma/injury","Contraindicated with hypersensitivity to bromelain.
+Caution with gastrointestinal lesion/ulcer.
+
+Contraindicated with hypersensitivity to bromelain.
+Caution with gastrointestinal lesion/ulcer.","Contraindicated with hypersensitivity to bromelain.
+Caution with gastrointestinal lesion/ulcer.
+
+Contraindicated with hypersensitivity to bromelain.
+Caution with gastrointestinal lesion/ulcer.","Caution with anticoagulant medication - bromelain may increase tendency for bleeding. However, it is recommended pre and post-surgery.
+
+Caution with anticoagulant medication - bromelain may increase tendency for bleeding. However, it is recommended pre and post-surgery.",,~4 reference markers in DOCX text,,,,"Adult dose: Adults and children over 12 years – For digestion: Take 1 capsule, twice daily, before meals.
+For soft tissue trauma: Ta | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,25,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0015,Herbs of Gold,Bulgarian Tribulus Complex,bulgarian tribulus complex,,tablet,30 / 60 tablets,"Take 1 tablet, once or twice daily, with food, or as directed by your health professional.",,"Adults – Take 1 tablet, once or twice daily, with food, or as directed by your health professional.","High strength
+Traditional male tonic
+
+High strength
+Traditional male tonic","Contraindicated in individuals with androgen-sensitive tumours.
+Contraindicated during pregnancy and lactation.
+
+Contraindicated in individuals with androgen-sensitive tumours.
+Contraindicated during pregnancy and lactation.",,"None noted at the recommended dose.
+
+None noted at the recommended dose.","Contraindicated in individuals with androgen-sensitive tumours.
+Contraindicated during pregnancy and lactation.
+
+Contraindicated in individuals with androgen-sensitive tumours.
+Contraindicated during pregnancy and lactation.",~2 reference markers in DOCX text,,"pregnancy_review_required, breastfeeding_review_required",,"Adult dose: Take 1 tablet, once or twice daily, with food, or as directed by your health professional. | Key ingredients: Tribulus terrestris (Bulgarian, Tribulus terrestris (Indian Tr | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,27,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0016,Herbs of Gold,Calcium K2 with D3,calcium k2 with d3,,tablet,90 / 180 tablets,"Adults and children over 12 years – Take 1 tablet, two to three times daily, with food, or as directed by your health professional.
+Adults and children over 12 years – Take 1 tablet, two to three times daily, with food, or as directed by your health professional.",,"Adults and children over 12 years – Take 1 tablet, two to three times daily, with food, or as directed by your health professional.
+Adults and children over 12 years – Take 1 tablet, two to three times daily, with food, or as directed by your health professional.","Highly bioavailable calcium
+Vitamin K2 binds calcium to bone
+
+Highly bioavailable calcium
+Vitamin K2 binds calcium to bone
+
+Highly bioavailable calcium
+Vitamin K2 binds calcium to bone
+
+Highly bioavailable calcium
+Vitamin K2 binds calcium to bone","Calcium supplementation is contraindicated in hypercalcaemia and hypercalciuria.
+Caution with hyperparathyroidism and chronic kidney disease calcium supplementation should only be taken under medical supervision.
+Vitamin D is contraindicated in people with vitamin D hypersensitivity, systemic lupus erythematosus (SLE) and hypercalcaemia.
+
+Calcium supplementation is contraindicated in hypercalcaemia and hypercalciuria.
+Caution with hyperparathyroidism and chronic kidney disease calcium supplement","Calcium supplementation is contraindicated in hypercalcaemia and hypercalciuria.
+Caution with hyperparathyroidism and chronic kidney disease calcium supplementation should only be taken under medical supervision.
+Vitamin D is contraindicated in people with vitamin D hypersensitivity, systemic lupus erythematosus (SLE) and hypercalcaemia.
+
+Calcium supplementation is contraindicated in hypercalcaemia and hypercalciuria.
+Caution with hyperparathyroidism and chronic kidney disease calcium supplement","Contraindicated with integrase inhibitors (e.g. dolutegravir, elvitegravir, raltegravir – HIV therapy) – calcium decreases drug serum levels.
+Caution with tetracycline and quinolone antibiotics – calcium may reduce drug bioavailability. Take antibiotics either 2 hours before or 4-6 hours after calcium.
+Caution with aluminium salts (e.g. antacids) – calcium citrate may increase the absorption of aluminum. Separate dose.
+Caution with bisphosphonates – calcium reduces drug absorption and may reduce",,~8 reference markers in DOCX text,"calcium_support, bone_health, vitamin_d_support","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, levothyroxine, renal_impairment_caution, hypercalcaemia_caution, sarcoidosis_caution, hyperparathyroidism_caution, renal_impairment_caution","bisphosphonate, levothyroxine, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Adults and children over 12 years – Take 1 tablet, two to three times daily, with food, or as directed by your health pr | Key ingredients: Calcified Lithothamnion tophif, Calcium citrate tetrahydrate, Menaquinone 7 (vitamin K2 as K | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,29,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0017,Herbs of Gold,Candida Relief,candida relief,,tablet,60 tablets,"Adults and children over 12 years – Take 1 tablet, twice daily, with food, or as directed by your health professional.",,"Adults and children over 12 years – Take 1 tablet, twice daily, with food, or as directed by your health professional.","Pau d’arco, also known as Red Lapacho or Taheebo, is a canopy tree native to the Amazon rainforest and can be found in tropical regions of South and Central America. Pau d’arco has been used by native Americans of Brazil, northern Argentina, Paraguay and Peru for over
+1000 years, with a long history of medicinal use that pre-dates the Incas.
+The bark of the Pau d’arco tree is hard and durable and well-known for its resistance to insect and fungal attack.
+Pau d’arco is traditionally used in South","Contraindicated in pregnancy and lactation - Pau d’arco may cause foetal damage.
+May increase the risk of bleeding. Discontinue use 2 weeks prior to surgery.",,Caution with anticoagulant medication - Pau d’arco may have antiplatelet activity.,"Contraindicated in pregnancy and lactation - Pau d’arco may cause foetal damage.
+May increase the risk of bleeding. Discontinue use 2 weeks prior to surgery.",~0 reference markers in DOCX text,,"pregnancy_review_required, breastfeeding_review_required, surgery_caution",,"Adult dose: Adults and children over 12 years – Take 1 tablet, twice daily, with food, or as directed by your health professional. | Key ingredients: Handroanthus impetiginosus (Pa | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,32,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0018,Herbs of Gold,Children’s Calci Care,children s calci care,,tablet,60 chewable tablets,"Tablets can be crushed and added to food.
+Children 1-8 years – Chew 1 tablet daily.
+Children 9-13 years – Chew 2 tablets daily.
+Or take as directed by your health professional.",,"Tablets can be crushed and added to food.
+Children 1-8 years – Chew 1 tablet daily.
+Children 9-13 years – Chew 2 tablets daily.
+Or take as directed by your health professional.","Calcium for healthy, growing bones
+Vitamin D to assist calcium absorption
+
+Calcium for healthy, growing bones
+Vitamin D to assist calcium absorption","Calcium supplementation is contraindicated in hypercalcaemia and hypercalciuria.
+Caution with hyperparathyroidism and chronic kidney disease – calcium supplementation should only be taken under medical supervision.
+Vitamin D is contraindicated in people with vitamin D hypersensitivity, systemic lupus erythematosus (SLE) and hypercalcaemia.
+
+Calcium supplementation is contraindicated in hypercalcaemia and hypercalciuria.
+Caution with hyperparathyroidism and chronic kidney disease – calcium supple","Calcium supplementation is contraindicated in hypercalcaemia and hypercalciuria.
+Caution with hyperparathyroidism and chronic kidney disease – calcium supplementation should only be taken under medical supervision.
+Vitamin D is contraindicated in people with vitamin D hypersensitivity, systemic lupus erythematosus (SLE) and hypercalcaemia.
+
+Calcium supplementation is contraindicated in hypercalcaemia and hypercalciuria.
+Caution with hyperparathyroidism and chronic kidney disease – calcium supple","Contraindicated with blood thinning medications and warfarin – vitamin D supplementation reduces drug effectiveness.
+Caution with tetracycline and quinolone antibiotics – calcium can reduce drug bioavailability. Take antibiotics either 2 hours before or 4-6 hours after calcium.
+Caution with magnesium, iron and zinc supplements - concurrent use with calcium can reduce the absorption of these minerals. Separate dose by 2 hours.
+Caution with thiazide diuretics – drug decreases urinary excretion of ",,~2 reference markers in DOCX text,"calcium_support, bone_health, vitamin_d_support","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, levothyroxine, renal_impairment_caution, hypercalcaemia_caution, sarcoidosis_caution, hyperparathyroidism_caution, renal_impairment_caution","bisphosphonate, levothyroxine, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Tablets can be crushed and added to food.
+Children 1-8 years – Chew 1 tablet daily.
+Children 9-13 years – Chew 2 tablets | Key ingredients: Calcium hydrogen phosphate dih, Colecalciferol, Menaquinone 7 (vitamin K2) | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,33,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0019,Herbs of Gold,Children’s Calm Care,children s calm care,,tablet,60 chewable tablets,"Tablets can be crushed and added to food.
+Children 1-3 years - Chew 1 tablet, twice daily.
+Children 4-9 years - Chew 1 tablet, three times a day.
+Or take as directed by your health professional. Consume within 6 months of opening.
+Not suitable for use in children under the age of 12 months, except on health professional advice.",,"Tablets can be crushed and added to food.
+Children 1-3 years - Chew 1 tablet, twice daily.
+Children 4-9 years - Chew 1 tablet, three times a day.
+Or take as directed by your health professional. Consume within 6 months of opening.
+Not suitable for use in children under the age of 12 months, except on health professional advice.","Nervous system relaxant
+Nervous system health
+Relieves digestive discomfort",Contraindicated in people with allergies to the Compositae/ Asteraceae family (Chamomile).,,"Caution with warfarin - Chamomile may increase the effects.
+Caution with quinolone and tetracycline antibiotics - magnesium may form insoluble complexes with the drugs and decrease absorption. Separate dose.
+Caution with bisphosphonate medications – magnesium supplements can reduce drug absorption. Separate dose by 2 hours.",,~0 reference markers in DOCX text,"magnesium_support, muscle_cramps, sleep_support, stress_support, nervous_system_support","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, renal_impairment_caution","bisphosphonate, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Tablets can be crushed and added to food.
+Children 1-3 years - Chew 1 tablet, twice daily.
+Children 4-9 years - Chew 1 t | Key ingredients: Alpha casozepine enriched hydr, Magnesium amino acid chelate | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,35,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0020,Herbs of Gold,Children’s Fish-i Care,children s fish i care,,capsule,,"Children 2-4 years - Twist or snip off the tail from the capsule, then squeeze the fish oil straight into your child’s mouth or onto your child’s favourite food. Take 1 capsule daily.
+Children 5-8 years - Chew 1 capsule daily.
+Children 9-13 years - Chew 2 capsules daily.
+Or take as directed by your health professional. Consume within 6 months of opening.",,"Children 2-4 years - Twist or snip off the tail from the capsule, then squeeze the fish oil straight into your child’s mouth or onto your child’s favourite food. Take 1 capsule daily.
+Children 5-8 years - Chew 1 capsule daily.
+Children 9-13 years - Chew 2 capsules daily.
+Or take as directed by your health professional. Consume within 6 months of opening.","Healthy brain function
+Cognitive & mental function","Children with bleeding disorders should only take fish oil under medical supervision.
+Children with thyroid conditions should only take iodine under medical supervision.
+Discontinue 1 week before surgery.",,"Caution with anticoagulant medications – fish oil may increase bleeding.
+Caution with thyroid medications – iodine may have an additive effect.",,~1 reference markers in DOCX text,"general_multivitamin, heart_health, cholesterol_support, thyroid_condition_review_required","thyroid_condition_review_required, anticoagulant_review_required, antiplatelet, child_review_required, surgery_caution","anticoagulant, antiplatelet","Adult dose: Children 2-4 years - Twist or snip off the tail from the capsule, then squeeze the fish oil straight into your child’s m | Key ingredients: Concentrated fish Omega-3 trig, Potassium iodide | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,36,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0021,Herbs of Gold,Children’s Immune Care,children s immune care,,tablet,60 chewable tablets,"Children 2-4 years – Chew 1 tablet daily. Children 5-12 years – Chew 2 tablets daily. Or take as directed by your health professional. Consume within 6 months of opening.
+Not to be used in children under two years of age without medical advice. Not to be used in children under 5 years for relief of mild fever.",,"Children 2-4 years – Chew 1 tablet daily. Children 5-12 years – Chew 2 tablets daily. Or take as directed by your health professional. Consume within 6 months of opening.
+Not to be used in children under two years of age without medical advice. Not to be used in children under 5 years for relief of mild fever.","Immune health
+With Echinacea and nutrients","Echinacea may cause allergic reactions in individuals sensitive to plants from the Asteraceae (daisy) family.
+Caution in iron overload conditions, such as thalassaemia major, haemochromatosis or sideroblastic anaemia, as vitamin C can increase iron absorption.
+Stop taking a week before any surgery.
+In rare circumstances, Echinacea may cause worsening of asthma. Monitor.",,"Caution with immunosuppressive drugs – Children’s Immune Care may have an antagonistic effect (theoretical).
+Caution with amphetamines (some ADHD medications) – vitamin C may reduce drug absorption. Separate dose by 2 hours.
+Caution with anticoagulant and antiplatelet drugs – vitamin C may increase the blood thinning effects. Separate dose by 4 hours.
+Caution with calcium supplements - concurrent use with zinc can reduce the absorption of both. Separate dose by 2 hours.
+Caution with eltrombopag ",,~2 reference markers in DOCX text,"calcium_support, bone_health, vitamin_d_support, immune_support, skin_health, hair_nail_support, antioxidant_support, eye_health","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, levothyroxine, renal_impairment_caution, penicillamine, hypercalcaemia_caution, sarcoidosis_caution, hyperparathyroidism_caution, surgery_caution","bisphosphonate, levothyroxine, penicillamine, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Children 2-4 years – Chew 1 tablet daily. Children 5-12 years – Chew 2 tablets daily. Or take as directed by your health | Key ingredients: Ascorbic acid (vitamin C), Calcium ascorbate dihydrate, Colecalciferol | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,37,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0022,Herbs of Gold,Children’s Magnesium Care,children s magnesium care,,tablet,60 chewable tablets,"Children 4-8 years – Chew 1 tablet daily.
+Children 9-12 years – Chew 1 tablet once or twice daily.
+Or take as directed by your health professional. Consume within 6 months of opening.",,"Children 4-8 years – Chew 1 tablet daily.
+Children 9-12 years – Chew 1 tablet once or twice daily.
+Or take as directed by your health professional. Consume within 6 months of opening.","Great tasting strawberry-vanilla flavour
+Chewable tablet for easy compliance
+
+Great tasting strawberry-vanilla flavour
+Chewable tablet for easy compliance","High dose magnesium is contraindicated in individuals with compromised renal function and heart block.
+Dose may be too high for children under 4 years of age. Tablets can be halved and dosed appropriately for younger children.
+
+High dose magnesium is contraindicated in individuals with compromised renal function and heart block.
+Dose may be too high for children under 4 years of age. Tablets can be halved and dosed appropriately for younger children.",,"Caution with aminoglycoside antibiotics (e.g. gentamicin) - both it and magnesium affect muscle function, potentially leading to muscle weakness and side effects. Co-administration should be avoided.
+Caution with quinolone and tetracycline antibiotics – magnesium forms insoluble complexes with drugs, decreasing drug absorption. Take drug 2 hours before or 6 hours after magnesium.
+Caution with bisphosphonates – magnesium can form complexes with drug and reduce absorption. Separate dose by 2 hours",,~0 reference markers in DOCX text,"magnesium_support, muscle_cramps, sleep_support, stress_support, nervous_system_support","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, renal_impairment_caution, child_review_required, renal_impairment_caution","bisphosphonate, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Children 4-8 years – Chew 1 tablet daily.
+Children 9-12 years – Chew 1 tablet once or twice daily.
+Or take as directed b | Key ingredients: Magnesium amino acid chelate | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,38,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0023,Herbs of Gold,Children’s Multi Care,children s multi care,,tablet,60 chewable tablets,"Children 2-8 years – Chew 1 tablet daily.
+Children 9-13 years – Chew 2 tablets daily.
+Or take as directed by your health professional. Consume within 6 months of opening.",,"Children 2-8 years – Chew 1 tablet daily.
+Children 9-13 years – Chew 2 tablets daily.
+Or take as directed by your health professional. Consume within 6 months of opening.","Great tasting strawberry-vanilla flavour
+Chewable tablet for easy compliance
+With 21 vitamins & minerals
+
+Great tasting strawberry-vanilla flavour
+Chewable tablet for easy compliance
+With 21 vitamins & minerals",,,,,~0 reference markers in DOCX text,,,,"Adult dose: Children 2-8 years – Chew 1 tablet daily.
+Children 9-13 years – Chew 2 tablets daily.
+Or take as directed by your health",herbsofgold_technical_manual.pdf,40,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0024,Herbs of Gold,Children’s Probiotic 15 Billion,children s probiotic 15 billion,,unknown,,"Children 1-12 years – Mix 1g (one level scoop) in water or juice, once daily, or take as directed by your health professional.
+Scoop included. Consume within 6 months of opening.",,"Children 1-12 years – Mix 1g (one level scoop) in water or juice, once daily, or take as directed by your health professional.
+Scoop included. Consume within 6 months of opening.","Supports beneficial intestinal flora
+Maintains digestive system health
+
+Supports beneficial intestinal flora
+Maintains digestive system health",,,,,~16 reference markers in DOCX text,"probiotic_support, gut_health, immune_support","immunosuppressed_review_required, central_line_caution",,"Adult dose: Children 1-12 years – Mix 1g (one level scoop) in water or juice, once daily, or take as directed by your health profess | Key ingredients: Lactobacillus rhamnosus GG, Lactobacillus acidophilus La-1, Lactobacillus gasseri Lg-36",herbsofgold_technical_manual.pdf,42,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0025,Herbs of Gold,Chromium MAX,chromium max,,capsule,60 / 120 capsules,"Take 1 capsule daily, with food, or as directed by your health professional.",,"Adults – Take 1 capsule daily, with food, or as directed by your health professional.",,None noted at the recommended dose.,,"Caution with hypoglycaemic medication - chromium may have an additive effect. Monitor blood sugar levels.
+Caution with thyroxine – chromium can reduce drug absorption. Seperate dose by at least 3 hours.
+Food sources rich in chromium include organ meats, cheese, broccoli,
+green beans, spices and wine.
+The absorption of chromium from the intestinal tract is low and can be enhanced by the intake of nutrients such as vitamin C and niacin. Chromium is stored in the liver, spleen, soft tissue and bone",,~2 reference markers in DOCX text,"general_multivitamin, blood_sugar_support (review)",antidiabetic,antidiabetic,"Adult dose: Take 1 capsule daily, with food, or as directed by your health professional. | Key ingredients: Chromic chloride hexahydrate, Chromium picolinate | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,44,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0026,Herbs of Gold,Clear Skin,clear skin,,tablet,60 tablets,"Take 1 tablet, twice daily, with food, or as directed by your health professional.",,"Adults – Take 1 tablet, twice daily, with food, or as directed by your health professional.","Supports skin health
+Traditionally relieves acne
+
+Supports skin health
+Traditionally relieves acne","Contraindicated in people with allergies to the Asteraceae family (Burdock and Echinacea).
+Contraindicated in pregnancy and breastfeeding.
+
+Contraindicated in people with allergies to the Asteraceae family (Burdock and Echinacea).
+Contraindicated in pregnancy and breastfeeding.",,"Contraindicated with antineoplastic drugs (etoposide) – Echinacea may increase risk of drug toxicity.
+Contraindicated with retinoids (vitamin A derivatives) e.g. Accutane – vitamin A supplementation may have additive toxic effects.
+Caution with Digoxin – long term use of Yellow dock may result in potassium loss, which increases risk of drug toxicity (usually at higher doses).
+Caution with immunosuppressive drugs - Echinacea has immunostimulatory effects.
+Caution with cyclophosphamide – Echinacea","Contraindicated in people with allergies to the Asteraceae family (Burdock and Echinacea).
+Contraindicated in pregnancy and breastfeeding.
+
+Contraindicated in people with allergies to the Asteraceae family (Burdock and Echinacea).
+Contraindicated in pregnancy and breastfeeding.",~2 reference markers in DOCX text,,"pregnancy_review_required, breastfeeding_review_required",,"Adult dose: Take 1 tablet, twice daily, with food, or as directed by your health professional. | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,45,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0027,Herbs of Gold,Cold & Flu Strike,cold flu strike,,tablet,30 / 60 tablets,"Adults and children over 12 years – Take 1 tablet, once or twice daily, with food, or as directed by your health professional. Not to be used in children under two years of age without medical advice.
+Not to be used in children under 5 years for relief of mild fever.",,"Adults and children over 12 years – Take 1 tablet, once or twice daily, with food, or as directed by your health professional. Not to be used in children under two years of age without medical advice.
+Not to be used in children under 5 years for relief of mild fever.","Andrographis 6g
+Contains 60mg andrographolides
+
+Andrographis 6g
+Contains 60mg andrographolides","Contraindicated during pregnancy and breastfeeding.
+Contraindicated in states of hyperacidity, especially duodenal ulcers (Andrographis).
+Caution in individuals with autoimmune conditions.
+Caution in individuals with bleeding disorders. Andrographis may inhibit platelet aggregation and increase the risk of bleeding.
+Caution in people with conditions of iron overload, such as hemochromatosis, as vitamin C increases iron absorption.
+Discontinue use one week before surgery.
+Separate from mineral su",,"Caution with immunosuppression agents (e.g. cyclosporine) –
+Cold & Flu Strike may interfere with immunosuppression agents due to its immunostimulant activity.
+Caution with anticoagulant and antiplatelet drugs - additive effects are theoretically possible as Andrographis has been shown to inhibit platelet aggregation in animals. Observe for increased bruising or bleeding.
+Caution with NSAIDs, penicillamine, cefalexin and tetracycline and quinolone antibiotics - zinc forms complexes with these dru","Contraindicated during pregnancy and breastfeeding.
+Contraindicated in states of hyperacidity, especially duodenal ulcers (Andrographis).
+Caution in individuals with autoimmune conditions.
+Caution in individuals with bleeding disorders. Andrographis may inhibit platelet aggregation and increase the risk of bleeding.
+Caution in people with conditions of iron overload, such as hemochromatosis, as vitamin C increases iron absorption.
+Discontinue use one week before surgery.
+Separate from mineral supplementation or coffee by 2 hours - coffee reduces zinc absorption and minerals may interfere
+with zinc absorption.
+Andrographis in high doses long term may cause temporary loss of taste.
+
+Contraindicated during pregnancy and breastfeeding.
+Contraindicated in states of hyperacidity, especially duodenal ulcers (Andrographis).
+Caution in individuals with autoimmune conditions.
+Caution in individuals with bleeding disorders. Andrographis may inhibit platelet aggregation and increase the risk of bleeding.
+Caution in people with conditions of iron overload, such as hemochromatosis, as vitamin C increases iron absorption.
+Discontinue use one week before surgery.
+Separate from mineral supplementation or coffee by 2 hours - coffee reduces zinc absorption and minerals may interfere
+with zinc absorption.
+Andrographis in high doses long term may cause temporary loss of taste.",~6 reference markers in DOCX text,"immune_support, skin_health, hair_nail_support, antioxidant_support","tetracycline_antibiotic, quinolone_antibiotic, penicillamine, pregnancy_review_required, breastfeeding_review_required, surgery_caution","penicillamine, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Adults and children over 12 years – Take 1 tablet, once or twice daily, with food, or as directed by your health profess | Key ingredients: Ascorbic acid (vitamin C), Zinc amino acid chelate | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,47,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0028,Herbs of Gold,Collagen,collagen,,capsule,30 capsules,"Take 1-2 capsules daily, with food. Take capsules whole, or open capsules and mix contents with preferred beverage or sprinkle over food.",,"Take 1-2 capsules daily, with food. Take capsules whole, or open capsules and mix contents with preferred beverage or sprinkle over food.","With zinc & C
+Protects from free radicals
+
+With zinc & C
+Protects from free radicals","Collagen is derived from fish.
+
+Collagen is derived from fish.",,"None noted at the recommended dose.
+
+None noted at the recommended dose.",,~2 reference markers in DOCX text,"skin_health, hair_nail_support",,,"Adult dose: Take 1-2 capsules daily, with food. Take capsules whole, or open capsules and mix contents with preferred beverage or sp | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,49,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0029,Herbs of Gold,Collagen Forte,collagen forte,,powder,9 g,"Add 9g (2 level scoops) into 150mL water or other preferred beverage and mix well.
+Add 9g (2 level scoops) into 150mL water or other preferred beverage and mix well.",,"Add 9g (2 level scoops) into 150mL water or other preferred beverage and mix well.
+Add 9g (2 level scoops) into 150mL water or other preferred beverage and mix well.",180g oral powder; High strength; 5500mg collagen per serve; Collagen formation support,"None noted at the recommended dose.
+
+None noted at the recommended dose.
+
+None noted at the recommended dose.
+
+None noted at the recommended dose.",,"None noted at the recommended dose.
+
+None noted at the recommended dose.
+
+None noted at the recommended dose.
+
+None noted at the recommended dose.",,~0 reference markers in DOCX text,"skin_health, hair_nail_support",,,"Adult dose: Add 9g (2 level scoops) into 150mL water or other preferred beverage and mix well.
+Add 9g (2 level scoops) into 150mL wa | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,51,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0030,Herbs of Gold,Collagen Gold,collagen gold,,unknown,,"Add 6g (1 heaped scoop) into 150mL water or other preferred beverage and mix well.
+Add 6g (1 heaped scoop) into 150mL water or other preferred beverage and mix well.",,"Add 6g (1 heaped scoop) into 150mL water or other preferred beverage and mix well.
+Add 6g (1 heaped scoop) into 150mL water or other preferred beverage and mix well.","Fish collagen
+2500mg collagen per serve
+Collagen formation support
+
+Fish collagen
+2500mg collagen per serve
+Collagen formation support
+
+Fish collagen
+2500mg collagen per serve
+Collagen formation support
+
+Fish collagen
+2500mg collagen per serve
+Collagen formation support","Collagen is derived from fish.
+
+Collagen is derived from fish.
+
+Collagen is derived from fish.
+
+Collagen is derived from fish.",,"None noted at the recommended dose.
+
+None noted at the recommended dose.
+
+None noted at the recommended dose.
+
+None noted at the recommended dose.",,~0 reference markers in DOCX text,"skin_health, hair_nail_support",,,"Adult dose: Add 6g (1 heaped scoop) into 150mL water or other preferred beverage and mix well.
+Add 6g (1 heaped scoop) into 150mL wa | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,54,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0031,Herbs of Gold,CoQ10 150mg,coq10 150mg,,capsule,60 / 120 capsules,"Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional.
+Children under 12 years – Take only as directed by your health professional.",,"Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional.
+Children under 12 years – Take only as directed by your health professional.","Supports cardiovascular system function
+Heart health
+
+Supports cardiovascular system function
+Heart health","None noted at the recommended dose.
+
+None noted at the recommended dose.",,"Caution with antihypertensive medication - coenzyme Q10 may have an additive effect. Monitor blood pressure.
+Caution with warfarin. Conflicting reports have shown CoQ10 may decrease, increase or have no effect on the efficacy of oral
+anticoagulants. Use only under the care of a health professional and monitor INR values.
+
+Caution with antihypertensive medication - coenzyme Q10 may have an additive effect. Monitor blood pressure.
+Caution with warfarin. Conflicting reports have shown CoQ10 may dec",,~4 reference markers in DOCX text,"heart_health, energy_support",,,"Adult dose: Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional.
+Childre | Key ingredients: Ubidecarenone (coenzyme Q10) | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,57,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0032,Herbs of Gold,Cranberry 70 000,cranberry 70 000,,tablet,50 tablets,"Adults and children over 12 years – Take 1 tablet daily, with food, or as directed by your health professional.
+Children under 12 years – Take only as directed by your health professional.",,"Adults and children over 12 years – Take 1 tablet daily, with food, or as directed by your health professional.
+Children under 12 years – Take only as directed by your health professional.","High strength – 70g
+Urinary tract health","If symptoms of UTI become more severe while taking Cranberry, or if pain or irritation persists for more than 48 hours, medical advice is recommended. The presence of blood in the urine warrants immediate medical attention.
+Use with caution in people with iron overload conditions, such as haemochromotosis, as vitamin C increases iron absorption.",,"Caution with warfarin – possible interaction with Cranberry and vitamin C (conflicting reports). Monitor INR.
+Caution with aluminium-containing compounds (e.g. phosphate binders) – vitamin C increases the amount of aluminium absorbed. Separate dose by at least 2 hours.",,~4 reference markers in DOCX text,"immune_support, antioxidant_support, skin_health","warfarin, anticoagulant_review_required","anticoagulant, warfarin","Adult dose: Adults and children over 12 years – Take 1 tablet daily, with food, or as directed by your health professional.
+Children | Key ingredients: Ascorbic acid (vitamin C) | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,59,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0033,Herbs of Gold,Digest-Zymes,digest zymes,,capsule,60 capsules,"Adults and children over 12 years – Take 1 capsule, three times a day, before each meal, or as directed by your health professional.
+Children under 12 years – Take only as directed by your health professional.",,"Adults and children over 12 years – Take 1 capsule, three times a day, before each meal, or as directed by your health professional.
+Children under 12 years – Take only as directed by your health professional.","Vegetarian friendly enzymes
+With Gentian
+
+Vegetarian friendly enzymes
+With Gentian","Not recommended in pregnancy due to a lack of safety data.
+Contraindicated in peptic ulcer disease, digestive hyperacidity and hypersensitivity to Pineapple.
+
+Not recommended in pregnancy due to a lack of safety data.
+Contraindicated in peptic ulcer disease, digestive hyperacidity and hypersensitivity to Pineapple.",,"None noted at the recommended dose.
+Best avoided with acid suppressing medication (including proton pump inhibitors) as they have opposing effects.
+
+None noted at the recommended dose.
+Best avoided with acid suppressing medication (including proton pump inhibitors) as they have opposing effects.","Not recommended in pregnancy due to a lack of safety data.
+Contraindicated in peptic ulcer disease, digestive hyperacidity and hypersensitivity to Pineapple.
+
+Not recommended in pregnancy due to a lack of safety data.
+Contraindicated in peptic ulcer disease, digestive hyperacidity and hypersensitivity to Pineapple.",~2 reference markers in DOCX text,,pregnancy_review_required,,"Adult dose: Adults and children over 12 years – Take 1 capsule, three times a day, before each meal, or as directed by your health p | Key ingredients: Lipase, Cellulase | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,60,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0034,Herbs of Gold,Echinacea 4000 Complex,echinacea 4000 complex,,tablet,30 / 60 tablets,"Adults and children over 12 years – Take 1 tablet, once or twice daily, with food, or as directed by your health professional.
+Not to be used in children under two years of age without medical advice. Not to be used in children under 5 years for relief of mild fever.",,"Adults and children over 12 years – Take 1 tablet, once or twice daily, with food, or as directed by your health professional.
+Not to be used in children under two years of age without medical advice. Not to be used in children under 5 years for relief of mild fever.","Angustifolia & purpurea extracts
+High strength
+
+Angustifolia & purpurea extracts
+High strength","Echinacea may cause allergic reactions in individuals sensitive to plants from the Asteraceae (daisy) family.
+
+Echinacea may cause allergic reactions in individuals sensitive to plants from the Asteraceae (daisy) family.",,"Caution with immunosuppression agents – Echinacea may interfere with immunosuppression due to its immunostimulant activity.
+
+Caution with immunosuppression agents – Echinacea may interfere with immunosuppression due to its immunostimulant activity.",,~8 reference markers in DOCX text,immune_support,,,"Adult dose: Adults and children over 12 years – Take 1 tablet, once or twice daily, with food, or as directed by your health profess | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,62,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0035,Herbs of Gold,Elderberry Echinacea & Olive Leaf,elderberry echinacea olive leaf,,liquid,10 ml,"Shake well before use. May be taken in water or juice.
+Adults and children over 12 years – Take 10mL, three times a day.
+Children 6-12 years – Take 5mL, 2-3 times daily. Children 2-5 years – Take 3mL, 2-3 times daily. Or take as directed by your health professional.",,"Shake well before use. May be taken in water or juice.
+Adults and children over 12 years – Take 10mL, three times a day.
+Children 6-12 years – Take 5mL, 2-3 times daily. Children 2-5 years – Take 3mL, 2-3 times daily. Or take as directed by your health professional.",Traditionally used in Western herbal; medicine to relieve the symptoms of:; Colds & flu; Upper respiratory tract infections; Mild fever,"Echinacea may cause allergic reactions in individuals sensitive to plants from the Asteraceae (daisy) family.
+In rare circumstances, Echinacea may cause worsening of asthma. Monitor.",,"Caution with immunosuppressive drugs – Elderberry Echinacea & Olive Leaf may have an antagonistic effect (theoretical).
+Caution with hypoglycaemic and antihypertensive medication – Olive leaf may have additive effects. Monitor blood sugar and blood pressure.",,~3 reference markers in DOCX text,immune_support,,,"Adult dose: Shake well before use. May be taken in water or juice.
+Adults and children over 12 years – Take 10mL, three times a day. | Key ingredients: Sambucus nigra (Elderberry) fr, Olea europaea (Olive) leaf ext, Echinacea angustifolia (Echina | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,64,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0036,Herbs of Gold,Evening Primrose Oil Daily,evening primrose oil daily,,capsule,200 capsules,"Take 1-2 capsules, three times a day, with food, or as directed by your health professional.",,"Adults – Take 1-2 capsules, three times a day, with food, or as directed by your health professional.","Cold pressed
+Rich source of GLA","Limited safety data exists for the use of EPO in pregnancy, however it is not expected to have any adverse effects.",,"Caution with Tamoxifen (potentially beneficial effect).
+Caution with lopinavir/ritonavir – EPO may increase drug levels (case report).
+Caution with anticoagulant medications - GLA may affect coagulation although clinical significance is unknown.","Limited safety data exists for the use of EPO in pregnancy, however it is not expected to have any adverse effects.",~5 reference markers in DOCX text,"women_health, skin_health",pregnancy_review_required,,"Adult dose: Take 1-2 capsules, three times a day, with food, or as directed by your health professional. | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,65,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0037,Herbs of Gold,Fish Oil 1000,fish oil 1000,,capsule,200 / 400 capsules,"Adults and children over 12 years – Take 1-2 capsules, three times a day, with food.
+For joint health and muscle health: Take 2 capsules, two to three times a day, with food. Or take as directed by your health professional.",,"Adults and children over 12 years – Take 1-2 capsules, three times a day, with food.
+For joint health and muscle health: Take 2 capsules, two to three times a day, with food. Or take as directed by your health professional.","Small wild cold-water fish
+Mercury & heavy metal tested
+Low reflux
+Anti-inflammatory
+
+Small wild cold-water fish
+Mercury & heavy metal tested
+Low reflux
+Anti-inflammatory","Individuals with bleeding disorders should only take fish oil supplements under medical supervision.
+Discontinue use 1 week before surgery.
+
+Individuals with bleeding disorders should only take fish oil supplements under medical supervision.
+Discontinue use 1 week before surgery.",,"Contraindicated with cisplatin, oxaliplatin and irinotecan (chemotherapeutic agents) – fish oils may cause platinum compound resistance. Avoid fish oils on the days surrounding chemotherapy.
+Caution with warfarin and other anticoagulant/antiplatelet drugs - omega-3 triglycerides may potentiate anticoagulant effects.
+Caution with antihypertensive drugs - fish oils may have additive effects. Monitor.
+Caution with orlistat – drug inhibits the absorption of fat in the gut. Separate dose by 2 hours.
+",,~6 reference markers in DOCX text,"heart_health, cholesterol_support","anticoagulant_review_required, antiplatelet, surgery_caution","anticoagulant, antiplatelet","Adult dose: Adults and children over 12 years – Take 1-2 capsules, three times a day, with food.
+For joint health and muscle health: | Key ingredients: Natural fish oil | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,66,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0038,Herbs of Gold,Folic Acid Complex,folic acid complex,,tablet,60 tablets,"Take 1 tablet daily, with food, or as directed by your health professional. Start taking 3 months prior to planning a pregnancy.",,"Adults – Take 1 tablet daily, with food, or as directed by your health professional. Start taking 3 months prior to planning a pregnancy.","Preconception care
+Iodine for baby’s brain development
+Activated vitamin B12
+
+Preconception care
+Iodine for baby’s brain development
+Activated vitamin B12","None noted at the recommended dose.
+
+None noted at the recommended dose.",,"Several medications may deplete folate status, including antacids (PPIs), trimethoprim (antibiotic), pyrimethamine (antimalarial), triamterene (blood pressure), sulfasalazine (for ulcerative colitis) and oral contraceptives. Separate dose by 2-3 hours.
+Caution with methotrexate (folic acid antagonist) – co-administration with folate may reduce the effects. Patients should take folate only under the supervision of a health professional.
+Caution with antiepileptic medications – folic acid may redu",,~6 reference markers in DOCX text,"b12_support, energy_support, nervous_system_support, folate_support, pregnancy_support, general_multivitamin, thyroid_condition_review_required",thyroid_condition_review_required,,"Adult dose: Take 1 tablet daily, with food, or as directed by your health professional. Start taking 3 months prior to planning a pr | Key ingredients: Folic acid, Mecobalamin (co-methylcobalami, Pyridoxine hydrochloride | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,68,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0039,Herbs of Gold,Ginkgo Biloba 6000,ginkgo biloba 6000,,capsule,60 / 120 capsules,,,,High strength; Standardised to 28.8mg (24%) of Ginkgo flavonglycosides; Cognitive function,"Stop taking Ginkgo seven days before any surgery.
+Contraindicated in people with epilepsy - Ginkgo may promote seizure activity.
+Contraindicated in pregnancy and breastfeeding due to a lack of safety data.
+
+Stop taking Ginkgo seven days before any surgery.
+Contraindicated in people with epilepsy - Ginkgo may promote seizure activity.
+Contraindicated in pregnancy and breastfeeding due to a lack of safety data.",,"Contraindicated with talinolol (beta-blocker medication) - Ginkgo may have additive effects.
+Caution with blood thinning and anti-platelet medications (e.g. warfarin, aspirin and ibuprofen) – concurrent administration with Ginkgo may increase the risk of bleeding.
+Caution with nexium – Ginkgo can increase the metabolising enzyme
+Brondino, N., De Silvestri, A., Re, S., Lanati, N., Thiemann, P., Verna, A., ... & Politi, P. (2013). A systematic review and meta-analysis of Ginkgo biloba [...]: from ","Stop taking Ginkgo seven days before any surgery.
+Contraindicated in people with epilepsy - Ginkgo may promote seizure activity.
+Contraindicated in pregnancy and breastfeeding due to a lack of safety data.
+
+Stop taking Ginkgo seven days before any surgery.
+Contraindicated in people with epilepsy - Ginkgo may promote seizure activity.
+Contraindicated in pregnancy and breastfeeding due to a lack of safety data.",~4 reference markers in DOCX text,"memory_support (review), anticoagulant_review_required","anticoagulant_review_required, antiplatelet, warfarin, surgery_caution, pregnancy_review_required, breastfeeding_review_required, seizure_disorder_review_required, surgery_caution","anticoagulant, antiplatelet, warfarin",Key ingredients: Ginkgo biloba (Ginkgo) leaf ex | Cautions: 1 flagged,herbsofgold_technical_manual.pdf,70,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0040,Herbs of Gold,Ginseng 4 Energy Gold,ginseng 4 energy gold,,capsule,30 / 60 tablets,"Take 1 capsule, three times a day, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 tablet, twice daily, with food, or as directed by your health professional.
+Adults and children over 12 years - Take 1 tablet, twice daily, with food, or as directed by your health professional.
+Adults – Take 1 capsule, three times a day, with food, or as directed by your health professional.","Supports energy production
+Aids a healthy stress response
+
+Supports energy production
+Aids a healthy stress response
+
+With Gymnema & Cinnamon
+Chromium for sugar metabolism","Contraindicated during pregnancy and lactation. Ginsengs have been shown to be potentially unsafe during pregnancy and should be avoided. No safety data currently exists regarding safety during breastfeeding.
+Avoid use in hormone sensitive conditions.
+Korean ginseng may have an additive stimulant effect with caffeine.
+
+Contraindicated during pregnancy and lactation. Ginsengs have been shown to be potentially unsafe during pregnancy and should be avoided. No safety data currently exists regarding",,"Caution with monoamine oxidase inhibitor (MAOIs) antidepressant medications – concurrent use with Ginsengs can interfere with drug effects. Use under supervision of a health professional.
+Caution with CNS stimulants - concurrent use with Ginsengs and Ashwagandha may have an additive effect.
+Caution with immunosuppressant medication - concurrent use with Ginsengs and Ashwagandha may reduce their effectiveness.
+Caution with antidiabetic medications - Korean ginseng may have additive hypoglycaemic ","Contraindicated during pregnancy and lactation. Ginsengs have been shown to be potentially unsafe during pregnancy and should be avoided. No safety data currently exists regarding safety during breastfeeding.
+Avoid use in hormone sensitive conditions.
+Korean ginseng may have an additive stimulant effect with caffeine.
+
+Contraindicated during pregnancy and lactation. Ginsengs have been shown to be potentially unsafe during pregnancy and should be avoided. No safety data currently exists regarding safety during breastfeeding.
+Avoid use in hormone sensitive conditions.
+Korean ginseng may have an additive stimulant effect with caffeine.",~16 reference markers in DOCX text,"energy_support, stress_support","pregnancy_review_required, breastfeeding_review_required",,"Adult dose: Take 1 capsule, three times a day, with food, or as directed by your health professional. | Key ingredients: Panax ginseng (Korean ginseng), Eleutherococcus senticosus (Si, Panax quinquefolius (American  | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,72,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0041,Herbs of Gold,GlucoPlex,glucoplex,,unknown,60 capsules,,,,,"Contraindicated during pregnancy and lactation.
+Contraindicated in sarcoidosis or hyperparathyroidism without medical supervision.",,"Caution with hypoglycaemic medications and insulin – GlucoPlex may have additive effects. Monitor.
+Caution with warfarin – ALA has reduced platelet reactivity in vitro, uncertain whether the effect is clinically significant.
+Caution with anticoagulant/antiplatelet drugs – Fenugreek may have additive effects, increasing the risk of bruising and bleeding.
+Caution with thyroxine – ALA may suppress the conversion of thyroxine to active T3 form and chromium can reduce thyroxine absorption. Separate d","Contraindicated during pregnancy and lactation.
+Contraindicated in sarcoidosis or hyperparathyroidism without medical supervision.",~3 reference markers in DOCX text,"vitamin_d_support, bone_health, immune_support, skin_health, hair_nail_support, general_multivitamin, blood_sugar_support (review)","tetracycline_antibiotic, quinolone_antibiotic, penicillamine, hypercalcaemia_caution, renal_impairment_caution, sarcoidosis_caution, hyperparathyroidism_caution, antidiabetic, pregnancy_review_required, breastfeeding_review_required","antidiabetic, penicillamine, quinolone_antibiotic, tetracycline_antibiotic","Key ingredients: Nicotinamide, Chromic chloride hexahydrate, Chromium picolinate | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,74,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0042,Herbs of Gold,Glucosamine MAX,glucosamine max,,capsule,90 / 180 tablets,"Adults and children over 12 years – Take 1 tablet daily, with food, or as directed by your health professional.",,"Adults and children over 12 years – Take 1 tablet daily, with food, or as directed by your health professional.","Glucosamine, Chondroitin & MSM
+Relieves symptoms of mild arthritis
+
+Glucosamine, Chondroitin & MSM
+Relieves symptoms of mild arthritis","Not recommended in pregnancy or lactation due to lack of safety data.
+Caution in individuals with clotting disorders (Ginger).
+Caution in individuals with peptic ulcers and gallstones (Ginger).
+
+Not recommended in pregnancy or lactation due to lack of safety data.
+Caution in individuals with clotting disorders (Ginger).
+Caution in individuals with peptic ulcers and gallstones (Ginger).",,"Contraindicated with warfarin and other anticoagulants – Ginger affects platelet aggregation and may increase the risk of bleeding. Glucosamine may theoretically have additive effects.
+
+Contraindicated with warfarin and other anticoagulants – Ginger affects platelet aggregation and may increase the risk of bleeding. Glucosamine may theoretically have additive effects.","Not recommended in pregnancy or lactation due to lack of safety data.
+Caution in individuals with clotting disorders (Ginger).
+Caution in individuals with peptic ulcers and gallstones (Ginger).
+
+Not recommended in pregnancy or lactation due to lack of safety data.
+Caution in individuals with clotting disorders (Ginger).
+Caution in individuals with peptic ulcers and gallstones (Ginger).",~6 reference markers in DOCX text,"immune_support, skin_health, hair_nail_support, joint_health (review)","tetracycline_antibiotic, quinolone_antibiotic, penicillamine, warfarin, anticoagulant_review_required, shellfish_allergy_caution, pregnancy_review_required, breastfeeding_review_required","anticoagulant, penicillamine, quinolone_antibiotic, tetracycline_antibiotic, warfarin","Adult dose: Adults and children over 12 years – Take 1 tablet daily, with food, or as directed by your health professional. | Key ingredients: Glucosamine hydrochloride, Bovine sodium chondroitin sulf, Dimethyl sulfone (MSM) | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,76,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0043,Herbs of Gold,Gout Relief Complex,gout relief complex,,capsule,60 capsules,"Maintenance dose: Take 2 capsules daily, with food. Acute gout symptom relief: Take 2 capsules, twice daily, with food. Or take as directed by your health professional.",,"Adults – Maintenance dose: Take 2 capsules daily, with food. Acute gout symptom relief: Take 2 capsules, twice daily, with food. Or take as directed by your health professional.","Relieves symptoms of occasional episodes of gout
+
+Relieves symptoms of occasional episodes of gout","Avoid in patients with kidney disease (Celery and potassium).
+Contraindicated in pregnancy and breastfeeding.
+
+Avoid in patients with kidney disease (Celery and potassium).
+Contraindicated in pregnancy and breastfeeding.",,"Caution with thyroxine – Celery may reduce levels of thyroxine in the body. Monitor thyroid function.
+Caution with anticoagulant and antiplatelet drugs – Celery, Alfalfa and potassium may increase the blood thinning effects. Separate dose by at least 2 hours.
+
+Caution with thyroxine – Celery may reduce levels of thyroxine in the body. Monitor thyroid function.
+Caution with anticoagulant and antiplatelet drugs – Celery, Alfalfa and potassium may increase the blood thinning effects. Separate dose ","Avoid in patients with kidney disease (Celery and potassium).
+Contraindicated in pregnancy and breastfeeding.
+
+Avoid in patients with kidney disease (Celery and potassium).
+Contraindicated in pregnancy and breastfeeding.",~12 reference markers in DOCX text,"magnesium_support, muscle_cramps, sleep_support, stress_support, nervous_system_support","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, renal_impairment_caution, pregnancy_review_required, breastfeeding_review_required, renal_impairment_caution","bisphosphonate, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Maintenance dose: Take 2 capsules daily, with food. Acute gout symptom relief: Take 2 capsules, twice daily, with food.  | Key ingredients: Potassium citrate, Magnesium citrate | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,78,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0044,Herbs of Gold,Grape Seed Gold,grape seed gold,,tablet,60 / 120 tablets,"Adults only – Take 1 tablet daily, with food, or as directed by your health professional. Not recommended for use by pregnant and lactating women.",,"Adults only – Take 1 tablet daily, with food, or as directed by your health professional. Not recommended for use by pregnant and lactating women.","Grape seed 30 000mg
+Potent antioxidant formula
+With glutathione
+
+Grape seed 30 000mg
+Potent antioxidant formula
+With glutathione","Not recommended in pregnancy or breastfeeding due to a lack of safety data on Grape seed.
+Use in caution if there is a history of renal calculi (kidney stones) as vitamin C may increase the risk of recurrence of calcium oxalate calculi.
+Caution with iron overload conditions, such as haemochromatosis, as vitamin C increases iron absorption.
+
+Not recommended in pregnancy or breastfeeding due to a lack of safety data on Grape seed.
+Use in caution if there is a history of renal calculi (kidney stone",,"Caution with anticoagulants and antiplatelet medications – Grape seed and vitamin E theoretically have additive effects. Monitor.
+Caution with antidepressants, antipsychotic medication and beta blockers (hypertensive medication) – vitamin E may affect efficacy.
+Caution with NSAIDs, cefalexin, penicillamine and tetracycline and quinolone antibiotics (broad-spectrum antibiotics) - zinc may interfere with their absorption. Separate doses by 3 hours.
+
+Caution with anticoagulants and antiplatelet med","Not recommended in pregnancy or breastfeeding due to a lack of safety data on Grape seed.
+Use in caution if there is a history of renal calculi (kidney stones) as vitamin C may increase the risk of recurrence of calcium oxalate calculi.
+Caution with iron overload conditions, such as haemochromatosis, as vitamin C increases iron absorption.
+
+Not recommended in pregnancy or breastfeeding due to a lack of safety data on Grape seed.
+Use in caution if there is a history of renal calculi (kidney stones) as vitamin C may increase the risk of recurrence of calcium oxalate calculi.
+Caution with iron overload conditions, such as haemochromatosis, as vitamin C increases iron absorption.",~4 reference markers in DOCX text,"immune_support, skin_health, hair_nail_support, antioxidant_support, eye_health, anticoagulant_review_required","tetracycline_antibiotic, quinolone_antibiotic, penicillamine, anticoagulant_review_required, warfarin, pregnancy_review_required, breastfeeding_review_required, renal_impairment_caution","anticoagulant, penicillamine, quinolone_antibiotic, tetracycline_antibiotic, warfarin","Adult dose: Adults only – Take 1 tablet daily, with food, or as directed by your health professional. Not recommended for use by pre | Key ingredients: Glutathione, Betacarotene, Ascorbic acid (vitamin C) | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,80,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0045,Herbs of Gold,Gut Care,gut care,,gel,5 g,"Adults and children over 12 years – Mix 5g (one level scoop) in 150mL water or juice, once daily, with food, or as directed by your health professional. Scoop included.",,"Adults and children over 12 years – Mix 5g (one level scoop) in 150mL water or juice, once daily, with food, or as directed by your health professional. Scoop included.","With Aloe vera & Slippery elm
+Glutamine 3.5g
+Delicious vanilla flavour
+
+With Aloe vera & Slippery elm
+Glutamine 3.5g
+Delicious vanilla flavour","Contraindicated during pregnancy.
+Contraindicated in hypotonia, severe renal insufficiency, hypokalaemia, liver cirrhosis, cholestatic liver disease (Licorice) and intestinal obstruction (Slippery elm).
+Discontinue Gut Care 1 week prior to surgery.
+
+Contraindicated during pregnancy.
+Contraindicated in hypotonia, severe renal insufficiency, hypokalaemia, liver cirrhosis, cholestatic liver disease (Licorice) and intestinal obstruction (Slippery elm).
+Discontinue Gut Care 1 week prior to surgery.",,"Theoretically, Slippery elm may slow the absorption and reduce serum levels of orally administered drugs due to its mucilage content.
+Clinical significance is unclear. Caution is warranted with drugs with a narrow therapeutic range (e.g. barbiturates, digoxin, lithium, phenytoin, warfarin). Separate dose by 2 hours.
+Caution with warfarin and digoxin – Licorice may affect drug metabolism.
+Caution with glucose lowering medications (including metformin) – Aloe vera given in conjunction with glucose","Contraindicated during pregnancy.
+Contraindicated in hypotonia, severe renal insufficiency, hypokalaemia, liver cirrhosis, cholestatic liver disease (Licorice) and intestinal obstruction (Slippery elm).
+Discontinue Gut Care 1 week prior to surgery.
+
+Contraindicated during pregnancy.
+Contraindicated in hypotonia, severe renal insufficiency, hypokalaemia, liver cirrhosis, cholestatic liver disease (Licorice) and intestinal obstruction (Slippery elm).
+Discontinue Gut Care 1 week prior to surgery.",~10 reference markers in DOCX text,"immune_support, skin_health, hair_nail_support, gut_health, gastrointestinal_support (review)","tetracycline_antibiotic, quinolone_antibiotic, penicillamine, pregnancy_review_required, renal_impairment_caution, liver_impairment_caution, surgery_caution","penicillamine, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Adults and children over 12 years – Mix 5g (one level scoop) in 150mL water or juice, once daily, with food, or as direc | Key ingredients: Ulmus rubra (Slippery elm) inn, Glutamine (L-Glutamine), Quercetin dihydrate (Quercetin | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,82,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0046,Herbs of Gold,Hawthorn 4500,hawthorn 4500,,tablet,60 tablets,"FEATURES & BENEFITS
+Heart tonic
+Cardiovascular system health",,"FEATURES & BENEFITS
+Heart tonic
+Cardiovascular system health",,"Contraindicated during pregnancy.
+Hawthorn may inhibit platelet aggregation and increase the risk of postoperative bleeding. Discontinue use 2 weeks prior to surgery.",,"Caution with digoxin - Hawthorn improves cardiac output and might potentiate the effects of digoxin requiring digoxin dose reduction. Monitor.
+Caution with nitrates, calcium channel blockers and beta-blockers | Hawthorn has vasodilatory effects and may theoretically have an additive effect. Use under medical supervision.
+Caution with blood pressure lowering drugs such as viagra, cialis and levitra - Hawthorn may have an additive effect with these medications. Monitor blood pressure.","Contraindicated during pregnancy.
+Hawthorn may inhibit platelet aggregation and increase the risk of postoperative bleeding. Discontinue use 2 weeks prior to surgery.",~1 reference markers in DOCX text,heart_health,"pregnancy_review_required, surgery_caution",,"Adult dose: FEATURES & BENEFITS
+Heart tonic
+Cardiovascular system health | Key ingredients: Crataegus monogyna (Hawthorn) , Crataegus monogyna (Hawthorn)  | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,84,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0047,Herbs of Gold,Hayfever & Sinus Ease,hayfever sinus ease,,tablet,60 tablets,"Adults and children over 12 years - Take 1 tablet, three times a day, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 tablet, three times a day, with food, or as directed by your health professional.","Garlic, Horseradish & C
+Traditional hayfever relief
+High strength
+
+Garlic, Horseradish & C
+Traditional hayfever relief
+High strength","Horseradish is contraindicated in individuals with stomach/intestinal ulcers and kidney disorders.
+Caution in iron overload conditions, such as haemochromatosis, as vitamin C increases iron absorption.
+Not suitable during pregnancy or breastfeeding. Horseradish contains mustard oil which can be irritating to the uterus lining, increasing
+the risk of miscarriage. Horseradish and Garlic can potentially cause gastrointestinal upset in breastfed babies.
+
+Horseradish is contraindicated in individuals",,"Contraindicated with antiretroviral and immunosuppressive medications – Garlic and Baical skullcap may reduce their effectiveness.
+Caution with anticoagulant, antiplatelet and antihypertensive medications – Garlic, Baical skullcap and vitamin C can increase bleeding risk.
+Caution with benzodiazepines – Garlic can increase drug effectiveness. Sepa rate dose by 2-4 hours and monitor symptoms of excess sedation.
+Caution with aluminium based antacids – vitamin C increases the amount of aluminium abs","Horseradish is contraindicated in individuals with stomach/intestinal ulcers and kidney disorders.
+Caution in iron overload conditions, such as haemochromatosis, as vitamin C increases iron absorption.
+Not suitable during pregnancy or breastfeeding. Horseradish contains mustard oil which can be irritating to the uterus lining, increasing
+the risk of miscarriage. Horseradish and Garlic can potentially cause gastrointestinal upset in breastfed babies.
+
+Horseradish is contraindicated in individuals with stomach/intestinal ulcers and kidney disorders.
+Caution in iron overload conditions, such as haemochromatosis, as vitamin C increases iron absorption.
+Not suitable during pregnancy or breastfeeding. Horseradish contains mustard oil which can be irritating to the uterus lining, increasing
+the risk of miscarriage. Horseradish and Garlic can potentially cause gastrointestinal upset in breastfed babies.",~4 reference markers in DOCX text,"immune_support, antioxidant_support, skin_health","pregnancy_review_required, breastfeeding_review_required, renal_impairment_caution",,"Adult dose: Adults and children over 12 years - Take 1 tablet, three times a day, with food, or as directed by your health professio | Key ingredients: Ascorbic acid (vitamin C) | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,85,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0048,Herbs of Gold,Hormone Metabolism,hormone metabolism,,tablet,60 tablets,"Adults only - Take 1-2 tablets, twice daily, with food, or as directed by your health professional. Not recommended for use by pregnant or lactating women.",,"Adults only - Take 1-2 tablets, twice daily, with food, or as directed by your health professional. Not recommended for use by pregnant or lactating women.","Supports oestrogen metabolism
+Liver detoxification
+With Broccoli sprouts
+
+Supports oestrogen metabolism
+Liver detoxification
+With Broccoli sprouts",,,,,~0 reference markers in DOCX text,,,,"Adult dose: Adults only - Take 1-2 tablets, twice daily, with food, or as directed by your health professional. Not recommended for  | Key ingredients: Quercetin dihydrate, Glutathione (L-Glutathione)",herbsofgold_technical_manual.pdf,87,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0049,Herbs of Gold,Iodine MAX,iodine max,,tablet,60 tablets,"Adults only - Take 1 tablet daily, with food, or as directed by your health professional.",,"Adults only - Take 1 tablet daily, with food, or as directed by your health professional.","High strength
+Thyroid health
+
+High strength
+Thyroid health","Caution in thyroid conditions without medical advice.
+Care with dose in pregnancy as many pregnancy multivitamins also contain iodine. Care should be taken to avoid ingestion of excessive iodine during pregnancy due to potential for increasing the rate of postpartum thyroid disorders.
+
+Caution in thyroid conditions without medical advice.
+Care with dose in pregnancy as many pregnancy multivitamins also contain iodine. Care should be taken to avoid ingestion of excessive iodine during pregnancy d",,"Contraindicated with antithyroid drugs.
+Caution with Lithium - concurrent administration of iodine and lithium can lead to increased risk of toxicity. Monitor thyroid function.
+Caution with drugs affecting potassium levels, including ACE inhibitors, angiotensin receptor blockers, angiotensin II antagonists, potassium-sparing diuretics (e.g. aldactone), heparin (anticoagulant) and ciclosporin (immunosuppressant) - concurrent use of these drugs with potassium iodide increases the risk of hyperkala","Caution in thyroid conditions without medical advice.
+Care with dose in pregnancy as many pregnancy multivitamins also contain iodine. Care should be taken to avoid ingestion of excessive iodine during pregnancy due to potential for increasing the rate of postpartum thyroid disorders.
+
+Caution in thyroid conditions without medical advice.
+Care with dose in pregnancy as many pregnancy multivitamins also contain iodine. Care should be taken to avoid ingestion of excessive iodine during pregnancy due to potential for increasing the rate of postpartum thyroid disorders.",~0 reference markers in DOCX text,"general_multivitamin, thyroid_condition_review_required","thyroid_condition_review_required, pregnancy_review_required",,"Adult dose: Adults only - Take 1 tablet daily, with food, or as directed by your health professional. | Key ingredients: Potassium iodide | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,90,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0050,Herbs of Gold,Liver Care,liver care,,tablet,60 tablets,"Adults and children over 12 years - Take 1 tablet, twice daily, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 tablet, twice daily, with food, or as directed by your health professional.","Supports liver health
+With St Mary’s thistle & Dandelion
+Healthy digestion	✓ Liver herbs & nutrients
+
+Supports liver health
+With St Mary’s thistle & Dandelion
+Healthy digestion	✓ Liver herbs & nutrients","Contraindicated during pregnancy and breastfeeding. Specific safety data is lacking, however, it is not recommended to stimulate detoxification during pregnancy or breastfeeding.
+Not recommended in people with peptic ulcer disease, excessive stomach acidity, bile duct obstruction or other gall bladder conditions.
+
+Contraindicated during pregnancy and breastfeeding. Specific safety data is lacking, however, it is not recommended to stimulate detoxification during pregnancy or breastfeeding.
+Not r",,"Caution with any medication, as Liver Care can improve liver function, and therefore may affect how drugs are metabolised. As a general rule, take 2 hours apart from other medications.
+Contraindicated with morphine – St Mary’s thistle may affect serum levels of morphine and increase or decrease its effect.
+Contraindicated with sirolimus (immunosuppressant) – Schisandra increases drug concentrations in the blood, increasing the risk of adverse events.
+Caution with hypoglycaemic medications – St M","Contraindicated during pregnancy and breastfeeding. Specific safety data is lacking, however, it is not recommended to stimulate detoxification during pregnancy or breastfeeding.
+Not recommended in people with peptic ulcer disease, excessive stomach acidity, bile duct obstruction or other gall bladder conditions.
+
+Contraindicated during pregnancy and breastfeeding. Specific safety data is lacking, however, it is not recommended to stimulate detoxification during pregnancy or breastfeeding.
+Not recommended in people with peptic ulcer disease, excessive stomach acidity, bile duct obstruction or other gall bladder conditions.",~4 reference markers in DOCX text,"antioxidant_support, joint health (review), heart_health, energy_support","anticoagulant_review_required, antiplatelet, pregnancy_review_required, breastfeeding_review_required","anticoagulant, antiplatelet","Adult dose: Adults and children over 12 years - Take 1 tablet, twice daily, with food, or as directed by your health professional. | Key ingredients: Curcumin, Taurine, Choline bitartrate | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,92,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0051,Herbs of Gold,Lung Care,lung care,,tablet,60 tablets,"Take 1 tablet, three times a day, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 tablet, twice daily, with food, or as directed by your health professional. Not to be used in children under two years of age without medical advice.
+Adults and children over 12 years - Take 1 tablet, twice daily, with food, or as directed by your health professional. Not to be used in children under two years of age without medical advice.
+Adults – Take 1 tablet, three times a day, or as directed by your health professional.","Antioxidant
+Supports lung health
+Immune system health
+
+Antioxidant
+Supports lung health
+Immune system health
+
+High dose lysine
+Standardised Olive leaf","Contraindicated in pregnancy and breastfeeding.
+Licorice is contraindicated in cholestatic liver disorders, liver cirrhosis, hypertonia, hypokalemia, high blood pressure, cardiovascular disorders and severe kidney insufficiency.
+Caution in iron overload conditions (e.g. haemochromatosis), as vitamin C increases iron absorption.
+
+Contraindicated in pregnancy and breastfeeding.
+Licorice is contraindicated in cholestatic liver disorders, liver cirrhosis, hypertonia, hypokalemia, high blood pressure",,"Caution with potassium-depleting drugs (e.g thiazide diuretics and laxatives) and cardiac glycosides - Licorice may increase potassium loss.
+Caution with corticosteroids - Licorice may potentiate the pharmacologic effects corticosteroid drugs and cause potassium depletion.
+Caution with warfarin - Licorice can induce CYP450 enzymes and decrease warfarin levels. Monitor INR.
+Caution with aluminum-based antacids - vitamin C increases the amount of aluminum absorbed. Separate dose by 2 hours.
+
+Cauti","Contraindicated in pregnancy and breastfeeding.
+Licorice is contraindicated in cholestatic liver disorders, liver cirrhosis, hypertonia, hypokalemia, high blood pressure, cardiovascular disorders and severe kidney insufficiency.
+Caution in iron overload conditions (e.g. haemochromatosis), as vitamin C increases iron absorption.
+
+Contraindicated in pregnancy and breastfeeding.
+Licorice is contraindicated in cholestatic liver disorders, liver cirrhosis, hypertonia, hypokalemia, high blood pressure, cardiovascular disorders and severe kidney insufficiency.
+Caution in iron overload conditions (e.g. haemochromatosis), as vitamin C increases iron absorption.
+
+Contraindicated in people with the rare genetic disorder hyperlysinaemia/hyperlysinuria.",~4 reference markers in DOCX text,"antioxidant_support, immune_support, skin_health","pregnancy_review_required, breastfeeding_review_required, renal_impairment_caution, liver_impairment_caution",,"Adult dose: Take 1 tablet, three times a day, or as directed by your health professional. | Key ingredients: Ascorbic acid (vitamin C), Selenomethionine | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,94,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0052,Herbs of Gold,Macu-Guard,macu guard,,tablet,60 / 90 tablets,"Adults and children over 12 years - Take 1 tablet, once or twice daily, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 tablet, once or twice daily, with food, or as directed by your health professional.","With Bilberry 10 000
+Macula & eye health
+With lutein & zeaxanthin (5:1)
+
+With Bilberry 10 000
+Macula & eye health
+With lutein & zeaxanthin (5:1)","Contraindicated in Wilson’s disease – a rare inherited disorder of copper storage in which biliary excretion of copper is impaired.
+Caution with iron overload conditions, such as hemochromatosis, as vitamin C increases iron absorption.
+
+Contraindicated in Wilson’s disease – a rare inherited disorder of copper storage in which biliary excretion of copper is impaired.
+Caution with iron overload conditions, such as hemochromatosis, as vitamin C increases iron absorption.","Contraindicated in Wilson’s disease – a rare inherited disorder of copper storage in which biliary excretion of copper is impaired.
+Caution with iron overload conditions, such as hemochromatosis, as vitamin C increases iron absorption.
+
+Contraindicated in Wilson’s disease – a rare inherited disorder of copper storage in which biliary excretion of copper is impaired.
+Caution with iron overload conditions, such as hemochromatosis, as vitamin C increases iron absorption.","Caution with aluminium-based antacids – vitamin C increases the amount of aluminium absorbed. Separate doses by at least 2 hours.
+Caution with anticoagulant and antiplatelet drugs - vitamin E may enhance the effects and decrease levels of vitamin K-dependent clotting factors (usually only a concern at higher doses). Monitor.
+Caution with ciclosporin – vitamin E may increase drug absorption. Use under supervision of a health professional.
+Caution with orlistat – drug may impair absorption of vita",,~6 reference markers in DOCX text,"immune_support, skin_health, hair_nail_support, antioxidant_support, eye_health","tetracycline_antibiotic, quinolone_antibiotic, penicillamine","penicillamine, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Adults and children over 12 years - Take 1 tablet, once or twice daily, with food, or as directed by your health profess | Key ingredients: Zeaxanthin, Ascorbic acid (vitamin C), Zinc citrate dihydrate | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,97,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0053,Herbs of Gold,Magnesium Chewable,magnesium chewable,,tablet,60 chewable tablets,"Adults and children over 12 years - Chew 1 tablet, twice daily, with food, or as directed by your health professional.
+Consume within 6 months of opening.",,"Adults and children over 12 years - Chew 1 tablet, twice daily, with food, or as directed by your health professional.
+Consume within 6 months of opening.",60 chewable tablets; High strength; Organic forms of magnesium; Chewable tablet for compliance; Delicious raspberry flavoured tablets; Supports energy production,,,,,~0 reference markers in DOCX text,"magnesium_support, muscle_cramps, sleep_support, stress_support, nervous_system_support","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, renal_impairment_caution","bisphosphonate, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Adults and children over 12 years - Chew 1 tablet, twice daily, with food, or as directed by your health professional.
+C | Key ingredients: Magnesium citrate, Magnesium amino acid chelate",herbsofgold_technical_manual.pdf,99,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0054,Herbs of Gold,Magnesium Citrate 900,magnesium citrate 900,,capsule,60 / 120 capsules,"Adults and children over 12 years - Take 1 capsule, twice daily, with food.
+To reduce occurence of mild migraines: Take 2 capsules, twice daily, with food. Or take as directed by your health professional.",,"Adults and children over 12 years - Take 1 capsule, twice daily, with food.
+To reduce occurence of mild migraines: Take 2 capsules, twice daily, with food. Or take as directed by your health professional.","Highly bioavailable, organic form of magnesium
+Reduces occurrence of mild migraines
+
+Highly bioavailable, organic form of magnesium
+Reduces occurrence of mild migraines",,,,,~0 reference markers in DOCX text,"magnesium_support, muscle_cramps, sleep_support, stress_support, nervous_system_support","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, renal_impairment_caution","bisphosphonate, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Adults and children over 12 years - Take 1 capsule, twice daily, with food.
+To reduce occurence of mild migraines: Take  | Key ingredients: Magnesium citrate",herbsofgold_technical_manual.pdf,101,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0055,Herbs of Gold,Magnesium Forte,magnesium forte,,tablet,60 / 120 tablets,"Adults and children over 12 years - Take 1 tablet, once or twice daily, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 tablet, once or twice daily, with food, or as directed by your health professional.","Highly bioavailable, organic forms of magnesium
+Supports muscle health
+Energy production
+
+Highly bioavailable, organic forms of magnesium
+Supports muscle health
+Energy production","High dose magnesium is contraindicated in people with compromised renal function and heart block.
+Caution in individuals with low blood pressure – magnesium supplementation can lower blood pressure. Monitor.
+
+High dose magnesium is contraindicated in people with compromised renal function and heart block.
+Caution in individuals with low blood pressure – magnesium supplementation can lower blood pressure. Monitor.","High dose magnesium is contraindicated in people with compromised renal function and heart block.
+Caution in individuals with low blood pressure – magnesium supplementation can lower blood pressure. Monitor.
+
+High dose magnesium is contraindicated in people with compromised renal function and heart block.
+Caution in individuals with low blood pressure – magnesium supplementation can lower blood pressure. Monitor.","Caution with quinolone antibiotics – magnesium forms insoluble complexes with quinolones, decreasing drug absorption. Take drug 2 hours before or 6 hours after magnesium.
+Caution with tetracycline antibiotics – tetracyclines form insoluble complexes with magnesium, reducing absorption of both. Separate dose by at least 3 hours.
+Caution with bisphosphonates – magnesium can form complexes with drug and reduce absorption. Separate dose by 2 hours.
+Caution with calcium channel blockers and other hyp",,~2 reference markers in DOCX text,"magnesium_support, muscle_cramps, sleep_support, stress_support, nervous_system_support","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, renal_impairment_caution, renal_impairment_caution","bisphosphonate, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Adults and children over 12 years - Take 1 tablet, once or twice daily, with food, or as directed by your health profess | Key ingredients: Magnesium amino acid chelate, Magnesium citrate, Magnesium glycinate | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,103,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0056,Herbs of Gold,Magnesium Muscle Cream,magnesium muscle cream,,spray,,Adults and children over 12 years - Apply 5g to the skin and massage as required or use as directed by your health professional. External use only.,,Adults and children over 12 years - Apply 5g to the skin and massage as required or use as directed by your health professional. External use only.,"Muscle health
+Supports muscle relaxation
+
+Muscle health
+Supports muscle relaxation",,,,,~0 reference markers in DOCX text,"magnesium_support, muscle_cramps, sleep_support, stress_support, nervous_system_support","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, renal_impairment_caution","bisphosphonate, quinolone_antibiotic, tetracycline_antibiotic",Adult dose: Adults and children over 12 years - Apply 5g to the skin and massage as required or use as directed by your health profe | Key ingredients: Magnesium chloride hexahydrate,herbsofgold_technical_manual.pdf,105,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0057,Herbs of Gold,Magnesium Night Plus,magnesium night plus,,powder,,"Adults and children over 12 years - Mix 6g (one level scoop) into 150mL of water or juice, once daily, before sleep, or as directed by your health professional. Scoop included.",,"Adults and children over 12 years - Mix 6g (one level scoop) into 150mL of water or juice, once daily, before sleep, or as directed by your health professional. Scoop included.","High-strength magnesium powder
+Supports a healthy stress response
+
+High-strength magnesium powder
+Supports a healthy stress response",,,,,~0 reference markers in DOCX text,"magnesium_support, muscle_cramps, sleep_support, stress_support, nervous_system_support, calcium_support, bone_health, gut_health, gastrointestinal_support (review)","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, levothyroxine, renal_impairment_caution","bisphosphonate, levothyroxine, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Adults and children over 12 years - Mix 6g (one level scoop) into 150mL of water or juice, once daily, before sleep, or  | Key ingredients: Magnesium glycinate dihydrate, Magnesium citrate, Calcium citrate tetrahydrate",herbsofgold_technical_manual.pdf,107,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0058,Herbs of Gold,Mega B Complex,mega b complex,,capsule,60 capsules,"Take 1 capsule daily, with food, or as directed by your health professional.",,"Adults - Take 1 capsule daily, with food, or as directed by your health professional.","High strength
+With active folate
+Supports healthy cognitive function
+
+High strength
+With active folate
+Supports healthy cognitive function","B vitamins are stimulatory in nature. To avoid any sleep interference, it is recommended you do not take B vitamin supplements at night before bed.
+Taking at night may result in more vivid dreams (vitamin B6).
+
+B vitamins are stimulatory in nature. To avoid any sleep interference, it is recommended you do not take B vitamin supplements at night before bed.
+Taking at night may result in more vivid dreams (vitamin B6).","B vitamins are stimulatory in nature. To avoid any sleep interference, it is recommended you do not take B vitamin supplements at night before bed.
+Taking at night may result in more vivid dreams (vitamin B6).
+
+B vitamins are stimulatory in nature. To avoid any sleep interference, it is recommended you do not take B vitamin supplements at night before bed.
+Taking at night may result in more vivid dreams (vitamin B6).","Contraindicated with pyrimethamine (antimalarial) – folate may reduce drug effectiveness.
+Caution with tetracycline antibiotics - concurrent administration with B2 and B12 may decrease the effectiveness of the medication. Separate dose.
+Caution with chloramphenicol (broad spectrum antibiotic) – folinic acid and B12 may impact drug metabolism. Separate dose.
+Caution with anticholinergic drugs – may reduce absorption of vitamin B2. Separate dose.
+Caution with carbamazepine and primidone – vitamin ",,~4 reference markers in DOCX text,"calcium_support, bone_health, b12_support, energy_support, nervous_system_support, hair_nail_support","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, levothyroxine, renal_impairment_caution","bisphosphonate, levothyroxine, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Take 1 capsule daily, with food, or as directed by your health professional. | Key ingredients: Thiamine hydrochloride, Riboflavin (vitamin B2), Nicotinamide | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,109,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0059,Herbs of Gold,Memory & Cognition Gold,memory cognition gold,,tablet,60 tablets,"Take 1 tablet, twice daily, with food, or as directed by your health professional.",,"Adults - Take 1 tablet, twice daily, with food, or as directed by your health professional.","Clinically trialled ingredients
+Standardised Brahmi & Ginkgo
+
+Clinically trialled ingredients
+Standardised Brahmi & Ginkgo",,,,,~0 reference markers in DOCX text,"b12_support, energy_support, nervous_system_support, joint_health (review)","warfarin, anticoagulant_review_required, shellfish_allergy_caution","anticoagulant, warfarin","Adult dose: Take 1 tablet, twice daily, with food, or as directed by your health professional. | Key ingredients: Soy phosphatidylserine-enriche, Levomefolate glucosamine (Quat, Mecobalamin (co-methylcobalami",herbsofgold_technical_manual.pdf,111,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0060,Herbs of Gold,Menopause Relief,menopause relief,,tablet,60 tablets,"Take 1 tablet, twice daily, with food, or as directed by your health professional.",,"Adults - Take 1 tablet, twice daily, with food, or as directed by your health professional.","Relieves menopause symptoms
+Synergistic formula
+
+Relieves menopause symptoms
+Synergistic formula","Contraindicated in pregnancy and breastfeeding.
+Bommer, S. A. G. E., Klein, P., & Suter, A. (2011). First time proof of sage’s tolerability and efficacy in menopausal women with hot flushes. Advances in Therapy, 28(6), 490-500.
+Trickey, R. (2011). Women, Hormoes and the Menstrual Cycle. Trickey Enterprises.
+Bommer, S. A. G. E., Klein, P., & Suter, A. (2011). First time proof of sage’s tolerability and efficacy in menopausal women with hot flushes. Advances in Therapy, 28(6), 490-500.
+
+Contraindi",,"Contraindicated with HRT or progesterone drugs – the oestrogenic effects of Ziziphus and Vitex may interfere with drug absorption.
+Caution with the contraceptive pill - Vitex may interfere with how well the contraceptive pill works. Use under professional supervision.
+Caution with dopamine antagonists and antipsychotic drugs - Vitex may reduce their effectiveness. Monitor.
+
+Contraindicated with HRT or progesterone drugs – the oestrogenic effects of Ziziphus and Vitex may interfere with drug abso","Contraindicated in pregnancy and breastfeeding.
+Bommer, S. A. G. E., Klein, P., & Suter, A. (2011). First time proof of sage’s tolerability and efficacy in menopausal women with hot flushes. Advances in Therapy, 28(6), 490-500.
+Trickey, R. (2011). Women, Hormoes and the Menstrual Cycle. Trickey Enterprises.
+Bommer, S. A. G. E., Klein, P., & Suter, A. (2011). First time proof of sage’s tolerability and efficacy in menopausal women with hot flushes. Advances in Therapy, 28(6), 490-500.
+
+Contraindicated in pregnancy and breastfeeding.
+Bommer, S. A. G. E., Klein, P., & Suter, A. (2011). First time proof of sage’s tolerability and efficacy in menopausal women with hot flushes. Advances in Therapy, 28(6), 490-500.
+Trickey, R. (2011). Women, Hormoes and the Menstrual Cycle. Trickey Enterprises.
+Bommer, S. A. G. E., Klein, P., & Suter, A. (2011). First time proof of sage’s tolerability and efficacy in menopausal women with hot flushes. Advances in Therapy, 28(6), 490-500.",~3 reference markers in DOCX text,"women_health, menopause_review_required","pregnancy_review_required, breastfeeding_review_required",,"Adult dose: Take 1 tablet, twice daily, with food, or as directed by your health professional. | Key ingredients: Salvia officinalis (Sage) leaf, Asparagus racemosus (Shatavari, Vitex agnus-castus (Chaste tre | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,116,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0061,Herbs of Gold,Mind Ease,mind ease,,tablet,60 tablets,"Take 1 tablet, twice daily, with food, or as directed by your health professional.",,"Adults - Take 1 tablet, twice daily, with food, or as directed by your health professional.","Relieves symptoms of mild anxiety
+Supports nervous system function
+
+Relieves symptoms of mild anxiety
+Supports nervous system function","Caution in peptic ulcer disease – Ashwagandha may cause gastrointestinal irritation.
+Contraindicated during pregnancy – Ashwagandha has abortifacient effects.
+
+Caution in peptic ulcer disease – Ashwagandha may cause gastrointestinal irritation.
+Contraindicated during pregnancy – Ashwagandha has abortifacient effects.",,"Caution with CNS stimulants and sedatives - Ashwagandha and Lavender may have additive effects. Monitor.
+Caution with immunosuppressant medication - Ashwagandha may have opposing effects.
+Caution with thyroid medications - Ashwagandha may increase thyroxine concentrations. Monitor thyroid hormone levels.
+
+Caution with CNS stimulants and sedatives - Ashwagandha and Lavender may have additive effects. Monitor.
+Caution with immunosuppressant medication - Ashwagandha may have opposing effects.
+Cauti","Caution in peptic ulcer disease – Ashwagandha may cause gastrointestinal irritation.
+Contraindicated during pregnancy – Ashwagandha has abortifacient effects.
+
+Caution in peptic ulcer disease – Ashwagandha may cause gastrointestinal irritation.
+Contraindicated during pregnancy – Ashwagandha has abortifacient effects.",~7 reference markers in DOCX text,stress_support,pregnancy_review_required,,"Adult dose: Take 1 tablet, twice daily, with food, or as directed by your health professional. | Key ingredients: Withania somnifera (Ashwagandh, Lavandula angustifolia (Lavend | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,118,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0062,Herbs of Gold,Muscle Resuscitation,muscle resuscitation,,powder,,"Mix 6g (one level scoop) into 200mL of water or juice, once daily, or as directed by your health professional. Scoop included. Consume within 6 months of opening.",,"Adults - Mix 6g (one level scoop) into 200mL of water or juice, once daily, or as directed by your health professional. Scoop included. Consume within 6 months of opening.","High-strength magnesium
+Delicious lemon-lime flavour
+Convenient one-a-day dose
+Two organic, well-absorbed forms of magnesium
+
+High-strength magnesium
+Delicious lemon-lime flavour
+Convenient one-a-day dose
+Two organic, well-absorbed forms of magnesium",,,,,~0 reference markers in DOCX text,,,,"Adult dose: Mix 6g (one level scoop) into 200mL of water or juice, once daily, or as directed by your health professional. Scoop inc",herbsofgold_technical_manual.pdf,120,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0063,Herbs of Gold,Mushroom 5 Complex,mushroom 5 complex,,capsule,60 capsules,"Adults and children over 12 years – Take 1 capsule, three times a day, with food, or as directed by your health professional.
+Children under 12 years – Take only as directed by your health professional. Not to be used in children under two years of age without medical advice.",,"Adults and children over 12 years – Take 1 capsule, three times a day, with food, or as directed by your health professional.
+Children under 12 years – Take only as directed by your health professional. Not to be used in children under two years of age without medical advice.","Immune system health
+Lung health
+
+Immune system health
+Lung health","Discontinue use one week prior to surgery.
+
+Discontinue use one week prior to surgery.",,"Caution with immunosuppressant drugs - mushrooms can stimulate immune function.
+Caution with anticoagulant drugs - Reishi and Snow fungus may increase the risk of bleeding.
+
+Caution with immunosuppressant drugs - mushrooms can stimulate immune function.
+Caution with anticoagulant drugs - Reishi and Snow fungus may increase the risk of bleeding.",,~12 reference markers in DOCX text,"immune_support, general_multivitamin",surgery_caution,,"Adult dose: Adults and children over 12 years – Take 1 capsule, three times a day, with food, or as directed by your health professi | Key ingredients: Lentinula edodes (Shiitake) wh, Ganoderma lucidum (Reishi) who, Cordyceps sinensis (Cordyceps) | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,122,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0064,Herbs of Gold,Natural Vitamin E 500IU,natural vitamin e 500iu,,capsule,50 / 100 capsules,"Adults and children over 12 years - Take 1-2 capsules daily, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1-2 capsules daily, with food, or as directed by your health professional.","Antioxidant
+Cardiovascular health
+
+Antioxidant
+Cardiovascular health","Discontinue use 1 week before surgery.
+Caution in individuals with bleeding disorders (e.g. haemophilia, bleeding peptic ulcers or history of haemorrhagic stroke). Use only with medical supervision due to increased risk of haemorrhage.
+
+Discontinue use 1 week before surgery.
+Caution in individuals with bleeding disorders (e.g. haemophilia, bleeding peptic ulcers or history of haemorrhagic stroke). Use only with medical supervision due to increased risk of haemorrhage.",,"Caution with blood thinning medications, including warfarin – vitamin E may interfere with the activity of vitamin K in producing blood clotting factors and lead to increased clinical effects of oral anticoagulants. Monitor INR within one to two weeks of vitamin E initiation.
+Caution with cyclosporin (immunosuppressant) – vitamin E may increase or decrease serum drug levels. Monitor drug levels.
+
+Caution with blood thinning medications, including warfarin – vitamin E may interfere with the activ",,~2 reference markers in DOCX text,antioxidant_support,"anticoagulant_review_required, warfarin, surgery_caution","anticoagulant, warfarin","Adult dose: Adults and children over 12 years - Take 1-2 capsules daily, with food, or as directed by your health professional. | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,124,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0065,Herbs of Gold,Niacin 100mg Extended Release,niacin 100mg extended release,,tablet,,"Take 1 tablet once daily, with food, or as directed by your health professional. Tablet should be taken whole.",,"Adults - Take 1 tablet once daily, with food, or as directed by your health professional. Tablet should be taken whole.
+Do not break, crush or chew tablet before swallowing. Do not take more than 1 tablet per day.","Niacin is a water-soluble vitamin required for the function of over 200 enzymes throughout the body. It is well-absorbed after oral administration and metabolised in the liver to nicotinamide
+adenine dinucleotide (NAD) and nicotinamide adenine dinucleotide phosphate (NADP). NAD and NADP are essential for energy metabolism, oxidation-reduction reactions and ADP-ribose transfer reactions involved in DNA repair and calcium mobilisation.
+Niacin can be formed in the body from the amino acid tryptopha","Not recommended during pregnancy or lactation due to insufficient safety data on high doses of niacin.
+Avoid consuming with alcohol. Alcohol can exacerbate the flushing associated with niacin.
+Contraindicated in people with gout. Niacin can reduce urinary excretion of uric acid, potentially resulting in hyperuricemia.
+Caution in people with blood sugar imbalance. High doses of niacin can impair glucose tolerance. However, doses under 1.5g daily have minimal effects on blood glucose.",,"Caution with anticoagulant or antiplatelet medication - niacin may increase the risk of bleeding in some patients.
+Caution with bile acid sequestrants (e.g. cholestyramine) – drugs bind to niacin and decrease absorption. Separate dose by 4-6 hours.
+Caution with statin medication. Co-administration of statins and niacin may increase the risk of developing myotoxicity,
+however, usually in much higher doses. Co-administration is often recommended for dyslipidaemia; it is recommended to use the lowe","Not recommended during pregnancy or lactation due to insufficient safety data on high doses of niacin.
+Avoid consuming with alcohol. Alcohol can exacerbate the flushing associated with niacin.
+Contraindicated in people with gout. Niacin can reduce urinary excretion of uric acid, potentially resulting in hyperuricemia.
+Caution in people with blood sugar imbalance. High doses of niacin can impair glucose tolerance. However, doses under 1.5g daily have minimal effects on blood glucose.",~2 reference markers in DOCX text,,"pregnancy_review_required, breastfeeding_review_required",,"Adult dose: Take 1 tablet once daily, with food, or as directed by your health professional. Tablet should be taken whole. | Key ingredients: Nicotinic acid (niacin) (vitam | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,126,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0066,Herbs of Gold,Olive Leaf,olive leaf,,gel,,"Shake well before use. May be taken in water or juice.
+Adults and children over 12 years – Take 7.5mL, once or twice daily, with food, or as directed by your health professional.
+Not to be used in children under 5 years for relief of mild fever.",,"Shake well before use. May be taken in water or juice.
+Adults and children over 12 years – Take 7.5mL, once or twice daily, with food, or as directed by your health professional.
+Not to be used in children under 5 years for relief of mild fever.","High-strength
+Immune health
+Antioxidant
+
+High-strength
+Immune health
+Antioxidant","Caution in kidney disorders - Olive leaf can cause a detoxification reaction adding further stress to the kidneys.
+
+Caution in kidney disorders - Olive leaf can cause a detoxification reaction adding further stress to the kidneys.",,"Caution with hypoglycaemic, antihypertensive and diuretic medications - Olive leaf may have additive effects. Monitor blood sugar or blood pressure.
+Caution with chemotherapy drugs - Olive leaf’s antioxidant effect may interfere with therapy. Use only under professional supervision.
+
+Caution with hypoglycaemic, antihypertensive and diuretic medications - Olive leaf may have additive effects. Monitor blood sugar or blood pressure.
+Caution with chemotherapy drugs - Olive leaf’s antioxidant effect ",,~6 reference markers in DOCX text,,renal_impairment_caution,,"Adult dose: Shake well before use. May be taken in water or juice.
+Adults and children over 12 years – Take 7.5mL, once or twice dai | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,127,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0067,Herbs of Gold,Olive Leaf 7500,olive leaf 7500,,tablet,60 tablets,"Adults and children over 12 years – Take 1 tablet daily, with food, or as directed by your health professional. Not to be used in children under 5 years for relief of mild fever",,"Adults and children over 12 years – Take 1 tablet daily, with food, or as directed by your health professional. Not to be used in children under 5 years for relief of mild fever","Contains oleuropein 180mg
+High strength",Caution in kidney disorders - Olive leaf can cause a detoxification reaction adding further stress to the kidneys.,,"Caution with hypoglycaemic, antihypertensive and diuretic medications - Olive leaf may have additive effects. Monitor blood sugar or blood pressure.
+Caution with chemotherapy drugs - Olive leaf’s antioxidant effect may interfere with therapy. Use only under professional supervision.",,~3 reference markers in DOCX text,,renal_impairment_caution,,"Adult dose: Adults and children over 12 years – Take 1 tablet daily, with food, or as directed by your health professional. Not to b | Key ingredients: Olea europaea (Olive) leaf ext | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,129,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0068,Herbs of Gold,Organic Iron MAX,organic iron max,,capsule,30 capsules,"Adults and children over 12 years – Take 1 capsule daily, or as directed by your health professional.",,"Adults and children over 12 years – Take 1 capsule daily, or as directed by your health professional.","Contains Albion’s FerrochelTM
+Clinically studied iron
+Vegan-friendly
+
+Contains Albion’s FerrochelTM
+Clinically studied iron
+Vegan-friendly","Iron, calcium and zinc all compete for absorption. Separate dose.
+Contraindicated in iron overload conditions, such as haemochromatosis, haemosiderosis or iron loading anaemias such as thalassaemia and sideroblastic anaemia.
+Tannins bind to iron and reduce absorption. Avoid taking iron with foods rich in tannins including tea, Bilberry and Raspberry leaf.
+
+Iron, calcium and zinc all compete for absorption. Separate dose.
+Contraindicated in iron overload conditions, such as haemochromatosis, haem","Iron, calcium and zinc all compete for absorption. Separate dose.
+Contraindicated in iron overload conditions, such as haemochromatosis, haemosiderosis or iron loading anaemias such as thalassaemia and sideroblastic anaemia.
+Tannins bind to iron and reduce absorption. Avoid taking iron with foods rich in tannins including tea, Bilberry and Raspberry leaf.
+
+Iron, calcium and zinc all compete for absorption. Separate dose.
+Contraindicated in iron overload conditions, such as haemochromatosis, haem","Caution with ACE inhibitors (hypertension), cimetidine (hyperacidity),
+L-dopa and carbidopa (movement disorders e.g. Parkinson’s disease), penicillamine, sulfasalazine (antidiarrheal) - iron supplementation may reduce drug absorption. Separate dose by at least 2 hours.
+Caution with quinolone and tetracycline antibiotics - iron supplementation may reduce drug effect. Take drugs 2 hours before or 4-6 hours after iron.
+Caution with thyroxine - iron supplementation can reduce drug effects. Separate ",,~4 reference markers in DOCX text,"calcium_support, bone_health, iron_support, energy_support, b12_support, nervous_system_support, immune_support, antioxidant_support, skin_health, joint_health (review)","antacid_separation, doac, tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, levothyroxine, constipation_caution, renal_impairment_caution, warfarin, anticoagulant_review_required, shellfish_allergy_caution","anticoagulant, bisphosphonate, doac, levothyroxine, quinolone_antibiotic, tetracycline_antibiotic, warfarin","Adult dose: Adults and children over 12 years – Take 1 capsule daily, or as directed by your health professional. | Key ingredients: Iron amino acid chelate (Ferro, Thiamine hydrochloride, Riboflavin (vitamin B2) | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,130,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0069,Herbs of Gold,Organic Oregano Oil,organic oregano oil,,capsule,60 capsules,"Take 1 capsule, once or twice daily, with food, or as directed by your health professional. For short-term use only.",,"Adults – Take 1 capsule, once or twice daily, with food, or as directed by your health professional. For short-term use only.","100% organic Oregano oil
+High-strength carvacrol
+
+100% organic Oregano oil
+High-strength carvacrol","Contraindicated in pregnancy and lactation.
+Caution with iron supplements, concurrent use can interfere with the body’s ability to absorb iron. Take any iron supplements 2 hours before or 4 hours after Oregano oil.
+Discontinue 2 weeks before surgery.
+Oregano oil is a known skin irritant. A skin patch test is recommended before use if applying to the skin.
+This product is not suitable for long-term use. Use only at the dose and directions indicated on the bottle or as directed by a health profess",,"Caution with anticoagulant and antiplatelet medications such as warfarin – Oregano oil may increase the risk of bruising and bleeding. Monitor.
+Caution with hypoglycaemic or antidiabetic medication – Oregano oil may have an additive effect. Monitor blood sugar.
+
+Caution with anticoagulant and antiplatelet medications such as warfarin – Oregano oil may increase the risk of bruising and bleeding. Monitor.
+Caution with hypoglycaemic or antidiabetic medication – Oregano oil may have an additive effe","Contraindicated in pregnancy and lactation.
+Caution with iron supplements, concurrent use can interfere with the body’s ability to absorb iron. Take any iron supplements 2 hours before or 4 hours after Oregano oil.
+Discontinue 2 weeks before surgery.
+Oregano oil is a known skin irritant. A skin patch test is recommended before use if applying to the skin.
+This product is not suitable for long-term use. Use only at the dose and directions indicated on the bottle or as directed by a health professional.
+
+Contraindicated in pregnancy and lactation.
+Caution with iron supplements, concurrent use can interfere with the body’s ability to absorb iron. Take any iron supplements 2 hours before or 4 hours after Oregano oil.
+Discontinue 2 weeks before surgery.
+Oregano oil is a known skin irritant. A skin patch test is recommended before use if applying to the skin.
+This product is not suitable for long-term use. Use only at the dose and directions indicated on the bottle or as directed by a health professional.",~4 reference markers in DOCX text,,"pregnancy_review_required, breastfeeding_review_required, surgery_caution",,"Adult dose: Take 1 capsule, once or twice daily, with food, or as directed by your health professional. For short-term use only. | Key ingredients: Origanum vulgare (Oregano) lea | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,132,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0070,Herbs of Gold,Pain Relief PEA,pain relief pea,,capsule,30 / 60 capsules,"Adults only - Take 1-2 capsules, twice daily, or as directed by your health professional.
+Adults only - Take 1-2 capsules, twice daily, or as directed by your health professional.",,"Adults only - Take 1-2 capsules, twice daily, or as directed by your health professional.
+Adults only - Take 1-2 capsules, twice daily, or as directed by your health professional.","Analgesic
+Relieves pain
+
+Analgesic
+Relieves pain
+
+Analgesic
+Relieves pain
+
+Analgesic
+Relieves pain","None noted at the recommended dose.
+Not recommended in pregnancy or breastfeeding due to a lack of safety data.
+
+None noted at the recommended dose.
+Not recommended in pregnancy or breastfeeding due to a lack of safety data.
+
+None noted at the recommended dose.
+Not recommended in pregnancy or breastfeeding due to a lack of safety data.
+
+None noted at the recommended dose.
+Not recommended in pregnancy or breastfeeding due to a lack of safety data.",,"None noted at the recommended dose.
+
+None noted at the recommended dose.
+
+None noted at the recommended dose.
+
+None noted at the recommended dose.","None noted at the recommended dose.
+Not recommended in pregnancy or breastfeeding due to a lack of safety data.
+
+None noted at the recommended dose.
+Not recommended in pregnancy or breastfeeding due to a lack of safety data.
+
+None noted at the recommended dose.
+Not recommended in pregnancy or breastfeeding due to a lack of safety data.
+
+None noted at the recommended dose.
+Not recommended in pregnancy or breastfeeding due to a lack of safety data.",~28 reference markers in DOCX text,,"pregnancy_review_required, breastfeeding_review_required",,"Adult dose: Adults only - Take 1-2 capsules, twice daily, or as directed by your health professional.
+Adults only - Take 1-2 capsule | Key ingredients: Palmidrol | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,134,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0071,Herbs of Gold,ParaStrike,parastrike,,tablet,28 / 84 tablets,,"3-4 years: Take 1 tablet daily; 5-9 years: Take 1 tablet, twice daily;","To break the life cycle of worms: Take for 14 days, then take a break for 14 days, then take again for 14 days. Repeat if necessary.
+Adults and children over 12 years – Take 2 tablets, three times a day, with food.
+Children – 3-4 years: Take 1 tablet daily; 5-9 years: Take 1 tablet, twice daily;
+10-12 years: Take 1 tablet, three times a day. Take crushed in food or swallowed. Or take as directed by your health professional.
+Not to be used long-term. Do not use if pregnant or likely to become pregnant.","Traditional worming formula
+With high-strength Wormwood
+
+Traditional worming formula
+With high-strength Wormwood","Contraindicated in pregnancy and lactation – the thujone in Wormwood can have a contraction effect on the uterus, while berberine can be harmful to the developing brain of the unborn child.
+Contraindicated in gastric or duodenal ulcers – Wormwood can increase gastric fluid potentially making these conditions worse.
+Caution in high blood pressure - Thyme essential oil may theoretically increase blood pressure. Monitor.
+Caution in acute/severe hepatocellular disease, liver cancer, intestinal spasm",,"Contraindicated with anticoagulant and antiplatelet medications such as warfarin – Wormwood may increase bleeding risk and Thyme essential oil may interact by inducing phase I and phase II liver enzymes.
+Contraindicated with fluoroquinolone and tetracycline antibiotics, and anti-infective medications – Barberry may reduce their effectiveness.
+
+Contraindicated with anticoagulant and antiplatelet medications such as warfarin – Wormwood may increase bleeding risk and Thyme essential oil may interac","Contraindicated in pregnancy and lactation – the thujone in Wormwood can have a contraction effect on the uterus, while berberine can be harmful to the developing brain of the unborn child.
+Contraindicated in gastric or duodenal ulcers – Wormwood can increase gastric fluid potentially making these conditions worse.
+Caution in high blood pressure - Thyme essential oil may theoretically increase blood pressure. Monitor.
+Caution in acute/severe hepatocellular disease, liver cancer, intestinal spasm or ileus - Wormwood and Barberry can impact liver function when liver health is poor.
+Wormwood may cause allergic reactions in people sensitive to the Asteraceae family.
+This product is not suitable for long-term use. Use only at the dose and directions indicated on the bottle.
+
+Contraindicated in pregnancy and lactation – the thujone in Wormwood can have a contraction effect on the uterus, while berberine can be harmful to the developing brain of the unborn child.
+Contraindicated in gastric or duodenal ulcers – Wormwood can increase gastric fluid potentially making these conditions worse.
+Caution in high blood pressure - Thyme essential oil may theoretically increase blood pressure. Monitor.
+Caution in acute/severe hepatocellular disease, liver cancer, intestinal spasm or ileus - Wormwood and Barberry can impact liver function when liver health is poor.
+Wormwood may cause allergic reactions in people sensitive to the Asteraceae family.
+This product is not suitable for long-term use. Use only at the dose and directions indicated on the bottle.",~2 reference markers in DOCX text,,"pregnancy_review_required, breastfeeding_review_required, child_review_required, liver_impairment_caution",,"Key ingredients: Origanum vulgare (Oregano) her, Thymus vulgaris (Thyme) leaf e | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,137,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0072,Herbs of Gold,Pregnancy Plus 1-2-3,pregnancy plus 1 2 3,,capsule,,"Take 1 tablet, twice daily, with food, or as directed by your health professional.",,"Adults - Take 1 tablet, twice daily, with food, or as directed by your health professional.
+Adults - Take 1 tablet, twice daily, with food, or as directed by your health professional.
+Adults and children over 12 years - Take 1 capsule daily, with food.
+For diarrhoea: Take 2 capsules daily, with food.
+Or take as directed by your health professional. Consume within 6 months of opening.","Preconception
+Pregnancy
+Breastfeeding
+
+Preconception
+Pregnancy
+Breastfeeding
+
+SB 6 billion CFU
+Maintains healthy intestinal bacteria
+Supports immune system health
+Relieves traveller’s diarrhoea","Contraindicated in iron overload conditions such as haemochromatosis, haemosiderosis, or iron-loading anaemias (thalassaemia, sideroblastic anaemia).
+Contraindicated in hypercalcaemia.
+Caution in people with sarcoidosis and hyperparathyroidism – use only under medical supervision.
+
+Use with caution in the immunocompromised, as they may be at increased risk of adverse reactions.
+Contraindicated in infants less than 12 months old due to immature metabolism of lactic acid.",,"Always advise a health professional of any supplements taken during pregnancy to ensure appropriate safety.
+Several medications may deplete folate status, including antacids, PPIs, trimethoprim (antibiotic), pyrimethamine (antimalarial), triamterene (blood pressure), sulfasalazine (for ulcerative colitis) and oral contraceptives.
+Caution with antiepileptic and anticonvulsant medications – folinic acid, methylfolate and vitamin B6 may reduce serum levels of these medications. Patients should take",,~3 reference markers in DOCX text,,"child_review_required, pregnancy_review_required",,"Adult dose: Take 1 tablet, twice daily, with food, or as directed by your health professional. | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,139,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0073,Herbs of Gold,Probiotic 60 Billion,probiotic 60 billion,,capsule,30 / 60 capsules,"Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional. Consume within 6 months of opening.",,"Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional. Consume within 6 months of opening.","High-strength
+Broad-spectrum with 12 strains
+Restores beneficial gut flora
+Supports healthy bowel function
+
+High-strength
+Broad-spectrum with 12 strains
+Restores beneficial gut flora
+Supports healthy bowel function","Use with caution in the immunocompromised, as they may be at increased risk of adverse reactions.
+Do not give to infants less than 12 months old due to immature metabolism of lactic acid.
+
+Use with caution in the immunocompromised, as they may be at increased risk of adverse reactions.
+Do not give to infants less than 12 months old due to immature metabolism of lactic acid.",,"Co-administration with antibiotics may reduce side effects – beneficial interaction likely.
+
+Co-administration with antibiotics may reduce side effects – beneficial interaction likely.",,~14 reference markers in DOCX text,"probiotic_support, gut_health, immune_support","immunosuppressed_review_required, central_line_caution, child_review_required",,"Adult dose: Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional. Consume | Key ingredients: Bifidobacterium lactis BL-04®, Lactobacillus rhamnosus HN001™, Lactobacillus rhamnosus GG | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,144,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0074,Herbs of Gold,Prostate Pro,prostate pro,,tablet,60 tablets,"Take 1 tablet daily, with food, or as directed by your health professional.",,"Adults - Take 1 tablet daily, with food, or as directed by your health professional.","One-a-day formula
+Healthy prostate function
+Urinary tract health
+
+One-a-day formula
+Healthy prostate function
+Urinary tract health","If urinary symptoms become more severe while on this product, or if pain or irritation persists for more than 48 hours, medical advice is recommended. The presence of blood in the urine warrants immediate medical attention.
+
+If urinary symptoms become more severe while on this product, or if pain or irritation persists for more than 48 hours, medical advice is recommended. The presence of blood in the urine warrants immediate medical attention.",,"Caution with warfarin – selenium may increase blood thinning effect and a theoretical interaction with Cranberry is possible. Monitor INR.
+Caution with high dose vitamin E or beta-carotene supplements - beta-sitosterols can decrease absorption of these nutrients. Separate dose by at least 2 hours.
+Caution with drugs that reduce fat absorption (Orlistat, cholestyramine, colestipol) – these drugs may also reduce the absorption of lycopene. Separate dose by 2 hours.
+Caution with NSAIDs, cefalexin, ",,~4 reference markers in DOCX text,"immune_support, skin_health, hair_nail_support, antioxidant_support","tetracycline_antibiotic, quinolone_antibiotic, penicillamine, warfarin, anticoagulant_review_required","anticoagulant, penicillamine, quinolone_antibiotic, tetracycline_antibiotic, warfarin","Adult dose: Take 1 tablet daily, with food, or as directed by your health professional. | Key ingredients: Vaccinium macrocarpon (Cranber, Conifer phytosterol complex (P, Lycopene | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,146,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0075,Herbs of Gold,Quercetin Complex,quercetin complex,,tablet,60 tablets,"Adults and children over 12 years – Take 1 tablet, one to three times a day, with food, or as directed by your health professional.",,"Adults and children over 12 years – Take 1 tablet, one to three times a day, with food, or as directed by your health professional.","Antihistamine
+Antioxidant
+
+Antihistamine
+Antioxidant","Caution in iron overload conditions, such as haemochromatosis, as vitamin C can increase iron absorption.
+
+Caution in iron overload conditions, such as haemochromatosis, as vitamin C can increase iron absorption.",,"Contraindicated with digoxin – quercetin may (theoretically) increase drug bioavailability.
+Quercetin may induce CYP3A4, therefore caution is advised with medications chiefly metabolised by CYP3A4.
+Caution with midazolam – quercetin may decrease blood concentrations of the drug. Use under professional supervision.
+Caution with cyclosporin – quercetin may increase blood concentrations of the drug. Use under professional supervision.
+Caution with antihypertensive drugs – quercetin may have additiv",,~14 reference markers in DOCX text,"immune_support, antioxidant_support, skin_health",,,"Adult dose: Adults and children over 12 years – Take 1 tablet, one to three times a day, with food, or as directed by your health pr | Key ingredients: Quercetin dihydrate, Rutoside (rutin), Citrus bioflavonoids extract | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,148,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0076,Herbs of Gold,Raspberry Leaf,raspberry leaf,,tablet,60 tablets,"Take 2 tablets daily, with food, or as directed by your health professional.",,"Adults - Take 2 tablets daily, with food, or as directed by your health professional.",,"Due to its high tannin content, Raspberry leaf may decrease the absorption of iron, calcium and magnesium. Separate dose by 2 hours.
+Avoid in constipation due to high tannin content in Raspberry leaf. Caution in people with peptic ulcer and inflammation of the gastrointestinal tract.","Due to its high tannin content, Raspberry leaf may decrease the absorption of iron, calcium and magnesium. Separate dose by 2 hours.
+Avoid in constipation due to high tannin content in Raspberry leaf. Caution in people with peptic ulcer and inflammation of the gastrointestinal tract.",None noted at the recommended dose.,,~3 reference markers in DOCX text,,,,"Adult dose: Take 2 tablets daily, with food, or as directed by your health professional. | Key ingredients: Rubus idaeus (Raspberry) leaf  | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,150,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0077,Herbs of Gold,Resveratrol AdvantAGE,resveratrol advantage,,capsule,60 capsules,"Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional.","250mg resveratrol
+Antioxidant
+
+250mg resveratrol
+Antioxidant","Women with a history of oestrogen sensitive cancers, such as breast, ovarian and uterine cancers, should avoid taking resveratrol supplements (due to its possible oestrogenic activity).
+
+Women with a history of oestrogen sensitive cancers, such as breast, ovarian and uterine cancers, should avoid taking resveratrol supplements (due to its possible oestrogenic activity).",,"Caution with anticoagulant drugs - resveratrol may (theoretically) have an additive effect. Monitor.
+Caution with drugs metabolised via the cytochrome P450 pathway | resveratrol may inhibit the activity of cytochrome P450 and theoretically increase the bioavailability of these medications. Separate dose by 2 hours.
+Colica, C., Milanović, M., Milić, N., Aiello, V., De Lorenzo, A., & Abenavoli, L. (2018). A systematic review on natural antioxidant properties of resveratrol. Natural Product Communi","Women with a history of oestrogen sensitive cancers, such as breast, ovarian and uterine cancers, should avoid taking resveratrol supplements (due to its possible oestrogenic activity).
+
+Women with a history of oestrogen sensitive cancers, such as breast, ovarian and uterine cancers, should avoid taking resveratrol supplements (due to its possible oestrogenic activity).",~3 reference markers in DOCX text,antioxidant_support,,,"Adult dose: Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional. | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,151,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0078,Herbs of Gold,Sea Buckthorn Oil,sea buckthorn oil,,capsule,60 capsules,"Adults and children over 12 years –
+For general health and wellbeing, skin health and antioxidant support: Take 1-2 capsules, twice daily, with food.
+To relieve dry eyes: Take 2 capsules, twice daily, with food. Or take as directed by your health professional.",,"Adults and children over 12 years –
+For general health and wellbeing, skin health and antioxidant support: Take 1-2 capsules, twice daily, with food.
+To relieve dry eyes: Take 2 capsules, twice daily, with food. Or take as directed by your health professional.","100% pure and certified organic Omegia™ Sea buckthorn oil
+Blend of fruit and seed oil
+
+100% pure and certified organic Omegia™ Sea buckthorn oil
+Blend of fruit and seed oil","Sea buckthorn may increase the risk of bleeding during and after surgery as it slows down blood clothing. It is recommended to discontinue its use 2 weeks before any scheduled surgery.
+The safety of Sea buckthorn oil during pregnancy and lactation has not been established.
+
+Sea buckthorn may increase the risk of bleeding during and after surgery as it slows down blood clothing. It is recommended to discontinue its use 2 weeks before any scheduled surgery.
+The safety of Sea buckthorn oil during p",,"Caution with anti-coagulant and anti-platelet drugs such as aspirin and warfarin – Sea buckthorn may have an additive effect which can increase the risk of bleeding.
+Caution with antihypertensive medication – Sea buckthorn may have an additive effect. Monitor blood pressure.
+
+Caution with anti-coagulant and anti-platelet drugs such as aspirin and warfarin – Sea buckthorn may have an additive effect which can increase the risk of bleeding.
+Caution with antihypertensive medication – Sea buckthorn ","Sea buckthorn may increase the risk of bleeding during and after surgery as it slows down blood clothing. It is recommended to discontinue its use 2 weeks before any scheduled surgery.
+The safety of Sea buckthorn oil during pregnancy and lactation has not been established.
+
+Sea buckthorn may increase the risk of bleeding during and after surgery as it slows down blood clothing. It is recommended to discontinue its use 2 weeks before any scheduled surgery.
+The safety of Sea buckthorn oil during pregnancy and lactation has not been established.",~8 reference markers in DOCX text,,"pregnancy_review_required, breastfeeding_review_required, surgery_caution",,"Adult dose: Adults and children over 12 years –
+For general health and wellbeing, skin health and antioxidant support: Take 1-2 caps | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,153,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0079,Herbs of Gold,Selenium 150 MAX,selenium 150 max,,capsule,60 capsules,"Take 1 capsule daily, with food, or as directed by your health professional. Not recommended for children under 15 years.",,"Adults - Take 1 capsule daily, with food, or as directed by your health professional. Not recommended for children under 15 years.","High strength
+Antioxidant
+Organic form
+High bioavailability
+Thyroid hormone production
+Immune health
+Sperm health",None noted at the recommended dose.,,"Caution with immunosuppressant drugs - selenium may theoretically interfere with immunosuppressant therapy due to its immunostimulant activity.
+Caution with warfarin and other anticoagulants – selenium may increase blood thinning effect. Monitor.
+Caution with Eltrombopag – selenium may reduce drug absorption. Separate dose by 4 hours.",,~0 reference markers in DOCX text,antioxidant_support,,,"Adult dose: Take 1 capsule daily, with food, or as directed by your health professional. Not recommended for children under 15 years | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,155,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0080,Herbs of Gold,Silica Hair Skin & Nails,silica hair skin nails,,tablet,30 / 60 tablets,"Take 1 tablet daily, with food, or as directed by your health professional.",,"Adults - Take 1 tablet daily, with food, or as directed by your health professional.","High-strength silica, 216mg per tablet
+2.5mg biotin for nail health
+Connective tissue health
+
+High-strength silica, 216mg per tablet
+2.5mg biotin for nail health
+Connective tissue health","Not recommended in pregnancy or breastfeeding due to the high dose of vitamin A and silica.
+Individuals with liver or renal disease, or alcoholism should use vitamin A supplements with caution.
+Caution in iron overload conditions, such as haemochromatosis, as vitamin C can increase iron absorption.
+Biotin shares the sodium-dependent multivitamin transporter (SMVT) with vitamin B5. Theoretically, this may reduce vitamin B5 absorption due to competitive inhibition of the transporter.",,"Contraindicated with retinoid medication (including acitretin, isotretinoin, accutane or roaccutane) - vitamin A supplements should not be taken concurrently due to potential vitamin A toxicity.
+Caution with oral contraceptives - concurrent use may increase vitamin A levels.
+Caution with eltrombopag - zinc may form chelates with and reduce the absorption of the drug. Separate dose by at least 4 hours.
+Caution with NSAIDs, cefalexin, penacillamine and quinolone and tetracycline antibiotics – zinc","Not recommended in pregnancy or breastfeeding due to the high dose of vitamin A and silica.
+Individuals with liver or renal disease, or alcoholism should use vitamin A supplements with caution.
+Caution in iron overload conditions, such as haemochromatosis, as vitamin C can increase iron absorption.
+Biotin shares the sodium-dependent multivitamin transporter (SMVT) with vitamin B5. Theoretically, this may reduce vitamin B5 absorption due to competitive inhibition of the transporter.",~0 reference markers in DOCX text,"calcium_support, bone_health, immune_support, skin_health, hair_nail_support, antioxidant_support","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, levothyroxine, renal_impairment_caution, penicillamine, pregnancy_review_required, breastfeeding_review_required, renal_impairment_caution, liver_impairment_caution","bisphosphonate, levothyroxine, penicillamine, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Take 1 tablet daily, with food, or as directed by your health professional. | Key ingredients: Silicon dioxide, Colloidal anhydrous silica, Ascorbic acid (vitamin C) | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,156,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0081,Herbs of Gold,Silica Hair Solution,silica hair solution,,unknown,,"SHAKE WELL BEFORE USE.
+Adults and children over 12 years – Take 10mL in 100mL of water or other preferred beverage once daily, or as directed by your health professional.",,"SHAKE WELL BEFORE USE.
+Adults and children over 12 years – Take 10mL in 100mL of water or other preferred beverage once daily, or as directed by your health professional.","Supports hair health
+Supports hair strength & thickness
+
+Supports hair health
+Supports hair strength & thickness","Not recommended in pregnancy or breastfeeding due to lack of safety data on high doses of silica and biotin.
+
+Not recommended in pregnancy or breastfeeding due to lack of safety data on high doses of silica and biotin.",,"Caution with eltrombopag – selenium and zinc may form chelates with and reduce the absorption of the drug. Separate dose by at least 4 hours.
+
+Caution with eltrombopag – selenium and zinc may form chelates with and reduce the absorption of the drug. Separate dose by at least 4 hours.","Not recommended in pregnancy or breastfeeding due to lack of safety data on high doses of silica and biotin.
+
+Not recommended in pregnancy or breastfeeding due to lack of safety data on high doses of silica and biotin.",~6 reference markers in DOCX text,"immune_support, skin_health, hair_nail_support, antioxidant_support","tetracycline_antibiotic, quinolone_antibiotic, penicillamine, pregnancy_review_required, breastfeeding_review_required","penicillamine, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: SHAKE WELL BEFORE USE.
+Adults and children over 12 years – Take 10mL in 100mL of water or other preferred beverage once  | Key ingredients: Colloidal anhydrous silica, Biotin, Selenomethionine | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,159,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0082,Herbs of Gold,Sleep Ease,sleep ease,,capsule,30 / 60 capsules,"Adults and children over 12 years - Take 2-3 capsules daily, one hour before bed, or as directed by your health professional.",,"Adults and children over 12 years - Take 2-3 capsules daily, one hour before bed, or as directed by your health professional.","With Ziziphus & Passionflower
+Traditionally promotes sleep
+
+With Ziziphus & Passionflower
+Traditionally promotes sleep","Contraindicated during pregnancy and breastfeeding.
+Caution in combination with alcohol – sedative herbs may (theoretically) lead to excessive drowsiness and decreased motor function.
+
+Contraindicated during pregnancy and breastfeeding.
+Caution in combination with alcohol – sedative herbs may (theoretically) lead to excessive drowsiness and decreased motor function.",,"Caution with sedative drugs, including benzodiazepines, barbiturates and CNS depressants – Sleep Ease may have additive effects. Monitor for excessive drowsiness.
+Caution with antidiabetic drugs – Ziziphus may have additive effects (based on animal research). Monitor.
+
+Caution with sedative drugs, including benzodiazepines, barbiturates and CNS depressants – Sleep Ease may have additive effects. Monitor for excessive drowsiness.
+Caution with antidiabetic drugs – Ziziphus may have additive effect","Contraindicated during pregnancy and breastfeeding.
+Caution in combination with alcohol – sedative herbs may (theoretically) lead to excessive drowsiness and decreased motor function.
+
+Contraindicated during pregnancy and breastfeeding.
+Caution in combination with alcohol – sedative herbs may (theoretically) lead to excessive drowsiness and decreased motor function.",~6 reference markers in DOCX text,"sleep_support, stress_support","pregnancy_review_required, breastfeeding_review_required",,"Adult dose: Adults and children over 12 years - Take 2-3 capsules daily, one hour before bed, or as directed by your health professi | Key ingredients: Magnolia officinalis (Magnolia, Eschscholzia californica (Cali | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,161,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0083,Herbs of Gold,Slippery Elm 400mg,slippery elm 400mg,,capsule,60 capsules,"Adults and children over 12 years – Take 1 capsule, three times a day, before food, or as directed by your health professional.
+Children under 12 years – Take only as directed by your health professional.",,"Adults and children over 12 years – Take 1 capsule, three times a day, before food, or as directed by your health professional.
+Children under 12 years – Take only as directed by your health professional.","Digestive system health
+Demulcent",None noted at the recommended dose.,,"The mucilage content of Slippery elm may (theoretically) slow the absorption of oral drugs and reduce serum levels. Caution is needed with drugs with a narrow therapeutic index (including barbiturates, digoxin, lithium, phenytoin and warfarin). Separate dose by 2 hours.",,~2 reference markers in DOCX text,"gut_health, gastrointestinal_support (review)",,,"Adult dose: Adults and children over 12 years – Take 1 capsule, three times a day, before food, or as directed by your health profes | Key ingredients: Slippery elm (Ulmus rubra) bar | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,163,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0084,Herbs of Gold,St John's Wort 3600,st john s wort 3600,,tablet,30 / 60 tablets,"Adults and children over 12 years - Take 1-2 tablets daily, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1-2 tablets daily, with food, or as directed by your health professional.","High strength
+Healthy mood balance","Contraindicated during pregnancy and lactation.
+Discontinue use at least one week prior to any general anaesthetic.
+Avoid St John’s wort in combination with tyramine-rich foods and beverages – coadministration may cause elevated blood pressure and rapid heart rate. Tyramine-rich foods include aged cheeses, cured meats, fermented foods, dried fruits, beer and red wine.",,"St John’s wort, particularly hyperforin, induces the CYP450 enzyme system, and should not be used with drugs metabolised through this pathway, including indianvir, cyclosporin, oral contraceptives, digoxin, theophylline, HIV protease inhibitors, HIV non-nucleoside reverse transcriptase inhibitors, methadone, antineoplastic drugs, anticonvulsants (phenobarbiton, phenytoin), antidepressants, tacrolimus, omeprazole, midazolam, alprazolam and carbamazepine (tegretol).
+Contraindicated with anticoagul","Contraindicated during pregnancy and lactation.
+Discontinue use at least one week prior to any general anaesthetic.
+Avoid St John’s wort in combination with tyramine-rich foods and beverages – coadministration may cause elevated blood pressure and rapid heart rate. Tyramine-rich foods include aged cheeses, cured meats, fermented foods, dried fruits, beer and red wine.",~0 reference markers in DOCX text,,"antidepressant_review_required, anticoagulant_review_required, oral_contraceptive, immunosuppressant, digoxin, pregnancy_review_required, breastfeeding_review_required","anticoagulant, antidepressant, digoxin, immunosuppressant, oral_contraceptive","Adult dose: Adults and children over 12 years - Take 1-2 tablets daily, with food, or as directed by your health professional. | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,164,"Technical Information, Directions, Cautions",Medium,Unreviewed,
+HOG-0085,Herbs of Gold,St Mary’s Thistle 35 000,st mary s thistle 35 000,,tablet,60 tablets,"Take 1 tablet daily, with food, or as directed by your health professional.",,"Adults – Take 1 tablet daily, with food, or as directed by your health professional.","Healthy liver function
+Digestive health
+
+Healthy liver function
+Digestive health","Contraindicated in individuals with a known allergy to the Asteraceae family.
+Not recommended in pregnancy due to a lack of safety data. St Mary's thistle is often used as a galactagogue, however, it is not reommended to increase detoxification during pregnancy or breastfeeding.
+
+Contraindicated in individuals with a known allergy to the Asteraceae family.
+Not recommended in pregnancy due to a lack of safety data. St Mary's thistle is often used as a galactagogue, however, it is not reommended t",,"Caution with any medication, as St Mary’s thistle can improve liver function, and therefore may affect how drugs are metabolised. Pharmacokinetic research shows that St Mary’s thistle extract does not significantly influence many of the cytochrome P450 pathways
+Felter, H. W., & Lloyd, J. U. (1898). King’s American Dispensatory. https://www.henriettes-herb.com/eclectic/kings/silybum.html
+Health Canada. (2019). Milk thistle – Silybum marianum. http://webprod.hc-sc.gc.ca/nhpid-bdipsn/atReq.do?atid=","Contraindicated in individuals with a known allergy to the Asteraceae family.
+Not recommended in pregnancy due to a lack of safety data. St Mary's thistle is often used as a galactagogue, however, it is not reommended to increase detoxification during pregnancy or breastfeeding.
+
+Contraindicated in individuals with a known allergy to the Asteraceae family.
+Not recommended in pregnancy due to a lack of safety data. St Mary's thistle is often used as a galactagogue, however, it is not reommended to increase detoxification during pregnancy or breastfeeding.",~2 reference markers in DOCX text,liver_support,"immunosuppressant, oral_contraceptive, pregnancy_review_required, breastfeeding_review_required","immunosuppressant, oral_contraceptive","Adult dose: Take 1 tablet daily, with food, or as directed by your health professional. | Key ingredients: Silybum marianum (St Mary’s th | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,165,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0086,Herbs of Gold,Stress Ease,stress ease,,tablet,60 tablets,"Take 1 tablet, twice daily, with food, or as directed by your health professional.",,"Adults - Take 1 tablet, twice daily, with food, or as directed by your health professional.","With Rhodiola & Ashwagandha
+Healthy stress response
+
+With Rhodiola & Ashwagandha
+Healthy stress response","Contraindicated in liver and kidney disease (Licorice).
+Contraindicated in pregnancy. Not recommended in breastfeeding due to a lack of safety data.
+Caution in peptic ulcer disease – Ashwagandha may cause gastrointestinal irritation.
+
+Contraindicated in liver and kidney disease (Licorice).
+Contraindicated in pregnancy. Not recommended in breastfeeding due to a lack of safety data.
+Caution in peptic ulcer disease – Ashwagandha may cause gastrointestinal irritation.",,"Caution with cyclosporin – Licorice may lead to reduced blood concentrations of the drug (based on animal studies). Take only under the care of a health professional and monitor cyclosporin levels.
+Caution with corticosteroid medications – Licorice can potentiate the effects of oral and topical corticosteroids. Monitor.
+Caution with digoxin – Licorice (in high doses) may increase digoxin toxicity. Monitor.
+Caution with diuretic medication (loop, thiazide and potassium-depleting) – concurrent adm","Contraindicated in liver and kidney disease (Licorice).
+Contraindicated in pregnancy. Not recommended in breastfeeding due to a lack of safety data.
+Caution in peptic ulcer disease – Ashwagandha may cause gastrointestinal irritation.
+
+Contraindicated in liver and kidney disease (Licorice).
+Contraindicated in pregnancy. Not recommended in breastfeeding due to a lack of safety data.
+Caution in peptic ulcer disease – Ashwagandha may cause gastrointestinal irritation.",~4 reference markers in DOCX text,"stress_support, energy_support, thyroid_condition_review_required","thyroid_condition_review_required, antidepressant_review_required, pregnancy_review_required, breastfeeding_review_required, renal_impairment_caution, liver_impairment_caution",antidepressant,"Adult dose: Take 1 tablet, twice daily, with food, or as directed by your health professional. | Key ingredients: Tyrosine | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,167,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0087,Herbs of Gold,Sublingual B12 1000,sublingual b12 1000,,tablet,,"Adults and children over 12 years - Dissolve 1 tablet under the tongue, once or twice daily, or as directed by your health professional.",,"Adults and children over 12 years - Dissolve 1 tablet under the tongue, once or twice daily, or as directed by your health professional.","Nerve & cognitive health
+Energy production",None noted at the recommended dose.,,None noted at the recommended dose.,,~0 reference markers in DOCX text,"b12_support, energy_support, nervous_system_support",,,"Adult dose: Adults and children over 12 years - Dissolve 1 tablet under the tongue, once or twice daily, or as directed by your heal | Key ingredients: Cyanocobalamin (vitamin B12) | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,169,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0088,Herbs of Gold,Super Brahmi 6000,super brahmi 6000,,tablet,60 tablets,"Take 2 tablets daily, with food.",,"Adults – Take 2 tablets daily, with food.
+Children 6 to 18 years – Take 1 tablet daily, with food.
+Or take as directed by your health professional. Tablets can be crushed and added to food.","Clinically trialled
+Cognitive function
+Memory
+
+Clinically trialled
+Cognitive function
+Memory","Not recommended in pregnancy due to a lack of safety data.
+Caution in hyperthyroidism as Brahmi can theoretically elevate T4 levels.
+
+Not recommended in pregnancy due to a lack of safety data.
+Caution in hyperthyroidism as Brahmi can theoretically elevate T4 levels.",,"Caution with acetyl cholinesterase inhibitors, anticholinergic and cholinergic drugs - Brahmi may increase acetylcholine levels.
+
+Caution with acetyl cholinesterase inhibitors, anticholinergic and cholinergic drugs - Brahmi may increase acetylcholine levels.","Not recommended in pregnancy due to a lack of safety data.
+Caution in hyperthyroidism as Brahmi can theoretically elevate T4 levels.
+
+Not recommended in pregnancy due to a lack of safety data.
+Caution in hyperthyroidism as Brahmi can theoretically elevate T4 levels.",~4 reference markers in DOCX text,"stress_support, nervous_system_support","antidepressant_review_required, thyroid_condition_review_required, pregnancy_review_required",antidepressant,"Adult dose: Take 2 tablets daily, with food. | Key ingredients: Bacopa monnieri (Brahmi) whole | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,170,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0089,Herbs of Gold,Super Calcium Plus with Boron,super calcium plus with boron,,tablet,180 tablets,"Adults only - Take 1 tablet, three times a day, with food, or as directed by your health professional.",,"Adults only - Take 1 tablet, three times a day, with food, or as directed by your health professional.","Two forms of organically bound calcium
+Magnesium for calcium absorption & deposition
+
+Two forms of organically bound calcium
+Magnesium for calcium absorption & deposition","Calcium supplementation is contraindicated in hypercalcaemia and hypercalciuria.
+Caution with hyperparathyroidism and chronic kidney disease – calcium supplementation should only be taken under medical supervision.
+Vitamin D is contraindicated in people with vitamin D hypersensitivity, systemic lupus erythematosus (SLE) and hypercalcaemia.
+
+Calcium supplementation is contraindicated in hypercalcaemia and hypercalciuria.
+Caution with hyperparathyroidism and chronic kidney disease – calcium supple","Calcium supplementation is contraindicated in hypercalcaemia and hypercalciuria.
+Caution with hyperparathyroidism and chronic kidney disease – calcium supplementation should only be taken under medical supervision.
+Vitamin D is contraindicated in people with vitamin D hypersensitivity, systemic lupus erythematosus (SLE) and hypercalcaemia.
+
+Calcium supplementation is contraindicated in hypercalcaemia and hypercalciuria.
+Caution with hyperparathyroidism and chronic kidney disease – calcium supple","Caution with tetracycline and quinolone antibiotics – drug bioavailability may be reduced with calcium, magnesium or manganese supplementation. Take antibiotics either 2 hours before or 4-6 hours after calcium.
+Caution with thiazide diuretics – drug decreases urinary excretion of calcium. Monitor serum calcium levels and look for signs of hypercalcaemia.
+Caution with cardiac glycosides (digoxin) – calcium supplementation may cause drug toxicity. Monitor use.
+Caution with bisphosphonates – magnes",,~1 reference markers in DOCX text,"magnesium_support, muscle_cramps, sleep_support, stress_support, nervous_system_support, calcium_support, bone_health, vitamin_d_support, immune_support, skin_health, hair_nail_support","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, levothyroxine, renal_impairment_caution, penicillamine, hypercalcaemia_caution, sarcoidosis_caution, hyperparathyroidism_caution, renal_impairment_caution","bisphosphonate, levothyroxine, penicillamine, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Adults only - Take 1 tablet, three times a day, with food, or as directed by your health professional. | Key ingredients: Calcium citrate, Hydroxyapatite, Magnesium oxide | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,172,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0090,Herbs of Gold,Thyroid Support,thyroid support,,tablet,60 tablets,"Take 1 tablet, twice daily, with food, or as directed by your health professional.",,"Adults - Take 1 tablet, twice daily, with food, or as directed by your health professional.","Assists thyroid hormone production
+Supports thyroid gland health
+
+Assists thyroid hormone production
+Supports thyroid gland health","Contraindicated in pregnancy and breastfeeding – safety data regarding high dose tyrosine is unavailable and Ashwagandha may have abortifacient action.
+Contraindicated in hyperthyroidism and Graves’ disease – both tyrosine and Ashwagandha may increase T4.
+Contraindicated in those with melanoma, adrenal tumours or pheochromocytoma.
+Caution in peptic ulcer disease – Ashwagandha may cause gastrointestinal irritation.
+
+Contraindicated in pregnancy and breastfeeding – safety data regarding high dose ",,"Contraindicated with anti-thyroid medications.
+Contraindicated with levodopa - competes with tyrosine for uptake, reducing efficacy.
+Caution with antidepressant drugs (MAOIs, SSRIs and tricyclic antidepressants) - concurrent use with tyrosine may have an additive effect or result in elevated blood pressure.
+Caution with levothyroxine and CNS stimulants – tyrosine may have additive effects. Separate dose by 2 hours and monitor use.
+Caution with immunosuppressant drugs - selenium and Ashwagandha m","Contraindicated in pregnancy and breastfeeding – safety data regarding high dose tyrosine is unavailable and Ashwagandha may have abortifacient action.
+Contraindicated in hyperthyroidism and Graves’ disease – both tyrosine and Ashwagandha may increase T4.
+Contraindicated in those with melanoma, adrenal tumours or pheochromocytoma.
+Caution in peptic ulcer disease – Ashwagandha may cause gastrointestinal irritation.
+
+Contraindicated in pregnancy and breastfeeding – safety data regarding high dose tyrosine is unavailable and Ashwagandha may have abortifacient action.
+Contraindicated in hyperthyroidism and Graves’ disease – both tyrosine and Ashwagandha may increase T4.
+Contraindicated in those with melanoma, adrenal tumours or pheochromocytoma.
+Caution in peptic ulcer disease – Ashwagandha may cause gastrointestinal irritation.",~5 reference markers in DOCX text,"immune_support, skin_health, hair_nail_support, antioxidant_support, general_multivitamin, thyroid_condition_review_required, energy_support","tetracycline_antibiotic, quinolone_antibiotic, penicillamine, thyroid_condition_review_required, antidepressant_review_required, pregnancy_review_required, breastfeeding_review_required, renal_impairment_caution","antidepressant, penicillamine, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Take 1 tablet, twice daily, with food, or as directed by your health professional. | Key ingredients: Tyrosine, Potassium iodide, Selenomethionine | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,174,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0091,Herbs of Gold,Triple Strength Omega-3,triple strength omega 3,,capsule,150 capsules,"Adults and children over 12 years –
+For general health and wellbeing: Take 1 capsule daily, with food.
+For muscle health, memory and circulation: Take 2 capsules daily, with food.
+For joint health: Take 2-3 capsules daily, with food. Or take as directed by your health professional.",,"Adults and children over 12 years –
+For general health and wellbeing: Take 1 capsule daily, with food.
+For muscle health, memory and circulation: Take 2 capsules daily, with food.
+For joint health: Take 2-3 capsules daily, with food. Or take as directed by your health professional.","High-strength EPA & DHA
+Odourless
+Heavy metal tested
+Sustainably sourced
+
+High-strength EPA & DHA
+Odourless
+Heavy metal tested
+Sustainably sourced",,,,,~2 reference markers in DOCX text,"heart_health, cholesterol_support","anticoagulant_review_required, antiplatelet","anticoagulant, antiplatelet","Adult dose: Adults and children over 12 years –
+For general health and wellbeing: Take 1 capsule daily, with food.
+For muscle health | Key ingredients: Concentrated fish Omega-3 trig",herbsofgold_technical_manual.pdf,176,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0092,Herbs of Gold,Tyrosine 1000,tyrosine 1000,,tablet,60 tablets,"Take 1 tablet, twice daily, with food, or as directed by your health professional.",,"Adults - Take 1 tablet, twice daily, with food, or as directed by your health professional.","Assist thyroid hormone production
+Maintain healthy thyroid gland function
+Aid in the synthesis of neurotransmitters
+High-strength","Contraindicated in hyperthyroidism and Graves’ disease - as tyrosine is a precursor to thyroxine, theoretically it may aggravate these conditions.
+Contraindicated in those with melanoma, adrenal tumours or pheochromocytoma.
+Not suitable in pregnancy or breastfeeding – safety data regarding high dose tyrosine is unavailable.",,"Contraindicated with antidepressant drugs (MAOIs, SSRIs and tricyclic antidepressants) - concurrent use may have an additive effect or result in elevated blood pressure.
+Contraindicated with levodopa - with tyrosine competes with levodapa for uptake, reducing efficacy.
+Caution with levothyroxine – tyrosine may have additive effects. Separate dose by 2 hours and monitor use.
+Caution with CNS stimulants – tyrosine may have additive effects. Separate dose by 2 hours and monitor use.","Contraindicated in hyperthyroidism and Graves’ disease - as tyrosine is a precursor to thyroxine, theoretically it may aggravate these conditions.
+Contraindicated in those with melanoma, adrenal tumours or pheochromocytoma.
+Not suitable in pregnancy or breastfeeding – safety data regarding high dose tyrosine is unavailable.",~2 reference markers in DOCX text,"energy_support, thyroid_condition_review_required","thyroid_condition_review_required, antidepressant_review_required, pregnancy_review_required, breastfeeding_review_required, renal_impairment_caution",antidepressant,"Adult dose: Take 1 tablet, twice daily, with food, or as directed by your health professional. | Key ingredients: Tyrosine | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,179,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0093,Herbs of Gold,Ubiquinol 100mg,ubiquinol 100mg,,capsule,30 / 60 capsules,"Take 1 capsule daily, with food, or as directed by your health professional.",,"Adults – Take 1 capsule daily, with food, or as directed by your health professional.","Metabolically active form of CoQ10
+Supports cardiovascular health
+
+Metabolically active form of CoQ10
+Supports cardiovascular health","None noted at the recommended dose.
+
+None noted at the recommended dose.",,"Caution with antihypertensive medication – ubiquinol may have additive effects. Monitor blood pressure.
+Caution with warfarin and other antiplatelet and anticoagulant medication – conflicting reports have shown ubiquinol may decrease, increase or have no effect on the efficacy of oral anticoagulants. Use only under the care of a health professional.
+
+Caution with antihypertensive medication – ubiquinol may have additive effects. Monitor blood pressure.
+Caution with warfarin and other antiplatele",,~4 reference markers in DOCX text,"heart_health, energy_support",,,"Adult dose: Take 1 capsule daily, with food, or as directed by your health professional. | Key ingredients: Ubiquinol-10 (Kaneka QH™) | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,180,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0094,Herbs of Gold,Ubiquinol 150mg,ubiquinol 150mg,,capsule,30 / 60 capsules,"Take 1-2 capsules daily, with food, or as directed by your health professional.",,"Adults – Take 1-2 capsules daily, with food, or as directed by your health professional.
+Adults – Take 1-2 capsules daily, with food, or as directed by your health professional.
+Adults - Take 1 capsule daily, with food, or as directed by your health professional.","Metabolically active form of CoQ10
+Supports cardiovascular health
+
+Metabolically active form of CoQ10
+Supports cardiovascular health
+
+High strength
+Organically bound zinc
+With vitamin A, B6 & magnesium","None noted at the recommended dose.
+
+None noted at the recommended dose.
+
+Caution with high dose zinc and vitamin A in pregnancy.
+Individuals with liver or renal disease, or alcoholism should use vitamin A supplements with caution.
+Taking vitamin B6 at night may result in more vivid dreams.",,"Caution with antihypertensive medication – ubiquinol may have additive effects. Monitor blood pressure.
+Caution with warfarin and other antiplatelet and anticoagulant medication – conflicting reports have shown ubiquinol may decrease, increase or have no effect on the efficacy of oral anticoagulants. Use only under the care of a health professional.
+
+Caution with antihypertensive medication – ubiquinol may have additive effects. Monitor blood pressure.
+Caution with warfarin and other antiplatele","None noted at the recommended dose.
+
+None noted at the recommended dose.
+
+Caution with high dose zinc and vitamin A in pregnancy.
+Individuals with liver or renal disease, or alcoholism should use vitamin A supplements with caution.
+Taking vitamin B6 at night may result in more vivid dreams.",~8 reference markers in DOCX text,"heart_health, energy_support","pregnancy_review_required, renal_impairment_caution, liver_impairment_caution",,"Adult dose: Take 1-2 capsules daily, with food, or as directed by your health professional. | Key ingredients: Ubiquinol-10 (Kaneka QHTM Ubiq | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,182,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0095,Herbs of Gold,Vitamin B1 100mg,vitamin b1 100mg,,tablet,100 tablets,"Adults and children over 12 years - Take 1 tablet daily, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 tablet daily, with food, or as directed by your health professional.","Vitamin B1 (thiamine) is a water-soluble vitamin that is involved in carbohydrate metabolism and nervous system health. As body
+reserves of thiamine are small, a steady intake is important to avoid deficiency. Vitamin B1 100mg helps prevent vitamin B1 deficiency.
+There is approximately 30mg of thiamine in the average adult, with about half of this stored in muscle tissue. It is also found in high concentrations in the heart, liver, kidneys and brain1.
+Vitamin B1 is absorbed in the small intestin",None noted at the recommended dose.,,None noted at the recommended dose.,,~2 reference markers in DOCX text,,,,"Adult dose: Adults and children over 12 years - Take 1 tablet daily, with food, or as directed by your health professional. | Key ingredients: Thiamine hydrochloride (vitami | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,186,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0096,Herbs of Gold,Vitamin B2 200mg,vitamin b2 200mg,,tablet,60 tablets,"Take 1 tablet daily, with food.",,"Adults - Take 1 tablet daily, with food.
+To reduce occurrence of mild migraines: Take 2 tablets daily, with food. Take for at least 3 months. Or take as directed by your health professional.","Vitamin B2 (riboflavin) is a water-soluble B vitamin that helps maintain the integrity of mucous membranes, skin, eyes and the nervous system.
+Riboflavin is mostly present in the body as a component of two coenzymes: Flavin mononucleotide (FMN) and Flavin adenine dinucleotide (FAD).
+Common clinical symptoms of riboflavin deficiency include inflammation of the throat, mouth (stomatitis), and tongue (glossitis); cracking of the tissue around the corners of the mouth (angular cheilitis) and moist, ",None noted at the recommended dose.,,"Caution with tetracycline antibiotics - vitamin B2 may decrease the effectiveness of the medication or antibiotics may interfere with the conversion of vitamin B2 into its active form. Separate dose.
+Caution with anticholinergic drugs - decrease the absorption of vitamin B2. Separate dose.",,~0 reference markers in DOCX text,,,,"Adult dose: Take 1 tablet daily, with food. | Key ingredients: Riboflavin (vitamin B2) | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,187,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0097,Herbs of Gold,Vitamin B3 500mg,vitamin b3 500mg,,tablet,60 tablets,"Adults and children over 12 years - Take 1 tablet daily, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 tablet daily, with food, or as directed by your health professional.",,"Caution in pregnancy and breastfeeding – safety of high dose vitamin B3 is unknown.
+Caution in individuals with gout. Large doses of vitamin B3 can reduce urinary excretion of uric acid (a risk factor for gout).
+concentrations in the liver, muscles, kidneys and heart. Excess vitamin
+B3 is methylated in the liver and excreted in the urine.
+Vitamin B3 can be formed in the body from the amino acid tryptophan, however, it takes approximately 60mg of tryptophan to form 1mg of niacin, with an approxim",,"Caution with carbamazepine - nicotinamide may inhibit the CYP450-mediated metabolism of the medication, resulting in increased carbamazepine serum concentrations. Monitor drug level.
+Caution with primidone - nicotinamide may inhibit the CYP450-mediated metabolism of primidone and its conversion to phenobarbital. Monitor drug levels.","Caution in pregnancy and breastfeeding – safety of high dose vitamin B3 is unknown.
+Caution in individuals with gout. Large doses of vitamin B3 can reduce urinary excretion of uric acid (a risk factor for gout).
+concentrations in the liver, muscles, kidneys and heart. Excess vitamin
+B3 is methylated in the liver and excreted in the urine.
+Vitamin B3 can be formed in the body from the amino acid tryptophan, however, it takes approximately 60mg of tryptophan to form 1mg of niacin, with an approximate conversion rate of 60:1. This conversion requires adequate iron, riboflavin and vitamin B6.
+As tryptophan is also a precursor to serotonin and dietary tryptophan is preferentially converted to vitamin B3 in deficiency states, low levels of vitamin B3 can result in serotonin depletion and mood alterations.
+Energy
+Vitamin B3 is used in the body in two coenzyme forms – nicotinamide adenine dinucleotide (NAD) and nicotinamide adenine dinucleotide phosphate (NADP), which participate in over 200 metabolic reactions.
+Vitamin B3, as NAD and NADP, plays a major role in the metabolism of carbohydrate, proteins, fats and alcohol. NAD acts as an electron and hydrogen acceptor in glycolysis and the citric acid cycle. NADP is primarily involved in fatty acid biosynthesis.
+Skin health
+Vitamin B3, in the form of nicotinamide, supports skin health and DNA repair and has been shown to have a protective effect against damage caused by UV radiation. It prevents the ATP depletion and glycolytic blockade induced by UV radiation, boosting cellular energy and enhancing DNA repair in the skin.
+A double-blind, randomised, placebo controlled crossover trial examined the effects of oral nicotinamide on UV exposure in 61 volunteers. Significant immunosuppression occurred in a UV dose-dependent manner in the presence of placebo. Oral nicotinamide, at doses of either 500mg or 1500mg daily, were well tolerated and significantly reduced UV immunosuppression with no immune effects in unirradiated skin1.
+A phase 3, double-blind, randomised, controlled trial using 500mg of nicotinamide twice daily substantiated the benefits of vitamin B3 in supporting skin health and protecting skin from the damaging effects of the sun2.",~1 reference markers in DOCX text,,"pregnancy_review_required, breastfeeding_review_required, renal_impairment_caution, liver_impairment_caution",,"Adult dose: Adults and children over 12 years - Take 1 tablet daily, with food, or as directed by your health professional. | Key ingredients: Nicotinamide (vitamin B3) | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,188,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0098,Herbs of Gold,Vitamin B5 500mg,vitamin b5 500mg,,capsule,60 capsules,"Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional.","Vitamin B5, also known as pantothenic acid, is a water-soluble B complex vitamin that is widely distributed throughout the food chain.
+Pantothenic acid gets its name from the Greek ‘panto’, which means ‘everywhere’ and refers to the ubiquitous nature of this nutrient.
+Vitamin B5 is a component of coenzyme A (CoA), the biologically active form of pantothenic acid, which is involved in over 100 metabolic reactions in the body. It is essential for the breakdown of carbohydrates, proteins, lipids an",Caution in pregnancy and breastfeeding – safety of high dose vitamin B5 is unknown,,None noted at the recommended dose.,Caution in pregnancy and breastfeeding – safety of high dose vitamin B5 is unknown,~0 reference markers in DOCX text,"calcium_support, bone_health","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, levothyroxine, renal_impairment_caution, pregnancy_review_required, breastfeeding_review_required","bisphosphonate, levothyroxine, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional. | Key ingredients: Calcium pantothenate | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,189,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0099,Herbs of Gold,Vitamin B6 100mg,vitamin b6 100mg,,tablet,60 tablets,"Take 1 tablet daily, with food, or as directed by your health professional.",,"Adults - Take 1 tablet daily, with food, or as directed by your health professional.","High strength
+With activated B6
+
+High strength
+With activated B6","Taking vitamin B6 at night may result in more vivid dreams.
+
+Taking vitamin B6 at night may result in more vivid dreams.",,"Caution with levodopa - vitamin B6 reduces drug effects. However, this effect is prevented by the administration of a dopa decarboxylase inhibitor (e.g. benserazide, carbidopa) with levodopa, as is common clinical practice.
+Caution with phenobarbital/phenobarbitone and phenytoin (anticonvulsants) - vitamin B6 may reduce serum concentrations of these drugs. Monitor.
+
+Caution with levodopa - vitamin B6 reduces drug effects. However, this effect is prevented by the administration of a dopa decarbox",,~3 reference markers in DOCX text,,,,"Adult dose: Take 1 tablet daily, with food, or as directed by your health professional. | Key ingredients: Pyridoxine hydrochloride, Pyridoxal 5-phosphate monohydr | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,190,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0100,Herbs of Gold,Vitamin C 1000 Plus,vitamin c 1000 plus,,tablet,60 / 120 tablets,"Adults and children over 12 years - Take 1 tablet, one to three times a day, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 tablet, one to three times a day, with food, or as directed by your health professional.","High dose vitamin C
+Low acid formula
+Immune health
+
+High dose vitamin C
+Low acid formula
+Immune health","Use in caution if there is a history of renal impairment or renal calculi (kidney stones) as vitamin C (ascorbic acid) may increase the risk of recurrence of calcium oxalate calculi.
+Caution in iron overload conditions, such as haemochromatosis, as vitamin C can increase iron absorption.
+
+Use in caution if there is a history of renal impairment or renal calculi (kidney stones) as vitamin C (ascorbic acid) may increase the risk of recurrence of calcium oxalate calculi.
+Caution in iron overload co",,"Caution with chemotherapeutic agents – evidence regarding the use of vitamin C in conjunction with chemotherapy treatment is still emerging. Use only under medical supervision.
+Caution with warfarin and anticoagulant/antiplatelet medication – high dose vitamin C may theoretically increase bleeding risk. Monitor.
+Caution with aluminium based antacids – vitamin C increases the amount of aluminium absorbed. Separate dose by 2 hours.
+Caution with NSAIDs, cephalexin, penicillamine and quinolone antib",,~12 reference markers in DOCX text,"calcium_support, bone_health, immune_support, skin_health, hair_nail_support, antioxidant_support","tetracycline_antibiotic, quinolone_antibiotic, bisphosphonate, levothyroxine, renal_impairment_caution, penicillamine, renal_impairment_caution","bisphosphonate, levothyroxine, penicillamine, quinolone_antibiotic, tetracycline_antibiotic","Adult dose: Adults and children over 12 years - Take 1 tablet, one to three times a day, with food, or as directed by your health pr | Key ingredients: Calcium ascorbate dihydrate, Sodium ascorbate, Citrus bioflavonoids extract | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,192,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0101,Herbs of Gold,Vitamin D3 1000,vitamin d3 1000,,capsule,120 / 240 capsules,"Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional.",,"Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional.","Vegan friendly
+Aids bone mineralisation
+Assists with calcium absorption",Contraindicated in sarcoidosis or hyperparathyroidism without medical supervision.,Contraindicated in sarcoidosis or hyperparathyroidism without medical supervision.,"Caution with atorvastatin – vitamin D may decrease bioavailability. Monitor.
+Caution with orlistat (weight loss) – may impair the absorption of vitamin D. Separate dose by 2 hours.
+Caution with digoxin – concurrent vitamin D may elevate serum calcium levels which can increase toxicity of cardiac glycosides. Monitor calcium levels.
+Caution with thiazide diurectics – can cause an increase in serum calcium levels when coadministered with vitamin D. Monitor serum calcium levels.",,~2 reference markers in DOCX text,"vitamin_d_support, bone_health","hypercalcaemia_caution, renal_impairment_caution, sarcoidosis_caution, hyperparathyroidism_caution",,"Adult dose: Adults and children over 12 years - Take 1 capsule daily, with food, or as directed by your health professional. | Key ingredients: Colecalciferol | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,194,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0102,Herbs of Gold,Vitamin K2 180 MAX,vitamin k2 180 max,,capsule,60 capsules,"Take 1 capsule daily, with food, or as directed by your health professional.",,"Adults - Take 1 capsule daily, with food, or as directed by your health professional.","High-strength vitamin K2
+K2VITAL™
+All-trans MK-7
+Supports bone strength
+
+High-strength vitamin K2
+K2VITAL™
+All-trans MK-7
+Supports bone strength",None noted at the recommended dose.,,Caution with anticoagulant/antiplatelet drugs – vitamin K2 may affect anticoagulant effect. Monitor.,,~5 reference markers in DOCX text,bone_health,,,"Adult dose: Take 1 capsule daily, with food, or as directed by your health professional. | Key ingredients: Menaquinone 7 (vitamin K2)(K2V | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,195,"Technical Information, Directions, Cautions",High,Unreviewed,
+HOG-0103,Herbs of Gold,Vitex 1000,vitex 1000,,tablet,60 tablets,"Take 1 tablet daily, in the morning, or as directed by your health professional.",,"Adults - Take 1 tablet daily, in the morning, or as directed by your health professional.","Vitex agnus-castus (Chaste tree) has a long history of traditional use in Western herbal medicine (WHM) for the relief of menstrual irregularities and symptoms of premenstrual tension (PMT).
+The dried fruit from the Vitex plant contains several active constituents including flavonoids, iridoids, alkaloids and volatile oils.
+The mode of action of Vitex is multifaceted. Vitex acts on dopamine (D2) receptors in the anterior pituitary gland, decreasing high prolactin levels. Prolactin is a hormone t","Avoid use in individuals with tumours sensitive to oestrogen or progesterone.
+Vitex is not generally recommended in females under 20 years of age as the natural hypothalamic-pituitary-ovarian axis can be easily disrupted.
+Vitex is most effective during the first three to six months of use. After that, its effect on the pituitary starts to diminish. It is recommended to take a break from Vitex for two months before resuming use.
+Not recommended during pregnancy without medical advice and breastfe",,"Contraindicated with fertility drugs or IVF – the addition of Vitex could potentially cause hyperstimulation of the ovaries.
+Caution with hormone replacement therapy, oral contraceptive pills and progesterone drugs – given Vitex’s hormone modulating effect, it may theoretically interfere with the action of these drugs.","Avoid use in individuals with tumours sensitive to oestrogen or progesterone.
+Vitex is not generally recommended in females under 20 years of age as the natural hypothalamic-pituitary-ovarian axis can be easily disrupted.
+Vitex is most effective during the first three to six months of use. After that, its effect on the pituitary starts to diminish. It is recommended to take a break from Vitex for two months before resuming use.
+Not recommended during pregnancy without medical advice and breastfeeding due to insufficient studies relating to safety.",~5 reference markers in DOCX text,"women_health, menopause_review_required","pregnancy_review_required, breastfeeding_review_required",,"Adult dose: Take 1 tablet daily, in the morning, or as directed by your health professional. | Key ingredients: Vitex agnus-castus (Chaste tre | Cautions: 1 flagged",herbsofgold_technical_manual.pdf,198,"Technical Information, Directions, Cautions",High,Unreviewed,

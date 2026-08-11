@@ -1,0 +1,11 @@
+{
+  "sheets": [
+    {
+      "name": "Table 1",
+      "rows": 1390,
+      "cols": 67,
+      "csv_path": "extracted/excel_sheets/Table_1.csv",
+      "product_column": null
+    }
+  ]
+}
