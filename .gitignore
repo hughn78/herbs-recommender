@@ -39,8 +39,14 @@ dist-ssr
 # macOS AppleDouble metadata (external volume)
 ._*
 
-# Source corpus + scraper artefacts (kept in workspace, not committed)
-docs/herbsofgold_scraped/
+# Source corpus IS committed (Lovable ingestion reads it from the repo);
+# only scraper artefacts and non-pipeline byproducts are excluded.
+docs/herbsofgold_scraped/.venv/
+docs/herbsofgold_scraped/chrome_profile/
+docs/herbsofgold_scraped/downloads/
+docs/herbsofgold_scraped/inspect/
+docs/herbsofgold_scraped/HerbsOfGold_KnowledgeBase/scripts/
+docs/herbsofgold_scraped/HerbsOfGold_KnowledgeBase/extracted/
 cookies.txt
 ~$*
 
