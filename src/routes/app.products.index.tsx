@@ -14,9 +14,9 @@ import {
   type CatalogueProductSummary,
 } from "@/lib/catalogue.functions";
 import { listProductsFn } from "@/lib/cases.functions";
-import { productImageProps } from "@/lib/product-images";
+import { PackShot, hasPackShot } from "@/components/pack-shot";
 
-export const Route = createFileRoute("/app/products")({
+export const Route = createFileRoute("/app/products/")({
   component: ProductsPage,
   errorComponent: ({ error }) => (
     <div className="p-8 text-sm text-destructive">{error.message}</div>
@@ -189,15 +189,14 @@ function CatalogueBrowser({ products }: { products: CatalogueProductSummary[] })
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
         {filtered.map((p) => {
           const badge = REVIEW_BADGE[p.reviewStatus] ?? REVIEW_BADGE.needs_review;
-          const img = productImageProps(p.image);
+          const img = hasPackShot(p.image);
           const inCompare = compare.includes(p.hogCode);
           return (
             <Card key={p.hogCode} className="p-4 bg-card/60 backdrop-blur-sm space-y-2">
               <div className="flex items-start gap-3">
                 {img ? (
-                  <img
-                    {...img}
-                    loading="lazy"
+                  <PackShot
+                    image={p.image}
                     className="h-16 w-16 shrink-0 rounded-md border border-hairline object-contain bg-white"
                   />
                 ) : (

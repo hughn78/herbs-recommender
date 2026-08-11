@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { getDictionaryFn, createCaseFn, type ConfirmedMed } from "@/lib/cases.functions";
 import type { GeneratedRec } from "@/lib/engine";
-import { productImageProps } from "@/lib/product-images";
+import { PackShot, hasPackShot } from "@/components/pack-shot";
 import { parseMedications, type DictEntry, type ParsedItem } from "@/lib/parser";
 import { Check, AlertCircle, HelpCircle, X, ShieldCheck } from "lucide-react";
 
@@ -437,17 +437,15 @@ function TransientResults({
           <div className="space-y-3">
             {group.items.map((r, i) => {
               const packShot =
-                r.recommendation_type === "product_recommendation"
-                  ? productImageProps(r.image)
-                  : null;
+                r.recommendation_type === "product_recommendation" &&
+                hasPackShot(r.image);
               return (
               <article key={`${r.rank}-${r.title}-${i}`} className="pp-glass p-5">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex items-start gap-3 min-w-0">
                     {packShot && (
-                      <img
-                        {...packShot}
-                        loading="lazy"
+                      <PackShot
+                        image={r.image}
                         className="h-20 w-20 shrink-0 rounded-md border border-hairline object-contain bg-white"
                       />
                     )}

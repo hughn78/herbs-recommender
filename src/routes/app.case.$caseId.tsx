@@ -4,7 +4,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { toast } from "sonner";
 import { getCaseFn } from "@/lib/cases.functions";
-import { productImageProps } from "@/lib/product-images";
+import { PackShot, hasPackShot } from "@/components/pack-shot";
 import type { ProductImageRef } from "@/lib/recommend-products";
 import {
   exportCaseFn,
@@ -374,7 +374,7 @@ function RecCard({
   const showSafetyNet = !(suppressStandardProductBoilerplate && isStandardSafetyNet);
 
   // Phase 9: approved primary pack shot for catalogue product cards.
-  const packShot = isProduct ? productImageProps(r.image) : null;
+  const packShot = isProduct && hasPackShot(r.image);
 
   return (
     <article
@@ -382,9 +382,8 @@ function RecCard({
     >
       <div className="flex items-start gap-3">
         {packShot ? (
-          <img
-            {...packShot}
-            loading="lazy"
+          <PackShot
+            image={r.image}
             className="h-20 w-20 shrink-0 rounded-md border border-hairline object-contain bg-white"
           />
         ) : (
