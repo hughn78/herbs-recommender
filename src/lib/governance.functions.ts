@@ -205,7 +205,20 @@ export const getReviewQueueFn = createServerFn({ method: "GET" })
     };
   });
 
+/** Review writes are admin-only (enforced in the database too). */
+async function assertReviewAdmin(db: SupabaseClient, userId: string) {
+  const { data, error } = await db
+    .from("user_roles")
+    .select("role")
+    .eq("user_id", userId)
+    .eq("role", "admin")
+    .maybeSingle();
+  if (error) throw new Error(error.message);
+  if (!data) throw new Error("Forbidden: catalogue review requires the admin role.");
+}
+
 async function recordAction(
+
   db: SupabaseClient,
   reviewer: string,
   entityType: string,
@@ -237,6 +250,7 @@ export const reviewEntityFn = createServerFn({ method: "POST" })
   .handler(async ({ data, context }) => {
     const db = context.supabase as unknown as SupabaseClient;
     const reviewer: string = context.userId;
+    await assertReviewAdmin(db, reviewer);
     const spec = ENTITY_TABLE[data.entityType];
     if (!spec) throw new Error(`Unknown entity type: ${data.entityType}`);
     const reason = (data.reason ?? "").trim();
@@ -294,6 +308,7 @@ export const bulkApproveProductsFn = createServerFn({ method: "POST" })
   .handler(async ({ data, context }) => {
     const db = context.supabase as unknown as SupabaseClient;
     const reviewer: string = context.userId;
+    await assertReviewAdmin(db, reviewer);
     const reason = (data.reason ?? "").trim();
     if (!reason) throw new Error("A review reason is required for the audit trail.");
 
