@@ -16,7 +16,7 @@ import {
 import { listProductsFn } from "@/lib/cases.functions";
 import { PackShot, hasPackShot } from "@/components/pack-shot";
 
-export const Route = createFileRoute("/app/products")({
+export const Route = createFileRoute("/app/products/")({
   component: ProductsPage,
   errorComponent: ({ error }) => (
     <div className="p-8 text-sm text-destructive">{error.message}</div>
