@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, BookOpen, ChevronDown, Package } from "lucide-react";
 import { getCatalogueProductFn } from "@/lib/catalogue.functions";
 import { listProductClaimsFn, type ProductClaimRow } from "@/lib/references.functions";
-import { productImageProps } from "@/lib/product-images";
+import { PackShot, hasPackShot } from "@/components/pack-shot";
 
 export const Route = createFileRoute("/app/products/$hogCode")({
   component: ProductDetailPage,
@@ -57,7 +57,7 @@ function ProductDetailPage() {
     );
   }
 
-  const img = productImageProps(p.image);
+  const img = hasPackShot(p.image);
 
   return (
     <div className="mx-auto max-w-4xl p-6 md:p-10 space-y-6">

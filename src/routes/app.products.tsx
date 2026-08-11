@@ -14,7 +14,7 @@ import {
   type CatalogueProductSummary,
 } from "@/lib/catalogue.functions";
 import { listProductsFn } from "@/lib/cases.functions";
-import { productImageProps } from "@/lib/product-images";
+import { PackShot, hasPackShot } from "@/components/pack-shot";
 
 export const Route = createFileRoute("/app/products")({
   component: ProductsPage,
@@ -189,7 +189,7 @@ function CatalogueBrowser({ products }: { products: CatalogueProductSummary[] })
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
         {filtered.map((p) => {
           const badge = REVIEW_BADGE[p.reviewStatus] ?? REVIEW_BADGE.needs_review;
-          const img = productImageProps(p.image);
+          const img = hasPackShot(p.image);
           const inCompare = compare.includes(p.hogCode);
           return (
             <Card key={p.hogCode} className="p-4 bg-card/60 backdrop-blur-sm space-y-2">
