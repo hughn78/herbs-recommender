@@ -205,7 +205,20 @@ export const getReviewQueueFn = createServerFn({ method: "GET" })
     };
   });
 
+/** Review writes are admin-only (enforced in the database too). */
+async function assertReviewAdmin(db: SupabaseClient, userId: string) {
+  const { data, error } = await db
+    .from("user_roles")
+    .select("role")
+    .eq("user_id", userId)
+    .eq("role", "admin")
+    .maybeSingle();
+  if (error) throw new Error(error.message);
+  if (!data) throw new Error("Forbidden: catalogue review requires the admin role.");
+}
+
 async function recordAction(
+
   db: SupabaseClient,
   reviewer: string,
   entityType: string,
