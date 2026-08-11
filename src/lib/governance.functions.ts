@@ -250,6 +250,7 @@ export const reviewEntityFn = createServerFn({ method: "POST" })
   .handler(async ({ data, context }) => {
     const db = context.supabase as unknown as SupabaseClient;
     const reviewer: string = context.userId;
+    await assertReviewAdmin(db, reviewer);
     const spec = ENTITY_TABLE[data.entityType];
     if (!spec) throw new Error(`Unknown entity type: ${data.entityType}`);
     const reason = (data.reason ?? "").trim();
@@ -307,6 +308,7 @@ export const bulkApproveProductsFn = createServerFn({ method: "POST" })
   .handler(async ({ data, context }) => {
     const db = context.supabase as unknown as SupabaseClient;
     const reviewer: string = context.userId;
+    await assertReviewAdmin(db, reviewer);
     const reason = (data.reason ?? "").trim();
     if (!reason) throw new Error("A review reason is required for the audit trail.");
 
