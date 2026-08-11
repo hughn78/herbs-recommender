@@ -22,6 +22,8 @@ import { Route as AppReviewRouteImport } from './routes/app.review'
 import { Route as AppAdminRulesRouteImport } from './routes/app._admin.rules'
 import { Route as AppAdminSetupRouteImport } from './routes/app._admin.setup'
 import { Route as AppCaseCaseIdRouteImport } from './routes/app.case.$caseId'
+import { Route as AppMedicinesIndexRouteImport } from './routes/app.medicines.index'
+import { Route as AppMedicinesConceptIdRouteImport } from './routes/app.medicines.$conceptId'
 import { Route as AppProductsIndexRouteImport } from './routes/app.products.index'
 import { Route as AppProductsHogCodeRouteImport } from './routes/app.products.$hogCode'
 
@@ -89,6 +91,16 @@ const AppCaseCaseIdRoute = AppCaseCaseIdRouteImport.update({
   path: '/case/$caseId',
   getParentRoute: () => AppRoute,
 } as any)
+const AppMedicinesIndexRoute = AppMedicinesIndexRouteImport.update({
+  id: '/medicines/',
+  path: '/medicines/',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppMedicinesConceptIdRoute = AppMedicinesConceptIdRouteImport.update({
+  id: '/medicines/$conceptId',
+  path: '/medicines/$conceptId',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppProductsIndexRoute = AppProductsIndexRouteImport.update({
   id: '/products/',
   path: '/products/',
@@ -113,7 +125,9 @@ export interface FileRoutesByFullPath {
   '/app/rules': typeof AppAdminRulesRoute
   '/app/setup': typeof AppAdminSetupRoute
   '/app/case/$caseId': typeof AppCaseCaseIdRoute
+  '/app/medicines/$conceptId': typeof AppMedicinesConceptIdRoute
   '/app/products/$hogCode': typeof AppProductsHogCodeRoute
+  '/app/medicines/': typeof AppMedicinesIndexRoute
   '/app/products/': typeof AppProductsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -128,7 +142,9 @@ export interface FileRoutesByTo {
   '/app/rules': typeof AppAdminRulesRoute
   '/app/setup': typeof AppAdminSetupRoute
   '/app/case/$caseId': typeof AppCaseCaseIdRoute
+  '/app/medicines/$conceptId': typeof AppMedicinesConceptIdRoute
   '/app/products/$hogCode': typeof AppProductsHogCodeRoute
+  '/app/medicines': typeof AppMedicinesIndexRoute
   '/app/products': typeof AppProductsIndexRoute
 }
 export interface FileRoutesById {
@@ -146,7 +162,9 @@ export interface FileRoutesById {
   '/app/_admin/rules': typeof AppAdminRulesRoute
   '/app/_admin/setup': typeof AppAdminSetupRoute
   '/app/case/$caseId': typeof AppCaseCaseIdRoute
+  '/app/medicines/$conceptId': typeof AppMedicinesConceptIdRoute
   '/app/products/$hogCode': typeof AppProductsHogCodeRoute
+  '/app/medicines/': typeof AppMedicinesIndexRoute
   '/app/products/': typeof AppProductsIndexRoute
 }
 export interface FileRouteTypes {
@@ -164,7 +182,9 @@ export interface FileRouteTypes {
     | '/app/rules'
     | '/app/setup'
     | '/app/case/$caseId'
+    | '/app/medicines/$conceptId'
     | '/app/products/$hogCode'
+    | '/app/medicines/'
     | '/app/products/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -179,7 +199,9 @@ export interface FileRouteTypes {
     | '/app/rules'
     | '/app/setup'
     | '/app/case/$caseId'
+    | '/app/medicines/$conceptId'
     | '/app/products/$hogCode'
+    | '/app/medicines'
     | '/app/products'
   id:
     | '__root__'
@@ -196,7 +218,9 @@ export interface FileRouteTypes {
     | '/app/_admin/rules'
     | '/app/_admin/setup'
     | '/app/case/$caseId'
+    | '/app/medicines/$conceptId'
     | '/app/products/$hogCode'
+    | '/app/medicines/'
     | '/app/products/'
   fileRoutesById: FileRoutesById
 }
@@ -299,6 +323,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppCaseCaseIdRouteImport
       parentRoute: typeof AppRoute
     }
+    '/app/medicines/': {
+      id: '/app/medicines/'
+      path: '/medicines'
+      fullPath: '/app/medicines/'
+      preLoaderRoute: typeof AppMedicinesIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/medicines/$conceptId': {
+      id: '/app/medicines/$conceptId'
+      path: '/medicines/$conceptId'
+      fullPath: '/app/medicines/$conceptId'
+      preLoaderRoute: typeof AppMedicinesConceptIdRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/app/products/': {
       id: '/app/products/'
       path: '/products'
@@ -339,7 +377,9 @@ interface AppRouteChildren {
   AppReviewRoute: typeof AppReviewRoute
   AppIndexRoute: typeof AppIndexRoute
   AppCaseCaseIdRoute: typeof AppCaseCaseIdRoute
+  AppMedicinesConceptIdRoute: typeof AppMedicinesConceptIdRoute
   AppProductsHogCodeRoute: typeof AppProductsHogCodeRoute
+  AppMedicinesIndexRoute: typeof AppMedicinesIndexRoute
   AppProductsIndexRoute: typeof AppProductsIndexRoute
 }
 
@@ -352,7 +392,9 @@ const AppRouteChildren: AppRouteChildren = {
   AppReviewRoute: AppReviewRoute,
   AppIndexRoute: AppIndexRoute,
   AppCaseCaseIdRoute: AppCaseCaseIdRoute,
+  AppMedicinesConceptIdRoute: AppMedicinesConceptIdRoute,
   AppProductsHogCodeRoute: AppProductsHogCodeRoute,
+  AppMedicinesIndexRoute: AppMedicinesIndexRoute,
   AppProductsIndexRoute: AppProductsIndexRoute,
 }
 

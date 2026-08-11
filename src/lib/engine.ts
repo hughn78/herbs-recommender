@@ -13,6 +13,9 @@ import {
 } from "./rationale";
 import { screenRedFlags, type RedFlagHit } from "./red-flags";
 import { checkOtcInteractions, type OtcInteractionHit } from "./otc-interactions";
+import { evaluateMedicationSafety, applySafetySignals, type SafetySignal } from "./medication-safety";
+import { detectMedicationFactors, detectSymptomMedicationAlerts, type MedicationFactorSignal, type SymptomMedicationAlert } from "./medication-reasoning";
+import type { MedicationConcept } from "./medication-knowledge";
 import type { PatientCtx } from "./engine-types";
 export type { PatientCtx };
 
@@ -284,6 +287,7 @@ export function runEngine(
   rules: SafetyRuleRow[],
   products: ProductRow[] = [],
   maps: Partial<TagMaps> = {},
+  medicationConcepts: MedicationConcept[] = [],
 ): GeneratedRec[] {
   const factors = detectPatientFactors(ctx);
   const classes = new Set(
@@ -461,6 +465,29 @@ export function runEngine(
     recs.push(otcInteractionToRec(hit));
   }
 
+  // ---- Medication × supplement safety (Phase 8) --------------------------
+  // Evaluates medication knowledge against supplement product tags.
+  // Runs BEFORE product ranking. Suppressions/downgrades applied to products.
+  const medSafetySignals = evaluateMedicationSafety(ctx, medicationConcepts);
+  for (const signal of medSafetySignals) {
+    recs.push(safetySignalToRec(signal));
+  }
+
+  // ---- Medication-driven patient factor detection (Phase 13) -------------
+  const medFactors = detectMedicationFactors(ctx, medicationConcepts);
+  for (const mf of medFactors) {
+    // Only add if not already detected by the base factor detector
+    if (!factors.includes(mf.factor)) {
+      factors.push(mf.factor);
+    }
+  }
+
+  // ---- Symptom + medication reasoning (Phase 14) -------------------------
+  const symptomAlerts = detectSymptomMedicationAlerts(ctx, medicationConcepts);
+  for (const alert of symptomAlerts) {
+    recs.push(symptomAlertToRec(alert));
+  }
+
   // ---- Product recommendations (Phase 5) ----------------------------------
   if (products.length > 0) {
     const triggeredRuleIds = new Set(
@@ -479,6 +506,30 @@ export function runEngine(
     // clinical synonyms) are passed through; recommendProducts falls back to
     // its built-in defaults for any map not supplied.
     const productRecs = recommendProducts(ctx, products, triggeredRules, maps);
+    // Phase 8: Apply medication × supplement safety signals to products.
+    // Suppressions, downgrades, and counselling notes from the medication
+    // safety engine modify product recommendations AFTER ranking.
+    if (medSafetySignals.length > 0) {
+      const adapted = productRecs.map((pr) => ({
+        product_id: pr.product_id,
+        name: pr.product_name,
+        active_ingredients: [], // ProductRow has this but ProductRecommendation doesn't expose it
+        clinical_use_tags: pr.matched_product_tags,
+        avoid_if_tags: [],
+        safety_cautions: pr.safety_cautions,
+        interaction_notes: pr.interaction_notes,
+        confidence: pr.confidence,
+        confidence_score: pr.confidence_score,
+        why_triggered: pr.why_triggered,
+      }));
+      const modified = applySafetySignals(adapted, medSafetySignals);
+      for (let i = 0; i < productRecs.length; i++) {
+        productRecs[i].safety_cautions = modified[i].safety_cautions;
+        productRecs[i].interaction_notes = modified[i].interaction_notes;
+        productRecs[i].confidence = modified[i].confidence;
+        productRecs[i].confidence_score = modified[i].confidence_score;
+      }
+    }
     // Convert ProductRecommendation to GeneratedRec shape.
     // Rank-flattening fix: carry through the per-product confidence and
     // confidence_score computed in recommendProducts (previously every
@@ -607,6 +658,91 @@ function otcInteractionToRec(hit: OtcInteractionHit): GeneratedRec {
     matched_patient_factors: [],
     source_references: [
       { source: hit.source, tier_label: "OTC interaction table", note: hit.id },
+    ],
+  };
+}
+
+function safetySignalToRec(signal: SafetySignal): GeneratedRec {
+  const matchedFactors: MatchedFactor[] = [];
+  if (signal.medication_concept) {
+    matchedFactors.push({ factor: "medication", value: signal.medication_concept, matched: true });
+  }
+  if (signal.medication_class) {
+    matchedFactors.push({ factor: "medication_class", value: signal.medication_class, matched: true });
+  }
+  if (signal.supplement_ingredient) {
+    matchedFactors.push({ factor: "existing_supplement", value: signal.supplement_ingredient, matched: true });
+  }
+  const rationale = buildRationale({
+    ruleId: `med_safety:${signal.rule_id}`,
+    severity: signal.severity_tier,
+    evidence: "moderate",
+    source: signal.source as RuleSource,
+    matchedFactors,
+    advice: signal.advice,
+    safetyNet: signal.safety_net,
+    mechanism: signal.mechanism,
+  });
+  const recType: RecType = signal.action === "suppress" ? "safety_caution"
+    : signal.action === "require_review" ? "review_required"
+    : signal.action === "admin_timing" ? "administration"
+    : signal.action === "downgrade" ? "safety_caution"
+    : "counselling_prompt";
+  return {
+    recommendation_type: recType,
+    title: `${signal.medication_concept || signal.medication_class || "Medication"} × supplement: ${signal.action}`,
+    confidence: confidenceToTier(rationale.confidence),
+    confidence_score: rationale.confidence,
+    severity_tier: signal.severity_tier,
+    score: TYPE_BASE_SCORE[recType] + rationale.confidence,
+    rank: 0,
+    why_triggered: signal.mechanism,
+    rationale,
+    pharmacist_checks: signal.pharmacist_checks,
+    talking_points: [signal.advice],
+    safety_cautions: signal.severity_tier === "contraindicated" || signal.severity_tier === "major"
+      ? [signal.advice] : [],
+    interaction_notes: signal.action === "admin_timing" ? [signal.advice] : [],
+    matched_medicines: signal.medication_concept ? [signal.medication_concept] : [],
+    matched_patient_factors: [],
+    source_references: [
+      { source: signal.source, tier_label: "Medication safety rule", note: signal.rule_id },
+    ],
+  };
+}
+
+function symptomAlertToRec(alert: SymptomMedicationAlert): GeneratedRec {
+  const rationale = buildRationale({
+    ruleId: `symptom_med:${alert.alert_title}`,
+    severity: "moderate",
+    evidence: "moderate",
+    source: alert.source as RuleSource,
+    matchedFactors: [
+      { factor: "symptom", value: alert.alert_title, matched: true },
+    ],
+    advice: alert.pharmacist_action,
+    safetyNet: "Refer to GP if symptoms persist or worsen.",
+    mechanism: "clinical",
+    mechanismDetail: alert.alert_text,
+  });
+  return {
+    recommendation_type: "counselling_prompt",
+    title: alert.alert_title,
+    confidence: confidenceToTier(rationale.confidence),
+    confidence_score: rationale.confidence,
+    severity_tier: "moderate",
+    score: TYPE_BASE_SCORE.counselling_prompt + rationale.confidence,
+    rank: 0,
+    why_triggered: alert.alert_text,
+    rationale,
+    pharmacist_checks: [alert.pharmacist_action],
+    talking_points: [alert.alert_text],
+    safety_cautions: [],
+    interaction_notes: [],
+    matched_medicines: [],
+    matched_patient_factors: [],
+    source_references: [
+      { source: alert.source, tier_label: "Symptom + medication reasoning", note: alert.alert_title },
     ],
   };
 }
