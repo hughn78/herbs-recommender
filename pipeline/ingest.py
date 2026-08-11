@@ -607,7 +607,15 @@ def main() -> int:
             print("corpus unchanged since last successful run — skipping (use --force)")
             return 0
 
-    run = rest.insert("ingestion_runs", [{"dry_run": False, "source_hashes": hashes, "stats": stats}])
+    # PostgREST refuses UPDATE without a filter, so capture the run_id up front
+    # and address the bookkeeping row explicitly.
+    run = rest._req(
+        "POST",
+        "ingestion_runs?select=run_id",
+        body=[{"dry_run": False, "source_hashes": hashes, "stats": stats}],
+        prefer="return=representation",
+    )
+    run_id = run[0]["run_id"]
 
     try:
         # provenance documents first: sections/citations reference their UUIDs
@@ -746,14 +754,14 @@ def main() -> int:
 
         rest._req(
             "PATCH",
-            "ingestion_runs?order=started_at.desc&limit=1",
+            f"ingestion_runs?run_id=eq.{run_id}",
             body={"status": "complete", "finished_at": "now()", "stats": stats},
             prefer="return=minimal",
         )
     except Exception as e:
         rest._req(
             "PATCH",
-            "ingestion_runs?order=started_at.desc&limit=1",
+            f"ingestion_runs?run_id=eq.{run_id}",
             body={"status": "error", "finished_at": "now()", "last_error": str(e)[:500]},
             prefer="return=minimal",
         )
