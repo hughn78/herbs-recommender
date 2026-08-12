@@ -46,12 +46,15 @@ export async function loadMedicationKnowledge(
 }> {
   try {
     // Try new tables first
+    // Note: Supabase default limit is 100 rows. We must explicitly request
+    // all rows by setting a high limit, otherwise brand names beyond the
+    // first 100 are never loaded and brand recognition silently fails.
     const [conceptsRes, namesRes, classMemRes, classRes, assertionsRes] = await Promise.all([
-      supabase.from("medication_concepts").select("*"),
-      supabase.from("medication_names").select("*"),
-      supabase.from("medication_class_memberships").select("concept_id, class_id"),
-      supabase.from("medication_classes").select("class_id, class_code, class_label"),
-      supabase.from("medication_assertions").select("*"),
+      supabase.from("medication_concepts").select("*").limit(10000),
+      supabase.from("medication_names").select("*").limit(50000),
+      supabase.from("medication_class_memberships").select("concept_id, class_id").limit(50000),
+      supabase.from("medication_classes").select("class_id, class_code, class_label").limit(1000),
+      supabase.from("medication_assertions").select("*").limit(100000),
     ]);
 
     if (conceptsRes.error) throw new Error(conceptsRes.error.message);
