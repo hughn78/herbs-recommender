@@ -214,7 +214,7 @@ function CaseResults() {
   if (isLoading) return <div className="px-8 py-10 text-sm text-muted-foreground">Loading…</div>;
   if (error)
     return (
-      <div className="px-8 py-10 text-sm text-signal">
+      <div className="px-8 py-10 text-sm text-signal" role="alert">
         {error instanceof Error ? error.message : "Could not load case"}
       </div>
     );

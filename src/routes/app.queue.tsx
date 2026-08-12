@@ -29,11 +29,15 @@ function QueuePage() {
       </header>
 
       {isLoading && <div className="text-sm text-muted-foreground">Loading…</div>}
-      {error && <div className="text-sm text-signal">{error instanceof Error ? error.message : "Error"}</div>}
+      {error && (
+        <div className="text-sm text-signal" role="alert">
+          {error instanceof Error ? error.message : "Error"}
+        </div>
+      )}
 
       {data && data.groups.length === 0 && (
         <div className="pp-glass p-10 text-center">
-          <Inbox className="h-8 w-8 mx-auto text-muted-foreground" />
+          <Inbox className="h-8 w-8 mx-auto text-muted-foreground" aria-hidden="true" />
           <div className="font-display text-lg mt-3">Queue is clear</div>
           <div className="text-sm text-muted-foreground mt-1">
             No outstanding safety cautions or review-required items right now.

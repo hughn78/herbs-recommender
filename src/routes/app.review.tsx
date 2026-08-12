@@ -19,8 +19,10 @@ import { GuidedReview, type ReviewAnswers } from "@/components/guided-review";
 import {
   Check,
   AlertCircle,
+  AlertTriangle,
   HelpCircle,
   X,
+  ShieldAlert,
   ShieldCheck,
   ChevronDown,
   ChevronRight,
@@ -58,6 +60,10 @@ const TYPE_LABEL: Record<string, string> = {
   product_discussion: "Product discussion",
   product_recommendation: "Product recommendation",
 };
+/** RecTypes that must appear FIRST inside any severity bucket and be
+ *  rendered with the signal-red visual treatment. Everything else is a
+ *  product/counselling recommendation and is shown after. */
+const SAFETY_TYPES = new Set(["safety_caution", "red_flag", "otc_interaction"]);
 
 function ReviewWizard() {
   const navigate = useNavigate();
@@ -298,14 +304,16 @@ function ReviewWizard() {
             <div className="pp-glass p-6 space-y-5 max-w-4xl mx-auto">
               <h1 className="text-2xl font-display">Patient context</h1>
           <div className="grid grid-cols-2 gap-4">
-            <Field label="Age">
-              <Input type="number" value={ageStr} onChange={(e) => setAgeStr(e.target.value)} />
+            <Field label="Age" htmlFor="review-age">
+              <Input id="review-age" type="number" value={ageStr} onChange={(e) => setAgeStr(e.target.value)} aria-label="Age" />
             </Field>
-            <Field label="Sex">
+            <Field label="Sex" htmlFor="review-sex">
               <select
+                id="review-sex"
                 value={sex}
                 onChange={(e) => setSex(e.target.value)}
                 className="h-9 w-full rounded-md border border-border bg-card px-3 text-sm"
+                aria-label="Sex"
               >
                 <option value="">—</option>
                 <option value="female">Female</option>
@@ -313,11 +321,13 @@ function ReviewWizard() {
                 <option value="other">Other / unspecified</option>
               </select>
             </Field>
-            <Field label="Pregnancy">
+            <Field label="Pregnancy" htmlFor="review-pregnancy">
               <select
+                id="review-pregnancy"
                 value={pregnancy}
                 onChange={(e) => setPregnancy(e.target.value)}
                 className="h-9 w-full rounded-md border border-border bg-card px-3 text-sm"
+                aria-label="Pregnancy status"
               >
                 <option value="not_applicable">Not applicable</option>
                 <option value="no">No</option>
@@ -325,11 +335,13 @@ function ReviewWizard() {
                 <option value="unsure">Unsure</option>
               </select>
             </Field>
-            <Field label="Breastfeeding">
+            <Field label="Breastfeeding" htmlFor="review-breastfeeding">
               <select
+                id="review-breastfeeding"
                 value={breastfeeding}
                 onChange={(e) => setBreastfeeding(e.target.value)}
                 className="h-9 w-full rounded-md border border-border bg-card px-3 text-sm"
+                aria-label="Breastfeeding status"
               >
                 <option value="not_applicable">Not applicable</option>
                 <option value="no">No</option>
@@ -401,7 +413,7 @@ function ReviewWizard() {
           )}
 
           {recognitionError && (
-            <p className="text-sm text-signal">
+            <p className="text-sm text-signal" role="alert">
               Recognition error: {recognitionError}
             </p>
           )}
@@ -422,7 +434,11 @@ function ReviewWizard() {
                   <Check className="h-3.5 w-3.5 text-accent" />
                   {m.generic_name}
                   {m.brand_name ? ` (${m.brand_name})` : ""}
-                  <button onClick={() => removeConfirmed(i)} className="ml-1 text-muted-foreground hover:text-foreground">
+                  <button
+                    onClick={() => removeConfirmed(i)}
+                    className="ml-1 text-muted-foreground hover:text-foreground"
+                    aria-label={`Remove ${m.generic_name} from confirmed medications`}
+                  >
                     <X className="h-3 w-3" />
                   </button>
                 </span>
@@ -471,6 +487,7 @@ function ReviewWizard() {
                       <button
                         onClick={() => acceptFuzzy(i)}
                         className="pp-chip hover:bg-accent/15"
+                        aria-label={`Accept suggested match: ${r.suggestion ?? ""} for ${r.raw}`}
                       >
                         <HelpCircle className="h-3.5 w-3.5 text-amber" />
                         "{r.raw}" → <strong className="font-medium">{r.suggestion}</strong>
@@ -479,6 +496,7 @@ function ReviewWizard() {
                         onClick={() => rejectFuzzy(i)}
                         className="pp-chip hover:bg-signal/10 text-muted-foreground"
                         title="Reject suggestion"
+                        aria-label={`Reject suggested match for ${r.raw}`}
                       >
                         <X className="h-3 w-3" />
                       </button>
@@ -566,7 +584,7 @@ function ReviewWizard() {
             )}
 
             {mutation.isError && (
-              <p className="text-sm text-signal">
+              <p className="text-sm text-signal" role="alert">
                 {mutation.error instanceof Error ? mutation.error.message : "Run failed"}
               </p>
             )}
@@ -594,10 +612,12 @@ function ReviewWizard() {
   );
 }
 
-function Field({ label, children }: { label: string; children: React.ReactNode }) {
+function Field({ label, htmlFor, children }: { label: string; htmlFor?: string; children: React.ReactNode }) {
   return (
     <div className="space-y-1.5">
-      <Label className="text-xs uppercase tracking-wider text-muted-foreground">{label}</Label>
+      <Label className="text-xs uppercase tracking-wider text-muted-foreground" htmlFor={htmlFor}>
+        {label}
+      </Label>
       {children}
     </div>
   );
@@ -610,10 +630,47 @@ function TransientResults({
   result: TransientResult;
   onStartAnother: () => void;
 }) {
-  const groups = SEVERITY_ORDER.map((severity) => ({
-    severity,
-    items: result.recommendations.filter((r) => r.severity_tier === severity),
-  })).filter((g) => g.items.length > 0);
+  // Safety-first hierarchy: split recommendations into three buckets and
+  // render them in priority order. Severity ordering within safety items
+  // is preserved: contraindicated → major → moderate → minor.
+  const SAFETY_TYPES = new Set(["safety_caution", "red_flag"]);
+  const SUITABLE_TYPES = new Set([
+    "product_recommendation",
+    "counselling_prompt",
+    "product_discussion",
+    "otc_interaction",
+    "administration",
+    "review_required",
+  ]);
+
+  const isSafety = (r: GeneratedRec) => SAFETY_TYPES.has(r.recommendation_type);
+  const isSuitable = (r: GeneratedRec) => SUITABLE_TYPES.has(r.recommendation_type);
+  // Excluded: safety items already cover what was ruled out via their
+  // interaction_notes / safety_cautions. We surface those reasons in a
+  // muted section at the end so the pharmacist always sees what was
+  // excluded and why.
+  const isExcludedReason = (r: GeneratedRec) =>
+    !isSafety(r) && !isSuitable(r);
+
+  const safetyGroups = SEVERITY_ORDER
+    .map((severity) => ({
+      severity,
+      items: result.recommendations.filter(
+        (r) => r.severity_tier === severity && isSafety(r),
+      ),
+    }))
+    .filter((g) => g.items.length > 0);
+
+  const suitableItems = result.recommendations.filter(isSuitable);
+
+  // "Excluded" in this display context is derived from the safety
+  // cautions' interaction_notes (which list avoid-product keywords) and
+  // any safety_cautions that explain why a product was ruled out. We
+  // flatten these into a single list of reason strings for the muted
+  // section at the end.
+  const excludedReasons = result.recommendations
+    .filter(isExcludedReason)
+    .map((r) => `${r.title}: ${r.why_triggered}`);
 
   return (
     <div className="mt-8 space-y-6">
@@ -644,18 +701,65 @@ function TransientResults({
         </div>
       )}
 
-      {groups.map((group) => (
-        <section key={group.severity}>
-          <h2 className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-3">
-            {group.severity} · {group.items.length}
-          </h2>
+      {/* ================================================================
+          SAFETY FIRST — visually dominant, before any suitable product.
+          Severity order: contraindicated → major → moderate → minor.
+          Each card gets a left signal-red border, soft red background,
+          and a warning icon header. ================================================================ */}
+      {safetyGroups.length > 0 && (
+        <section aria-label="Safety cautions" className="space-y-5">
+          <div className="flex items-center gap-2">
+            <ShieldAlert
+              className="h-5 w-5 text-signal shrink-0"
+              aria-hidden="true"
+            />
+            <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-signal">
+              Safety first · {safetyGroups.reduce((n, g) => n + g.items.length, 0)}
+            </h2>
+          </div>
+
+          {safetyGroups.map((group) => (
+            <div key={group.severity} className="space-y-3">
+              <h3 className="text-[11px] uppercase tracking-[0.18em] text-signal/80 font-medium">
+                {group.severity} · {group.items.length}
+              </h3>
+              <div className="space-y-3">
+                {group.items.map((r, i) => (
+                  <SafetyRecCard
+                    key={`safety-${r.rank}-${r.title}-${i}`}
+                    rec={r}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
+      )}
+
+      {/* ================================================================
+          SUITABLE PRODUCTS — subordinate section after all safety items.
+          ================================================================ */}
+      {suitableItems.length > 0 && (
+        <section aria-label="Suitable products" className="space-y-3">
+          <div className="flex items-center gap-2">
+            <ShieldCheck
+              className="h-4 w-4 text-accent shrink-0"
+              aria-hidden="true"
+            />
+            <h2 className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+              Suitable products & counselling · {suitableItems.length}
+            </h2>
+          </div>
           <div className="space-y-3">
-            {group.items.map((r, i) => {
+            {suitableItems.map((r, i) => {
               const packShot =
                 r.recommendation_type === "product_recommendation" &&
                 hasPackShot(r.image);
               return (
-              <article key={`${r.rank}-${r.title}-${i}`} className="pp-glass p-5">
+              <article
+                key={`suitable-${r.rank}-${r.title}-${i}`}
+                className="pp-glass p-5"
+              >
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex items-start gap-3 min-w-0">
                     {packShot && (
@@ -694,14 +798,6 @@ function TransientResults({
                   </div>
                 )}
 
-                {r.safety_cautions.length > 0 && (
-                  <ul className="mt-3 list-disc list-inside space-y-1 text-sm text-signal">
-                    {r.safety_cautions.map((c, idx) => (
-                      <li key={idx}>{c}</li>
-                    ))}
-                  </ul>
-                )}
-
                 {r.talking_points.length > 0 && (
                   <div className="mt-3">
                     <p className="text-[11px] uppercase tracking-wider text-muted-foreground">
@@ -734,8 +830,127 @@ function TransientResults({
             })}
           </div>
         </section>
-      ))}
+      )}
+
+      {/* ================================================================
+          EXCLUDED — muted/grey section at the end. Lists products
+          ruled out and the reasons why. Only renders when there is
+          something to show. ================================================================ */}
+      {excludedReasons.length > 0 && (
+        <section
+          aria-label="Excluded products"
+          className="rounded-md border border-hairline bg-muted/30 p-4 space-y-2"
+        >
+          <div className="flex items-center gap-2">
+            <X
+              className="h-4 w-4 text-muted-foreground shrink-0"
+              aria-hidden="true"
+            />
+            <h2 className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+              Excluded · {excludedReasons.length}
+            </h2>
+          </div>
+          <ul className="space-y-1 text-xs text-muted-foreground">
+            {excludedReasons.map((reason, idx) => (
+              <li key={idx} className="leading-relaxed">
+                {reason}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </div>
+  );
+}
+
+/** Safety-first card: visually dominant treatment for safety cautions and
+ *  red flags. Signal-red left border, soft red background, warning icon
+ *  in the header. Renders BEFORE any suitable product card. */
+function SafetyRecCard({ rec }: { rec: GeneratedRec }) {
+  const typeLabel = TYPE_LABEL[rec.recommendation_type] ?? rec.recommendation_type;
+  return (
+    <article
+      className="rounded-md border-l-4 border-signal bg-signal/5 p-5 space-y-3"
+      role="alert"
+    >
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex items-start gap-3 min-w-0">
+          <AlertTriangle
+            className="h-5 w-5 mt-0.5 text-signal shrink-0"
+            aria-hidden="true"
+          />
+          <div className="min-w-0">
+            <p className="text-[11px] uppercase tracking-wider text-signal font-semibold">
+              {typeLabel}
+            </p>
+            <h3 className="mt-1 font-display text-lg leading-snug text-foreground">
+              {rec.title}
+            </h3>
+            {(rec.brand || rec.product_id) && (
+              <p className="mt-1 text-xs text-muted-foreground">
+                {rec.brand}
+                {rec.brand && rec.product_id ? " · " : ""}
+                {rec.product_id ? <span className="font-mono">{rec.product_id}</span> : null}
+              </p>
+            )}
+          </div>
+        </div>
+        <span className="pp-chip text-[11px] shrink-0 bg-signal/10 text-signal border-signal/30">
+          {rec.confidence} · {rec.confidence_score}
+        </span>
+      </div>
+
+      {rec.why_triggered && (
+        <p className="text-sm text-foreground/90">{rec.why_triggered}</p>
+      )}
+
+      {rec.rationale?.advice && (
+        <div className="rounded-md border border-signal/20 bg-signal/5 p-3">
+          <p className="text-[11px] uppercase tracking-wider text-signal font-medium">
+            Action
+          </p>
+          <p className="mt-1 text-sm text-foreground">{rec.rationale.advice}</p>
+        </div>
+      )}
+
+      {rec.safety_cautions.length > 0 && (
+        <ul className="list-disc list-inside space-y-1 text-sm text-signal">
+          {rec.safety_cautions.map((c, idx) => (
+            <li key={idx}>{c}</li>
+          ))}
+        </ul>
+      )}
+
+      {rec.talking_points.length > 0 && (
+        <div>
+          <p className="text-[11px] uppercase tracking-wider text-muted-foreground">
+            Talking points
+          </p>
+          <ul className="mt-1.5 list-disc list-inside space-y-1 text-sm">
+            {rec.talking_points.slice(0, 4).map((t, idx) => (
+              <li key={idx}>{t}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {rec.source_references.length > 0 && (
+        <div className="border-t border-signal/20 pt-3">
+          <p className="text-[11px] uppercase tracking-wider text-muted-foreground">
+            Sources
+          </p>
+          <ul className="mt-1.5 space-y-1 text-xs text-muted-foreground">
+            {rec.source_references.slice(0, 3).map((s, idx) => (
+              <li key={idx}>
+                <span className="text-foreground">{s.source}</span>
+                {s.tier_label ? ` · ${s.tier_label}` : ""}
+                {s.note ? ` — ${s.note}` : ""}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </article>
   );
 }
 
@@ -790,6 +1005,8 @@ function MedicationCard({
       <button
         onClick={onToggle}
         className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-accent/5 transition-colors"
+        aria-expanded={expanded}
+        aria-label={`${expanded ? "Collapse" : "Expand"} details for ${result.generic_name}${result.brand_name ? ` (${result.brand_name})` : ""}`}
       >
         {expanded ? (
           <ChevronDown className="h-4 w-4 text-muted-foreground shrink-0" />
@@ -895,6 +1112,7 @@ function MedicationCard({
             <button
               onClick={onRemove}
               className="text-xs text-signal hover:underline"
+              aria-label={`Remove ${result.generic_name} from confirmed medications`}
             >
               Remove from confirmed
             </button>
@@ -935,6 +1153,7 @@ function UnknownMedicationRow({
           <button
             onClick={() => setShowManual(true)}
             className="text-xs text-accent hover:underline"
+            aria-label={`Manually map unrecognised medication: ${raw}`}
           >
             Map manually
           </button>
@@ -943,26 +1162,41 @@ function UnknownMedicationRow({
 
       {showManual && (
         <div className="mt-3 space-y-2">
-          <Input
-            type="text"
-            placeholder="Generic name (e.g. metformin)"
-            value={genericName}
-            onChange={(e) => setGenericName(e.target.value)}
-            className="text-sm"
-          />
-          <Input
-            type="text"
-            placeholder="Drug class (optional, e.g. biguanide)"
-            value={drugClass}
-            onChange={(e) => setDrugClass(e.target.value)}
-            className="text-sm"
-          />
+          <div>
+            <Label htmlFor={`unknown-generic-${raw}`} className="sr-only">
+              Generic name for {raw}
+            </Label>
+            <Input
+              id={`unknown-generic-${raw}`}
+              type="text"
+              placeholder="Generic name (e.g. metformin)"
+              value={genericName}
+              onChange={(e) => setGenericName(e.target.value)}
+              className="text-sm"
+              aria-label={`Generic name for unrecognised medication ${raw}`}
+            />
+          </div>
+          <div>
+            <Label htmlFor={`unknown-class-${raw}`} className="sr-only">
+              Drug class for {raw}
+            </Label>
+            <Input
+              id={`unknown-class-${raw}`}
+              type="text"
+              placeholder="Drug class (optional, e.g. biguanide)"
+              value={drugClass}
+              onChange={(e) => setDrugClass(e.target.value)}
+              className="text-sm"
+              aria-label={`Drug class for unrecognised medication ${raw}`}
+            />
+          </div>
           <div className="flex gap-2">
             <Button
               size="sm"
               onClick={handleAdd}
               disabled={!genericName.trim()}
               className="bg-amber text-amber-foreground hover:bg-amber/85"
+              aria-label={`Add ${genericName || "medication"} to confirmed list`}
             >
               Add to confirmed
             </Button>
@@ -974,6 +1208,7 @@ function UnknownMedicationRow({
                 setGenericName("");
                 setDrugClass("");
               }}
+              aria-label="Cancel manual mapping"
             >
               Cancel
             </Button>
