@@ -1,7 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useMutation } from "@tanstack/react-query";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,6 +15,7 @@ import {
 import type { GeneratedRec } from "@/lib/engine";
 import { PackShot, hasPackShot } from "@/components/pack-shot";
 import type { RecognitionResult } from "@/lib/medication-parser";
+import { GuidedReview, type ReviewAnswers } from "@/components/guided-review";
 import {
   Check,
   AlertCircle,
@@ -26,6 +27,7 @@ import {
   Pill,
   Package,
   Layers,
+  Zap,
 } from "lucide-react";
 
 export const Route = createFileRoute("/app/review")({
@@ -63,6 +65,7 @@ function ReviewWizard() {
   const recogniseMeds = useServerFn(recogniseMedicationsFn);
 
   const [step, setStep] = useState<Step>(1);
+  const [fastEntry, setFastEntry] = useState(false);
   const [ageStr, setAgeStr] = useState("");
   const [sex, setSex] = useState("");
   const [pregnancy, setPregnancy] = useState("not_applicable");
@@ -75,6 +78,38 @@ function ReviewWizard() {
   const [supplements, setSupplements] = useState("");
   const [pathology, setPathology] = useState("");
   const [notes, setNotes] = useState("");
+
+  // Load Fast Entry preference from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem("counterpoint-fast-entry");
+    if (saved === "true") setFastEntry(true);
+  }, []);
+
+  function toggleFastEntry() {
+    const next = !fastEntry;
+    setFastEntry(next);
+    localStorage.setItem("counterpoint-fast-entry", String(next));
+  }
+
+  // Guided review answers handler — updates the same state variables
+  function handleGuidedAnswers(a: ReviewAnswers) {
+    setAgeStr(a.ageStr);
+    setSex(a.sex);
+    setPregnancy(a.pregnancy);
+    setBreastfeeding(a.breastfeeding);
+    setAllergies(a.allergies);
+    setHistory(a.history);
+    setMedsText(a.medsText);
+    setSupplements(a.supplements);
+    setSymptoms(a.symptoms);
+    setGoal(a.goal);
+    setPathology(a.pathology);
+  }
+
+  const guidedAnswers: ReviewAnswers = {
+    ageStr, sex, pregnancy, breastfeeding, allergies, history,
+    medsText, supplements, symptoms, goal, pathology,
+  };
 
   const [confirmed, setConfirmed] = useState<ConfirmedMed[]>([]);
   const [recognitionResults, setRecognitionResults] = useState<RecognitionResult[]>([]);
@@ -243,8 +278,25 @@ function ReviewWizard() {
       </div>
 
       {step === 1 && (
-        <div className="mt-8 pp-glass p-6 space-y-5">
-          <h1 className="text-2xl font-display">Patient context</h1>
+        <div className="mt-8 space-y-5">
+          {/* Fast Entry toggle */}
+          <div className="flex items-center justify-between max-w-4xl mx-auto">
+            <div className="text-xs text-muted-foreground">
+              {fastEntry ? "Fast entry mode" : "Guided mode"}
+            </div>
+            <button
+              onClick={toggleFastEntry}
+              className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
+              aria-label={fastEntry ? "Switch to guided mode" : "Switch to fast entry mode"}
+            >
+              <Zap className="h-3.5 w-3.5" />
+              {fastEntry ? "Guided mode" : "Fast entry"}
+            </button>
+          </div>
+
+          {fastEntry ? (
+            <div className="pp-glass p-6 space-y-5 max-w-4xl mx-auto">
+              <h1 className="text-2xl font-display">Patient context</h1>
           <div className="grid grid-cols-2 gap-4">
             <Field label="Age">
               <Input type="number" value={ageStr} onChange={(e) => setAgeStr(e.target.value)} />
@@ -319,10 +371,19 @@ function ReviewWizard() {
             <Textarea rows={2} value={pathology} onChange={(e) => setPathology(e.target.value)} />
           </Field>
           <div className="flex justify-end pt-2">
-            <Button onClick={goConfirm} className="bg-amber text-amber-foreground hover:bg-amber/85">
+            <Button onClick={goConfirm} style={{ backgroundColor: "#ECBA82", color: "#2E2E2E" }}>
               Continue
             </Button>
           </div>
+        </div>
+          ) : (
+            <GuidedReview
+              answers={guidedAnswers}
+              onAnswersChange={handleGuidedAnswers}
+              onComplete={goConfirm}
+              onBack={() => navigate({ to: "/app" })}
+            />
+          )}
         </div>
       )}
 

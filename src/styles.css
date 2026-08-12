@@ -275,6 +275,18 @@
   }
 }
 
+/* Guided review enter animation */
+@keyframes cpQuestionEnter {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Print: clean A4 results */
 @page {
   size: A4;
