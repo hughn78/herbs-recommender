@@ -49,7 +49,8 @@ export const searchMedicationsFn = createServerFn({ method: "GET" })
     const limit = Math.min(data.limit ?? 50, 100);
     if (!q) return [];
 
-    // Search medication_names by text — ilike on the name column
+    // Search medication_names by text — ilike contains on the name column
+    // (trigram index med_names_name_trgm_idx makes this fast)
     const { data: nameRows, error: nameErr } = await db
       .from("medication_names")
       .select("name_id, concept_id, name, name_type, is_primary")
@@ -60,10 +61,28 @@ export const searchMedicationsFn = createServerFn({ method: "GET" })
       if (isMissingSchema(nameErr.message)) return [];
       throw new Error(nameErr.message);
     }
-    if (!nameRows?.length) return [];
 
-    // Collect unique concept IDs
-    const conceptIds = Array.from(new Set(nameRows.map((r) => r.concept_id as string)));
+    // Collect concept IDs from name matches
+    const conceptIds = Array.from(new Set((nameRows ?? []).map((r) => r.concept_id as string)));
+
+    // Also search medication_concepts.canonical_name for generic/ingredient matches
+    // that might not have a corresponding brand/generic name row
+    const { data: conceptMatches, error: conceptSearchErr } = await db
+      .from("medication_concepts")
+      .select("concept_id")
+      .ilike("canonical_name", `%${q}%`)
+      .limit(limit);
+
+    if (conceptSearchErr && !isMissingSchema(conceptSearchErr.message)) {
+      throw new Error(conceptSearchErr.message);
+    }
+
+    for (const c of conceptMatches ?? []) {
+      if (!conceptIds.includes(c.concept_id as string)) {
+        conceptIds.push(c.concept_id as string);
+      }
+    }
+
     if (conceptIds.length === 0) return [];
 
     // Fetch concepts
@@ -147,7 +166,9 @@ export const searchMedicationsFn = createServerFn({ method: "GET" })
     // Deduplicate by concept_id, keeping the best match (primary name first)
     const seen = new Set<string>();
     const results: MedicationSearchResult[] = [];
-    for (const nr of nameRows) {
+
+    // First: results from name matches (preserves match type info)
+    for (const nr of nameRows ?? []) {
       const cid = nr.concept_id as string;
       if (seen.has(cid)) continue;
       seen.add(cid);
@@ -162,6 +183,27 @@ export const searchMedicationsFn = createServerFn({ method: "GET" })
         canonicalName: concept.canonical_name as string,
         matchedName: nr.name as string,
         matchType: nr.name_type as string,
+        brands: nameInfo.brands,
+        drugClasses: classesByConcept.get(cid) ?? [],
+        assertionCount: assertionCountByConcept.get(cid) ?? 0,
+      });
+
+      if (results.length >= limit) break;
+    }
+
+    // Then: concepts matched only by canonical_name (no name row matched)
+    for (const c of concepts ?? []) {
+      const cid = c.concept_id as string;
+      if (seen.has(cid)) continue;
+      seen.add(cid);
+
+      const nameInfo = namesByConcept.get(cid) ?? { brands: [], all: [] };
+
+      results.push({
+        conceptId: cid,
+        canonicalName: c.canonical_name as string,
+        matchedName: c.canonical_name as string,
+        matchType: "generic",
         brands: nameInfo.brands,
         drugClasses: classesByConcept.get(cid) ?? [],
         assertionCount: assertionCountByConcept.get(cid) ?? 0,

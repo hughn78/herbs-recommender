@@ -41,11 +41,11 @@ export const searchMedicationsFn = createServerFn({ method: "GET" })
     if (!query) return { results: [], total: 0, search_method: "empty" };
 
     try {
-      // 1. Exact name lookup first
+      // 1. Name lookup — contains match (trigram index makes ILIKE '%term%' fast)
       const { data: nameMatches, error: nameErr } = await db
         .from("medication_names")
         .select("concept_id, name, name_type")
-        .ilike("name", query)
+        .ilike("name", `%${query}%`)
         .limit(20);
 
       if (nameErr) {
