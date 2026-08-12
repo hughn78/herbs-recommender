@@ -27,6 +27,13 @@ dist-ssr
 .DS_Store
 *.suo
 *.ntvs*
+
+# Medication corpus — never commit raw AMH/eMIMS data
+data/medication_kb/*.json
+data/medication_kb/*.sql
+!data/medication_kb/ingestion_summary.json
+docs/emims_scraped/
+docs/amh_scraped/
 *.njsproj
 *.sln
 *.sw?

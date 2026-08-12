@@ -12,6 +12,8 @@ import { loadOntologyTagMaps } from "./ontology";
 import type { ProductImageRef } from "./recommend-products";
 import { attachEvidence } from "./retrieval";
 import { runAiSenseCheck } from "./ai-sense-check";
+import { loadMedicationKnowledge } from "./medication-knowledge";
+import { recogniseMedications, buildIndexFromConcepts, type RecognitionResult } from "./medication-parser";
 
 export type ConfirmedMed = {
   generic_name: string;
@@ -53,6 +55,47 @@ export const getDictionaryFn = createServerFn({ method: "GET" })
       drug_class: d.drug_class ?? null,
       aliases: d.aliases ?? [],
     }));
+  });
+
+export type RecogniseMedicationsResult = {
+  results: RecognitionResult[];
+  source: "medication_intelligence" | "legacy_dictionary" | "none";
+  error?: string;
+};
+
+/** Server function: recognises medications from free-text input using the
+ *  new medication intelligence tables (with legacy dictionary fallback).
+ *  The MedIndex uses Map objects that can't cross the server/client
+ *  boundary, so recognition must happen server-side. */
+export const recogniseMedicationsFn = createServerFn({ method: "POST" })
+  .middleware([publicSupabase])
+  .inputValidator((d: { text: string }) => d)
+  .handler(async ({ data, context }) => {
+    const { supabase } = context;
+    const load = await loadMedicationKnowledge(supabase);
+    if (load.concepts.length === 0) {
+      return {
+        results: [],
+        source: load.source,
+        error: load.error,
+      } satisfies RecogniseMedicationsResult;
+    }
+    const index = buildIndexFromConcepts(
+      load.concepts.map((c) => ({
+        concept_id: c.concept_id,
+        canonical_name: c.canonical_name,
+        name_normalised: c.name_normalised,
+        drug_classes: c.drug_classes,
+        brands: c.brands,
+        aliases: c.aliases,
+      })),
+    );
+    const results = recogniseMedications(data.text, index);
+    return {
+      results,
+      source: load.source,
+      error: load.error,
+    } satisfies RecogniseMedicationsResult;
   });
 
 export const listSafetyRulesFn = createServerFn({ method: "GET" })

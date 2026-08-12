@@ -1,0 +1,10 @@
+{
+  "total_concepts": 2654,
+  "total_names": 10690,
+  "total_assertions": 57918,
+  "total_conflicts": 0,
+  "total_class_mappings": 22,
+  "concepts_from_emims": 1794,
+  "concepts_from_amh": 1432,
+  "concepts_from_both": 572
+}
