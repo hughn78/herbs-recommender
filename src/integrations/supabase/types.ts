@@ -460,6 +460,463 @@ export type Database = {
         }
         Relationships: []
       }
+      med_data_quality: {
+        Row: {
+          concept_id: string | null
+          created_at: string
+          description: string
+          issue_id: string
+          issue_type: string
+          severity: string
+          source_code: string | null
+          source_file: string | null
+          status: string
+        }
+        Insert: {
+          concept_id?: string | null
+          created_at?: string
+          description: string
+          issue_id?: string
+          issue_type: string
+          severity?: string
+          source_code?: string | null
+          source_file?: string | null
+          status?: string
+        }
+        Update: {
+          concept_id?: string | null
+          created_at?: string
+          description?: string
+          issue_id?: string
+          issue_type?: string
+          severity?: string
+          source_code?: string | null
+          source_file?: string | null
+          status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "med_data_quality_concept_id_fkey"
+            columns: ["concept_id"]
+            isOneToOne: false
+            referencedRelation: "medication_concepts"
+            referencedColumns: ["concept_id"]
+          },
+        ]
+      }
+      med_ingestion_runs: {
+        Row: {
+          changed_assertions: number
+          completed_at: string | null
+          conflicts_found: number
+          document_id: string | null
+          error_summary: string | null
+          files_failed: number
+          files_processed: number
+          files_skipped: number
+          new_assertions: number
+          new_concepts: number
+          report_json: Json | null
+          run_id: string
+          source_code: string
+          started_at: string
+          status: string
+          updated_concepts: number
+        }
+        Insert: {
+          changed_assertions?: number
+          completed_at?: string | null
+          conflicts_found?: number
+          document_id?: string | null
+          error_summary?: string | null
+          files_failed?: number
+          files_processed?: number
+          files_skipped?: number
+          new_assertions?: number
+          new_concepts?: number
+          report_json?: Json | null
+          run_id?: string
+          source_code: string
+          started_at?: string
+          status?: string
+          updated_concepts?: number
+        }
+        Update: {
+          changed_assertions?: number
+          completed_at?: string | null
+          conflicts_found?: number
+          document_id?: string | null
+          error_summary?: string | null
+          files_failed?: number
+          files_processed?: number
+          files_skipped?: number
+          new_assertions?: number
+          new_concepts?: number
+          report_json?: Json | null
+          run_id?: string
+          source_code?: string
+          started_at?: string
+          status?: string
+          updated_concepts?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "med_ingestion_runs_document_id_fkey"
+            columns: ["document_id"]
+            isOneToOne: false
+            referencedRelation: "med_source_documents"
+            referencedColumns: ["document_id"]
+          },
+        ]
+      }
+      med_source_documents: {
+        Row: {
+          corpus_path: string | null
+          document_id: string
+          file_count: number | null
+          ingested_at: string
+          scrape_date: string | null
+          sha256: string
+          source_code: string
+          source_version: string | null
+          title: string
+        }
+        Insert: {
+          corpus_path?: string | null
+          document_id?: string
+          file_count?: number | null
+          ingested_at?: string
+          scrape_date?: string | null
+          sha256: string
+          source_code: string
+          source_version?: string | null
+          title: string
+        }
+        Update: {
+          corpus_path?: string | null
+          document_id?: string
+          file_count?: number | null
+          ingested_at?: string
+          scrape_date?: string | null
+          sha256?: string
+          source_code?: string
+          source_version?: string | null
+          title?: string
+        }
+        Relationships: []
+      }
+      medication_assertion_conflicts: {
+        Row: {
+          assertion_a_id: string | null
+          assertion_b_id: string | null
+          assertion_type: string
+          clinical_significance: string
+          concept_id: string
+          conflict_id: string
+          created_at: string
+          resolution: string
+          resolved_at: string | null
+          reviewer_notes: string | null
+          source_a: string
+          source_b: string
+          statement_a: string
+          statement_b: string
+        }
+        Insert: {
+          assertion_a_id?: string | null
+          assertion_b_id?: string | null
+          assertion_type: string
+          clinical_significance?: string
+          concept_id: string
+          conflict_id?: string
+          created_at?: string
+          resolution?: string
+          resolved_at?: string | null
+          reviewer_notes?: string | null
+          source_a: string
+          source_b: string
+          statement_a: string
+          statement_b: string
+        }
+        Update: {
+          assertion_a_id?: string | null
+          assertion_b_id?: string | null
+          assertion_type?: string
+          clinical_significance?: string
+          concept_id?: string
+          conflict_id?: string
+          created_at?: string
+          resolution?: string
+          resolved_at?: string | null
+          reviewer_notes?: string | null
+          source_a?: string
+          source_b?: string
+          statement_a?: string
+          statement_b?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "medication_assertion_conflicts_assertion_a_id_fkey"
+            columns: ["assertion_a_id"]
+            isOneToOne: false
+            referencedRelation: "medication_assertions"
+            referencedColumns: ["assertion_id"]
+          },
+          {
+            foreignKeyName: "medication_assertion_conflicts_assertion_b_id_fkey"
+            columns: ["assertion_b_id"]
+            isOneToOne: false
+            referencedRelation: "medication_assertions"
+            referencedColumns: ["assertion_id"]
+          },
+          {
+            foreignKeyName: "medication_assertion_conflicts_concept_id_fkey"
+            columns: ["concept_id"]
+            isOneToOne: false
+            referencedRelation: "medication_concepts"
+            referencedColumns: ["concept_id"]
+          },
+        ]
+      }
+      medication_assertions: {
+        Row: {
+          assertion_id: string
+          assertion_type: string
+          assertion_value: string | null
+          concept_id: string
+          confidence: string
+          content_hash: string
+          created_at: string
+          extraction_method: string
+          ingestion_run_id: string | null
+          review_status: string
+          reviewer_notes: string | null
+          source_code: string
+          source_document_id: string | null
+          source_file: string | null
+          source_locator: string | null
+          source_section: string | null
+          statement: string
+          updated_at: string
+        }
+        Insert: {
+          assertion_id?: string
+          assertion_type: string
+          assertion_value?: string | null
+          concept_id: string
+          confidence?: string
+          content_hash: string
+          created_at?: string
+          extraction_method?: string
+          ingestion_run_id?: string | null
+          review_status?: string
+          reviewer_notes?: string | null
+          source_code: string
+          source_document_id?: string | null
+          source_file?: string | null
+          source_locator?: string | null
+          source_section?: string | null
+          statement: string
+          updated_at?: string
+        }
+        Update: {
+          assertion_id?: string
+          assertion_type?: string
+          assertion_value?: string | null
+          concept_id?: string
+          confidence?: string
+          content_hash?: string
+          created_at?: string
+          extraction_method?: string
+          ingestion_run_id?: string | null
+          review_status?: string
+          reviewer_notes?: string | null
+          source_code?: string
+          source_document_id?: string | null
+          source_file?: string | null
+          source_locator?: string | null
+          source_section?: string | null
+          statement?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "medication_assertions_concept_id_fkey"
+            columns: ["concept_id"]
+            isOneToOne: false
+            referencedRelation: "medication_concepts"
+            referencedColumns: ["concept_id"]
+          },
+          {
+            foreignKeyName: "medication_assertions_ingestion_run_id_fkey"
+            columns: ["ingestion_run_id"]
+            isOneToOne: false
+            referencedRelation: "med_ingestion_runs"
+            referencedColumns: ["run_id"]
+          },
+          {
+            foreignKeyName: "medication_assertions_source_document_id_fkey"
+            columns: ["source_document_id"]
+            isOneToOne: false
+            referencedRelation: "med_source_documents"
+            referencedColumns: ["document_id"]
+          },
+        ]
+      }
+      medication_class_memberships: {
+        Row: {
+          class_id: string
+          concept_id: string
+          confidence: string
+          created_at: string
+          membership_id: string
+          source_code: string | null
+        }
+        Insert: {
+          class_id: string
+          concept_id: string
+          confidence?: string
+          created_at?: string
+          membership_id?: string
+          source_code?: string | null
+        }
+        Update: {
+          class_id?: string
+          concept_id?: string
+          confidence?: string
+          created_at?: string
+          membership_id?: string
+          source_code?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "medication_class_memberships_class_id_fkey"
+            columns: ["class_id"]
+            isOneToOne: false
+            referencedRelation: "medication_classes"
+            referencedColumns: ["class_id"]
+          },
+          {
+            foreignKeyName: "medication_class_memberships_concept_id_fkey"
+            columns: ["concept_id"]
+            isOneToOne: false
+            referencedRelation: "medication_concepts"
+            referencedColumns: ["concept_id"]
+          },
+        ]
+      }
+      medication_classes: {
+        Row: {
+          class_category: string | null
+          class_code: string
+          class_id: string
+          class_label: string
+          created_at: string
+          parent_class_id: string | null
+          source_code: string | null
+        }
+        Insert: {
+          class_category?: string | null
+          class_code: string
+          class_id?: string
+          class_label: string
+          created_at?: string
+          parent_class_id?: string | null
+          source_code?: string | null
+        }
+        Update: {
+          class_category?: string | null
+          class_code?: string
+          class_id?: string
+          class_label?: string
+          created_at?: string
+          parent_class_id?: string | null
+          source_code?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "medication_classes_parent_class_id_fkey"
+            columns: ["parent_class_id"]
+            isOneToOne: false
+            referencedRelation: "medication_classes"
+            referencedColumns: ["class_id"]
+          },
+        ]
+      }
+      medication_components: {
+        Row: {
+          combination_brand: string | null
+          combination_label: string
+          component_id: string
+          concept_id: string
+          created_at: string
+          role: string | null
+        }
+        Insert: {
+          combination_brand?: string | null
+          combination_label: string
+          component_id?: string
+          concept_id: string
+          created_at?: string
+          role?: string | null
+        }
+        Update: {
+          combination_brand?: string | null
+          combination_label?: string
+          component_id?: string
+          concept_id?: string
+          created_at?: string
+          role?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "medication_components_concept_id_fkey"
+            columns: ["concept_id"]
+            isOneToOne: false
+            referencedRelation: "medication_concepts"
+            referencedColumns: ["concept_id"]
+          },
+        ]
+      }
+      medication_concepts: {
+        Row: {
+          atc_code: string | null
+          canonical_name: string
+          concept_id: string
+          created_at: string
+          description: string | null
+          name_normalised: string
+          review_status: string
+          reviewer_notes: string | null
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          atc_code?: string | null
+          canonical_name: string
+          concept_id?: string
+          created_at?: string
+          description?: string | null
+          name_normalised: string
+          review_status?: string
+          reviewer_notes?: string | null
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          atc_code?: string | null
+          canonical_name?: string
+          concept_id?: string
+          created_at?: string
+          description?: string | null
+          name_normalised?: string
+          review_status?: string
+          reviewer_notes?: string | null
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       medication_dictionary: {
         Row: {
           aliases: string[] | null
@@ -489,6 +946,206 @@ export type Database = {
           id?: string
         }
         Relationships: []
+      }
+      medication_forms: {
+        Row: {
+          concept_id: string
+          created_at: string
+          dosage_form: string
+          form_id: string
+          route: string | null
+          source_code: string | null
+          strength_text: string | null
+        }
+        Insert: {
+          concept_id: string
+          created_at?: string
+          dosage_form: string
+          form_id?: string
+          route?: string | null
+          source_code?: string | null
+          strength_text?: string | null
+        }
+        Update: {
+          concept_id?: string
+          created_at?: string
+          dosage_form?: string
+          form_id?: string
+          route?: string | null
+          source_code?: string | null
+          strength_text?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "medication_forms_concept_id_fkey"
+            columns: ["concept_id"]
+            isOneToOne: false
+            referencedRelation: "medication_concepts"
+            referencedColumns: ["concept_id"]
+          },
+        ]
+      }
+      medication_names: {
+        Row: {
+          concept_id: string
+          created_at: string
+          is_primary: boolean
+          name: string
+          name_id: string
+          name_type: string
+          source_code: string | null
+        }
+        Insert: {
+          concept_id: string
+          created_at?: string
+          is_primary?: boolean
+          name: string
+          name_id?: string
+          name_type: string
+          source_code?: string | null
+        }
+        Update: {
+          concept_id?: string
+          created_at?: string
+          is_primary?: boolean
+          name?: string
+          name_id?: string
+          name_type?: string
+          source_code?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "medication_names_concept_id_fkey"
+            columns: ["concept_id"]
+            isOneToOne: false
+            referencedRelation: "medication_concepts"
+            referencedColumns: ["concept_id"]
+          },
+        ]
+      }
+      medication_patient_factor_rules: {
+        Row: {
+          class_id: string | null
+          concept_id: string | null
+          created_at: string
+          detection_label: string
+          patient_factor: string
+          review_status: string
+          rule_id: string
+          source_code: string
+        }
+        Insert: {
+          class_id?: string | null
+          concept_id?: string | null
+          created_at?: string
+          detection_label: string
+          patient_factor: string
+          review_status?: string
+          rule_id?: string
+          source_code?: string
+        }
+        Update: {
+          class_id?: string | null
+          concept_id?: string | null
+          created_at?: string
+          detection_label?: string
+          patient_factor?: string
+          review_status?: string
+          rule_id?: string
+          source_code?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "medication_patient_factor_rules_class_id_fkey"
+            columns: ["class_id"]
+            isOneToOne: false
+            referencedRelation: "medication_classes"
+            referencedColumns: ["class_id"]
+          },
+          {
+            foreignKeyName: "medication_patient_factor_rules_concept_id_fkey"
+            columns: ["concept_id"]
+            isOneToOne: false
+            referencedRelation: "medication_concepts"
+            referencedColumns: ["concept_id"]
+          },
+        ]
+      }
+      medication_supplement_safety: {
+        Row: {
+          action: string
+          advice: string
+          class_id: string | null
+          concept_id: string | null
+          created_at: string
+          mechanism: string | null
+          pharmacist_checks: string[]
+          product_tags: string[]
+          review_status: string
+          rule_id: string
+          safety_net: string | null
+          severity_tier: string
+          source_assertion_id: string | null
+          source_code: string
+          supplement_ingredient: string | null
+        }
+        Insert: {
+          action: string
+          advice: string
+          class_id?: string | null
+          concept_id?: string | null
+          created_at?: string
+          mechanism?: string | null
+          pharmacist_checks?: string[]
+          product_tags?: string[]
+          review_status?: string
+          rule_id?: string
+          safety_net?: string | null
+          severity_tier: string
+          source_assertion_id?: string | null
+          source_code?: string
+          supplement_ingredient?: string | null
+        }
+        Update: {
+          action?: string
+          advice?: string
+          class_id?: string | null
+          concept_id?: string | null
+          created_at?: string
+          mechanism?: string | null
+          pharmacist_checks?: string[]
+          product_tags?: string[]
+          review_status?: string
+          rule_id?: string
+          safety_net?: string | null
+          severity_tier?: string
+          source_assertion_id?: string | null
+          source_code?: string
+          supplement_ingredient?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "medication_supplement_safety_class_id_fkey"
+            columns: ["class_id"]
+            isOneToOne: false
+            referencedRelation: "medication_classes"
+            referencedColumns: ["class_id"]
+          },
+          {
+            foreignKeyName: "medication_supplement_safety_concept_id_fkey"
+            columns: ["concept_id"]
+            isOneToOne: false
+            referencedRelation: "medication_concepts"
+            referencedColumns: ["concept_id"]
+          },
+          {
+            foreignKeyName: "medication_supplement_safety_source_assertion_id_fkey"
+            columns: ["source_assertion_id"]
+            isOneToOne: false
+            referencedRelation: "medication_assertions"
+            referencedColumns: ["assertion_id"]
+          },
+        ]
       }
       ontology_concepts: {
         Row: {
