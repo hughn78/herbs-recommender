@@ -261,6 +261,7 @@ export function GuidedReview({ answers, onAnswersChange, onComplete, onBack }: G
               onChange={(e) => setAnswer(question.key, e.target.value)}
               className="h-11 w-full rounded-md border border-border bg-card px-3 text-sm"
               style={{ fontSize: "clamp(16px, 2.5vw, 20px)" }}
+              aria-label={question.label}
             >
               {question.options?.map((opt) => (
                 <option key={opt.value} value={opt.value}>{opt.label}</option>

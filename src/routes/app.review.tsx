@@ -60,10 +60,6 @@ const TYPE_LABEL: Record<string, string> = {
   product_discussion: "Product discussion",
   product_recommendation: "Product recommendation",
 };
-/** RecTypes that must appear FIRST inside any severity bucket and be
- *  rendered with the signal-red visual treatment. Everything else is a
- *  product/counselling recommendation and is shown after. */
-const SAFETY_TYPES = new Set(["safety_caution", "red_flag", "otc_interaction"]);
 
 function ReviewWizard() {
   const navigate = useNavigate();
