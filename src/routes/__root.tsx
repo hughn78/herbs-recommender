@@ -49,7 +49,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           This page didn't load
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          Something went wrong. You can try refreshing or head back home.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -78,34 +78,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "PharmRec" },
-      { name: "description", content: "PharmaPrompt OS is a clinical recommendation platform for Australian pharmacists." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "PharmRec" },
-      { property: "og:description", content: "PharmaPrompt OS is a clinical recommendation platform for Australian pharmacists." },
+      { title: "CounterPoint" },
+      { name: "description", content: "Supplement guidance, considered at the counter. Safety-screened, source-backed recommendations for Australian community pharmacists." },
+      { property: "og:title", content: "CounterPoint" },
+      { property: "og:description", content: "Supplement guidance, considered at the counter. Safety-screened, source-backed recommendations for Australian community pharmacists." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "PharmRec" },
-      { name: "twitter:description", content: "PharmaPrompt OS is a clinical recommendation platform for Australian pharmacists." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/R6K3glyzDwgIwpIt8lj1BoPA0EM2/social-images/social-1781275682726-“Modern_Australian_pharmacist_prescriber_using_202605201422.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/R6K3glyzDwgIwpIt8lj1BoPA0EM2/social-images/social-1781275682726-“Modern_Australian_pharmacist_prescriber_using_202605201422.webp" },
+      { name: "twitter:title", content: "CounterPoint" },
+      { name: "twitter:description", content: "Supplement guidance, considered at the counter. Safety-screened, source-backed recommendations for Australian community pharmacists." },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap",
       },
       { rel: "stylesheet", href: appCss },
     ],
   }),
-  shellComponent: RootShell,
-  component: RootComponent,
-  notFoundComponent: NotFoundComponent,
-  errorComponent: ErrorComponent,
-});
+    shellComponent: RootShell,
+    component: RootComponent,
+    notFoundComponent: NotFoundComponent,
+    errorComponent: ErrorComponent,
+  });
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
@@ -126,7 +122,6 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <Toaster />
     </QueryClientProvider>

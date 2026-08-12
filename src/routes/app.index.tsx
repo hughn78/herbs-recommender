@@ -19,7 +19,7 @@ function HomePage() {
     <div className="px-8 py-10 max-w-5xl mx-auto">
       <div className="flex items-end justify-between">
         <div>
-          <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Counter view</p>
+          <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Counter</p>
           <h1 className="mt-1 text-3xl font-display">Good day.</h1>
           <p className="mt-2 text-muted-foreground">
             Start a new review or pick up where you left off. Recommendations are deterministic and source-aware.

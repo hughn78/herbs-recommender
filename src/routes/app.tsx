@@ -20,7 +20,7 @@ function AppLayout() {
             <div className="flex items-center gap-3">
               <SidebarTrigger />
               <span className="font-display text-sm text-foreground">
-                Pharmacy Recommendation Engine
+                CounterPoint
               </span>
             </div>
             <div className="flex items-center gap-2 text-xs text-subtle">
