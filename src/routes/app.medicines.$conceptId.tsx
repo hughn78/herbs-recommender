@@ -345,6 +345,14 @@ function MedicationDetailPage() {
     retry: false,
   });
 
+  // Memoize assertion groups — must be called before any early returns
+  // to respect the Rules of Hooks (no conditional hook calls).
+  const m = detailQuery.data;
+  const groups = useMemo(
+    () => (m && m.available ? groupAssertions(m.assertions) : []),
+    [m],
+  );
+
   if (detailQuery.isLoading) {
     return (
       <div className="mx-auto max-w-4xl p-6 md:p-10 text-sm text-muted-foreground">
@@ -353,7 +361,6 @@ function MedicationDetailPage() {
     );
   }
 
-  const m = detailQuery.data;
   if (!m || !m.available) {
     return (
       <div className="mx-auto max-w-4xl p-6 md:p-10 space-y-4">
@@ -374,8 +381,6 @@ function MedicationDetailPage() {
       </div>
     );
   }
-
-  const groups = useMemo(() => groupAssertions(m.assertions), [m.assertions]);
 
   // Summary counts for header
   const contraindicationCount = m.assertions.filter((a) => a.assertion_type === "contraindication").length;
