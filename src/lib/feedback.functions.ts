@@ -139,7 +139,7 @@ export const exportCaseFn = createServerFn({ method: "GET" })
       recommendations: recsRes.data ?? [],
       feedback: feedbackRes.data ?? [],
       disclaimer:
-        "PharmaPrompt OS — decision support, not medical advice. Pharmacist judgement required.",
+        "CounterPoint — decision support, not medical advice. Pharmacist judgement required.",
     };
 
     const esc = (v: unknown) => {
