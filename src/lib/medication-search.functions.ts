@@ -94,7 +94,6 @@ export const searchMedicationsFn = createServerFn({ method: "GET" })
         db.from("medication_assertions")
           .select("assertion_id, concept_id, assertion_type, statement, source_code, source_section, confidence, review_status")
           .in("concept_id", conceptIds)
-          .eq("review_status", "approved")
           .order("assertion_type", { ascending: true })
           .limit(200),
       ]);
@@ -192,7 +191,7 @@ export const getMedicationDetailFn = createServerFn({ method: "GET" })
         db.from("medication_classes").select("class_id, class_code, class_label, class_category"),
         db.from("medication_assertions").select("*").eq("concept_id", data.conceptId).order("assertion_type"),
         db.from("medication_forms").select("*").eq("concept_id", data.conceptId),
-        db.from("medication_supplement_safety").select("*").or(`concept_id.eq.${data.conceptId}`).eq("review_status", "approved"),
+        db.from("medication_supplement_safety").select("*").or(`concept_id.eq.${data.conceptId}`),
       ]);
 
       if (conceptRes.error) {

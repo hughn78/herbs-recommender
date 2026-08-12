@@ -129,6 +129,7 @@ export const searchMedicationsFn = createServerFn({ method: "GET" })
     }
 
     // Fetch assertion counts per concept
+    // (don't filter by review_status — auto-ingested from AMH/eMIMS, all authoritative)
     const { data: assertions, error: assertErr } = await db
       .from("medication_assertions")
       .select("concept_id, assertion_id")

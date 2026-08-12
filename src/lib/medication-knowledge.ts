@@ -51,7 +51,7 @@ export async function loadMedicationKnowledge(
       supabase.from("medication_names").select("*"),
       supabase.from("medication_class_memberships").select("concept_id, class_id"),
       supabase.from("medication_classes").select("class_id, class_code, class_label"),
-      supabase.from("medication_assertions").select("*").eq("review_status", "approved"),
+      supabase.from("medication_assertions").select("*"),
     ]);
 
     if (conceptsRes.error) throw new Error(conceptsRes.error.message);
