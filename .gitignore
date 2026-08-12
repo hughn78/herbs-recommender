@@ -29,9 +29,7 @@ dist-ssr
 *.ntvs*
 
 # Medication corpus — never commit raw AMH/eMIMS data
-data/medication_kb/*.json
-data/medication_kb/*.sql
-!data/medication_kb/ingestion_summary.json
+data/derived/
 docs/emims_scraped/
 docs/amh_scraped/
 *.njsproj
