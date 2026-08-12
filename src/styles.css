@@ -5,29 +5,30 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* PharmaPrompt OS — Organic design system
+/* CounterPoint — professional pharmacy supplement recommendation
  * Editorial + warm: paper-gray page, borderless white panels,
- * deep-teal hero band, pale amber actions, serif headings, Inter body.
+ * deep-teal counter, amber point accent, serif headings, Inter body.
  * Signal red reserved EXCLUSIVELY for safety cautions.
  */
 
 @theme inline {
-  --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+  --font-display: "Instrument Serif", Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  /* Organic geometry — soft, never pill-like */
+  /* Geometry — restrained, not pill-like */
   --radius-sm: 4px;
-  --radius-md: 14px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
-  --radius-2xl: 32px;
-  --radius-band: 80px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-band: 60px;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted-foreground: var(--muted-foreground);
   --color-subtle: var(--subtle);
+  --color-subtle-ink: var(--subtle-ink);
   --color-card: var(--card);
   --color-card-foreground: var(--foreground);
   --color-popover: var(--card);
@@ -48,6 +49,7 @@
   --color-panel: var(--panel);
   --color-teal: var(--teal);
   --color-teal-foreground: var(--teal-foreground);
+  --color-warm-white: var(--warm-white);
 
   /* Signal red — SAFETY CAUTIONS ONLY */
   --color-signal: var(--signal);
@@ -59,6 +61,7 @@
 
   --color-amber: var(--amber);
   --color-amber-foreground: var(--amber-foreground);
+  --color-amber-ink: var(--amber-ink);
   --color-amber-soft: var(--amber-soft);
 
   --color-sidebar: var(--sidebar);
@@ -74,9 +77,13 @@
 :root {
   /* Paper surface */
   --background: #F5F5F5;
+  /* Warm white alt surface */
+  --warm-white: #F3F1EC;
   /* Inks */
   --foreground: #2E2E2E;
+  --muted-ink: #57564C;
   --muted-foreground: #57564C;
+  --subtle-ink: #6B6A63;
   --subtle: #82817A;
 
   /* Borderless white panels */
@@ -84,7 +91,7 @@
   --panel: #FFFFFF;
   --deep-panel: #1A1A1A;
 
-  /* Hero teal */
+  /* Hero teal — the counter */
   --teal: #024F46;
   --teal-foreground: #F3F1EC;
 
@@ -98,8 +105,8 @@
   --accent-foreground: #F3F1EC;
   --accent-deep: #013A33;
 
-  --border: #E9E6E6;
-  --hairline: #E9E6E6;
+  --border: #E2DFD9;
+  --hairline: #E2DFD9;
   --ring: #024F46;
 
   /* Signal red — RESERVED for safety cautions only */
@@ -107,9 +114,10 @@
   --signal-foreground: #FFFFFF;
   --signal-soft: #FBF0EE;
 
-  /* Brand amber — primary actions and intentional highlights */
+  /* Brand amber — the point */
   --amber: #ECBA82;
   --amber-foreground: #2E2E2E;
+  --amber-ink: #8A5A1F;
   --amber-soft: #FBF1E5;
 
   --sidebar: #FFFFFF;
@@ -130,11 +138,16 @@
 
   html, body {
     background-color: var(--color-background);
-    color: var(--color-muted-foreground);
+    color: var(--color-foreground);
     font-family: var(--font-sans);
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     line-height: 1.6;
+  }
+
+  /* Body text defaults to ink, not muted */
+  body {
+    color: var(--foreground);
   }
 
   h1, h2, h3, h4, h5 {
@@ -147,26 +160,47 @@
   button, [role="button"] {
     min-height: 0;
   }
+
+  /* Keyboard focus — visible and consistent */
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+
+  /* Monospace for medication strings */
+  .font-mono, .med-string {
+    font-family: var(--font-mono);
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 @layer components {
-  /* Borderless white panel — the Organic default surface */
+  /* Borderless white panel — the default surface */
   .pp-glass {
     background: var(--color-card);
-    border: 0;
-    border-radius: 24px;
+    border: 1px solid var(--color-hairline);
+    border-radius: 12px;
   }
   .pp-flat {
     background: var(--color-card);
-    border: 0;
-    border-radius: 16px;
+    border: 1px solid var(--color-hairline);
+    border-radius: 8px;
   }
-  /* Floating overlays get the only soft elevation in the system */
+  /* Floating overlays get subtle elevation */
   .pp-raised {
     background: var(--color-card);
-    border: 0;
-    border-radius: 16px;
-    box-shadow: 0 18px 40px -24px rgba(26, 26, 26, 0.28);
+    border: 1px solid var(--color-hairline);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px -16px rgba(26, 26, 26, 0.18);
   }
   .pp-chip {
     display: inline-flex;
@@ -184,7 +218,7 @@
     border-left: 4px solid var(--color-signal);
     background: var(--color-signal-soft);
   }
-  /* Signature hero band: square top, deeply rounded bottom */
+  /* Signature hero band: deep teal */
   .pp-band {
     background: var(--color-teal);
     color: var(--color-teal-foreground);
@@ -194,7 +228,62 @@
   .pp-island {
     background: var(--color-deep-panel);
     color: #F3F1EC;
-    border-radius: 32px;
+    border-radius: 16px;
+  }
+
+  /* Guided review progress indicator */
+  .cp-progress-track {
+    height: 3px;
+    background: var(--color-hairline);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .cp-progress-fill {
+    height: 100%;
+    background: var(--color-teal);
+    transition: width 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Question enter/exit transitions */
+  .cp-question-enter {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .cp-question-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 420ms cubic-bezier(0.16, 1, 0.3, 1), transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .cp-question-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .cp-question-exit-active {
+    opacity: 0;
+    transform: translateY(-16px);
+    transition: opacity 220ms ease-in, transform 220ms ease-in;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cp-question-enter,
+    .cp-question-enter-active,
+    .cp-question-exit,
+    .cp-question-exit-active {
+      transition: opacity 80ms linear !important;
+      transform: none !important;
+    }
+  }
+}
+
+/* Guided review enter animation */
+@keyframes cpQuestionEnter {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

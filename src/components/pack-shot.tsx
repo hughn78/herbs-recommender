@@ -39,6 +39,7 @@ export function PackShot({
       {...(image?.width ? { width: image.width } : {})}
       {...(image?.height ? { height: image.height } : {})}
       loading="lazy"
+      decoding="async"
       className={className}
     />
   );

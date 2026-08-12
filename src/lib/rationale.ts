@@ -37,7 +37,7 @@ export type RuleSource =
   | "local_guidance"       // Pharmacy-internal SOP
   | "manufacturer"         // Product leaflet / sponsor
   | "pharmacist_judgement"// Explicitly a pharmacist's clinical call
-  | "curated";             // PharmaPrompt catalogue-derived
+  | "curated";             // CounterPoint catalogue-derived
 
 export type MatchedFactor = {
   // A discrete piece of patient context that contributed to the
@@ -182,7 +182,7 @@ const SOURCE_LABEL: Record<RuleSource, string> = {
   local_guidance: "Local guidance",
   manufacturer: "Manufacturer information",
   pharmacist_judgement: "Pharmacist judgement",
-  curated: "PharmaPrompt catalogue",
+  curated: "CounterPoint catalogue",
 };
 
 export const SEVERITY = {

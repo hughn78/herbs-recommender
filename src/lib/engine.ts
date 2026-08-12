@@ -437,7 +437,7 @@ export function runEngine(
       matched_patient_factors: factors.filter((f) => f !== "allergy_risk"),
       source_references: [
         {
-          source: "PharmaPrompt symptom map",
+          source: "CounterPoint symptom map",
           tier_label: "Built-in counselling prompt",
           note: map.topic,
         },

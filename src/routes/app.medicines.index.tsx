@@ -268,18 +268,23 @@ function MedicinesSearchPage() {
         className="flex gap-2"
       >
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" aria-hidden="true" />
+          <label htmlFor="medication-search" className="sr-only">
+            Search medications
+          </label>
           <Input
+            id="medication-search"
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Search by generic name, brand, or alias — e.g. metformin, Lipitor, Coversyl…"
             className="pl-9 h-11"
+            aria-label="Search medications"
             autoFocus
           />
         </div>
         {query.isFetching && (
-          <Button variant="outline" className="h-11 px-4" disabled>
-            <Loader2 className="h-4 w-4 animate-spin" />
+          <Button variant="outline" className="h-11 px-4" disabled aria-label="Search in progress">
+            <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
           </Button>
         )}
       </form>
@@ -298,8 +303,8 @@ function MedicinesSearchPage() {
 
       {/* Error — likely schema not migrated */}
       {query.isError && hasSearched && (
-        <Alert className="border-amber-500/30 bg-amber-500/5">
-          <Info className="h-4 w-4 text-amber-600" />
+        <Alert className="border-amber-500/30 bg-amber-500/5" role="alert">
+          <Info className="h-4 w-4 text-amber-600" aria-hidden="true" />
           <AlertTitle className="text-amber-700 dark:text-amber-400">
             Medication tables not available
           </AlertTitle>
@@ -317,7 +322,7 @@ function MedicinesSearchPage() {
       {/* No results */}
       {hasSearched && !query.isLoading && !query.isError && results.length === 0 && (
         <Card className="p-10 text-center bg-card/60 backdrop-blur-sm">
-          <Pill className="h-8 w-8 mx-auto text-muted-foreground" />
+          <Pill className="h-8 w-8 mx-auto text-muted-foreground" aria-hidden="true" />
           <div className="font-display text-lg mt-3">No medications found</div>
           <div className="text-sm text-muted-foreground mt-1">
             No concepts match “{q.trim()}”. Try a different spelling or search by active
@@ -387,7 +392,7 @@ function MedicinesSearchPage() {
                         : "No assertions yet"}
                     </span>
                     <span className="text-xs text-accent inline-flex items-center gap-1">
-                      View detail <ArrowRight className="h-3 w-3" />
+                      View detail <ArrowRight className="h-3 w-3" aria-hidden="true" />
                     </span>
                   </div>
                 </Card>
@@ -401,7 +406,7 @@ function MedicinesSearchPage() {
       {!hasSearched && !query.isLoading && (
         <Card className="p-8 bg-card/40 border-dashed">
           <div className="text-center space-y-2">
-            <Search className="h-6 w-6 mx-auto text-muted-foreground/50" />
+            <Search className="h-6 w-6 mx-auto text-muted-foreground/50" aria-hidden="true" />
             <p className="text-sm text-muted-foreground">
               Start typing a medication name above to search the knowledge base.
             </p>

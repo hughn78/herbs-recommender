@@ -367,13 +367,14 @@ function MedicationDetailPage() {
         <Link
           to="/app/medicines"
           className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground"
+          aria-label="Back to medicines search"
         >
-          <ArrowLeft className="h-3 w-3" /> Back to medicines
+          <ArrowLeft className="h-3 w-3" aria-hidden="true" /> Back to medicines
         </Link>
         <Card className="p-10 text-center">
-          <Pill className="h-8 w-8 mx-auto text-muted-foreground" />
+          <Pill className="h-8 w-8 mx-auto text-muted-foreground" aria-hidden="true" />
           <div className="font-display text-lg mt-3">Medication not found</div>
-          <div className="text-sm text-muted-foreground mt-1">
+          <div className="text-sm text-muted-foreground mt-1" role="alert">
             No medication concept with ID <span className="font-mono text-xs">{conceptId}</span>.
             The medication intelligence migration may not be applied yet.
           </div>
@@ -395,15 +396,16 @@ function MedicationDetailPage() {
       <Link
         to="/app/medicines"
         className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground"
+        aria-label="Back to medicines search"
       >
-        <ArrowLeft className="h-3 w-3" /> Back to medicines search
+        <ArrowLeft className="h-3 w-3" aria-hidden="true" /> Back to medicines search
       </Link>
 
       {/* Summary header */}
       <Card className="p-6 bg-card/60 backdrop-blur-sm">
         <div className="flex items-start gap-4">
           <div className="h-12 w-12 shrink-0 rounded-lg border border-hairline bg-foreground/[0.03] flex items-center justify-center">
-            <Pill className="h-6 w-6 text-muted-foreground/60" />
+            <Pill className="h-6 w-6 text-muted-foreground/60" aria-hidden="true" />
           </div>
           <div className="min-w-0 flex-1">
             <div className="flex items-start justify-between gap-3">
@@ -472,8 +474,8 @@ function MedicationDetailPage() {
 
       {/* No data fallback */}
       {m.assertions.length === 0 && m.supplementSafety.length === 0 && (
-        <Alert className="border-amber-500/30 bg-amber-500/5">
-          <Info className="h-4 w-4 text-amber-600" />
+        <Alert className="border-amber-500/30 bg-amber-500/5" role="alert">
+          <Info className="h-4 w-4 text-amber-600" aria-hidden="true" />
           <AlertTitle className="text-amber-700 dark:text-amber-400">No clinical data yet</AlertTitle>
           <AlertDescription className="text-sm text-muted-foreground">
             This medication concept exists but has no structured assertions. Run the AMH/eMIMS
@@ -486,7 +488,7 @@ function MedicationDetailPage() {
       {m.supplementSafety.length > 0 && (
         <Card className="p-5 bg-card/60 backdrop-blur-sm border-signal/20 space-y-3">
           <h2 className="text-xs uppercase tracking-[0.18em] text-muted-foreground flex items-center gap-2">
-            <ShieldAlert className="h-3.5 w-3.5 text-signal" />
+            <ShieldAlert className="h-3.5 w-3.5 text-signal" aria-hidden="true" />
             Supplement safety cautions · {m.supplementSafety.length}
           </h2>
           <div className="space-y-2">
@@ -562,7 +564,7 @@ function MedicationDetailPage() {
       {groups.length > 0 && (
         <Card className="p-5 bg-card/60 backdrop-blur-sm">
           <h2 className="text-xs uppercase tracking-[0.18em] text-muted-foreground flex items-center gap-2 mb-4">
-            <Activity className="h-3.5 w-3.5" />
+            <Activity className="h-3.5 w-3.5" aria-hidden="true" />
             Clinical assertions · {m.assertions.length}
           </h2>
           <Accordion type="multiple" className="w-full">
@@ -643,7 +645,7 @@ function MedicationDetailPage() {
         <>
           <Separator />
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
-            <BookOpen className="h-3.5 w-3.5" />
+            <BookOpen className="h-3.5 w-3.5" aria-hidden="true" />
             <span>
               Assertions sourced from{" "}
               {Array.from(new Set(m.assertions.map((a) => a.source_code)))

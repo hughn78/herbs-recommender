@@ -10,13 +10,24 @@ export const Route = createFileRoute("/app/_admin/rules")({
 function RulesPage() {
   const fn = useServerFn(listSafetyRulesFn);
   const { data } = useQuery({ queryKey: ["rules"], queryFn: () => fn() });
+  const count = data?.length ?? 0;
   return (
-    <div className="px-8 py-10 max-w-4xl mx-auto">
-      <h1 className="text-2xl font-display">Safety rules</h1>
-      <p className="mt-2 text-sm text-muted-foreground">
-        Read-only view of the deterministic guardrails that fire during a review.
-      </p>
-      <div className="mt-6 space-y-3">
+    <div className="mx-auto max-w-4xl p-6 md:p-10 space-y-6">
+      <header>
+        <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Rules</p>
+        <h1 className="font-display text-3xl mt-1">Safety rules</h1>
+        <p className="text-sm text-muted-foreground mt-2 max-w-prose">
+          Read-only view of the deterministic guardrails that fire during a review. Each rule
+          lists its severity, the drug classes that trigger it, and the pharmacist-facing
+          counselling message it produces.
+        </p>
+        {count > 0 && (
+          <p className="mt-3 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+            {count} {count === 1 ? "rule" : "rules"} loaded
+          </p>
+        )}
+      </header>
+      <div className="space-y-3">
         {(data ?? []).map((r) => (
           <div key={r.rule_id} className="pp-glass p-5">
             <div className="flex items-center justify-between">
@@ -35,6 +46,15 @@ function RulesPage() {
             </div>
           </div>
         ))}
+        {data && data.length === 0 && (
+          <div className="pp-glass p-10 text-center">
+            <p className="font-display text-lg">No rules loaded</p>
+            <p className="text-sm text-muted-foreground mt-1">
+              The deterministic safety rules will appear here once the catalogue migrations are
+              applied.
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

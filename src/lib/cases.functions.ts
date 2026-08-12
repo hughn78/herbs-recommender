@@ -1,4 +1,4 @@
-// Server functions for PharmaPrompt OS.
+// Server functions for CounterPoint.
 // Phase 1: deterministic rule engine. Phase 3: KB evidence attachment.
 // Phase 5: product recommendations. Phase 13: authenticated clinical flow —
 // patient reviews require a staff session; rows are owned by the reviewer

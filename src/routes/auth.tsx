@@ -4,12 +4,13 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { CounterPointMark } from "@/components/counterpoint-mark";
 
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
-      { title: "Sign in — PharmaPrompt OS" },
-      { name: "description", content: "Pharmacist sign-in for PharmaPrompt OS." },
+      { title: "Sign in — CounterPoint" },
+      { name: "description", content: "Staff sign-in for CounterPoint catalogue and governance tools." },
     ],
   }),
   component: AuthPage,
@@ -56,14 +57,15 @@ function AuthPage() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4 bg-background">
       <div className="w-full max-w-md pp-glass p-8">
-        <Link to="/" className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-          PharmaPrompt OS
+        <Link to="/" aria-label="CounterPoint home">
+          <CounterPointMark size={24} />
         </Link>
-        <h1 className="mt-4 text-2xl font-display">
-          {mode === "signin" ? "Pharmacist sign-in" : "Create access"}
+        <h1 className="mt-6 text-2xl font-display">
+          {mode === "signin" ? "Staff sign-in" : "Create access"}
         </h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          Decision support for community pharmacy. You remain responsible for final clinical judgement.
+          Catalogue, governance and administrative tools. The public review workflow
+          does not require sign-in.
         </p>
 
         <form onSubmit={submit} className="mt-6 space-y-4">
@@ -82,8 +84,8 @@ function AuthPage() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          {err && <p className="text-sm text-signal">{err}</p>}
-          <Button type="submit" disabled={busy} className="w-full bg-amber text-amber-foreground hover:bg-amber/85">
+          {err && <p className="text-sm text-signal" role="alert">{err}</p>}
+          <Button type="submit" disabled={busy} className="w-full" style={{ backgroundColor: "#ECBA82", color: "#2E2E2E" }}>
             {busy ? "Working…" : mode === "signin" ? "Sign in" : "Create account"}
           </Button>
         </form>

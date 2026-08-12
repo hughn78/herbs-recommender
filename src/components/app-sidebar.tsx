@@ -1,6 +1,6 @@
 import { Link, useRouterState, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Home, FilePlus2, ListChecks, BookOpen, Package, Inbox, ShieldCheck, Settings, LogOut, LogIn, ClipboardCheck, Pill } from "lucide-react";
+import { Home, FilePlus2, ListChecks, BookOpen, Package, Inbox, ShieldCheck, Settings, LogOut, LogIn, ClipboardCheck, Pill, Lock } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -14,6 +14,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { supabase } from "@/integrations/supabase/client";
+import { CounterPointMark } from "@/components/counterpoint-mark";
 
 const items = [
   { title: "Home", url: "/app", icon: Home },
@@ -22,7 +23,7 @@ const items = [
   { title: "Needs review", url: "/app/queue", icon: Inbox },
 ];
 
-const stubItems = [
+const staffItems = [
   { title: "Safety rules", url: "/app/rules", icon: ShieldCheck },
   { title: "References", url: "/app/references", icon: BookOpen },
   { title: "Products", url: "/app/products", icon: Package },
@@ -55,17 +56,14 @@ export function AppSidebar() {
     navigate({ to: "/app", replace: true });
   }
 
-
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader>
-        <Link to="/app" className="flex items-center gap-2 px-2 py-3">
-          <div className="flex h-8 w-8 items-center justify-center rounded-[10px] bg-teal">
-            <span className="font-display text-sm text-teal-foreground">P</span>
-          </div>
-          <div className="flex flex-col leading-tight">
-            <span className="font-display text-sm text-foreground">PharmaPrompt</span>
-            <span className="text-[10px] uppercase tracking-[0.16em] text-subtle">Pharmacy OS</span>
+        <Link to="/app" className="flex items-center gap-2 px-2 py-3" aria-label="CounterPoint home">
+          <CounterPointMark size={28} compact />
+          <div className="flex flex-col leading-tight group-data-[collapsible=icon]:hidden">
+            <span className="font-display text-sm text-foreground">CounterPoint</span>
+            <span className="text-[10px] uppercase tracking-[0.16em] text-subtle">Supplement guidance</span>
           </div>
         </Link>
       </SidebarHeader>
@@ -88,42 +86,51 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
         <SidebarGroup>
-          <SidebarGroupLabel>Knowledge</SidebarGroupLabel>
+          <SidebarGroupLabel>
+            <span className="group-data-[collapsible=icon]:hidden">Staff tools</span>
+            <Lock className="h-3 w-3 group-data-[collapsible=icon]:block hidden" aria-label="Staff tools (sign in required)" />
+          </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {stubItems.map((item) => (
+              {staffItems.map((item) => (
                 <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton asChild isActive={path === item.url}>
                     <Link to={item.url} className="flex items-center gap-2">
                       <item.icon className="h-4 w-4" />
                       <span>{item.title}</span>
+                      {!signedIn && (
+                        <Lock
+                          className="h-3 w-3 ml-auto text-subtle group-data-[collapsible=icon]:hidden"
+                          aria-label="Sign in required"
+                        />
+                      )}
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
-
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
         <SidebarMenu>
-          <SidebarMenuItem>
-            {signedIn ? (
-              <SidebarMenuButton onClick={signOut}>
+          {signedIn ? (
+            <SidebarMenuItem>
+              <SidebarMenuButton onClick={signOut} className="flex items-center gap-2">
                 <LogOut className="h-4 w-4" />
                 <span>Sign out</span>
               </SidebarMenuButton>
-            ) : (
+            </SidebarMenuItem>
+          ) : (
+            <SidebarMenuItem>
               <SidebarMenuButton asChild>
                 <Link to="/auth" className="flex items-center gap-2">
                   <LogIn className="h-4 w-4" />
-                  <span>Staff sign in</span>
+                  <span>Sign in</span>
                 </Link>
               </SidebarMenuButton>
-            )}
-          </SidebarMenuItem>
-
+            </SidebarMenuItem>
+          )}
         </SidebarMenu>
       </SidebarFooter>
     </Sidebar>

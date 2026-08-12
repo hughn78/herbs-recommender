@@ -225,11 +225,15 @@ function KbSearch() {
           />
         </div>
         <Button type="submit" disabled={mut.isPending} className="h-11 px-6">
-          {mut.isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : "Search"}
+          {mut.isPending ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> : "Search"}
         </Button>
       </form>
 
-      {mut.isError && <div className="text-sm text-destructive">{(mut.error as Error).message}</div>}
+      {mut.isError && (
+        <div className="text-sm text-destructive" role="alert">
+          {(mut.error as Error).message}
+        </div>
+      )}
 
       {mut.data && mut.data.results.length === 0 && (
         <Card className="p-8 text-center text-sm text-muted-foreground">
