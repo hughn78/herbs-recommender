@@ -1,0 +1,91 @@
+{
+  "edition": "2026-Q3",
+  "total_read": 16698,
+  "accepted": 16677,
+  "rejected": 21,
+  "unresolved": 0,
+  "shard_size": 1000,
+  "num_shards": 17,
+  "rejection_samples": [
+    {
+      "chunk_id": "TG-antibiotic-antimicrobial-dosage-modification-in-kidney-impai-body-016",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-antibiotic-antimicrobial-dosage-modification-in-kidney-impai-body-052",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-antibiotic-antimicrobial-dosage-modification-in-kidney-impai-body-067",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-cardiovascular-practical-information-on-using-warfarintopic--body-001",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-dermatology-dermatology-body-002",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-dermatology-considerations-in-the-use-of-topical-corticoster-body-002",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-dermatology-dermatitis-body-002",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-dermatology-pigment-disorders-body-001",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-dermatology-solar-damage-skin-cancer-body-001",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-dermatology-sweating-disorders-body-001",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-dermatology-urticaria-angioedema-body-001",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-gastrointestinal-stress-ulcer-prophylaxistopic-1-body-003",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-gastrointestinal-gastric-disorders-body-001",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-gastrointestinal-perianal-disorders-body-001",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-neurology-mal-de-debarquement-body-001",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-psychotropic-antipsychotic-adverse-effects-body-005",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-psychotropic-antipsychotic-adverse-effects-body-006",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-psychotropic-antipsychotic-adverse-effects-body-007",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-respiratory-asthma-maintenance-management-body-051",
+      "reason": "Could not derive an excerpt"
+    },
+    {
+      "chunk_id": "TG-respiratory-asthma-maintenance-management-body-052",
+      "reason": "Could not derive an excerpt"
+    }
+  ]
+}

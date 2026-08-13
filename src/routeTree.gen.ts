@@ -22,6 +22,7 @@ import { Route as AppReviewRouteImport } from './routes/app.review'
 import { Route as AppSearchRouteImport } from './routes/app.search'
 import { Route as AppAdminRulesRouteImport } from './routes/app._admin.rules'
 import { Route as AppAdminSetupRouteImport } from './routes/app._admin.setup'
+import { Route as AppAdminTgIngestRouteImport } from './routes/app._admin.tg-ingest'
 import { Route as AppCaseCaseIdRouteImport } from './routes/app.case.$caseId'
 import { Route as AppMedicinesIndexRouteImport } from './routes/app.medicines.index'
 import { Route as AppMedicinesConceptIdRouteImport } from './routes/app.medicines.$conceptId'
@@ -92,6 +93,11 @@ const AppAdminSetupRoute = AppAdminSetupRouteImport.update({
   path: '/setup',
   getParentRoute: () => AppAdminRoute,
 } as any)
+const AppAdminTgIngestRoute = AppAdminTgIngestRouteImport.update({
+  id: '/tg-ingest',
+  path: '/tg-ingest',
+  getParentRoute: () => AppAdminRoute,
+} as any)
 const AppCaseCaseIdRoute = AppCaseCaseIdRouteImport.update({
   id: '/case/$caseId',
   path: '/case/$caseId',
@@ -131,6 +137,7 @@ export interface FileRoutesByFullPath {
   '/app/': typeof AppIndexRoute
   '/app/rules': typeof AppAdminRulesRoute
   '/app/setup': typeof AppAdminSetupRoute
+  '/app/tg-ingest': typeof AppAdminTgIngestRoute
   '/app/case/$caseId': typeof AppCaseCaseIdRoute
   '/app/medicines/$conceptId': typeof AppMedicinesConceptIdRoute
   '/app/products/$hogCode': typeof AppProductsHogCodeRoute
@@ -149,6 +156,7 @@ export interface FileRoutesByTo {
   '/app/search': typeof AppSearchRoute
   '/app/rules': typeof AppAdminRulesRoute
   '/app/setup': typeof AppAdminSetupRoute
+  '/app/tg-ingest': typeof AppAdminTgIngestRoute
   '/app/case/$caseId': typeof AppCaseCaseIdRoute
   '/app/medicines/$conceptId': typeof AppMedicinesConceptIdRoute
   '/app/products/$hogCode': typeof AppProductsHogCodeRoute
@@ -170,6 +178,7 @@ export interface FileRoutesById {
   '/app/': typeof AppIndexRoute
   '/app/_admin/rules': typeof AppAdminRulesRoute
   '/app/_admin/setup': typeof AppAdminSetupRoute
+  '/app/_admin/tg-ingest': typeof AppAdminTgIngestRoute
   '/app/case/$caseId': typeof AppCaseCaseIdRoute
   '/app/medicines/$conceptId': typeof AppMedicinesConceptIdRoute
   '/app/products/$hogCode': typeof AppProductsHogCodeRoute
@@ -191,6 +200,7 @@ export interface FileRouteTypes {
     | '/app/'
     | '/app/rules'
     | '/app/setup'
+    | '/app/tg-ingest'
     | '/app/case/$caseId'
     | '/app/medicines/$conceptId'
     | '/app/products/$hogCode'
@@ -209,6 +219,7 @@ export interface FileRouteTypes {
     | '/app/search'
     | '/app/rules'
     | '/app/setup'
+    | '/app/tg-ingest'
     | '/app/case/$caseId'
     | '/app/medicines/$conceptId'
     | '/app/products/$hogCode'
@@ -229,6 +240,7 @@ export interface FileRouteTypes {
     | '/app/'
     | '/app/_admin/rules'
     | '/app/_admin/setup'
+    | '/app/_admin/tg-ingest'
     | '/app/case/$caseId'
     | '/app/medicines/$conceptId'
     | '/app/products/$hogCode'
@@ -335,6 +347,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppAdminSetupRouteImport
       parentRoute: typeof AppAdminRoute
     }
+    '/app/_admin/tg-ingest': {
+      id: '/app/_admin/tg-ingest'
+      path: '/tg-ingest'
+      fullPath: '/app/tg-ingest'
+      preLoaderRoute: typeof AppAdminTgIngestRouteImport
+      parentRoute: typeof AppAdminRoute
+    }
     '/app/case/$caseId': {
       id: '/app/case/$caseId'
       path: '/case/$caseId'
@@ -376,11 +395,13 @@ declare module '@tanstack/react-router' {
 interface AppAdminRouteChildren {
   AppAdminRulesRoute: typeof AppAdminRulesRoute
   AppAdminSetupRoute: typeof AppAdminSetupRoute
+  AppAdminTgIngestRoute: typeof AppAdminTgIngestRoute
 }
 
 const AppAdminRouteChildren: AppAdminRouteChildren = {
   AppAdminRulesRoute: AppAdminRulesRoute,
   AppAdminSetupRoute: AppAdminSetupRoute,
+  AppAdminTgIngestRoute: AppAdminTgIngestRoute,
 }
 
 const AppAdminRouteWithChildren = AppAdminRoute._addFileChildren(

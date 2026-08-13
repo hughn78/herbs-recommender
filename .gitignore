@@ -59,3 +59,5 @@ cookies.txt
 data/derived/
 __pycache__/
 *.py[cod]
+tg_sql_batches/
+data/tg_shards/

@@ -433,6 +433,84 @@ export type Database = {
         }
         Relationships: []
       }
+      tg_chunks: {
+        Row: {
+          chunk_id: string
+          edition: string
+          source: string
+          source_name: string
+          page_id: string
+          page_short_id: string
+          page_type: string | null
+          page_type_label: string | null
+          title: string
+          source_url: string
+          section_heading: string | null
+          section_level: number
+          section_index: number
+          chunk_index: number
+          excerpt: string
+          excerpt_length: number
+          content_hash: string
+          topic_area: string | null
+          topic_area_label: string | null
+          topic_code: string | null
+          active: boolean
+          inserted_at: string
+          updated_at: string
+        }
+        Insert: {
+          chunk_id: string
+          edition: string
+          source: string
+          source_name: string
+          page_id: string
+          page_short_id: string
+          page_type?: string | null
+          page_type_label?: string | null
+          title: string
+          source_url: string
+          section_heading?: string | null
+          section_level?: number
+          section_index?: number
+          chunk_index?: number
+          excerpt: string
+          excerpt_length: number
+          content_hash: string
+          topic_area?: string | null
+          topic_area_label?: string | null
+          topic_code?: string | null
+          active?: boolean
+          inserted_at?: string
+          updated_at?: string
+        }
+        Update: {
+          chunk_id?: string
+          edition?: string
+          source?: string
+          source_name?: string
+          page_id?: string
+          page_short_id?: string
+          page_type?: string | null
+          page_type_label?: string | null
+          title?: string
+          source_url?: string
+          section_heading?: string | null
+          section_level?: number
+          section_index?: number
+          chunk_index?: number
+          excerpt?: string
+          excerpt_length?: number
+          content_hash?: string
+          topic_area?: string | null
+          topic_area_label?: string | null
+          topic_code?: string | null
+          active?: boolean
+          inserted_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       lookup_indexes: {
         Row: {
           chunk_id: string
