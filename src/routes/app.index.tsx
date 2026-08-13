@@ -115,6 +115,7 @@ function HomePage() {
 
         <Link
           to="/app/search"
+          search={{ q: "" }}
           className="group flex items-start gap-4 rounded-lg border border-border bg-card p-5 hover:bg-secondary/40 transition-colors"
         >
           <span className="flex h-10 w-10 items-center justify-center rounded-md bg-amber/15 text-amber-ink shrink-0">
