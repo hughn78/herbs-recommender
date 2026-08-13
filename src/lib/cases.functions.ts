@@ -10,7 +10,7 @@ import { runEngine, type PatientCtx, type SafetyRuleRow } from "./engine";
 import { loadEngineProducts } from "./catalogue-products";
 import { loadOntologyTagMaps } from "./ontology";
 import type { ProductImageRef } from "./recommend-products";
-import { attachEvidence } from "./retrieval";
+import { attachEvidence, attachTgContext } from "./retrieval";
 import { runAiSenseCheck } from "./ai-sense-check";
 import { loadMedicationKnowledge } from "./medication-knowledge";
 import { recogniseMedications, buildIndexFromConcepts, type RecognitionResult } from "./medication-parser";
@@ -277,6 +277,10 @@ export const createCaseFn = createServerFn({ method: "POST" })
     };
 
     const baseRecs = await attachEvidence(supabase, runEngine(ctx, rules, products, ontologyLoad.maps));
+    // Conservative TG context retrieval: only fires when symptoms or
+    // counselling_goal contains an allow-listed clinical concept AND the
+    // tg_chunks table returns matching active rows. Silent no-op otherwise.
+    const withTg = await attachTgContext(supabase, ctx, baseRecs);
     // Transient reviews must not send patient context to the external AI
     // gateway. They receive deterministic results only; no audit row is
     // persisted below either.
@@ -285,12 +289,12 @@ export const createCaseFn = createServerFn({ method: "POST" })
           status: "skipped" as const,
           model: "transient-deterministic-only",
           latency_ms: 0,
-          recs: baseRecs,
+          recs: withTg,
           applied: [],
           rejected: [],
           error: "AI sense-check disabled for unsaved transient review",
         }
-      : await runAiSenseCheck(ctx, baseRecs);
+      : await runAiSenseCheck(ctx, withTg);
     const recs = sense.recs;
 
     // ---- Transient mode: return results without persisting anything ----
@@ -383,7 +387,7 @@ export const createCaseFn = createServerFn({ method: "POST" })
         age: ctx.age,
         sex: ctx.sex,
         medication_count: ctx.confirmed_medications.length,
-        rec_count: baseRecs.length,
+        rec_count: withTg.length,
       } as never,
       raw_response: (sense.overall_note ? { overall_note: sense.overall_note } : null) as never,
       applied_changes: sense.applied as never,
