@@ -15,6 +15,7 @@ import {
 } from "@/lib/feedback.functions";
 import {
   ShieldAlert,
+  ShieldCheck,
   Clock,
   ClipboardCheck,
   MessageSquare,
@@ -28,6 +29,7 @@ import {
   Flag,
   Download,
   ChevronDown,
+  BookOpen,
 } from "lucide-react";
 
 export const Route = createFileRoute("/app/case/$caseId")({
@@ -240,6 +242,42 @@ function CaseResults() {
     items: (recs as RecRow[]).filter((r) => r.recommendation_type === t),
   }));
 
+  // Safety-first hierarchy (mirrors the transient page).
+  // 1. Cautions dominate: safety_caution + red_flag, severity-bucketed.
+  // 2. Suitable products come next (product_recommendation).
+  // 3. Counselling/admin notes (administration, counselling_prompt,
+  //    otc_interaction, review_required, product_discussion) sit
+  //    between safety and product list.
+  const SAFETY_TYPES = new Set(["safety_caution", "red_flag"]);
+  const PRODUCT_TYPES = new Set(["product_recommendation"]);
+  const NOTES_TYPES = new Set([
+    "administration",
+    "counselling_prompt",
+    "otc_interaction",
+    "review_required",
+    "product_discussion",
+  ]);
+  const isSafety = (r: RecRow) => SAFETY_TYPES.has(r.recommendation_type);
+  const isProduct = (r: RecRow) => PRODUCT_TYPES.has(r.recommendation_type);
+  const isNotes = (r: RecRow) => NOTES_TYPES.has(r.recommendation_type);
+
+  const allSafety = (recs as RecRow[]).filter(isSafety);
+  const allProducts = (recs as RecRow[]).filter(isProduct);
+  const allNotes = (recs as RecRow[]).filter(isNotes);
+
+  const SEVERITY_BUCKET_ORDER: SeverityTier[] = [
+    "contraindicated",
+    "major",
+    "moderate",
+    "minor",
+  ];
+  const safetyGroups = SEVERITY_BUCKET_ORDER
+    .map((severity) => ({
+      severity,
+      items: allSafety.filter((r) => (r.severity_tier as SeverityTier) === severity),
+    }))
+    .filter((g) => g.items.length > 0);
+
   return (
     <div className="px-8 py-10 max-w-5xl mx-auto">
       <div className="flex items-start justify-between no-print">
@@ -311,21 +349,309 @@ function CaseResults() {
         </div>
       )}
 
-      <div className="mt-8 space-y-8">
-        {grouped.map(
-          (g) =>
-            g.items.length > 0 && (
-              <RecommendationGroup
-                key={g.type}
-                type={g.type}
-                items={g.items as RecRow[]}
-                feedback={feedbackQ.data}
-                caseId={caseId}
+      <div className="mt-8 space-y-10">
+        {/* ================================================================
+            SAFETY FIRST — visually dominant, before any product card.
+            Severity order: contraindicated → major → moderate → minor.
+            Same hierarchy as the transient review page so a pharmacist
+            sees the same treatment across both modes.
+            ================================================================ */}
+        {safetyGroups.length > 0 && (
+          <section aria-label="Safety cautions" className="space-y-5">
+            <div className="flex items-center gap-2">
+              <ShieldAlert
+                className="h-5 w-5 text-signal shrink-0"
+                aria-hidden="true"
               />
-            ),
+              <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-signal">
+                Safety first · {safetyGroups.reduce((n, g) => n + g.items.length, 0)}
+              </h2>
+            </div>
+            <p className="text-xs text-muted-foreground -mt-3">
+              Contraindications, red flags, and safety cautions are surfaced above all suitable products.
+            </p>
+            {safetyGroups.map((group) => (
+              <div key={group.severity} className="space-y-3">
+                <h3 className="text-[11px] uppercase tracking-[0.18em] text-signal/80 font-medium">
+                  {SEVERITY_BADGE[group.severity].label} · {group.items.length}
+                </h3>
+                <div className="space-y-3">
+                  {group.items.map((r) => {
+                    const latest = (feedbackQ.data ?? []).find(
+                      (f) => f.recommendation_id === r.recommendation_id,
+                    );
+                    return (
+                      <SafetyRecCard
+                        key={r.recommendation_id}
+                        r={r}
+                        caseId={caseId}
+                        latestStatus={(latest?.status as FeedbackStatus | undefined) ?? null}
+                        latestNotes={latest?.notes ?? null}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </section>
         )}
+
+        {/* ================================================================
+            NOTES — counselling prompts, administration, OTC interaction
+            notes, review-required flags. Subordinate to safety; lead the
+            product recommendations.
+            ================================================================ */}
+        {allNotes.length > 0 && (
+          <section aria-label="Counselling notes" className="space-y-3">
+            <div className="flex items-center gap-2">
+              <MessageSquare
+                className="h-4 w-4 text-muted-foreground shrink-0"
+                aria-hidden="true"
+              />
+              <h2 className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                Counselling & clinical notes · {allNotes.length}
+              </h2>
+            </div>
+            <div className="space-y-3">
+              {allNotes.map((r) => {
+                const latest = (feedbackQ.data ?? []).find(
+                  (f) => f.recommendation_id === r.recommendation_id,
+                );
+                return (
+                  <RecCard
+                    key={r.recommendation_id}
+                    r={r}
+                    caseId={caseId}
+                    latestStatus={(latest?.status as FeedbackStatus | undefined) ?? null}
+                    latestNotes={latest?.notes ?? null}
+                  />
+                );
+              })}
+            </div>
+          </section>
+        )}
+
+        {/* ================================================================
+            SUITABLE PRODUCTS — subordinate section after safety items.
+            Severity-bucketed within product_recommendation.
+            ================================================================ */}
+        {allProducts.length > 0 && (
+          <section aria-label="Suitable products" className="space-y-3">
+            <div className="flex items-center gap-2">
+              <ShieldCheck
+                className="h-4 w-4 text-accent shrink-0"
+                aria-hidden="true"
+              />
+              <h2 className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                Suitable products · {allProducts.length}
+              </h2>
+            </div>
+            <RecommendationGroup
+              type="product_recommendation"
+              items={allProducts}
+              feedback={feedbackQ.data}
+              caseId={caseId}
+            />
+          </section>
+        )}
+
+        {/* ================================================================
+            EXCLUDED — products ruled out and the reasons why.
+            Sources come from recommendation interaction_notes that list
+            avoid-product keywords, plus any safety_caution that explains
+            a product exclusion. Only renders when there is something
+            to show.
+            ================================================================ */}
+        <ExcludedProductsPanel recs={recs as RecRow[]} />
       </div>
+
+      {/* Original type-grouped lists kept for the supplementary
+          "by-type" view below — useful when scanning one specific
+          section (e.g. all administration timings). */}
+      <details className="mt-12 no-print">
+        <summary className="text-xs uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground cursor-pointer">
+          View by recommendation type
+        </summary>
+        <div className="mt-6 space-y-8">
+          {grouped.map(
+            (g) =>
+              g.items.length > 0 && (
+                <RecommendationGroup
+                  key={g.type}
+                  type={g.type}
+                  items={g.items as RecRow[]}
+                  feedback={feedbackQ.data}
+                  caseId={caseId}
+                />
+              ),
+          )}
+        </div>
+      </details>
     </div>
+  );
+}
+
+/** Filter products that were excluded for safety reasons. The engine
+ *  surfaces exclusions in two places: per-product interaction_notes
+ *  ("Avoid: magnesium, warfarin...") and safety_caution interaction_notes
+ *  listing avoid-product keywords. Both are flattened into a single
+ *  list of reason strings for the muted section at the end. */
+function ExcludedProductsPanel({ recs }: { recs: RecRow[] }) {
+  const reasons: string[] = [];
+  for (const r of recs) {
+    if (r.recommendation_type !== "safety_caution" && r.recommendation_type !== "otc_interaction") continue;
+    const notes = asArr(r.interaction_notes);
+    for (const n of notes) reasons.push(`${r.title} — ${n}`);
+  }
+  if (reasons.length === 0) return null;
+  return (
+    <section
+      aria-label="Excluded products"
+      className="rounded-md border border-hairline bg-muted/30 p-4 space-y-2"
+    >
+      <div className="flex items-center gap-2">
+        <X
+          className="h-4 w-4 text-muted-foreground shrink-0"
+          aria-hidden="true"
+        />
+        <h2 className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+          Excluded · {reasons.length}
+        </h2>
+      </div>
+      <p className="text-[11px] text-muted-foreground -mt-1">
+        Products ruled out by safety rules for this patient. The pharmacist always sees what was excluded, not just what survived.
+      </p>
+      <ul className="space-y-1 text-xs text-muted-foreground">
+        {reasons.slice(0, 12).map((reason, idx) => (
+          <li key={idx} className="leading-relaxed">
+            {reason}
+          </li>
+        ))}
+        {reasons.length > 12 && (
+          <li className="text-muted-foreground/70">
+            + {reasons.length - 12} more exclusion reason{reasons.length - 12 === 1 ? "" : "s"} — see safety cards above.
+          </li>
+        )}
+      </ul>
+    </section>
+  );
+}
+
+/** Safety-first card for safety_caution and red_flag recommendations on
+ *  the saved case page. Signal-red left border, soft red background,
+ *  warning icon in the header. Mirrors the SafetyRecCard on the
+ *  transient page so the visual treatment is identical across modes. */
+function SafetyRecCard({
+  r,
+  caseId,
+  latestStatus,
+  latestNotes,
+}: {
+  r: RecRow;
+  caseId: string;
+  latestStatus: FeedbackStatus | null;
+  latestNotes: string | null;
+}) {
+  const typeLabel = TYPE_META[r.recommendation_type]?.label ?? r.recommendation_type;
+  const Icon = TYPE_META[r.recommendation_type]?.icon ?? ShieldAlert;
+  const safetyCautions = asArr(r.safety_cautions);
+  const sources = asRefs(r.source_references);
+  const talkingPoints = dedupeTalkingPoints(r.advice, asArr(r.talking_points));
+  return (
+    <article
+      className="rounded-md border-l-4 border-signal bg-signal/5 p-5 space-y-3"
+      role="alert"
+    >
+      <div className="flex items-start gap-3">
+        <Icon
+          className="h-5 w-5 mt-0.5 text-signal shrink-0"
+          aria-hidden="true"
+        />
+        <div className="flex-1 min-w-0">
+          <div className="flex items-start justify-between gap-3">
+            <div className="min-w-0">
+              <p className="text-[11px] uppercase tracking-wider text-signal font-semibold">
+                {typeLabel}
+              </p>
+              <h3 className="mt-1 font-display text-lg leading-snug text-foreground">
+                {r.title}
+              </h3>
+              {(r.brand || r.product_id) && (
+                <p className="mt-1 text-xs text-muted-foreground">
+                  {r.brand}
+                  {r.brand && r.product_id ? " · " : ""}
+                  {r.product_id ? <span className="font-mono">{r.product_id}</span> : null}
+                </p>
+              )}
+            </div>
+            <span className="pp-chip text-[11px] shrink-0 bg-signal/10 text-signal border-signal/30">
+              {r.confidence}
+              {typeof r.confidence_score === "number" ? ` · ${r.confidence_score}` : ""}
+            </span>
+          </div>
+
+          {r.why_triggered && (
+            <p className="mt-2 text-sm text-foreground/90">{r.why_triggered}</p>
+          )}
+
+          {r.advice && (
+            <div className="mt-3 rounded-md border border-signal/20 bg-signal/5 p-3">
+              <p className="text-[11px] uppercase tracking-wider text-signal font-medium">
+                Action
+              </p>
+              <p className="mt-1 text-sm text-foreground">{r.advice}</p>
+            </div>
+          )}
+
+          {safetyCautions.length > 0 && (
+            <ul className="list-disc list-inside space-y-1 text-sm text-signal">
+              {safetyCautions.map((c, idx) => (
+                <li key={idx}>{c}</li>
+              ))}
+            </ul>
+          )}
+
+          {talkingPoints.length > 0 && (
+            <div>
+              <p className="text-[11px] uppercase tracking-wider text-muted-foreground">
+                Talking points
+              </p>
+              <ul className="mt-1.5 list-disc list-inside space-y-1 text-sm">
+                {talkingPoints.slice(0, 4).map((t, idx) => (
+                  <li key={idx}>{t}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {sources.length > 0 && (
+            <div className="border-t border-signal/20 pt-3">
+              <p className="text-[11px] uppercase tracking-wider text-muted-foreground">
+                Sources
+              </p>
+              <ul className="mt-1.5 space-y-1 text-xs text-muted-foreground">
+                {sources.slice(0, 3).map((s, i) => (
+                  <li key={i} className="flex items-baseline gap-2">
+                    <span className="pp-chip text-[10px] shrink-0">{s.tier_label}</span>
+                    <span>
+                      <span className="text-foreground">{s.source}</span>
+                      {s.note ? ` — ${s.note}` : ""}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <FeedbackRow
+            caseId={caseId}
+            recommendationId={r.recommendation_id}
+            latestStatus={latestStatus}
+            latestNotes={latestNotes}
+          />
+        </div>
+      </div>
+    </article>
   );
 }
 

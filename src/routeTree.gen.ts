@@ -19,6 +19,7 @@ import { Route as AppGovernanceRouteImport } from './routes/app.governance'
 import { Route as AppQueueRouteImport } from './routes/app.queue'
 import { Route as AppReferencesRouteImport } from './routes/app.references'
 import { Route as AppReviewRouteImport } from './routes/app.review'
+import { Route as AppSearchRouteImport } from './routes/app.search'
 import { Route as AppAdminRulesRouteImport } from './routes/app._admin.rules'
 import { Route as AppAdminSetupRouteImport } from './routes/app._admin.setup'
 import { Route as AppCaseCaseIdRouteImport } from './routes/app.case.$caseId'
@@ -76,6 +77,11 @@ const AppReviewRoute = AppReviewRouteImport.update({
   path: '/review',
   getParentRoute: () => AppRoute,
 } as any)
+const AppSearchRoute = AppSearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppAdminRulesRoute = AppAdminRulesRouteImport.update({
   id: '/rules',
   path: '/rules',
@@ -121,6 +127,7 @@ export interface FileRoutesByFullPath {
   '/app/queue': typeof AppQueueRoute
   '/app/references': typeof AppReferencesRoute
   '/app/review': typeof AppReviewRoute
+  '/app/search': typeof AppSearchRoute
   '/app/': typeof AppIndexRoute
   '/app/rules': typeof AppAdminRulesRoute
   '/app/setup': typeof AppAdminSetupRoute
@@ -139,6 +146,7 @@ export interface FileRoutesByTo {
   '/app/queue': typeof AppQueueRoute
   '/app/references': typeof AppReferencesRoute
   '/app/review': typeof AppReviewRoute
+  '/app/search': typeof AppSearchRoute
   '/app/rules': typeof AppAdminRulesRoute
   '/app/setup': typeof AppAdminSetupRoute
   '/app/case/$caseId': typeof AppCaseCaseIdRoute
@@ -158,6 +166,7 @@ export interface FileRoutesById {
   '/app/queue': typeof AppQueueRoute
   '/app/references': typeof AppReferencesRoute
   '/app/review': typeof AppReviewRoute
+  '/app/search': typeof AppSearchRoute
   '/app/': typeof AppIndexRoute
   '/app/_admin/rules': typeof AppAdminRulesRoute
   '/app/_admin/setup': typeof AppAdminSetupRoute
@@ -178,6 +187,7 @@ export interface FileRouteTypes {
     | '/app/queue'
     | '/app/references'
     | '/app/review'
+    | '/app/search'
     | '/app/'
     | '/app/rules'
     | '/app/setup'
@@ -196,6 +206,7 @@ export interface FileRouteTypes {
     | '/app/queue'
     | '/app/references'
     | '/app/review'
+    | '/app/search'
     | '/app/rules'
     | '/app/setup'
     | '/app/case/$caseId'
@@ -214,6 +225,7 @@ export interface FileRouteTypes {
     | '/app/queue'
     | '/app/references'
     | '/app/review'
+    | '/app/search'
     | '/app/'
     | '/app/_admin/rules'
     | '/app/_admin/setup'
@@ -302,6 +314,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppReviewRouteImport
       parentRoute: typeof AppRoute
     }
+    '/app/search': {
+      id: '/app/search'
+      path: '/search'
+      fullPath: '/app/search'
+      preLoaderRoute: typeof AppSearchRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/app/_admin/rules': {
       id: '/app/_admin/rules'
       path: '/rules'
@@ -375,6 +394,7 @@ interface AppRouteChildren {
   AppQueueRoute: typeof AppQueueRoute
   AppReferencesRoute: typeof AppReferencesRoute
   AppReviewRoute: typeof AppReviewRoute
+  AppSearchRoute: typeof AppSearchRoute
   AppIndexRoute: typeof AppIndexRoute
   AppCaseCaseIdRoute: typeof AppCaseCaseIdRoute
   AppMedicinesConceptIdRoute: typeof AppMedicinesConceptIdRoute
@@ -390,6 +410,7 @@ const AppRouteChildren: AppRouteChildren = {
   AppQueueRoute: AppQueueRoute,
   AppReferencesRoute: AppReferencesRoute,
   AppReviewRoute: AppReviewRoute,
+  AppSearchRoute: AppSearchRoute,
   AppIndexRoute: AppIndexRoute,
   AppCaseCaseIdRoute: AppCaseCaseIdRoute,
   AppMedicinesConceptIdRoute: AppMedicinesConceptIdRoute,

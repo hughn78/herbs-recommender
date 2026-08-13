@@ -1,6 +1,6 @@
 import { Link, useRouterState, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Home, FilePlus2, ListChecks, BookOpen, Package, Inbox, ShieldCheck, Settings, LogOut, LogIn, ClipboardCheck, Pill, Lock } from "lucide-react";
+import { Home, FilePlus2, ListChecks, BookOpen, Package, Inbox, ShieldCheck, Settings, LogOut, LogIn, ClipboardCheck, Pill, Lock, Search } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -19,6 +19,7 @@ import { CounterPointMark } from "@/components/counterpoint-mark";
 const items = [
   { title: "Home", url: "/app", icon: Home },
   { title: "New review", url: "/app/review", icon: FilePlus2 },
+  { title: "Search", url: "/app/search", icon: Search },
   { title: "Past reviews", url: "/app/cases", icon: ListChecks },
   { title: "Needs review", url: "/app/queue", icon: Inbox },
 ];

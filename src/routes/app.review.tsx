@@ -16,6 +16,7 @@ import type { GeneratedRec } from "@/lib/engine";
 import { PackShot, hasPackShot } from "@/components/pack-shot";
 import type { RecognitionResult } from "@/lib/medication-parser";
 import { GuidedReview, type ReviewAnswers } from "@/components/guided-review";
+import { MedicineAutocomplete, type ResolvedMedication } from "@/components/medicine-autocomplete";
 import {
   Check,
   AlertCircle,
@@ -194,6 +195,30 @@ function ReviewWizard() {
     setConfirmed((c) => c.filter((_, i) => i !== idx));
   }
 
+  /** Add a medicine from the type-ahead picker. De-duplicates by lowercased
+   *  generic_name. Free-text entries land in medsText so the existing
+   *  recognition pass on step 2 still sees them. */
+  function addFromAutocomplete(m: ResolvedMedication) {
+    const lc = m.generic_name.trim().toLowerCase();
+    if (!lc) return;
+    setConfirmed((c) => {
+      if (c.some((x) => x.generic_name.toLowerCase() === lc)) return c;
+      return [
+        ...c,
+        {
+          generic_name: m.generic_name.trim(),
+          brand_name: m.brand_name ?? undefined,
+          drug_class: m.drug_class ?? null,
+        },
+      ];
+    });
+    // Keep the typed text in medsText so step 2's bulk parser sees it too.
+    setMedsText((cur) => {
+      const v = cur.trim();
+      return v ? `${v}\n${m.generic_name}` : m.generic_name;
+    });
+  }
+
   /** Manually add a medication for an unknown entry. */
   function addManualMedication(
     idx: number,
@@ -357,14 +382,25 @@ function ReviewWizard() {
               placeholder="e.g. T2DM, hypertension, mild CKD"
             />
           </Field>
-          <Field label="Current medications (one per line or comma-separated, brand or generic)">
-            <Textarea
-              rows={5}
-              value={medsText}
-              onChange={(e) => setMedsText(e.target.value)}
-              placeholder={"Metformin 1g BD\nPantoprazole 40mg daily\nAtorvastatin 40mg\nAspirin 100mg\nCoversyl Plus 5/1.25"}
-              className="font-mono text-sm"
-            />
+          <Field label="Current medications">
+            <div className="space-y-2">
+              <MedicineAutocomplete
+                exclude={confirmed.map((m) => m.generic_name)}
+                onAdd={addFromAutocomplete}
+                placeholder="Search (e.g. metformin, warfarin, Coversyl)…"
+              />
+              <Textarea
+                rows={5}
+                value={medsText}
+                onChange={(e) => setMedsText(e.target.value)}
+                placeholder={"Metformin 1g BD\nPantoprazole 40mg daily\nAtorvastatin 40mg\nAspirin 100mg\nCoversyl Plus 5/1.25"}
+                className="font-mono text-sm"
+              />
+              <p className="text-[11px] text-muted-foreground">
+                Use the search to recognise and add medicines with their drug class. Anything
+                added here is also written to the text below for the step 2 review pass.
+              </p>
+            </div>
           </Field>
           <Field label="Existing supplements / OTC">
             <Input value={supplements} onChange={(e) => setSupplements(e.target.value)} />
